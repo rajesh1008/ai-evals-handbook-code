@@ -1,0 +1,634 @@
+{
+ "truss": "0.47.0",
+ "fixture": {
+  "n": 300,
+  "sources": {
+   "harbor-golden v1.1": 262,
+   "July production": 38
+  },
+  "final": {
+   "decline_window": 58,
+   "ask_income": 51,
+   "refer_to_officer": 43,
+   "ask_which_loan": 33,
+   "draft_deferral": 113,
+   "cannot_tell": 2
+  },
+  "first_july": 123104
+ },
+ "apptest": {
+  "blind": true,
+  "rows": 2
+ },
+ "pilot": {
+  "n": 40,
+  "pct": 0.625,
+  "kappa": 0.5020746887966805,
+  "kappa_ci": [
+   0.29883138564273787,
+   0.6901893287435455
+  ],
+  "alpha": 0.5004215851602023,
+  "matrix": [
+   [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    9,
+    0,
+    1,
+    1,
+    0
+   ],
+   [
+    0,
+    2,
+    7,
+    1,
+    2,
+    0
+   ],
+   [
+    0,
+    3,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    4,
+    0,
+    0,
+    5,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "per_label": {
+   "ask_which_loan": 0.6551724137931032,
+   "ask_income": 0.42408376963350786,
+   "decline_window": 0.6621621621621622,
+   "refer_to_officer": 0.4736842105263159,
+   "draft_deferral": 0.42652329749103957,
+   "cannot_tell": 1.0
+  },
+  "disagree": 15,
+  "per_label_pct": {
+   "ask_which_loan": 0.975,
+   "ask_income": 0.725,
+   "decline_window": 0.875,
+   "refer_to_officer": 0.875,
+   "draft_deferral": 0.8,
+   "cannot_tell": 1.0
+  },
+  "cause": {
+   "take-home pay (G-05)": 9,
+   "loan reference": 1,
+   "other": 3,
+   "window start or end (G-06)": 2
+  }
+ },
+ "s1": {
+  "n": 120,
+  "pct": 0.8,
+  "kappa": 0.7232365942725351,
+  "kappa_ci": [
+   0.6254256526674234,
+   0.8180163785259327
+  ],
+  "alpha": 0.7227646205896567,
+  "matrix": [
+   [
+    9,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    19,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    8,
+    5,
+    11,
+    0
+   ],
+   [
+    1,
+    0,
+    1,
+    14,
+    1,
+    0
+   ],
+   [
+    1,
+    1,
+    1,
+    1,
+    46,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "per_label": {
+   "ask_which_loan": 0.843478260869565,
+   "ask_income": 0.9693877551020409,
+   "decline_window": 0.3790849673202615,
+   "refer_to_officer": 0.7127659574468086,
+   "draft_deferral": 0.7318435754189945,
+   "cannot_tell": 1.0
+  },
+  "disagree": 24,
+  "per_label_pct": {
+   "ask_which_loan": 0.975,
+   "ask_income": 0.9916666666666667,
+   "decline_window": 0.8416666666666667,
+   "refer_to_officer": 0.925,
+   "draft_deferral": 0.8666666666666667,
+   "cannot_tell": 1.0
+  },
+  "top_cells": [
+   [
+    "decline_window",
+    "draft_deferral",
+    11
+   ],
+   [
+    "decline_window",
+    "refer_to_officer",
+    5
+   ],
+   [
+    "draft_deferral",
+    "ask_income",
+    1
+   ]
+  ],
+  "cell_pattern": {
+   "('deferral', True, True)": 9,
+   "('extension', True, True)": 2
+  }
+ },
+ "s3": {
+  "n": 140,
+  "pct": 0.9642857142857143,
+  "kappa": 0.9527346387575962,
+  "kappa_ci": [
+   0.907100199071002,
+   0.9904625655698618
+  ],
+  "alpha": 0.9528939015330586,
+  "matrix": [
+   [
+    17,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   [
+    0,
+    21,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    23,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    21,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    53,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "per_label": {
+   "ask_which_loan": 0.9362767410104691,
+   "ask_income": 0.9460916442048519,
+   "decline_window": 0.9744338933528124,
+   "refer_to_officer": 0.9725274725274726,
+   "draft_deferral": 0.9549356223175965,
+   "cannot_tell": 0.0
+  },
+  "disagree": 5,
+  "per_label_pct": {
+   "ask_which_loan": 0.9857142857142858,
+   "ask_income": 0.9857142857142858,
+   "decline_window": 0.9928571428571429,
+   "refer_to_officer": 0.9928571428571429,
+   "draft_deferral": 0.9785714285714285,
+   "cannot_tell": 0.9928571428571429
+  }
+ },
+ "reread": {
+  "n": 65,
+  "pct": 0.9538461538461539,
+  "kappa": 0.9290651145871227,
+  "kappa_ci": [
+   0.8434812521499829,
+   1.0
+  ],
+  "alpha": 0.9295979625250137,
+  "matrix": [
+   [
+    4,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    9,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    33,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    14,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "per_label": {
+   "ask_which_loan": 0.8807339449541289,
+   "ask_income": 1.0,
+   "decline_window": 0.9383301707779886,
+   "refer_to_officer": 0.6505376344086022,
+   "draft_deferral": 0.9556313993174063,
+   "cannot_tell": 1.0
+  },
+  "disagree": 3,
+  "per_label_pct": {
+   "ask_which_loan": 0.9846153846153847,
+   "ask_income": 1.0,
+   "decline_window": 0.9692307692307692,
+   "refer_to_officer": 0.9692307692307692,
+   "draft_deferral": 0.9846153846153847,
+   "cannot_tell": 1.0
+  }
+ },
+ "after": {
+  "n": 205,
+  "pct": 0.9609756097560975,
+  "kappa": 0.9485812823326539,
+  "kappa_ci": [
+   0.9105222135619644,
+   0.9806079334048055
+  ],
+  "alpha": 0.9486986516149263,
+  "matrix": [
+   [
+    21,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   [
+    0,
+    30,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    56,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    23,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    67,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "per_label": {
+   "ask_which_loan": 0.9251551661190215,
+   "ask_income": 0.9620018535681186,
+   "decline_window": 0.963744620644933,
+   "refer_to_officer": 0.9304691916336914,
+   "draft_deferral": 0.9563132658497602,
+   "cannot_tell": 0.0
+  },
+  "disagree": 8,
+  "per_label_pct": {
+   "ask_which_loan": 0.9853658536585366,
+   "ask_income": 0.9902439024390244,
+   "decline_window": 0.9853658536585366,
+   "refer_to_officer": 0.9853658536585366,
+   "draft_deferral": 0.9804878048780488,
+   "cannot_tell": 0.9951219512195122
+  }
+ },
+ "adjudication": {
+  "n": 300,
+  "kinds": {
+   "agreed": 250,
+   "guideline": 27,
+   "slip": 15,
+   "fact": 3,
+   "policy": 5
+  },
+  "status_before": {
+   "final": 294,
+   "pending": 5,
+   "cannot_tell": 1
+  },
+  "audit": 6,
+  "pending": 5
+ },
+ "gold": {
+  "name": "hardship-gold",
+  "version": "1.0",
+  "n": 300,
+  "digest": "306ab9435548",
+  "kinds": {
+   "agreed": 250,
+   "guideline": 27,
+   "slip": 15,
+   "fact": 3,
+   "policy": 5
+  },
+  "status": {
+   "final": 299,
+   "cannot_tell": 1
+  },
+  "n_gold": 299,
+  "wrong_vs_hidden": 2,
+  "changed_from_v11": 19,
+  "why": {
+   "disaster forbearance": 7,
+   "loan reference": 4,
+   "single-reader slip": 8
+  }
+ },
+ "hours": {
+  "by_person": {
+   "grace": 15.263166666666661,
+   "ben": 15.900166666666673,
+   "diane": 7.000000000000001
+  },
+  "hours": 38.163333333333334,
+  "dollars": 2289.8
+ },
+ "fatigue": [
+  {
+   "from": 0,
+   "to": 15,
+   "n": 63,
+   "disagree": 4
+  },
+  {
+   "from": 15,
+   "to": 30,
+   "n": 122,
+   "disagree": 5
+  },
+  {
+   "from": 30,
+   "to": 45,
+   "n": 152,
+   "disagree": 6
+  },
+  {
+   "from": 45,
+   "to": 60,
+   "n": 3,
+   "disagree": 0
+  },
+  {
+   "from": 60,
+   "to": 1000000000.0,
+   "n": 22,
+   "disagree": 5
+  }
+ ],
+ "explain": {
+  "next_step": {
+   "pct": 0.9333333333333333,
+   "kappa": 0.6307692307692309,
+   "alpha": 0.6327160493827161,
+   "base": 0.9666666666666667,
+   "ci": [
+    0.20000000000000018,
+    0.9238578680203043
+   ]
+  },
+  "reason": {
+   "pct": 0.8166666666666667,
+   "kappa": 0.16243654822335027,
+   "alpha": 0.16888888888888887,
+   "base": 0.95,
+   "ci": [
+    -0.12903225806451588,
+    0.4696969696969695
+   ]
+  },
+  "approval_sentence": {
+   "pct": 1.0,
+   "kappa": 1.0,
+   "alpha": 1.0,
+   "base": 0.5833333333333334,
+   "ci": [
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "explain_hours": 4.2,
+ "drift": {
+  "ben 2027-07-12": {
+   "agree": 8,
+   "n": 8,
+   "rate": 1.0
+  },
+  "ben 2027-07-19": {
+   "agree": 8,
+   "n": 8,
+   "rate": 1.0
+  },
+  "ben 2027-07-26": {
+   "agree": 6,
+   "n": 8,
+   "rate": 0.75
+  },
+  "ben 2027-08-02": {
+   "agree": 8,
+   "n": 8,
+   "rate": 1.0
+  },
+  "grace 2027-07-12": {
+   "agree": 8,
+   "n": 8,
+   "rate": 1.0
+  },
+  "grace 2027-07-19": {
+   "agree": 8,
+   "n": 8,
+   "rate": 1.0
+  },
+  "grace 2027-07-26": {
+   "agree": 7,
+   "n": 8,
+   "rate": 0.875
+  },
+  "grace 2027-08-02": {
+   "agree": 8,
+   "n": 8,
+   "rate": 1.0
+  }
+ },
+ "fm07": {
+  "acct": 3057,
+  "fails": 158,
+  "date": 133,
+  "tp": 40,
+  "fn": 0,
+  "ub": 0.04870291331009749
+ },
+ "bound": {
+  "n": 299,
+  "b0": 0.009969146792899269,
+  "b1": 0.015766783127611372
+ },
+ "plan": {
+  "kick-off": 2.25,
+  "pilot labels": 4.0,
+  "session one labels": 9.0,
+  "remaining 140 labels": 10.5,
+  "re-reads after a revision": 0.0,
+  "explanation labels": 4.0,
+  "anchor re-reads": 1.5,
+  "guideline revision meetings": 2.0,
+  "adjudication and re-derivation": 3.5,
+  "acceptance memo review": 0.75,
+  "reserve": 2.5
+ },
+ "actual": {
+  "kick-off": 2.25,
+  "pilot labels": 4.309333333333333,
+  "session one labels": 9.223666666666666,
+  "remaining 140 labels": 11.039,
+  "re-reads after a revision": 3.758,
+  "explanation labels": 4.2,
+  "anchor re-reads": 1.7600000000000002,
+  "guideline revision meetings": 2.8333333333333335,
+  "adjudication and re-derivation": 4.0,
+  "acceptance memo review": 0.75,
+  "reserve": 0.0
+ },
+ "plan_total": 40.0,
+ "actual_total": 44.123333333333335
+}

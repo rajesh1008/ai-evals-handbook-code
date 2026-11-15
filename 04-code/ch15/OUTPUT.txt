@@ -1,50 +1,50 @@
-== Decision-step probe (REAL, claude-haiku-4-5-20251001, default sampling; this SDK takes no temperature argument): 1280 calls cached, 851,952 input / 61,343 output tokens
-  parser check, production prompt, rep 1: first-action-word parser 110/160 right; JSON parser 136/160 right; 926 of 1280 replies add reasoning after the JSON
+== Decision-step probe (REAL, claude-haiku-4-5-20251001, default sampling; this SDK takes no temperature argument): 1280 calls cached, 851,952 input / 57,983 output tokens
+  parser check, production prompt, rep 1: first-action-word parser 123/160 right; JSON parser 135/160 right; 852 of 1280 replies add reasoning after the JSON
   hardship-prompt-p7 (rep 1 / rep 2)
     employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
     self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
     self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
-    window_inside          decline_window    right 16/20 16/20  wrong {'draft_deferral': 4} | {'draft_deferral': 4}
+    window_inside          decline_window    right 15/20 16/20  wrong {'draft_deferral': 5} | {'draft_deferral': 4}
     anniversary            draft_deferral    right  0/20  0/20  wrong {'decline_window': 20} | {'decline_window': 20}
     three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
     no_income              ask_income        right 20/20 20/20  wrong {} | {}
     two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
-    rep 1: right 136/160; wrong offers 4 (4 after a payment extension); eligible borrowers not offered 20
+    rep 1: right 135/160; wrong offers 5 (5 after a payment extension); eligible borrowers not offered 20
     rep 2: right 136/160; wrong offers 4 (4 after a payment extension); eligible borrowers not offered 20
   rc-0913-1 (rep 1 / rep 2)
     employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
     self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
     self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
-    window_inside          decline_window    right  4/20  3/20  wrong {'draft_deferral': 16} | {'draft_deferral': 17}
-    anniversary            draft_deferral    right 18/20 16/20  wrong {'decline_window': 2} | {'decline_window': 4}
+    window_inside          decline_window    right  3/20  4/20  wrong {'draft_deferral': 16, 'refer_to_officer': 1} | {'draft_deferral': 16}
+    anniversary            draft_deferral    right 12/20 14/20  wrong {'decline_window': 8} | {'decline_window': 6}
     three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
     no_income              ask_income        right 20/20 20/20  wrong {} | {}
     two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
-    rep 1: right 142/160; wrong offers 16 (11 after a payment extension); eligible borrowers not offered 2
-    rep 2: right 139/160; wrong offers 17 (11 after a payment extension); eligible borrowers not offered 4
+    rep 1: right 135/160; wrong offers 16 (11 after a payment extension); eligible borrowers not offered 8
+    rep 2: right 138/160; wrong offers 16 (11 after a payment extension); eligible borrowers not offered 6
   rc-0915-2 (rep 1 / rep 2)
     employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
     self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
     self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
     window_inside          decline_window    right 13/20 14/20  wrong {'draft_deferral': 7} | {'draft_deferral': 6}
-    anniversary            draft_deferral    right  2/20  4/20  wrong {'decline_window': 18} | {'decline_window': 16}
+    anniversary            draft_deferral    right  4/20  4/20  wrong {'decline_window': 16} | {'decline_window': 16}
     three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
     no_income              ask_income        right 20/20 20/20  wrong {} | {}
     two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
-    rep 1: right 135/160; wrong offers 7 (6 after a payment extension); eligible borrowers not offered 18
+    rep 1: right 137/160; wrong offers 7 (6 after a payment extension); eligible borrowers not offered 16
     rep 2: right 138/160; wrong offers 6 (5 after a payment extension); eligible borrowers not offered 16
   rc-0917-3 (rep 1 / rep 2)
     employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
     self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
     self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
-    window_inside          decline_window    right 19/20 19/20  wrong {'draft_deferral': 1} | {'draft_deferral': 1}
+    window_inside          decline_window    right 19/20 18/20  wrong {'draft_deferral': 1} | {'draft_deferral': 2}
     anniversary            draft_deferral    right 20/20 20/20  wrong {} | {}
     three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
     no_income              ask_income        right 20/20 20/20  wrong {} | {}
     two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
     rep 1: right 159/160; wrong offers 1 (1 after a payment extension); eligible borrowers not offered 0
-    rep 2: right 159/160; wrong offers 1 (1 after a payment extension); eligible borrowers not offered 0
-  rep 1 and rep 2 chose the same action on 628 of 640 case-prompt pairs
+    rep 2: right 158/160; wrong offers 2 (2 after a payment extension); eligible borrowers not offered 0
+  rep 1 and rep 2 chose the same action on 624 of 640 case-prompt pairs
 
 == A. The flow: every hardship conversation, Mon 6 to Sun 19 September 2027 (SIMULATED)
   480 conversations, t-161626 to t-169472; required first action {'draft_deferral': 214, 'ask_income': 69, 'ask_which_loan': 56, 'refer_to_officer': 77, 'decline_window': 64}
@@ -126,11 +126,10 @@
   drop         decision accuracy  no threshold, no owner, no action
   drop         offer rate         no threshold, no action
   REAL probe (claude-haiku-4-5-20251001, 160 authored cases, two runs each; 1280 calls cached)
-  rc-0913-1: accuracy [136, 136] -> [142, 139] of 160; wrong offers [4, 4] -> [16, 17], stable new 10, one run only 1; refusals [20, 20] -> [2, 4] of 40, stable new 0; verdict HOLD ['offer']
-    one-run-only new wrong offers ['pr-076']; production's own flips between runs 4 ['pr-061', 'pr-075', 'pr-078', 'pr-080']
-  rc-0915-2: accuracy [136, 136] -> [135, 138] of 160; wrong offers [4, 4] -> [7, 6], stable new 5, one run only 1; refusals [20, 20] -> [18, 16] of 40, stable new 0; verdict HOLD ['offer']
-    one-run-only new wrong offers ['pr-079']; production's own flips between runs 4 ['pr-061', 'pr-075', 'pr-078', 'pr-080']
-  rc-0917-3: accuracy [136, 136] -> [159, 159] of 160; wrong offers [4, 4] -> [1, 1], stable new 0, one run only 0; refusals [20, 20] -> [0, 0] of 40, stable new 0; verdict SHIP []
+  rc-0913-1: accuracy [135, 136] -> [135, 138] of 160; wrong offers [5, 4] -> [16, 16], stable new 10, one run only 0; refusals [20, 20] -> [8, 6] of 40, stable new 0; verdict HOLD ['offer']
+  rc-0915-2: accuracy [135, 136] -> [137, 138] of 160; wrong offers [5, 4] -> [7, 6], stable new 3, one run only 1; refusals [20, 20] -> [16, 16] of 40, stable new 0; verdict HOLD ['offer']
+    one-run-only new wrong offers ['pr-065']; production's own flips between runs 3 ['pr-061', 'pr-078', 'pr-080']
+  rc-0917-3: accuracy [135, 136] -> [159, 158] of 160; wrong offers [5, 4] -> [1, 2], stable new 0, one run only 0; refusals [20, 20] -> [0, 0] of 40, stable new 0; verdict SHIP []
   an accuracy-only gate (ship if correct first actions rise over both runs): {'rc-0913-1': 'ship', 'rc-0915-2': 'ship', 'rc-0917-3': 'ship'}
 
 == F. What Victor asked: is the wrong-offer rate under 0.5%?
@@ -182,4 +181,4 @@ wrote out/lab.json
   0.10%: 947 offers; gold 29.9 weeks at 60 labels, 14.9 at 120; census 9.3 weeks, if its checks catch every kind of wrong offer
   0.20%: 1549 offers; gold 55.8 weeks at 60 labels, 27.9 at 120; census 15.3 weeks, if its checks catch every kind of wrong offer
   0.30%: 3138 offers; gold 124.3 weeks at 60 labels, 62.1 at 120; census 30.9 weeks, if its checks catch every kind of wrong offer
-7 passed in 0.83s
+7 passed in 1.16s

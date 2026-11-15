@@ -1,0 +1,114 @@
+{
+ "n": 160,
+ "victor": [
+  {
+   "field": "doc_type",
+   "n": 160,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.01663137551298423,
+   "pass": true
+  },
+  {
+   "field": "period_end",
+   "n": 160,
+   "errors": 1,
+   "rate": 0.00625,
+   "upper": 0.02752807760092114,
+   "pass": true
+  },
+  {
+   "field": "pay_frequency",
+   "n": 70,
+   "errors": 1,
+   "rate": 0.014285714285714285,
+   "upper": 0.06153360496397915,
+   "pass": false
+  },
+  {
+   "field": "gross_pay",
+   "n": 70,
+   "errors": 1,
+   "rate": 0.014285714285714285,
+   "upper": 0.06153360496397915,
+   "pass": false
+  },
+  {
+   "field": "payroll_total",
+   "n": 50,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.05134185323214945,
+   "pass": false
+  },
+  {
+   "field": "stated_monthly_income",
+   "n": 29,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.08534734328885439,
+   "pass": false
+  },
+  {
+   "field": "loan_last4",
+   "n": 40,
+   "errors": 1,
+   "rate": 0.025,
+   "upper": 0.10459923428186342,
+   "pass": false
+  },
+  {
+   "field": "hardship_reason",
+   "n": 40,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.0633640101133271,
+   "pass": false
+  }
+ ],
+ "errors": [
+  [
+   "hd-0214",
+   "en",
+   "photo",
+   "gross_pay",
+   4045.92,
+   4044.92
+  ],
+  [
+   "hd-0255",
+   "es",
+   "clean",
+   "period_end",
+   "2027-08-06",
+   "2027-06-08"
+  ],
+  [
+   "hd-0271",
+   "en",
+   "photo",
+   "pay_frequency",
+   "biweekly",
+   "weekly"
+  ],
+  [
+   "hd-0297",
+   "es",
+   "photo",
+   "loan_last4",
+   "7B23",
+   "7823"
+  ]
+ ],
+ "flips": [
+  "hd-0255",
+  "hd-0271",
+  "hd-0297"
+ ],
+ "all_right": 146,
+ "unparsed": [],
+ "tokens": [
+  137640,
+  56437
+ ]
+}

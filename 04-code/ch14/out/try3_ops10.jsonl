@@ -1,0 +1,83 @@
+{"trace_id": "t-141872", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Policy check order (G-03): (1) Which loan\u2014only", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-141902", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\nReason: Single loan (no ask_which_loan needed). Income provided ($3", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-141921", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\nReason: Payment deferral on loan 9171 ended 2026-08-", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-141988", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\n**Reason:** The payment deferral on loan 8281 ended 2026-", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-141995", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Account has 4 payments behind, which meets the threshold of three", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142315", "raw": "{\"action\": \"decline_window\", \"confidence\": 95}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142362", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: G-07 applies. The borrower states they are now self-", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142415", "raw": "{\"action\": \"ask_which_loan\", \"confidence\": 95}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142438", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142483", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower is self-employed (started own cleaning business), trigg", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142560", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 95}\n```\n\nReason: Single loan (no which_loan needed). Income provided ($3,800", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142561", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}\n\n**Reason:** Borrower is self-employed (driving for delivery app on own account), triggering mandatory", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142592", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\n**Reason:** Borrower has one loan (no ambiguity); stated monthly", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142706", "raw": "{\"action\": \"decline_window\", \"confidence\": 95}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142788", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\nReason: A payment extension on loan 7783 ended 2026-08-04", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-142895", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\n**Reason:** Check which loan (G-04): Only one loan on account,", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143134", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\n**Reason:** Payment extension on loan 7854 ended 2026-08-04", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143221", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower is now self-employed (started cleaning business), triggering", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143244", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\n**Reason:** G-03 policy order applied: (1) Which loan\u2014", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143274", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\n**Reason:** Relief history shows a payment extension on loan 9065 ended 2026", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143356", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 92}\n```\n\n**Reason:** The payment extension on loan 5346 ended 2026-08-", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143372", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Three payments behind on account triggers referral requirement per G-07, which", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143374", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nThe borrower states they \"started my own cleaning business,\" indicating self-employment. Per", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143509", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 92}\n```\n\nReason: G-07 requires referral when borrower is self-employed.", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143744", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}\n\n**Reason:** The borrower has 4 payments behind (G-07: refer when three or more", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-143772", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower states \"I started my own cleaning business,\" indicating self", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144000", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower states \"Ahora tengo mi propio negoc", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144016", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144067", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: G-07 applies\u2014the borrower was self-employed at orig", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144142", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower is self-employed (driving for delivery app on own),", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144157", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower is self-employed (started cleaning business), triggering", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144220", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\nReason: Single loan (no which_loan question needed). Income stated ($6,", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144384", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower states they now work self-employed (\"manejo para una", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144427", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}\n\n**Reason:** Borrower is 2 payments behind, which triggers the refer_to_officer rule", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144462", "raw": "{\"action\": \"decline_window\", \"confidence\": 95}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144647", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower states \"I'm driving for a delivery app full time", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144667", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 92}\n```\n\nReason: The borrower has one loan (auto ending 1348), no stated income but", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-144973", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-145091", "raw": "{\"action\": \"draft_deferral\", \"confidence\": 92}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-145113", "raw": "{\"action\": \"decline_window\", \"confidence\": 95}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-145129", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower is self-employed (started own cleaning business), trigg", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-145166", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower states previous self-employment (closed shop) with Schedule", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-145418", "raw": "```json\n{\"action\": \"ask_which_loan\", \"confidence\": 95}\n```\n\n**Reason:** Borrower has two auto loans (ending 4014 and", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-145462", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}\n\n**Reason:** G-07 applies\u2014the borrower states \"I started my own cleaning business,\" indicating", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-145737", "raw": "```json\n{\"action\": \"ask_which_loan\", \"confidence\": 95}\n```\n\n**Reason:** G-04 applies. The borrower has two auto loans (", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146024", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 95}\n```\n\n**Reason:** Borrower has one loan (no ask_which_loan needed", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146032", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower states they are self-employed (driving for delivery app on", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146162", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower states they are now self-employed (\"driving for a delivery", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146177", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Policy check order applied: (1) which_loan\u2014borrower references", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146328", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower is now self-employed (driving for delivery app on their", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146358", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower states \"I'm driving for a delivery app full time", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146360", "raw": "{\"action\": \"decline_window\", \"confidence\": 92}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146435", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower stated \"I started my own cleaning business,\" indicating self-", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146495", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\n**Reason:** Borrower has one loan (no ambiguity per G-", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146513", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: G-07 applies. Employment on file shows self-employed (Schedule", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146722", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower states \"I started my own cleaning business,\" indicating self", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146769", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower stated they \"started my own cleaning business,\" indicating self-", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-146850", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\n**Reason:** Borrower has one loan (ask_which_loan: not", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147093", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\nReason: A payment deferral on loan 7815 ended 2026-08", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147137", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower is currently self-employed (Schedule C on file at orig", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147289", "raw": "{\"action\": \"decline_window\", \"confidence\": 85}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147350", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\nReason: Only one loan exists (no ask_which_loan needed). Borrow", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147446", "raw": "{\"action\": \"draft_deferral\", \"confidence\": 92}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147554", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower states they are self-employed (driving for delivery app on", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147559", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\nReason: The payment deferral on loan 4575 ended 2026-08", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147735", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}\n\n**Reason:** G-07 requires referral when the borrower is self-employed. Although the borrow", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-147957", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower is self-employed (Schedule C on file at origination", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148162", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower states they are now self-employed (driving for a", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148253", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148276", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\n**Reason:** Payment deferral on loan 6541 ended 2026-08", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148417", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148425", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Borrower states they now have their own cleaning business (self-employed", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148472", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\n**Reason:** One loan only (no ask_which_loan needed). Income provided", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148485", "raw": "```json\n{\"action\": \"ask_which_loan\", \"confidence\": 95}\n```\n\nReason: The borrower has two auto loans (6941 and 1770", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148562", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\nReason: Relief (payment deferral) on loan 5862 ended 2026", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148578", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** Borrower is self-employed (delivery app driver on own account", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148589", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: Apply checks in order: (1) which_loan\u2014only one loan", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148798", "raw": "```json\n{\"action\": \"decline_window\", \"confidence\": 95}\n```\n\nReason: Relief (payment extension) on loan 8809 ended 2026-08", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148889", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\nReason: The borrower is self-employed on file (Schedule C at origination", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-148913", "raw": "{\"action\": \"refer_to_officer\", \"confidence\": 95}\n\n**Reason:** Borrower is self-employed (started own cleaning business), which triggers referral per G", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-149026", "raw": "```json\n{\"action\": \"ask_which_loan\", \"confidence\": 95}\n```\n\nReason: G-04 applies first in the policy order (G-03).", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-149091", "raw": "```json\n{\"action\": \"refer_to_officer\", \"confidence\": 95}\n```\n\n**Reason:** The borrower states they are now employed on payroll (\"trabajo en", "model": "claude-haiku-4-5-20251001"}
+{"trace_id": "t-149122", "raw": "```json\n{\"action\": \"draft_deferral\", \"confidence\": 92}\n```\n\n**Reason:** Borrower has one loan (no ask_which_loan needed", "model": "claude-haiku-4-5-20251001"}

@@ -3,8 +3,8 @@
 Three ways a lab that uses model replies can run:
 
 1. Offline (default). Cached REAL replies in out/ are replayed; no API is called and no key is needed.
-   If a chapter's cache is not in this repository the step prints a SKIP line that points to OUTPUT.txt,
-   which holds the recorded run the book quotes.
+   If a chapter's cache is missing from out/ (for example after you delete it to rerun) the step prints a
+   SKIP line that points to OUTPUT.txt, which holds the recorded run the book quotes.
 2. Live Anthropic (paid, explicit). Only when you pass `run` or `--live` (or set LABS_LIVE=1) and
    ANTHROPIC_API_KEY is in the environment. Nothing in the labs falls back to a paid call on its own.
 3. Local model (free, explicit). Any OpenAI-compatible chat-completions server, for example Ollama,
@@ -93,8 +93,8 @@ def banner(what: str) -> None:
 
 
 def skip(what: str, cache: str, rerun: str) -> None:
-    print(f"SKIP: {what} needs the cached REAL replies in {cache}, which are not in this repository "
-          f"(they could not be recovered). The recorded run the book quotes is in this chapter's OUTPUT.txt. "
+    print(f"SKIP: {what} needs the cached REAL replies in {cache}, which are missing "
+          f"from out/. The recorded run the book quotes is in this chapter's OUTPUT.txt. "
           f"To rerun this step: `{rerun}` with ANTHROPIC_API_KEY set (paid), or the same command with "
           f"LLM_BACKEND=local and a local model (see 04-code/LOCAL_MODEL.md); either way the numbers will "
           f"not be the book's.")

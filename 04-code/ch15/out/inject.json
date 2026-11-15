@@ -1,0 +1,164 @@
+{
+ "documented only": {
+  "n": 281,
+  "new_offer": [],
+  "verdict": "ship",
+  "acc": {
+   "base": [
+    269,
+    269
+   ],
+   "cand": [
+    269,
+    269
+   ],
+   "n": 281
+  }
+ },
+ "stratified (all gold)": {
+  "n": 654,
+  "new_offer": [
+   "ops-16-20-18",
+   "ops-16-20-28",
+   "ops-16-20-30",
+   "ops-2-6-23",
+   "ops-2-6-27",
+   "ops-23-27-11",
+   "ops-23-27-56",
+   "ops-30-38",
+   "ops-30-40",
+   "ops-9-13-03",
+   "ops-9-13-05",
+   "ops-9-13-12",
+   "ops-9-13-17",
+   "ops-9-13-33",
+   "t-011197",
+   "t-012667",
+   "t-023472",
+   "t-025095",
+   "t-031355",
+   "t-037436",
+   "t-044779",
+   "t-050568",
+   "t-061073",
+   "t-082606",
+   "t-086585",
+   "t-087028",
+   "t-107711",
+   "t-162262",
+   "t-162789",
+   "t-164953",
+   "t-165517"
+  ],
+  "verdict": "hold",
+  "acc": {
+   "base": [
+    632,
+    632
+   ],
+   "cand": [
+    604,
+    604
+   ],
+   "n": 654
+  }
+ },
+ "audit_doc": {
+  "verdict": "refuse",
+  "failing": [
+   "anniversary",
+   "disaster forbearance",
+   "no income document",
+   "no income stated",
+   "self-employed",
+   "self-employed (any route)",
+   "stated change of work"
+  ],
+  "rows": {
+   "anniversary": {
+    "gate_n": 6,
+    "gate_share": 0.021352313167259787,
+    "frame_n": 31,
+    "frame_share": 0.06458333333333334,
+    "ratio": 0.33061646194466765,
+    "pass": false,
+    "why": "6 cases, minimum 20; share 2.1% against 6.5% of traffic"
+   },
+   "disaster forbearance": {
+    "gate_n": 11,
+    "gate_share": 0.03914590747330961,
+    "frame_n": 38,
+    "frame_share": 0.07916666666666666,
+    "ratio": 0.4944746207154898,
+    "pass": false,
+    "why": "11 cases, minimum 20; share 3.9% against 7.9% of traffic"
+   },
+   "no income document": {
+    "gate_n": 0,
+    "gate_share": 0.0,
+    "frame_n": 254,
+    "frame_share": 0.5291666666666667,
+    "ratio": 0.0,
+    "pass": false,
+    "why": "0 cases, minimum 20; share 0.0% against 52.9% of traffic"
+   },
+   "no income stated": {
+    "gate_n": 0,
+    "gate_share": 0.0,
+    "frame_n": 69,
+    "frame_share": 0.14375,
+    "ratio": 0.0,
+    "pass": false,
+    "why": "0 cases, minimum 20; share 0.0% against 14.4% of traffic"
+   },
+   "self-employed": {
+    "gate_n": 2,
+    "gate_share": 0.0071174377224199285,
+    "frame_n": 19,
+    "frame_share": 0.03958333333333333,
+    "ratio": 0.17980895298745084,
+    "pass": false,
+    "why": "2 cases, minimum 20; share 0.7% against 4.0% of traffic"
+   },
+   "self-employed (any route)": {
+    "gate_n": 10,
+    "gate_share": 0.03558718861209965,
+    "frame_n": 101,
+    "frame_share": 0.21041666666666667,
+    "ratio": 0.1691272330079983,
+    "pass": false,
+    "why": "10 cases, minimum 20; share 3.6% against 21.0% of traffic"
+   },
+   "stated change of work": {
+    "gate_n": 3,
+    "gate_share": 0.010676156583629894,
+    "frame_n": 27,
+    "frame_share": 0.05625,
+    "ratio": 0.18979833926453143,
+    "pass": false,
+    "why": "3 cases, minimum 20; share 1.1% against 5.6% of traffic"
+   }
+  }
+ },
+ "audit_all": {
+  "verdict": "refuse",
+  "failing": [
+   "anniversary",
+   "stated change of work"
+  ]
+ },
+ "shares": {
+  "traffic": [
+   101,
+   480
+  ],
+  "gold": [
+   91,
+   654
+  ],
+  "documented": [
+   10,
+   281
+  ]
+ }
+}

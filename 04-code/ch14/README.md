@@ -14,7 +14,7 @@ claude-haiku-4-5-20251001 (default sampling; the installed SDK takes no temperat
 | `prelabel.py` | **REAL** | three samples per trace on weeks 1 and 2 (480 traces) under ops-1.1, Compass's reply hidden |
 | `lab.py` | simulated readers | qualification, five weeks of double reading, sessions, adjudication, audit, cost, designs, debt, selection study, automation bias |
 | `inject.py` | simulated readers | Daniel x Kevin matrix with and without the anniversary sentence |
-| `try_its.py` | mixed | (1) no triple reads; (2) targeted share; (3) **REAL** ops-1.0 pre-labels on 85 traces |
+| `try_its.py` | mixed | (1) no triple reads; (2) targeted share; (3) **REAL** ops-1.0 pre-labels on 83 traces (44 anniversary and 41 stated-work; two traces are in both) |
 | `app.py` | code | Streamlit annotation screen (`streamlit run app.py`, then `?annotator=marisol&week=1`) |
 | `test_app.py` | code | AppTest: the reply stays hidden until the label is saved, then the label locks |
 

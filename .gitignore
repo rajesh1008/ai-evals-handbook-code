@@ -24,3 +24,6 @@ venv/
 # These are never reference outputs.
 **/out/local/
 **/out/OUTPUT.offline.txt
+
+# SQLite stores the Chapter 13 lab rebuilds on every run
+04-code/ch13/out/*.db

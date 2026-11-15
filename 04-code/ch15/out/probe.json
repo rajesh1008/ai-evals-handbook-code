@@ -1,0 +1,480 @@
+{
+ "model": "claude-haiku-4-5-20251001",
+ "calls": 1280,
+ "in_tok": 851952,
+ "out_tok": 57983,
+ "naive": 123,
+ "fixed": 135,
+ "seg": {
+  "hardship-prompt-p7|employed_eligible": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "hardship-prompt-p7|self_employed_record": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "hardship-prompt-p7|self_employed_stated": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "hardship-prompt-p7|window_inside": [
+   [
+    15,
+    20,
+    {
+     "draft_deferral": 5
+    }
+   ],
+   [
+    16,
+    20,
+    {
+     "draft_deferral": 4
+    }
+   ]
+  ],
+  "hardship-prompt-p7|anniversary": [
+   [
+    0,
+    20,
+    {
+     "decline_window": 20
+    }
+   ],
+   [
+    0,
+    20,
+    {
+     "decline_window": 20
+    }
+   ]
+  ],
+  "hardship-prompt-p7|three_behind": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "hardship-prompt-p7|no_income": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "hardship-prompt-p7|two_loans_unnamed": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0913-1|employed_eligible": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0913-1|self_employed_record": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0913-1|self_employed_stated": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0913-1|window_inside": [
+   [
+    3,
+    20,
+    {
+     "draft_deferral": 16,
+     "refer_to_officer": 1
+    }
+   ],
+   [
+    4,
+    20,
+    {
+     "draft_deferral": 16
+    }
+   ]
+  ],
+  "rc-0913-1|anniversary": [
+   [
+    12,
+    20,
+    {
+     "decline_window": 8
+    }
+   ],
+   [
+    14,
+    20,
+    {
+     "decline_window": 6
+    }
+   ]
+  ],
+  "rc-0913-1|three_behind": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0913-1|no_income": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0913-1|two_loans_unnamed": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0915-2|employed_eligible": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0915-2|self_employed_record": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0915-2|self_employed_stated": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0915-2|window_inside": [
+   [
+    13,
+    20,
+    {
+     "draft_deferral": 7
+    }
+   ],
+   [
+    14,
+    20,
+    {
+     "draft_deferral": 6
+    }
+   ]
+  ],
+  "rc-0915-2|anniversary": [
+   [
+    4,
+    20,
+    {
+     "decline_window": 16
+    }
+   ],
+   [
+    4,
+    20,
+    {
+     "decline_window": 16
+    }
+   ]
+  ],
+  "rc-0915-2|three_behind": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0915-2|no_income": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0915-2|two_loans_unnamed": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0917-3|employed_eligible": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0917-3|self_employed_record": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0917-3|self_employed_stated": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0917-3|window_inside": [
+   [
+    19,
+    20,
+    {
+     "draft_deferral": 1
+    }
+   ],
+   [
+    18,
+    20,
+    {
+     "draft_deferral": 2
+    }
+   ]
+  ],
+  "rc-0917-3|anniversary": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0917-3|three_behind": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0917-3|no_income": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ],
+  "rc-0917-3|two_loans_unnamed": [
+   [
+    20,
+    20,
+    {}
+   ],
+   [
+    20,
+    20,
+    {}
+   ]
+  ]
+ },
+ "hardship-prompt-p7|1": {
+  "right": 135,
+  "n": 160,
+  "wrong_offers": 5,
+  "wrongful_refusals": 20,
+  "ext_offers": 5
+ },
+ "hardship-prompt-p7|2": {
+  "right": 136,
+  "n": 160,
+  "wrong_offers": 4,
+  "wrongful_refusals": 20,
+  "ext_offers": 4
+ },
+ "rc-0913-1|1": {
+  "right": 135,
+  "n": 160,
+  "wrong_offers": 16,
+  "wrongful_refusals": 8,
+  "ext_offers": 11
+ },
+ "rc-0913-1|2": {
+  "right": 138,
+  "n": 160,
+  "wrong_offers": 16,
+  "wrongful_refusals": 6,
+  "ext_offers": 11
+ },
+ "rc-0915-2|1": {
+  "right": 137,
+  "n": 160,
+  "wrong_offers": 7,
+  "wrongful_refusals": 16,
+  "ext_offers": 6
+ },
+ "rc-0915-2|2": {
+  "right": 138,
+  "n": 160,
+  "wrong_offers": 6,
+  "wrongful_refusals": 16,
+  "ext_offers": 5
+ },
+ "rc-0917-3|1": {
+  "right": 159,
+  "n": 160,
+  "wrong_offers": 1,
+  "wrongful_refusals": 0,
+  "ext_offers": 1
+ },
+ "rc-0917-3|2": {
+  "right": 158,
+  "n": 160,
+  "wrong_offers": 2,
+  "wrongful_refusals": 0,
+  "ext_offers": 2
+ },
+ "rep_agree": 624
+}

@@ -18,9 +18,8 @@ backend: any server that speaks the OpenAI chat-completions API, such as
 | 14 | `prelabel.py` (pre-labeller), the selection study and automation bias in `lab.py`, Try it 2 and 3 | `ch14/out/local/`, `ch14/out/local/OUTPUT.local.txt` |
 | 15 | `probe.py` (decision-step probe), the two-way gate in `lab.py`, Try it 2 | `ch15/out/local/` |
 
-Chapters 13, 14 and 15 are the ones whose original REAL replies are not in this repository, so a local
-(or a new live) run is the only way to exercise their model step; their recorded results are in each
-chapter's `OUTPUT.txt`. The other scripts that take a `run` or `--live` argument keep their
+The REAL replies of Chapters 13, 14 and 15 were re-recorded on 15 November 2026 and are cached in each
+chapter's `out/`; a local run writes only under `out/local/` and leaves them and `OUTPUT.txt` alone. The other scripts that take a `run` or `--live` argument keep their
 Anthropic-only live path.
 
 ## Setup

@@ -1,0 +1,7837 @@
+[
+ {
+  "trace_id": "t-059370",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "8615987bfba0"
+ },
+ {
+  "trace_id": "t-126740",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "81d756721842"
+ },
+ {
+  "trace_id": "t-031682",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "972a5df5f6af"
+ },
+ {
+  "trace_id": "t-054322",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7fd21de9aac0"
+ },
+ {
+  "trace_id": "t-025095",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5561ce547d60"
+ },
+ {
+  "trace_id": "t-019992",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6b9bdae14efd"
+ },
+ {
+  "trace_id": "t-059488",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "830d76d9e599"
+ },
+ {
+  "trace_id": "t-009475",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "457fdb053db6"
+ },
+ {
+  "trace_id": "t-035440",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "065eb09d6151"
+ },
+ {
+  "trace_id": "t-051529",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6fa45a8d2cbc"
+ },
+ {
+  "trace_id": "t-017005",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "915e0804d7bb"
+ },
+ {
+  "trace_id": "t-097078",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7842f1f648ed"
+ },
+ {
+  "trace_id": "t-080678",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e11459294f60"
+ },
+ {
+  "trace_id": "t-039711",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "ed50e9b0f137"
+ },
+ {
+  "trace_id": "t-033443",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "be36eaf66662"
+ },
+ {
+  "trace_id": "t-025433",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "39ba60466e25"
+ },
+ {
+  "trace_id": "t-131634",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "252419ef702d"
+ },
+ {
+  "trace_id": "t-026123",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "fact",
+  "adjudicator": "diane",
+  "rationale": "'the car loan' fits both loans; asking which loan is the required action",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "0ba5c26ab5e4"
+ },
+ {
+  "trace_id": "t-128744",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9e3cdd1c4513"
+ },
+ {
+  "trace_id": "t-080183",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / refer_to_officer); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6ff92177980b"
+ },
+ {
+  "trace_id": "t-038353",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "efd02f887535"
+ },
+ {
+  "trace_id": "t-062369",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "47afb1db2a8a"
+ },
+ {
+  "trace_id": "t-076419",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1e9ddc398399"
+ },
+ {
+  "trace_id": "t-003561",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "445b677b3259"
+ },
+ {
+  "trace_id": "t-029949",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d94a48b97c62"
+ },
+ {
+  "trace_id": "t-049004",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d34739ab87ba"
+ },
+ {
+  "trace_id": "t-123712",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "860d8b6f9cf3"
+ },
+ {
+  "trace_id": "t-105629",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "10595df4b88d"
+ },
+ {
+  "trace_id": "t-075216",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6af609fd7b7a"
+ },
+ {
+  "trace_id": "t-078032",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "14a078ef129d"
+ },
+ {
+  "trace_id": "t-127861",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d12d034779d4"
+ },
+ {
+  "trace_id": "t-008946",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9be1eafef86f"
+ },
+ {
+  "trace_id": "t-035252",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f45f31b59a56"
+ },
+ {
+  "trace_id": "t-012667",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b30aad49999e"
+ },
+ {
+  "trace_id": "t-076714",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3aca3b636a80"
+ },
+ {
+  "trace_id": "t-033839",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e3b563438327"
+ },
+ {
+  "trace_id": "t-125052",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "97a986ed1e1b"
+ },
+ {
+  "trace_id": "t-027444",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-06",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "eeeb1ca7ccde"
+ },
+ {
+  "trace_id": "t-057753",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "95e6227aa8f9"
+ },
+ {
+  "trace_id": "t-014200",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6ce59416480b"
+ },
+ {
+  "trace_id": "t-099530",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "ad4568b24b6b"
+ },
+ {
+  "trace_id": "t-077189",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9c6e9eb73157"
+ },
+ {
+  "trace_id": "t-044167",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "996f98a4634a"
+ },
+ {
+  "trace_id": "t-060440",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "475b1bc2c401"
+ },
+ {
+  "trace_id": "t-130892",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e154964b0296"
+ },
+ {
+  "trace_id": "t-038103",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9528b27fc0f6"
+ },
+ {
+  "trace_id": "t-087528",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "policy",
+  "adjudicator": "diane",
+  "rationale": "both readers treat a disaster forbearance as outside the window; HP-2027-04 \u00a74.3 does not say so; re-derived: disaster forbearance is outside the \u00a74.3 window",
+  "guideline": "r2",
+  "policy": "HP-2027-04 + HB-2027-07",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "Victor Lane",
+  "ruling_id": "HB-2027-07",
+  "audit": "policy code says decline_window",
+  "history": [
+   {
+    "gold": null,
+    "policy": "HP-2027-04",
+    "decided_on": "2027-07-07",
+    "digest": "990359232498"
+   }
+  ],
+  "digest": "34712b5bbd29"
+ },
+ {
+  "trace_id": "t-025233",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "bbc509a686b8"
+ },
+ {
+  "trace_id": "t-010043",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7a5a60b379f3"
+ },
+ {
+  "trace_id": "t-005271",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5ad8b5195c3e"
+ },
+ {
+  "trace_id": "t-082175",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "both readers slipped; the trace and the guideline settle it",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "policy code says ask_which_loan",
+  "history": [],
+  "digest": "fe8cadc85adf"
+ },
+ {
+  "trace_id": "t-016994",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d58f8743677f"
+ },
+ {
+  "trace_id": "t-107660",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "cannot_tell",
+  "kind": "fact",
+  "adjudicator": "diane",
+  "rationale": "the trace does not show the relief end date",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "cannot_tell",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "bdb26a6bdad5"
+ },
+ {
+  "trace_id": "t-090018",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "058a4c050739"
+ },
+ {
+  "trace_id": "t-050568",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "26393b26e28c"
+ },
+ {
+  "trace_id": "t-080448",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "55df3604da27"
+ },
+ {
+  "trace_id": "t-069253",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9ac860228624"
+ },
+ {
+  "trace_id": "t-129078",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "88cd3d18c105"
+ },
+ {
+  "trace_id": "t-132194",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "de3fbb0ca311"
+ },
+ {
+  "trace_id": "t-035764",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6bde59cc5df7"
+ },
+ {
+  "trace_id": "t-046659",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "2e156a6367c5"
+ },
+ {
+  "trace_id": "t-027903",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a080c2b91937"
+ },
+ {
+  "trace_id": "t-001778",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "47c51b750ed7"
+ },
+ {
+  "trace_id": "t-124873",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "fd62d58a53a3"
+ },
+ {
+  "trace_id": "t-065041",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / refer_to_officer); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "759ce7d9dd0b"
+ },
+ {
+  "trace_id": "t-003700",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "67e80b948a79"
+ },
+ {
+  "trace_id": "t-062589",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "85b8d60ec43c"
+ },
+ {
+  "trace_id": "t-056176",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9dd3db1a14da"
+ },
+ {
+  "trace_id": "t-131858",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "80cb2ce3b7d6"
+ },
+ {
+  "trace_id": "t-074798",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "2a799a0bc9dd"
+ },
+ {
+  "trace_id": "t-079958",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e46328cede5b"
+ },
+ {
+  "trace_id": "t-106961",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a9d4596951da"
+ },
+ {
+  "trace_id": "t-044779",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "cced6c2c8f26"
+ },
+ {
+  "trace_id": "t-070509",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-07",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "631cfbd267c6"
+ },
+ {
+  "trace_id": "t-025873",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1762c938d7b6"
+ },
+ {
+  "trace_id": "t-067261",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1d9e5064bd98"
+ },
+ {
+  "trace_id": "t-065966",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "4f2befd8c2ea"
+ },
+ {
+  "trace_id": "t-102831",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5de547db5b5c"
+ },
+ {
+  "trace_id": "t-131086",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3e95155aad86"
+ },
+ {
+  "trace_id": "t-022482",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "14780a1c129a"
+ },
+ {
+  "trace_id": "t-056135",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d5b11096e9fe"
+ },
+ {
+  "trace_id": "t-102787",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f505812ce57c"
+ },
+ {
+  "trace_id": "t-105251",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "64f2a3d23890"
+ },
+ {
+  "trace_id": "t-017588",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6c50bc2f1e7e"
+ },
+ {
+  "trace_id": "t-085438",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5f5a56bd7009"
+ },
+ {
+  "trace_id": "t-037436",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "858cc07fa514"
+ },
+ {
+  "trace_id": "t-024052",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d6bc4fb887a4"
+ },
+ {
+  "trace_id": "t-049843",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d6c726b8a5ec"
+ },
+ {
+  "trace_id": "t-000696",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9f1d5a8985cf"
+ },
+ {
+  "trace_id": "t-010303",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a88b932575ad"
+ },
+ {
+  "trace_id": "t-071667",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "02cb1349dcb5"
+ },
+ {
+  "trace_id": "t-036266",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "ff33abeb205f"
+ },
+ {
+  "trace_id": "t-128029",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9a20c005ff6a"
+ },
+ {
+  "trace_id": "t-044250",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / refer_to_officer",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "492c7d53c1de"
+ },
+ {
+  "trace_id": "t-097974",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "45e9b10f0f85"
+ },
+ {
+  "trace_id": "t-053227",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a49da0b3ebeb"
+ },
+ {
+  "trace_id": "t-096217",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e0ab09a6d5b5"
+ },
+ {
+  "trace_id": "t-066316",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "39900a9e8a21"
+ },
+ {
+  "trace_id": "t-129313",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1beb19877a2c"
+ },
+ {
+  "trace_id": "t-125444",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "abb06ffc0041"
+ },
+ {
+  "trace_id": "t-011197",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "fbab1c53e3e1"
+ },
+ {
+  "trace_id": "t-075029",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / refer_to_officer); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a7a57636468f"
+ },
+ {
+  "trace_id": "t-124618",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "0b6809b0370a"
+ },
+ {
+  "trace_id": "t-099883",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "2291829ca38c"
+ },
+ {
+  "trace_id": "t-042630",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "fe7234dfebf0"
+ },
+ {
+  "trace_id": "t-012874",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6f84919a786b"
+ },
+ {
+  "trace_id": "t-128360",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "policy",
+  "adjudicator": "diane",
+  "rationale": "both readers treat a disaster forbearance as outside the window; HP-2027-04 \u00a74.3 does not say so; re-derived: disaster forbearance is outside the \u00a74.3 window",
+  "guideline": "r2",
+  "policy": "HP-2027-04 + HB-2027-07",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "Victor Lane",
+  "ruling_id": "HB-2027-07",
+  "audit": "policy code says decline_window",
+  "history": [
+   {
+    "gold": null,
+    "policy": "HP-2027-04",
+    "decided_on": "2027-07-08",
+    "digest": "af89bf153cb7"
+   }
+  ],
+  "digest": "ba43ff7d7378"
+ },
+ {
+  "trace_id": "t-028768",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "policy",
+  "adjudicator": "diane",
+  "rationale": "both readers treat a disaster forbearance as outside the window; HP-2027-04 \u00a74.3 does not say so; re-derived: disaster forbearance is outside the \u00a74.3 window",
+  "guideline": "r2",
+  "policy": "HP-2027-04 + HB-2027-07",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "Victor Lane",
+  "ruling_id": "HB-2027-07",
+  "audit": "policy code says decline_window",
+  "history": [
+   {
+    "gold": null,
+    "policy": "HP-2027-04",
+    "decided_on": "2027-07-08",
+    "digest": "f21e4d79cdb9"
+   }
+  ],
+  "digest": "0f4fb2514f68"
+ },
+ {
+  "trace_id": "t-060624",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "2218d5b63278"
+ },
+ {
+  "trace_id": "t-035847",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "8cb4e42eb32e"
+ },
+ {
+  "trace_id": "t-008106",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "727f3596aada"
+ },
+ {
+  "trace_id": "t-100647",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r2 (decline_window / refer_to_officer); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f09bfbb11c80"
+ },
+ {
+  "trace_id": "t-046942",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-08",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "272c1a0b3c3f"
+ },
+ {
+  "trace_id": "t-048715",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-09",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "28762901ef6a"
+ },
+ {
+  "trace_id": "t-082015",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "22b290e099e3"
+ },
+ {
+  "trace_id": "t-043819",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-09",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7cb178441aa2"
+ },
+ {
+  "trace_id": "t-087028",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-09",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e47a6c9309af"
+ },
+ {
+  "trace_id": "t-082606",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-09",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "296d9fe3a3a2"
+ },
+ {
+  "trace_id": "t-082340",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r2",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-09",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "43e97a9abebb"
+ },
+ {
+  "trace_id": "t-012313",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-22",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3b90171ee553"
+ },
+ {
+  "trace_id": "t-035478",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b17c0c6105e9"
+ },
+ {
+  "trace_id": "t-099777",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f4d1b1f7734a"
+ },
+ {
+  "trace_id": "t-021498",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a57d0454a2e2"
+ },
+ {
+  "trace_id": "t-024323",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "99b5ed675d48"
+ },
+ {
+  "trace_id": "t-042269",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d50c23b2e411"
+ },
+ {
+  "trace_id": "t-054891",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b7020203fbed"
+ },
+ {
+  "trace_id": "t-031355",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "c745818f6cbe"
+ },
+ {
+  "trace_id": "t-033060",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b8dde5304350"
+ },
+ {
+  "trace_id": "t-033385",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "879f722f2816"
+ },
+ {
+  "trace_id": "t-077082",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "db39ed5f43d0"
+ },
+ {
+  "trace_id": "t-063102",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "0da8ca8909e0"
+ },
+ {
+  "trace_id": "t-125580",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "ef561cef61dd"
+ },
+ {
+  "trace_id": "t-040996",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "670b525e8079"
+ },
+ {
+  "trace_id": "t-015861",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "131bc0b5c5e5"
+ },
+ {
+  "trace_id": "t-130143",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "8ce76775b001"
+ },
+ {
+  "trace_id": "t-030126",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3ff49a0720f5"
+ },
+ {
+  "trace_id": "t-028522",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d9d5e4b96250"
+ },
+ {
+  "trace_id": "t-025088",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "722618d88621"
+ },
+ {
+  "trace_id": "t-079528",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "adde8fb9ab3e"
+ },
+ {
+  "trace_id": "t-004627",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "cd05d7e62628"
+ },
+ {
+  "trace_id": "t-061105",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "122121d5f0d9"
+ },
+ {
+  "trace_id": "t-050603",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "99eb9805bcba"
+ },
+ {
+  "trace_id": "t-053917",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1de8625574fa"
+ },
+ {
+  "trace_id": "t-043538",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "8c52baa79fbd"
+ },
+ {
+  "trace_id": "t-064347",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "71e901c8fb44"
+ },
+ {
+  "trace_id": "t-065902",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "c611c7878b2c"
+ },
+ {
+  "trace_id": "t-040925",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5b8ae1be3533"
+ },
+ {
+  "trace_id": "t-063225",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "26bffe211831"
+ },
+ {
+  "trace_id": "t-023241",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1631bc123464"
+ },
+ {
+  "trace_id": "t-043308",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9659b6482f1e"
+ },
+ {
+  "trace_id": "t-023472",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d4ac37772a4d"
+ },
+ {
+  "trace_id": "t-011901",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b05ab7003141"
+ },
+ {
+  "trace_id": "t-018185",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5460e3b37331"
+ },
+ {
+  "trace_id": "t-107711",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3daabe813008"
+ },
+ {
+  "trace_id": "t-086709",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9c343762397f"
+ },
+ {
+  "trace_id": "t-032955",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-13",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "ae7eaf1d3f06"
+ },
+ {
+  "trace_id": "t-043909",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "074151f3591c"
+ },
+ {
+  "trace_id": "t-092299",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "714557038d96"
+ },
+ {
+  "trace_id": "t-008768",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f51e60047a97"
+ },
+ {
+  "trace_id": "t-091779",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "147fc5d47190"
+ },
+ {
+  "trace_id": "t-126306",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "cbed89d68347"
+ },
+ {
+  "trace_id": "t-126514",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "85dcd4271696"
+ },
+ {
+  "trace_id": "t-086585",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3e75d3b911a0"
+ },
+ {
+  "trace_id": "t-013430",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a3da30ef4518"
+ },
+ {
+  "trace_id": "t-092980",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "72d556afd21c"
+ },
+ {
+  "trace_id": "t-129781",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7f82913f01f2"
+ },
+ {
+  "trace_id": "t-052169",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3a2d8b5e2743"
+ },
+ {
+  "trace_id": "t-011809",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "c651e2c70d63"
+ },
+ {
+  "trace_id": "t-001822",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "22567a86e9ac"
+ },
+ {
+  "trace_id": "t-041312",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a945d7018408"
+ },
+ {
+  "trace_id": "t-126063",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "656f39d4dbd7"
+ },
+ {
+  "trace_id": "t-045368",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6719b2623d3c"
+ },
+ {
+  "trace_id": "t-061362",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "23fa55c149ee"
+ },
+ {
+  "trace_id": "t-098475",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "55302ac28b2a"
+ },
+ {
+  "trace_id": "t-097824",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "355a306386ec"
+ },
+ {
+  "trace_id": "t-127338",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e8a68c37dd6f"
+ },
+ {
+  "trace_id": "t-049861",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3d6e9246c57a"
+ },
+ {
+  "trace_id": "t-023829",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "db3f1c9bd3af"
+ },
+ {
+  "trace_id": "t-069567",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "62e464995400"
+ },
+ {
+  "trace_id": "t-026000",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9d30343053f9"
+ },
+ {
+  "trace_id": "t-089796",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "8b3ea49d7879"
+ },
+ {
+  "trace_id": "t-083189",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d587c8426e48"
+ },
+ {
+  "trace_id": "t-011000",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "8c1582c2478a"
+ },
+ {
+  "trace_id": "t-023602",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "290498ee9daa"
+ },
+ {
+  "trace_id": "t-085645",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "4b7720e183de"
+ },
+ {
+  "trace_id": "t-001712",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "db62af5ef531"
+ },
+ {
+  "trace_id": "t-025504",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "ca8125d68392"
+ },
+ {
+  "trace_id": "t-001654",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "691e02b1ac50"
+ },
+ {
+  "trace_id": "t-123366",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "eb6be77f7402"
+ },
+ {
+  "trace_id": "t-052751",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-14",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "4a41efe4697b"
+ },
+ {
+  "trace_id": "t-018246",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1283b31262e7"
+ },
+ {
+  "trace_id": "t-031501",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "745654d5c37f"
+ },
+ {
+  "trace_id": "t-100873",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e00733382aa0"
+ },
+ {
+  "trace_id": "t-124338",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6a738e14e2bd"
+ },
+ {
+  "trace_id": "t-074451",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "50c13873bf15"
+ },
+ {
+  "trace_id": "t-103308",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "df1155eedaa6"
+ },
+ {
+  "trace_id": "t-011754",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9aa9d4427854"
+ },
+ {
+  "trace_id": "t-008941",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "bc985d4029c4"
+ },
+ {
+  "trace_id": "t-129472",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a16a58a5f007"
+ },
+ {
+  "trace_id": "t-033432",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "68337364123b"
+ },
+ {
+  "trace_id": "t-103725",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e27354c6a6a8"
+ },
+ {
+  "trace_id": "t-126970",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5e1bbf0f5403"
+ },
+ {
+  "trace_id": "t-060825",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7597b289b082"
+ },
+ {
+  "trace_id": "t-045581",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "fa2ae31a196f"
+ },
+ {
+  "trace_id": "t-028040",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5af63249c381"
+ },
+ {
+  "trace_id": "t-124167",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e403c51743e1"
+ },
+ {
+  "trace_id": "t-016342",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "bdf665f38fb7"
+ },
+ {
+  "trace_id": "t-069645",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "c047518596e4"
+ },
+ {
+  "trace_id": "t-033779",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "cd7483bb6cf4"
+ },
+ {
+  "trace_id": "t-054711",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b2b0571d678b"
+ },
+ {
+  "trace_id": "t-053994",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7b0d54e5bcf8"
+ },
+ {
+  "trace_id": "t-125942",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7b5e1780a3fe"
+ },
+ {
+  "trace_id": "t-093282",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5cd4b42c1ae7"
+ },
+ {
+  "trace_id": "t-068306",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "0022f394a8b1"
+ },
+ {
+  "trace_id": "t-039606",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "de4b90e245a9"
+ },
+ {
+  "trace_id": "t-052267",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3f509df52269"
+ },
+ {
+  "trace_id": "t-039767",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e6aa1686e705"
+ },
+ {
+  "trace_id": "t-065729",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9475d9504c2f"
+ },
+ {
+  "trace_id": "t-083839",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6b8b009064db"
+ },
+ {
+  "trace_id": "t-083788",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "fdac2062fb6c"
+ },
+ {
+  "trace_id": "t-073110",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9d2aec060f89"
+ },
+ {
+  "trace_id": "t-049993",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5b2ad2faaa0e"
+ },
+ {
+  "trace_id": "t-052301",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "555e46c50f34"
+ },
+ {
+  "trace_id": "t-061073",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "fefc66d30775"
+ },
+ {
+  "trace_id": "t-073805",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "32a84149c4bf"
+ },
+ {
+  "trace_id": "t-058192",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "c18f505ded3d"
+ },
+ {
+  "trace_id": "t-035565",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3d06792f4876"
+ },
+ {
+  "trace_id": "t-130754",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "da251c04ca83"
+ },
+ {
+  "trace_id": "t-085991",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d04db07c41f6"
+ },
+ {
+  "trace_id": "t-034060",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5c84d660756d"
+ },
+ {
+  "trace_id": "t-068833",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "34f7152f3915"
+ },
+ {
+  "trace_id": "t-030262",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e1bba22f0258"
+ },
+ {
+  "trace_id": "t-131387",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f33fe51a7eac"
+ },
+ {
+  "trace_id": "t-024180",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b7874cb4a2c8"
+ },
+ {
+  "trace_id": "t-103883",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "67c983ab0239"
+ },
+ {
+  "trace_id": "t-084855",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3e50d2038b4d"
+ },
+ {
+  "trace_id": "t-003718",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6573da12f1bb"
+ },
+ {
+  "trace_id": "t-101713",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "32d9fa638ee4"
+ },
+ {
+  "trace_id": "t-019127",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f9db472feaba"
+ },
+ {
+  "trace_id": "t-029562",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a67b5e9d2953"
+ },
+ {
+  "trace_id": "t-129919",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "704a77f79bf7"
+ },
+ {
+  "trace_id": "t-073496",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "eba014a20659"
+ },
+ {
+  "trace_id": "t-051032",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b9fe26284ef8"
+ },
+ {
+  "trace_id": "t-097905",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "14381658325a"
+ },
+ {
+  "trace_id": "t-099306",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3e9663916995"
+ },
+ {
+  "trace_id": "t-077059",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "34901072f448"
+ },
+ {
+  "trace_id": "t-016303",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "768a7dbd4da3"
+ },
+ {
+  "trace_id": "t-050322",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "66de33c1b4b7"
+ },
+ {
+  "trace_id": "t-018286",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d5505d7ff3c0"
+ },
+ {
+  "trace_id": "t-107251",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5ddb6aa4bd30"
+ },
+ {
+  "trace_id": "t-011327",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1868b0edb702"
+ },
+ {
+  "trace_id": "t-127496",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "14a9ecc77753"
+ },
+ {
+  "trace_id": "t-060924",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "cannot_tell"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "two readings of a guideline sentence under r3",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "deecba594dd8"
+ },
+ {
+  "trace_id": "t-128480",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "36742a642a2a"
+ },
+ {
+  "trace_id": "t-003324",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "18c8c0a30275"
+ },
+ {
+  "trace_id": "t-040670",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "aa57b0dd13e4"
+ },
+ {
+  "trace_id": "t-123207",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "9b76058f4607"
+ },
+ {
+  "trace_id": "t-025214",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5c5ca8af54be"
+ },
+ {
+  "trace_id": "t-091775",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6591e01d0866"
+ },
+ {
+  "trace_id": "t-009510",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-16",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b8f57b9560a8"
+ },
+ {
+  "trace_id": "t-017730",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "b6b979fefd90"
+ },
+ {
+  "trace_id": "t-006148",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (draft_deferral / ask_income); re-read under r3: draft_deferral / draft_deferral",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "2513fed2729c"
+ },
+ {
+  "trace_id": "t-087461",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (decline_window / ask_income); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "379bf98eb69a"
+ },
+ {
+  "trace_id": "t-055744",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "bb0b0a35ffc5"
+ },
+ {
+  "trace_id": "t-047376",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "38697f2969a2"
+ },
+ {
+  "trace_id": "t-085877",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3a687c4c4f14"
+ },
+ {
+  "trace_id": "t-022318",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (decline_window / ask_income); re-read under r3: refer_to_officer / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d90ca39bd3ce"
+ },
+ {
+  "trace_id": "t-087349",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "policy",
+  "adjudicator": "diane",
+  "rationale": "both readers treat a disaster forbearance as outside the window; HP-2027-04 \u00a74.3 does not say so; re-derived: disaster forbearance is outside the \u00a74.3 window",
+  "guideline": "r1",
+  "policy": "HP-2027-04 + HB-2027-07",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "Victor Lane",
+  "ruling_id": "HB-2027-07",
+  "audit": "policy code says decline_window",
+  "history": [
+   {
+    "gold": null,
+    "policy": "HP-2027-04",
+    "decided_on": "2027-06-30",
+    "digest": "852f26870462"
+   }
+  ],
+  "digest": "77c0242a5b30"
+ },
+ {
+  "trace_id": "t-015217",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e4d80b6e1dd4"
+ },
+ {
+  "trace_id": "t-022774",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f6d2330792a5"
+ },
+ {
+  "trace_id": "t-037382",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f6ba2d9958ad"
+ },
+ {
+  "trace_id": "t-107971",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "488bf7fafbd0"
+ },
+ {
+  "trace_id": "t-033406",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f545be3564be"
+ },
+ {
+  "trace_id": "t-080249",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "ask_which_loan"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "e8f80a9c227e"
+ },
+ {
+  "trace_id": "t-106971",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "fbb36e4f06bc"
+ },
+ {
+  "trace_id": "t-085922",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "d029a0a03308"
+ },
+ {
+  "trace_id": "t-086537",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "0a8a5b3e4cab"
+ },
+ {
+  "trace_id": "t-019749",
+  "labels": [
+   [
+    "A",
+    "ask_which_loan"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "ask_which_loan",
+  "kind": "fact",
+  "adjudicator": "diane",
+  "rationale": "'the car loan' fits both loans; asking which loan is the required action",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "dfee56c42a19"
+ },
+ {
+  "trace_id": "t-076444",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "0236d326bdb0"
+ },
+ {
+  "trace_id": "t-054686",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (refer_to_officer / ask_income); re-read under r3: refer_to_officer / refer_to_officer",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "a7b3af4d4c43"
+ },
+ {
+  "trace_id": "t-077420",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "policy",
+  "adjudicator": "diane",
+  "rationale": "both readers treat a disaster forbearance as outside the window; HP-2027-04 \u00a74.3 does not say so; re-derived: disaster forbearance is outside the \u00a74.3 window",
+  "guideline": "r1",
+  "policy": "HP-2027-04 + HB-2027-07",
+  "decided_on": "2027-07-15",
+  "status": "final",
+  "escalated_to": "Victor Lane",
+  "ruling_id": "HB-2027-07",
+  "audit": "policy code says decline_window",
+  "history": [
+   {
+    "gold": null,
+    "policy": "HP-2027-04",
+    "decided_on": "2027-06-30",
+    "digest": "23451953cb2e"
+   }
+  ],
+  "digest": "12437b3288b3"
+ },
+ {
+  "trace_id": "t-097288",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "0cdf257ae6e5"
+ },
+ {
+  "trace_id": "t-013447",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "014b7ca3e93f"
+ },
+ {
+  "trace_id": "t-026908",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "6130b234ba3f"
+ },
+ {
+  "trace_id": "t-079908",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (refer_to_officer / ask_income); re-read under r3: draft_deferral / draft_deferral",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "af6b7b43d85c"
+ },
+ {
+  "trace_id": "t-020515",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (decline_window / draft_deferral); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "80f9d0a970a3"
+ },
+ {
+  "trace_id": "t-001997",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (refer_to_officer / ask_income); re-read under r3: refer_to_officer / refer_to_officer",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "eebabf1f3a89"
+ },
+ {
+  "trace_id": "t-066453",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "8fd8263552cc"
+ },
+ {
+  "trace_id": "t-123848",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (draft_deferral / ask_income); re-read under r3: draft_deferral / draft_deferral",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "f4f981f01bb5"
+ },
+ {
+  "trace_id": "t-079565",
+  "labels": [
+   [
+    "A",
+    "refer_to_officer"
+   ],
+   [
+    "B",
+    "refer_to_officer"
+   ]
+  ],
+  "gold": "refer_to_officer",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "90b4a6ac16de"
+ },
+ {
+  "trace_id": "t-033024",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (draft_deferral / ask_income); re-read under r3: draft_deferral / draft_deferral",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "18e33b7f5d05"
+ },
+ {
+  "trace_id": "t-013269",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3d0a71fa3045"
+ },
+ {
+  "trace_id": "t-100178",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "slip",
+  "adjudicator": "diane",
+  "rationale": "one reader misread the trace",
+  "guideline": "r1",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-06-30",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "3435847b3513"
+ },
+ {
+  "trace_id": "t-093126",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "abe61f1ca612"
+ },
+ {
+  "trace_id": "t-026919",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (draft_deferral / ask_income); re-read under r3: draft_deferral / draft_deferral",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "24167b7d3b82"
+ },
+ {
+  "trace_id": "t-085702",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "1ef3cfddf80f"
+ },
+ {
+  "trace_id": "t-130502",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "guideline",
+  "adjudicator": "diane",
+  "rationale": "read two ways under r1 (decline_window / refer_to_officer); re-read under r3: decline_window / decline_window",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "7a0b33b02e74"
+ },
+ {
+  "trace_id": "t-096562",
+  "labels": [
+   [
+    "A",
+    "decline_window"
+   ],
+   [
+    "B",
+    "decline_window"
+   ]
+  ],
+  "gold": "decline_window",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "637c2c8c8b12"
+ },
+ {
+  "trace_id": "t-037862",
+  "labels": [
+   [
+    "A",
+    "draft_deferral"
+   ],
+   [
+    "B",
+    "draft_deferral"
+   ]
+  ],
+  "gold": "draft_deferral",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "71326f09ff6b"
+ },
+ {
+  "trace_id": "t-010431",
+  "labels": [
+   [
+    "A",
+    "ask_income"
+   ],
+   [
+    "B",
+    "ask_income"
+   ]
+  ],
+  "gold": "ask_income",
+  "kind": "agreed",
+  "adjudicator": "diane",
+  "rationale": "blind labels agree",
+  "guideline": "r3",
+  "policy": "HP-2027-04",
+  "decided_on": "2027-07-21",
+  "status": "final",
+  "escalated_to": "",
+  "ruling_id": "",
+  "audit": "",
+  "history": [],
+  "digest": "5bf0cc9b9854"
+ }
+]

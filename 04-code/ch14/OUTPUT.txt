@@ -3,8 +3,8 @@
 anniversary 98 stated work 110
 compass wrong 116
 ### pre-labeller (REAL, cached)
-REAL run, model claude-haiku-4-5-20251001: 1440 calls on 480 traces; tokens in 950,256, out 55,970; unparsed answers 0
-majority label right 362/480 (75.4%)
+REAL run, model claude-haiku-4-5-20251001: 1440 calls on 480 traces; tokens in 950,256, out 55,038; unparsed answers 0
+majority label right 364/480 (75.8%)
 ### lab
 == Qualification, Thu 5 Aug 2027 (40 cases from hardship-gold, ops-1.0) SIMULATED
    pass mark 34/40 (85%), set before the test; marisol 35/40, daniel 37/40, kevin 37/40
@@ -59,13 +59,13 @@ majority label right 362/480 (75.4%)
   marisol-daniel: window x draft cell 6 -> 6; kappa 0.764 -> 0.769
   final labels right weeks 2-5: 237 -> 233 of 236; anniversary finals wrong under injection 2/18
 == Selection study on 480 traces (REAL pre-labels; Compass failures from the fixture)
-   {"frame": 480, "failures": 51, "true_rate": 0.10625, "by_kind": {"anniversary (FM-20)": 25, "take-home income": 13, "unclear loan": 4, "other": 4, "stated work": 5}, "random": {"found_mean": 6.355, "found_p5": 3, "found_p95": 10, "hours": 8.301596266666667, "rate_mean": 0.10591666666666666, "rate_sd": 0.03793625867454805}, "uncertainty": {"found": 3, "hours": 8.685133333333335, "naive_rate": 0.05, "kinds": {"anniversary (FM-20)": 2, "take-home income": 1}, "rate": "refused: inclusion probability unknown: a targeted draw cannot give a rate"}, "failure": {"found": 13, "hours": 8.732000000000001, "naive_rate": 0.21666666666666667, "kinds": {"anniversary (FM-20)": 6, "take-home income": 5, "other": 1, "stated work": 1}, "rate": "refused: inclusion probability unknown: a targeted draw cannot give a rate", "found_mean": 16.133, "found_p5": 12, "found_p95": 20}, "read_all_flagged": {"n": 142, "found": 38, "hours": 20.581866666666667}, "mixed": {"found_mean": 8.69, "hours": 8.385396333333334, "ht_rate_mean": 0.10750758471237196, "ht_rate_sd": 0.03151935537111184}, "suspect_count": 142, "suspect_true_fail": 38, "missed_by_prelabel": {"n": 13, "kinds": {"anniversary (FM-20)": 9, "stated work": 4}}}
-  pre-labeller: {"majority_right": 362, "unanimous": 435, "unanimous_right": 339, "split": 45, "split_right": 23, "conf_values": {"95": 935, "92": 399, "85": 98, "45": 5, "75": 1, "78": 1, "98": 1}, "by_required": {"ask_which_loan": [53, 63], "ask_income": [38, 65], "decline_window": [19, 53], "refer_to_officer": [73, 74], "draft_deferral": [176, 219], "cannot_tell": [3, 6]}, "by_conf": {"90-94": [189, 240], "95": [162, 220], "<90": [11, 20]}, "anniversary": [20, 44], "stated work": [20, 41], "spanish": [51, 67]}
+   {"frame": 480, "failures": 51, "true_rate": 0.10625, "by_kind": {"anniversary (FM-20)": 25, "take-home income": 13, "unclear loan": 4, "other": 4, "stated work": 5}, "random": {"found_mean": 6.355, "found_p5": 3, "found_p95": 10, "hours": 8.301596266666667, "rate_mean": 0.10591666666666666, "rate_sd": 0.03793625867454805}, "uncertainty": {"found": 7, "hours": 8.621000000000002, "naive_rate": 0.11666666666666667, "kinds": {"anniversary (FM-20)": 5, "stated work": 2}, "rate": "refused: inclusion probability unknown: a targeted draw cannot give a rate"}, "failure": {"found": 14, "hours": 8.781333333333334, "naive_rate": 0.23333333333333334, "kinds": {"anniversary (FM-20)": 7, "take-home income": 4, "other": 3}, "rate": "refused: inclusion probability unknown: a targeted draw cannot give a rate", "found_mean": 16.86, "found_p5": 12, "found_p95": 21}, "read_all_flagged": {"n": 146, "found": 41, "hours": 21.250333333333337}, "mixed": {"found_mean": 8.839, "hours": 8.3938792, "ht_rate_mean": 0.10744423562548563, "ht_rate_sd": 0.0313312272335603}, "suspect_count": 146, "suspect_true_fail": 41, "missed_by_prelabel": {"n": 10, "kinds": {"anniversary (FM-20)": 8, "stated work": 2}}}
+  pre-labeller: {"majority_right": 364, "unanimous": 442, "unanimous_right": 347, "split": 38, "split_right": 17, "conf_values": {"85": 113, "92": 364, "95": 960, "94": 1, "0": 1, "15": 1}, "by_required": {"ask_which_loan": [51, 63], "ask_income": [36, 65], "decline_window": [16, 53], "refer_to_officer": [73, 74], "draft_deferral": [185, 219], "cannot_tell": [3, 6]}, "by_conf": {"90-94": [182, 236], "95": [170, 221], "<90": [12, 23]}, "anniversary": [20, 44], "stated work": [21, 41], "spanish": [51, 67]}
 == Automation bias, SIMULATED readers with REAL pre-label suggestions (p_wrong 0.07, p_right 0.6)
   blind: kappa 0.837, accuracy 93.8%, agreed but wrong 1 of 480; Compass failures hidden by an agreed label 0 of 51
   Compass reply shown: kappa 0.889, accuracy 95.4%, agreed but wrong 2 of 480; Compass failures hidden by an agreed label 1 of 51
-  pre-label shown: kappa 0.865, accuracy 94.4%, agreed but wrong 3 of 480; Compass failures hidden by an agreed label 0 of 51
-  sensitivity p_wrong 0.2: {'blind': (0.837, 1, 0), 'Compass reply shown': (0.877, 5, 4), 'pre-label shown': (0.812, 8, 1)}
+  pre-label shown: kappa 0.879, accuracy 94.9%, agreed but wrong 3 of 480; Compass failures hidden by an agreed label 0 of 51
+  sensitivity p_wrong 0.2: {'blind': (0.837, 1, 0), 'Compass reply shown': (0.877, 5, 4), 'pre-label shown': (0.819, 7, 0)}
 == Bootstrap 95% intervals, Marisol-Daniel kappa (2,000 resamples)
   weeks [1]: kappa 0.621, interval 0.40 to 0.80, n 30
   weeks [2]: kappa 0.562, interval 0.25 to 0.80, n 27
@@ -114,13 +114,13 @@ majority label right 362/480 (75.4%)
   triple share 0.0: week-one anniversary traces 7, surfaced as a disagreement 5, final label wrong 1; week-one reads 138
 == Try it 2
   targeted  0 of 60: failures found 6.4, rate estimate mean 0.106, sd 0.038 (true 0.106)
-  targeted 15 of 60: failures found 8.7, rate estimate mean 0.108, sd 0.032 (true 0.106)
-  targeted 30 of 60: failures found 11.0, rate estimate mean 0.108, sd 0.033 (true 0.106)
-  targeted 45 of 60: failures found 13.5, rate estimate mean 0.106, sd 0.041 (true 0.106)
+  targeted 15 of 60: failures found 8.8, rate estimate mean 0.107, sd 0.031 (true 0.106)
+  targeted 30 of 60: failures found 11.3, rate estimate mean 0.106, sd 0.031 (true 0.106)
+  targeted 45 of 60: failures found 14.0, rate estimate mean 0.107, sd 0.038 (true 0.106)
 == Try it 3
-  REAL claude-haiku-4-5-20251001, anniversary traces (n 44): right under ops-1.0 29, under ops-1.1 20 (sample 0 of the main run)
-  REAL claude-haiku-4-5-20251001, stated work traces (n 41): right under ops-1.0 14, under ops-1.1 21 (sample 0 of the main run)
+  REAL claude-haiku-4-5-20251001, anniversary traces (n 44): right under ops-1.0 25, under ops-1.1 22 (sample 0 of the main run)
+  REAL claude-haiku-4-5-20251001, stated work traces (n 41): right under ops-1.0 16, under ops-1.1 21 (sample 0 of the main run)
 ### annotation screen
-1 passed in 1.45s
+1 passed in 1.55s
 ### truss tests
-91 passed in 0.88s
+289 passed in 5.51s

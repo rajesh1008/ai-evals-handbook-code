@@ -1,0 +1,76 @@
+{
+ "t1": {
+  "10|0.5": [
+   "anniversary",
+   "stated change of work"
+  ],
+  "20|0.5": [
+   "anniversary",
+   "stated change of work"
+  ],
+  "30|0.5": [
+   "anniversary",
+   "stated change of work"
+  ],
+  "20|0.8": [
+   "anniversary",
+   "disaster forbearance",
+   "self-employed (any route)",
+   "stated change of work"
+  ],
+  "40|0.8": [
+   "anniversary",
+   "disaster forbearance",
+   "self-employed",
+   "self-employed (any route)",
+   "stated change of work",
+   "three or more behind"
+  ]
+ },
+ "t2": {
+  "rc-0913-1": {
+   "MC-01 only": "hold",
+   "MC-17 only": "ship",
+   "accuracy only": "ship",
+   "both": "hold"
+  },
+  "rc-0915-2": {
+   "MC-01 only": "hold",
+   "MC-17 only": "ship",
+   "accuracy only": "ship",
+   "both": "hold"
+  },
+  "rc-0917-3": {
+   "MC-01 only": "ship",
+   "MC-17 only": "ship",
+   "accuracy only": "ship",
+   "both": "ship"
+  }
+ },
+ "t3": {
+  "0.0005": {
+   "n": 598,
+   "gold_60": 14.863636363636365,
+   "gold_120": 7.4318181818181825,
+   "census": 5.891625615763547
+  },
+  "0.001": {
+   "n": 947,
+   "gold_60": 29.899604743083007,
+   "gold_120": 14.949802371541503,
+   "census": 9.330049261083744
+  },
+  "0.002": {
+   "n": 1549,
+   "gold_60": 55.835573122529645,
+   "gold_120": 27.917786561264823,
+   "census": 15.261083743842365
+  },
+  "0.003": {
+   "n": 3138,
+   "gold_60": 124.29446640316206,
+   "gold_120": 62.14723320158103,
+   "census": 30.91625615763547
+  }
+ }
+}

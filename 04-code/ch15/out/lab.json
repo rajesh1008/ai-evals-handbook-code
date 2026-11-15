@@ -1,0 +1,719 @@
+{
+ "truss": "0.47.0",
+ "A": {
+  "n": 480,
+  "first": "t-161626",
+  "last": "t-169472",
+  "required": {
+   "draft_deferral": 214,
+   "ask_income": 69,
+   "ask_which_loan": 56,
+   "refer_to_officer": 77,
+   "decline_window": 64
+  },
+  "prod": {
+   "draft_deferral": 203,
+   "ask_income": 69,
+   "ask_which_loan": 56,
+   "refer_to_officer": 70,
+   "decline_window": 82
+  },
+  "offers": 203,
+  "documented": 226,
+  "tool_errors": 22
+ },
+ "B": {
+  "gold": 654,
+  "sources": {
+   "hardship-gold v1.0 (Chapter 13)": 299,
+   "operational weeks (Chapter 14)": 295,
+   "week of 6 September": 60
+  },
+  "wrong_offers": 3,
+  "drafted": 253,
+  "wo_wilson": [
+   0.00404065983633348,
+   0.034277120460939225
+  ],
+  "wo_upper": 0.030360014435434436,
+  "eligible": 261,
+  "refusals": 11,
+  "wr_wilson": [
+   0.02369356581359752,
+   0.07388022923974757
+  ],
+  "other": 8,
+  "rows": [
+   [
+    "relief inside window",
+    "offer",
+    "FM-04",
+    "draft_deferral",
+    "decline_window"
+   ],
+   [
+    "relief inside window",
+    "offer",
+    "FM-04",
+    "draft_deferral",
+    "decline_window"
+   ],
+   [
+    "relief inside window",
+    "offer",
+    "FM-04",
+    "draft_deferral",
+    "decline_window"
+   ],
+   [
+    "eligible, plain",
+    "refusal",
+    "none",
+    "ask_which_loan",
+    "draft_deferral"
+   ],
+   [
+    "anniversary",
+    "refusal",
+    "FM-20",
+    "decline_window",
+    "draft_deferral"
+   ],
+   [
+    "eligible, plain",
+    "refusal",
+    "none",
+    "refer_to_officer",
+    "draft_deferral"
+   ],
+   [
+    "eligible, plain",
+    "refusal",
+    "none",
+    "refer_to_officer",
+    "draft_deferral"
+   ],
+   [
+    "anniversary",
+    "refusal",
+    "FM-20",
+    "decline_window",
+    "draft_deferral"
+   ],
+   [
+    "eligible, plain",
+    "refusal",
+    "none",
+    "ask_income",
+    "draft_deferral"
+   ],
+   [
+    "anniversary",
+    "refusal",
+    "FM-20",
+    "decline_window",
+    "draft_deferral"
+   ],
+   [
+    "anniversary",
+    "refusal",
+    "FM-20",
+    "decline_window",
+    "draft_deferral"
+   ],
+   [
+    "anniversary",
+    "refusal",
+    "FM-20",
+    "decline_window",
+    "draft_deferral"
+   ],
+   [
+    "anniversary",
+    "refusal",
+    "FM-20",
+    "decline_window",
+    "draft_deferral"
+   ],
+   [
+    "eligible, plain",
+    "refusal",
+    "FM-20",
+    "decline_window",
+    "draft_deferral"
+   ]
+  ],
+  "modes": {
+   "FM-04": 3,
+   "none": 4,
+   "FM-20": 7
+  },
+  "wo_by_seg": {
+   "relief inside window": 3
+  },
+  "wr_by_seg": {
+   "eligible, plain": 5,
+   "anniversary": 6
+  },
+  "wr_by_action": {
+   "ask_which_loan": 1,
+   "decline_window": 7,
+   "refer_to_officer": 2,
+   "ask_income": 1
+  },
+  "seg_n": {
+   "relief inside window": 119,
+   "no income stated": 114,
+   "self-employed": 38,
+   "two loans, unnamed": 70,
+   "eligible, plain": 247,
+   "three or more behind": 39,
+   "anniversary": 17,
+   "stated change of work": 10
+  }
+ },
+ "C": {
+  "census": {
+   "C-01": {
+    "v1.0": {
+     "pass": 21,
+     "fail": 1,
+     "cannot_tell": 0,
+     "not_applicable": 458
+    },
+    "v1.1": {
+     "pass": 21,
+     "fail": 1,
+     "cannot_tell": 0,
+     "not_applicable": 458
+    }
+   },
+   "C-02": {
+    "v1.0": {
+     "pass": 52,
+     "fail": 1,
+     "cannot_tell": 0,
+     "not_applicable": 427
+    },
+    "v1.1": {
+     "pass": 52,
+     "fail": 1,
+     "cannot_tell": 0,
+     "not_applicable": 427
+    }
+   },
+   "C-03": {
+    "v1.0": {
+     "pass": 273,
+     "fail": 12,
+     "cannot_tell": 1,
+     "not_applicable": 194
+    },
+    "v1.1": {
+     "pass": 263,
+     "fail": 22,
+     "cannot_tell": 1,
+     "not_applicable": 194
+    }
+   },
+   "C-04": {
+    "v1.0": {
+     "pass": 198,
+     "fail": 5,
+     "cannot_tell": 0,
+     "not_applicable": 277
+    },
+    "v1.1": {
+     "pass": 198,
+     "fail": 5,
+     "cannot_tell": 0,
+     "not_applicable": 277
+    }
+   },
+   "C-09": {
+    "v1.0": {
+     "pass": 201,
+     "fail": 2,
+     "cannot_tell": 0,
+     "not_applicable": 277
+    },
+    "v1.1": {
+     "pass": 201,
+     "fail": 2,
+     "cannot_tell": 0,
+     "not_applicable": 277
+    }
+   }
+  },
+  "ms": 2.4056430002019624,
+  "anniv": 31,
+  "anniv_declined": 18,
+  "c03_only_old": 8,
+  "c03_only_new": 18,
+  "old_pass": 18,
+  "new_fail": 18,
+  "truth_wo": 5,
+  "flag_wo": 3,
+  "pr_wo": [
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    5
+   ]
+  ],
+  "missed_wo": {
+   "stated change of work": 4
+  },
+  "truth_wr": 16,
+  "flag_wr": 21,
+  "pr_wr": [
+   [
+    14,
+    21
+   ],
+   [
+    14,
+    16
+   ]
+  ],
+  "missed_wr": {
+   "eligible, plain|ask_which_loan": 1,
+   "eligible, plain|refer_to_officer": 1
+  },
+  "wk_gold_wo": 0,
+  "wk_flag_wo": 0,
+  "wk_gold_wr": 3,
+  "wk_flag_wr": 4
+ },
+ "D": {
+  "segments": {
+   "Spanish": {
+    "gate_n": 114,
+    "gate_share": 0.1743119266055046,
+    "frame_n": 68,
+    "frame_share": 0.14166666666666666,
+    "ratio": 1.2304371289800324,
+    "pass": true,
+    "why": ""
+   },
+   "anniversary": {
+    "gate_n": 17,
+    "gate_share": 0.02599388379204893,
+    "frame_n": 31,
+    "frame_share": 0.06458333333333334,
+    "ratio": 0.402485942586564,
+    "pass": false,
+    "why": "17 cases, minimum 20; share 2.6% against 6.5% of traffic"
+   },
+   "disaster forbearance": {
+    "gate_n": 32,
+    "gate_share": 0.04892966360856269,
+    "frame_n": 38,
+    "frame_share": 0.07916666666666666,
+    "ratio": 0.6180589087397393,
+    "pass": true,
+    "why": ""
+   },
+   "eligible, plain": {
+    "gate_n": 246,
+    "gate_share": 0.3761467889908257,
+    "frame_n": 194,
+    "frame_share": 0.4041666666666667,
+    "ratio": 0.9306724676061667,
+    "pass": true,
+    "why": ""
+   },
+   "no income stated": {
+    "gate_n": 114,
+    "gate_share": 0.1743119266055046,
+    "frame_n": 69,
+    "frame_share": 0.14375,
+    "ratio": 1.2126047068209016,
+    "pass": true,
+    "why": ""
+   },
+   "prior payment extension": {
+    "gate_n": 104,
+    "gate_share": 0.15902140672782875,
+    "frame_n": 80,
+    "frame_share": 0.16666666666666666,
+    "ratio": 0.9541284403669725,
+    "pass": true,
+    "why": ""
+   },
+   "relief inside window": {
+    "gate_n": 119,
+    "gate_share": 0.1819571865443425,
+    "frame_n": 64,
+    "frame_share": 0.13333333333333333,
+    "ratio": 1.364678899082569,
+    "pass": true,
+    "why": ""
+   },
+   "self-employed": {
+    "gate_n": 38,
+    "gate_share": 0.0581039755351682,
+    "frame_n": 19,
+    "frame_share": 0.03958333333333333,
+    "ratio": 1.4678899082568808,
+    "pass": true,
+    "why": ""
+   },
+   "self-employed (any route)": {
+    "gate_n": 91,
+    "gate_share": 0.13914373088685014,
+    "frame_n": 101,
+    "frame_share": 0.21041666666666667,
+    "ratio": 0.6612771368880007,
+    "pass": true,
+    "why": ""
+   },
+   "stated change of work": {
+    "gate_n": 10,
+    "gate_share": 0.01529051987767584,
+    "frame_n": 27,
+    "frame_share": 0.05625,
+    "ratio": 0.27183146449201495,
+    "pass": false,
+    "why": "10 cases, minimum 20; share 1.5% against 5.6% of traffic"
+   },
+   "three or more behind": {
+    "gate_n": 39,
+    "gate_share": 0.05963302752293578,
+    "frame_n": 20,
+    "frame_share": 0.041666666666666664,
+    "ratio": 1.4311926605504588,
+    "pass": true,
+    "why": ""
+   },
+   "two loans, unnamed": {
+    "gate_n": 71,
+    "gate_share": 0.10856269113149847,
+    "frame_n": 56,
+    "frame_share": 0.11666666666666667,
+    "ratio": 0.9305373525557011,
+    "pass": true,
+    "why": ""
+   }
+  },
+  "verdict": "refuse",
+  "failing": [
+   "anniversary",
+   "stated change of work"
+  ]
+ },
+ "E_table": {
+  "kept": [
+   {
+    "metric": "MC-01",
+    "question": "offer drafted where policy requires another first action",
+    "threshold": "any stable new failure on replay; rate reported to Victor with its bound",
+    "owner": "Grace Holloway",
+    "action": "hold the release; Grace reads every new failure",
+    "tier": "gate"
+   },
+   {
+    "metric": "MC-17",
+    "question": "eligible borrower not offered (any other first action)",
+    "threshold": "any stable new failure on replay",
+    "owner": "Grace Holloway",
+    "action": "hold the release; Grace reads every new failure",
+    "tier": "gate"
+   },
+   {
+    "metric": "C-01..C-04",
+    "question": "layer-one checks on every hardship replay case",
+    "threshold": "any failure",
+    "owner": "Ryan Mitchell",
+    "action": "block the build",
+    "tier": "gate"
+   },
+   {
+    "metric": "MC-03",
+    "question": "offer drafted before income (FM-01)",
+    "threshold": "weekly rate above 1%",
+    "owner": "Grace Holloway",
+    "action": "read the week's offers",
+    "tier": "monitor"
+   },
+   {
+    "metric": "MC-11",
+    "question": "request for a person ignored (FM-14)",
+    "threshold": "weekly count above 3",
+    "owner": "Grace Holloway",
+    "action": "read and route",
+    "tier": "monitor"
+   },
+   {
+    "metric": "MC-13",
+    "question": "Spanish hand-off not recognised (FM-16)",
+    "threshold": "any in a week",
+    "owner": "Ryan Mitchell",
+    "action": "fix the router tag",
+    "tier": "monitor"
+   },
+   {
+    "metric": "MC-18",
+    "question": "bereavement treated as ordinary hardship (FM-21)",
+    "threshold": "any in a week",
+    "owner": "Grace Holloway",
+    "action": "call the borrower within a day",
+    "tier": "monitor"
+   },
+   {
+    "metric": "S-02",
+    "question": "self-serve rate on hardship (context only)",
+    "threshold": "",
+    "owner": "Rachel Foster",
+    "action": "",
+    "tier": "inform"
+   }
+  ],
+  "dropped": [
+   [
+    {
+     "metric": "decision accuracy",
+     "question": "share of first actions matching gold",
+     "threshold": "",
+     "owner": "",
+     "action": "",
+     "tier": "monitor"
+    },
+    "no threshold, no owner, no action"
+   ],
+   [
+    {
+     "metric": "offer rate",
+     "question": "share of hardship conversations with an offer drafted",
+     "threshold": "",
+     "owner": "Rachel Foster",
+     "action": "",
+     "tier": "monitor"
+    },
+    "no threshold, no action"
+   ]
+  ]
+ },
+ "E_gate": {
+  "rc-0913-1": {
+   "offer": {
+    "new": [
+     "pr-063",
+     "pr-065",
+     "pr-066",
+     "pr-067",
+     "pr-068",
+     "pr-072",
+     "pr-073",
+     "pr-074",
+     "pr-075",
+     "pr-079"
+    ],
+    "single_run": [],
+    "production_flips": [
+     "pr-061",
+     "pr-078",
+     "pr-080"
+    ],
+    "n": 160,
+    "base": [
+     5,
+     4
+    ],
+    "cand": [
+     16,
+     16
+    ]
+   },
+   "refusal": {
+    "new": [],
+    "single_run": [],
+    "production_flips": [],
+    "n": 40,
+    "base": [
+     20,
+     20
+    ],
+    "cand": [
+     8,
+     6
+    ]
+   },
+   "accuracy": {
+    "base": [
+     135,
+     136
+    ],
+    "cand": [
+     135,
+     138
+    ],
+    "n": 160
+   },
+   "verdict": "hold",
+   "holds_on": [
+    "offer"
+   ]
+  },
+  "rc-0915-2": {
+   "offer": {
+    "new": [
+     "pr-063",
+     "pr-072",
+     "pr-079"
+    ],
+    "single_run": [
+     "pr-065"
+    ],
+    "production_flips": [
+     "pr-061",
+     "pr-078",
+     "pr-080"
+    ],
+    "n": 160,
+    "base": [
+     5,
+     4
+    ],
+    "cand": [
+     7,
+     6
+    ]
+   },
+   "refusal": {
+    "new": [],
+    "single_run": [],
+    "production_flips": [],
+    "n": 40,
+    "base": [
+     20,
+     20
+    ],
+    "cand": [
+     16,
+     16
+    ]
+   },
+   "accuracy": {
+    "base": [
+     135,
+     136
+    ],
+    "cand": [
+     137,
+     138
+    ],
+    "n": 160
+   },
+   "verdict": "hold",
+   "holds_on": [
+    "offer"
+   ]
+  },
+  "rc-0917-3": {
+   "offer": {
+    "new": [],
+    "single_run": [],
+    "production_flips": [
+     "pr-061",
+     "pr-078",
+     "pr-080"
+    ],
+    "n": 160,
+    "base": [
+     5,
+     4
+    ],
+    "cand": [
+     1,
+     2
+    ]
+   },
+   "refusal": {
+    "new": [],
+    "single_run": [],
+    "production_flips": [],
+    "n": 40,
+    "base": [
+     20,
+     20
+    ],
+    "cand": [
+     0,
+     0
+    ]
+   },
+   "accuracy": {
+    "base": [
+     135,
+     136
+    ],
+    "cand": [
+     159,
+     158
+    ],
+    "n": 160
+   },
+   "verdict": "ship",
+   "holds_on": []
+  }
+ },
+ "E_acc_only": {
+  "rc-0913-1": "ship",
+  "rc-0915-2": "ship",
+  "rc-0917-3": "ship"
+ },
+ "F": {
+  "rc": {
+   "rate": 0.011857707509881422,
+   "wilson": [
+    0.00404065983633348,
+    0.034277120460939225
+   ],
+   "upper": 0.030360014435434436,
+   "target": 0.005,
+   "reachable_by_sampling": false,
+   "shown": false
+  },
+  "needed": [
+   598,
+   947,
+   1258,
+   1549
+  ],
+  "need_at": {
+   "0.001": [
+    947,
+    29.899604743083007,
+    9.330049261083744
+   ],
+   "0.002": [
+    1549,
+    55.835573122529645,
+    15.261083743842365
+   ],
+   "0.003": [
+    3138,
+    124.29446640316206,
+    30.91625615763547
+   ],
+   "0.004": [
+    13542,
+    572.5300395256917,
+    133.41871921182266
+   ],
+   "0.0119": [
+    null,
+    null,
+    null
+   ]
+  },
+  "p_zero": 0.04890241834020297,
+  "gold_wk": 23.211009174311926,
+  "census_wk": 101.5,
+  "drafted": 253
+ }
+}

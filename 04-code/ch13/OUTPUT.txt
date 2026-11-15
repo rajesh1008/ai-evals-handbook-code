@@ -1,6 +1,6 @@
 
 == A. Fixture: 300 hardship traces (SIMULATED, seed 2026)
-Truss 0.16.0; 300 traces; sources {'harbor-golden v1.1': 262, 'July production': 38}; Spanish 51; two-loan 61
+Truss 0.47.0; 300 traces; sources {'harbor-golden v1.1': 262, 'July production': 38}; Spanish 51; two-loan 61
   required action under HP-2027-04 with HB-2027-07 (hidden from everyone in the story): {'decline_window': 58, 'ask_income': 51, 'refer_to_officer': 43, 'ask_which_loan': 33, 'draft_deferral': 113, 'cannot_tell': 2}
   traces where the written text and the bulletin differ (disaster forbearance inside 12 months): 7
 one trace as the screen shows it:
@@ -96,11 +96,27 @@ Compass: Which of your two loans is this about?
 == 3. Sittings of up to 90 minutes
   cap 45 minutes: 8 slipped labels in 240 (3.3%)
   cap 90 minutes: 11 slipped labels in 240 (4.6%)
+--- Listing 13.1: the rule refuses a disagreement without a written ruling
+t-031682: readers disagree (decline_window / draft_deferral); a ruling is required
+guideline decline_window (('A', 'decline_window'), ('B', 'draft_deferral')) 1b1b2064548c
+--- Listing 13.2: a policy question stays pending, and the gold set refuses it
+pending None
+1 records wait for a policy ruling, e.g. ['t-087528']
+--- Listing 13.3: Victor's bulletin re-derives the label without a re-read
+final draft_deferral HP-2027-04 + HB-2027-07 1 old digest kept: c9f84a8674a3
+{'t-031682': 'decline_window', 't-087528': 'draft_deferral'}
+--- Listing 13.4: where in the label set session one disagreed
+120 80.0% 0.72
+  ask_which_loan     0.84
+  ask_income         0.97
+  decline_window     0.38
+  refer_to_officer   0.71
+  draft_deferral     0.73
 documents: 160 {'pay_stub': 70, 'hardship_letter': 40, 'bank_statement': 50} hd-0201 to hd-0360
 languages: {'en': 134, 'es': 26} quality: {'clean': 114, 'photo': 46}
 traps: {'two_reasons': 10, 'signed_amounts': 13, 'balance_adjacent': 6, 'total_deposits_line': 12, 'two_periods': 5, 'ytd_first': 5, 'two_loans': 12, 'gross_not_printed': 2, 'frequency_unlabelled': 5, 'hourly_only': 6, 'net_stated': 14, 'abbreviated': 5, 'date_at_end': 5, 'pending_after_period': 6, 'page_break': 6}
 period ends: 2027-04-30 to 2027-06-30 ; uploads: 2027-06-01 to 2027-07-01
-== June set: 160 documents; 160 replies cached from claude-haiku-4-5-20251001 (137,640 input / 56,385 output tokens); prompts {'extract-prompt-v1': 134, 'extract-prompt-v2': 26}
+== June set: 160 documents; 160 replies cached from claude-haiku-4-5-20251001 (137,640 input / 56,437 output tokens); prompts {'extract-prompt-v1': 134, 'extract-prompt-v2': 26}
   replies that did not parse after fence repair: 0 []
   Victor's rule, critical fields:
     doc_type                0/160   0.0%  upper   1.7%  PASS
@@ -111,39 +127,39 @@ period ends: 2027-04-30 to 2027-06-30 ; uploads: 2027-06-01 to 2027-07-01
     stated_monthly_income   0/29    0.0%  upper   8.5%  FAIL
     loan_last4              1/40    2.5%  upper  10.5%  FAIL
     hardship_reason         0/40    0.0%  upper   6.3%  FAIL
-    error hd-0214 en photo gross_pay              got 4045.0 gold 4044.92
+    error hd-0214 en photo gross_pay              got 4045.92 gold 4044.92
     error hd-0255 es clean period_end             got '2027-08-06' gold '2027-06-08'
     error hd-0271 en photo pay_frequency          got 'biweekly' gold 'weekly'
     error hd-0297 es photo loan_last4             got '7B23' gold '7823'
-  documents with every field right 147/160; hardship decisions changed 3 ['hd-0255', 'hd-0271', 'hd-0297']
-claude-haiku-4-5-20251001 r2 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07']
-    G-06 readings: ['A deferral or extension that ended exactly 12 calendar months ago counts as within the window and triggers decline_window', 'A deferral or extension that ended exactly 12 calendar months ago is outside the window (12+ months) and does not trigger decline_window']
+  documents with every field right 146/160; hardship decisions changed 3 ['hd-0255', 'hd-0271', 'hd-0297']
+claude-haiku-4-5-20251001 r2 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ['Count any deferral or extension that ended fewer than 12 calendar months ago (e.g., ended 11 months ago qualifies for decline)', 'Only count deferrals/extensions where the end date is clearly within the last 12 months; ambiguous or uncertain dates about the end time trigger cannot_tell']
 claude-haiku-4-5-20251001 r2 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ['Count only deferrals or extensions that explicitly ended or were formally closed within the last 12 months', 'Count deferrals or extensions that were active at any point within the last 12 months, even if they started earlier']
+    G-06 readings: ["Relief that 'ended' means the day it was supposed to end according to the original agreement", "Relief that 'ended' means the day the borrower stopped receiving the benefit (could be earlier if they repaid early)"]
 claude-haiku-4-5-20251001 r2 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ['Relief that ended exactly 12 months ago counts as within the window', 'Relief that ended exactly 12 months ago counts as outside the window (12 or more months have passed)']
+    G-06 readings: ['Decline window applies when relief ended fewer than 12 calendar months ago (strict date counting)', "Decline window applies when relief occurred within the last 12 months in practical terms (allowing some interpretation of what 'fewer than 12 months ago' means at boundary dates)"]
 claude-haiku-4-5-20251001 r3 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07']
-    G-06 readings: ['Count exactly 12 calendar months; relief ending exactly 12 months ago is still within the window', 'Relief ending 12 or more calendar months ago is outside the window; count from 12+ months as meeting the threshold']
-claude-haiku-4-5-20251001 r3 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ['Count from the exact date the relief ended; if fewer than 12 calendar months have passed, decline', 'Count calendar months completed; a relief that ended partway through a month may allow flexibility in when the 12-month window closes']
+    G-06 readings: ['Count 12 calendar months from the end date (e.g., ended January 15 means 12 months is January 15 next year)', 'Count 12 calendar months as passing through 12 distinct calendar months (e.g., ended January means February of next year starts month 12)']
+claude-haiku-4-5-20251001 r3 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07']
+    G-06 readings: ['The window exclusion applies if the prior relief ended fewer than 12 calendar months before the conversation date', 'The window exclusion applies if fewer than 12 full calendar months have elapsed since the prior relief ended (i.e., the 12-month period must be complete)']
 claude-haiku-4-5-20251001 r3 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07']
-    G-06 readings: ['A previous relief that ended exactly 12 months ago is not inside the window (12+ months means eligible)', 'A previous relief that ended exactly 12 months ago is still inside the window (fewer than 12 months means from 0 to 11.99 months)']
+    G-06 readings: ['Count from the exact calendar date the relief ended; if any part of the 12th month has passed, it is outside the window', 'A relief that ended 12 full calendar months ago (counting 12 months back from today) is exactly at the boundary and is outside the window']
 claude-sonnet-4-6 r2 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ["'In the last twelve months' means the relief ended fewer than 12 calendar months ago, consistent with policy 4.3", "'In the last twelve months' means the relief began (or was granted) within the last twelve months, which could include relief that started 11 months ago but ended more than 12 months ago"]
-claude-sonnet-4-6 r2 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-09']
-    G-06 readings: ["'In the last twelve months' means the relief ended fewer than 12 calendar months ago (strict per policy 4.3)", "'In the last twelve months' means the relief ended 12 or fewer calendar months ago (inclusive boundary)"]
+    G-06 readings: ["'In the last twelve months' means the relief ended fewer than 12 calendar months ago, consistent with 4.3", "'In the last twelve months' could be read as the relief was granted or was active at any point in the last twelve months, which would catch some deferrals that ended exactly 12 months ago"]
+claude-sonnet-4-6 r2 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ["'In the last twelve months' means the relief ended fewer than 12 calendar months ago, consistent with policy 4.3", "'In the last twelve months' could be read as the relief started or was active within the last twelve months, capturing cases where relief started more than 12 months ago but ended within 12 months (or vice versa)"]
 claude-sonnet-4-6 r2 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ["'In the last twelve months' means the prior relief ended fewer than 12 calendar months ago, consistent with policy 4.3", "'In the last twelve months' could be read as including relief that ended exactly 12 months ago (i.e., within the 12-month window), whereas policy 4.3 says 'fewer than 12 calendar months' so exactly 12 months ago does not count"]
+    G-06 readings: ['Decline when the prior relief ended fewer than 12 calendar months ago, counting from the end date to today', 'Decline when the prior relief was granted (started) fewer than 12 calendar months ago']
 claude-sonnet-4-6 r3 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ["'Fewer than 12 calendar months' means the end date is within the 12-month period strictly before the conversation date, so exactly 12 months ago is outside the window (eligible)", "'Fewer than 12 calendar months' is ambiguous at the boundary: exactly 12 months ago could be read as still inside the window by one officer"]
+    G-06 readings: ["'Fewer than 12 calendar months' means strictly less than 12 full calendar months have elapsed since the end date", "'Fewer than 12 calendar months' could be counted by counting month boundaries crossed, so the result differs by one month at the boundary"]
 claude-sonnet-4-6 r3 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ['Label decline_window only when the relief ended fewer than 12 full calendar months before the conversation date', 'Label decline_window when the relief ended fewer than 12 calendar months before the conversation, counting inclusively or using a different boundary convention (e.g. exactly 12 months ago is still inside the window)']
+    G-06 readings: ['The window check applies only to the specific loan identified in the conversation; if which loan is unclear the officer still attempts to apply the check to whatever loan information is available', "If which loan is unclear, the window check cannot be completed and the officer should label cannot_tell rather than making an assumption about which loan's history to use"]
 claude-sonnet-4-6 r3 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
-    G-06 readings: ["'Ended fewer than 12 calendar months before the conversation' means before the date of the conversation itself", "'Ended fewer than 12 calendar months before the conversation' means before the date of the first reply Compass sent"]
+    G-06 readings: ["'This loan' means the specific loan identified in the conversation; if no loan has been identified yet, the officer cannot apply the window check and must label cannot_tell", "'This loan' is applied to whichever loan is contextually most salient, even if not explicitly confirmed, so the window check can still be performed"]
 
 summary (runs flagging each sentence, of 3):
-  claude-haiku-4-5-20251001 r2: G-04 3, G-05 3, G-06 3, G-07 3, G-09 2
-  claude-haiku-4-5-20251001 r3: G-04 3, G-05 3, G-06 3, G-07 3, G-09 1
-  claude-sonnet-4-6 r2: G-04 3, G-05 3, G-06 3, G-07 2, G-09 3
+  claude-haiku-4-5-20251001 r2: G-04 3, G-05 3, G-06 3, G-07 3, G-09 3
+  claude-haiku-4-5-20251001 r3: G-04 3, G-05 3, G-06 3, G-07 3
+  claude-sonnet-4-6 r2: G-04 3, G-05 3, G-06 3, G-07 3, G-09 3
   claude-sonnet-4-6 r3: G-04 3, G-05 3, G-06 3, G-07 3, G-09 3
-7 passed in 0.01s
+7 passed in 0.02s

@@ -1,0 +1,223 @@
+{
+ "claude-haiku-4-5-20251001 r2": [
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "Count any deferral or extension that ended fewer than 12 calendar months ago (e.g., ended 11 months ago qualifies for decline)",
+     "Only count deferrals/extensions where the end date is clearly within the last 12 months; ambiguous or uncertain dates about the end time trigger cannot_tell"
+    ],
+    "example": "The account shows a deferral 'ended earlier this year' with no exact date - one officer assumes it was within 12 months and declines; another marks cannot_tell due to missing exact end date"
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "Relief that 'ended' means the day it was supposed to end according to the original agreement",
+     "Relief that 'ended' means the day the borrower stopped receiving the benefit (could be earlier if they repaid early)"
+    ],
+    "example": "Borrower had a deferral scheduled to end 11 months and 20 days ago, but repaid early and the deferral benefit stopped 12 months and 5 days ago. Officer A labels decline_window (ended per agreement 11 months ago), Officer B labels eligible (stopped 12+ months ago)."
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "Decline window applies when relief ended fewer than 12 calendar months ago (strict date counting)",
+     "Decline window applies when relief occurred within the last 12 months in practical terms (allowing some interpretation of what 'fewer than 12 months ago' means at boundary dates)"
+    ],
+    "example": "A deferral ended exactly 365 days ago (12 calendar months to the day). Officer A labels decline_window (counting it as within 12 months). Officer B does not (counting 12+ months as outside the window)."
+   }
+  }
+ ],
+ "claude-haiku-4-5-20251001 r3": [
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "Count 12 calendar months from the end date (e.g., ended January 15 means 12 months is January 15 next year)",
+     "Count 12 calendar months as passing through 12 distinct calendar months (e.g., ended January means February of next year starts month 12)"
+    ],
+    "example": "Relief ended January 15 of this year; conversation is on January 14 of next year (364 days later). Officer A counts this as fewer than 12 calendar months (still in the window). Officer B counts it as 12 calendar months passed and labels draft_deferral instead of decline_window."
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "The window exclusion applies if the prior relief ended fewer than 12 calendar months before the conversation date",
+     "The window exclusion applies if fewer than 12 full calendar months have elapsed since the prior relief ended (i.e., the 12-month period must be complete)"
+    ],
+    "example": "A deferral ended on January 15, and the conversation occurs on January 20 of the following year. Is this exactly 12 calendar months (decline) or inside the window (decline_window)?"
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "Count from the exact calendar date the relief ended; if any part of the 12th month has passed, it is outside the window",
+     "A relief that ended 12 full calendar months ago (counting 12 months back from today) is exactly at the boundary and is outside the window"
+    ],
+    "example": "Relief ended on January 15, and today is January 14 of the following year (364 days later, but still within the same calendar month in year 2) - is this fewer than 12 calendar months or exactly 12?"
+   }
+  }
+ ],
+ "claude-sonnet-4-6 r2": [
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "'In the last twelve months' means the relief ended fewer than 12 calendar months ago, consistent with 4.3",
+     "'In the last twelve months' could be read as the relief was granted or was active at any point in the last twelve months, which would catch some deferrals that ended exactly 12 months ago"
+    ],
+    "example": "A borrower's previous deferral ended exactly 12 calendar months ago today. Officer A reads G-06 in line with policy 4.3 ('fewer than 12 calendar months') and labels draft_deferral (or the next applicable action). Officer B reads 'in the last twelve months' as including the 12-month mark and labels decline_window."
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "'In the last twelve months' means the relief ended fewer than 12 calendar months ago, consistent with policy 4.3",
+     "'In the last twelve months' could be read as the relief started or was active within the last twelve months, capturing cases where relief started more than 12 months ago but ended within 12 months (or vice versa)"
+    ],
+    "example": "Borrower had a deferral that started 14 months ago and ended 10 months ago. Officer A: it ended fewer than 12 months ago, so decline_window. Officer B: reading 'in the last twelve months' as when it began, it started more than 12 months ago, so no window bar\u2014proceed. (Policy 4.3 resolves this but G-06 alone does not restate the ended-date anchor clearly enough.)"
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "Decline when the prior relief ended fewer than 12 calendar months ago, counting from the end date to today",
+     "Decline when the prior relief was granted (started) fewer than 12 calendar months ago"
+    ],
+    "example": "A borrower received a 6-month deferral that started 10 months ago and ended 4 months ago. Officer A uses the end date (4 months ago < 12) and labels decline_window. Officer B uses the start date (10 months ago < 12) and also labels decline_window here \u2014 but consider a deferral that started 13 months ago and ended 7 months ago: Officer A uses end date (7 < 12) \u2192 decline_window; Officer B uses start date (13 \u2265 12) \u2192 does not decline."
+   }
+  }
+ ],
+ "claude-sonnet-4-6 r3": [
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "'Fewer than 12 calendar months' means strictly less than 12 full calendar months have elapsed since the end date",
+     "'Fewer than 12 calendar months' could be counted by counting month boundaries crossed, so the result differs by one month at the boundary"
+    ],
+    "example": "A deferral ended exactly 12 calendar months ago to the day. One officer reads 'fewer than 12 calendar months' as excluding exactly 12 months, so labels draft_deferral (or the next applicable check). The other is uncertain whether 'exactly 12' is inside or outside the window and might label decline_window, treating the boundary as still within the restricted period."
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "The window check applies only to the specific loan identified in the conversation; if which loan is unclear the officer still attempts to apply the check to whatever loan information is available",
+     "If which loan is unclear, the window check cannot be completed and the officer should label cannot_tell rather than making an assumption about which loan's history to use"
+    ],
+    "example": "Borrower has two loans; one had a deferral ending 8 months ago, the other had none. The borrower has not said which loan the hardship concerns (so ask_which_loan should fire first per G-03, but suppose an officer mistakenly reaches G-06). One officer applies the window to the loan with recent relief and labels decline_window; the other labels cannot_tell because the relevant loan is unidentified."
+   }
+  },
+  {
+   "flags": [
+    "G-04",
+    "G-05",
+    "G-06",
+    "G-07",
+    "G-09"
+   ],
+   "g06": {
+    "id": "G-06",
+    "ambiguous": true,
+    "readings": [
+     "'This loan' means the specific loan identified in the conversation; if no loan has been identified yet, the officer cannot apply the window check and must label cannot_tell",
+     "'This loan' is applied to whichever loan is contextually most salient, even if not explicitly confirmed, so the window check can still be performed"
+    ],
+    "example": "A borrower with two loans mentions a past deferral without specifying which loan it was on. One officer treats the window check as applicable to the salient loan and labels decline_window; another considers the loan unidentified at the window-check stage (before ask_which_loan is resolved) and labels cannot_tell or proceeds differently."
+   }
+  }
+ ]
+}
