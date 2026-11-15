@@ -1,0 +1,9 @@
+Chapter 29 OUTPUT
+digest 7d0f0586ab3f
+text 0.925 -> 0.935 (regress 3)
+tool 0.905 -> 0.825 (regress 16)
+silent schema fails 152 / pass_rate 0.240
+rot stale 82 / 200
+decision hold plant t-320118
+inject text_pass=True ship=False
+real REAL 12/12 (1.000)

@@ -1,0 +1,96 @@
+### build_store.py
+built trace_store.db: 24011 traces, 14 complaints
+
+### lab.py
+== A. Three complaints, three levels of record ==
+final answer only          root causes identified 0 of 3
+pilot trace (Chapter 2)    root causes identified 1 of 3
+v0.5 trace                 root causes identified 3 of 3
+  t-004683 fee_explanation  retrieved fee-schedule-2024-01
+  t-005026 hardship         offer drafted despite deferral on 2026-03-12
+  t-007114 lien_release     reply promised ten business days; CO title office recorded after 19 days
+
+== B. The trace contract ==
+first-pass sample of 300: traces with contract gaps, pilot schema 300, v0.5 schema 0
+  pilot schema lacks: ['policy_corpus_version', 'prompt_version', 'state'] + retrieval spans
+spans per trace 9.6; by kind {'chat': 150003, 'execute_tool': 42986, 'handoff': 6701, 'invoke_agent': 24011, 'retrieve': 6579}
+OpenTelemetry view of one tool span: {"name": "execute_tool get_account_history", "gen_ai.operation.name": "execute_tool", "gen_ai.tool.name": "get_account_history", "gen_ai.tool.call.id": "call_005026_get_account_history", "gen_ai.tool.call.arguments": {"loan_token": "LOAN_8d34f8c3"}, "gen_ai.tool.call.result": {"prior_deferral_on": "2026-03-12"}, "harbor.latency_ms": 528}
+payoff traces whose send_letter result shows the amount the borrower received: 0 of 2587
+
+== C. Redaction before storage ==
+  account_question   evidence kept 9969/9969
+  fee_explanation    evidence kept 5151/5151
+  statement_request  evidence kept 3427/3427
+  payoff_letter      evidence kept 2587/2587
+  lien_release       evidence kept 1449/1449
+  hardship           evidence kept 1428/1428
+first borrower messages scanned 24011; tokens inserted {'NAME': 6883, 'PHONE': 977}; identity-like strings left 84, e.g. '437 ** ****'
+
+== D. The trace store ==
+store 67.9 MB for 24011 traces: 2.83 kB per trace
+  at 10% of traffic (570/day): 0.6 GB a year, 2.0 million spans
+  at 100% of traffic (5700/day): 5.9 GB a year, 20.0 million spans
+frame query for hardship returned 1428 ids in 2 ms
+  two writers, rollback: 864 of 4000 span writes stored, 3136 refused with 'database is locked'
+  two writers, wal     : 4000 of 4000 span writes stored, 0 refused with 'database is locked'
+
+== E. Four sampling strategies, scored against the planted answer ==
+planted failure rate: 0.0762 (1830 of 24011 traces)
+  uniform        weighted est 0.0757 (raw 0.0757) rmse 0.0139; hardship read 18; failures per 100 read 7.6; modes found 8.4 of 14
+  stratified     weighted est 0.0756 (raw 0.0875) rmse 0.0192; hardship read 100; failures per 100 read 8.7; modes found 9.8 of 14
+  risk-weighted  weighted est 0.0764 (raw 0.0823) rmse 0.0156; hardship read 39; failures per 100 read 8.2; modes found 9.2 of 14
+  incident-seeded: 153 traces (14 complaints + look-alikes), 15 fail = 9.8% if wrongly pooled against 7.6% true; modes found 9
+
+== F. A sample anyone can draw again ==
+redraw from manifest: 300 of 300 identical; frame hash abb5e160c571bde4
+37 late SMS traces added to the frame: naive redraw changes 0 of 300 ids
+plus 4 early traces deleted on borrowers' erasure requests: naive redraw changes 178 of 300 ids
+verify(): frame changed: 24044 traces now, 24011 when first-pass-2026-10 was drawn (hash 171706778da3f2dd != abb5e160c571bde4)
+
+== G. Linking traces to outcomes ==
+outcomes by kind: {'title_recorded': 1255, 'recontact_call': 3613, 'officer_decision': 918, 'complaint': 14}
+  fuzzy join on borrower_token  7 days: 3011 links, precision 0.744, recall 0.902
+  fuzzy join on loan_token      7 days: 3008 links, precision 0.748, recall 0.906
+  direct join (trace id on the event): 918 officer decisions, precision 1.000 by construction
+  account_question   re-contact within 7 days: failed 26.4%, passed 11.0%
+  fee_explanation    re-contact within 7 days: failed 31.1%, passed 10.8%
+  statement_request  re-contact within 7 days: failed 25.7%, passed 11.9%
+  payoff_letter      re-contact within 7 days: failed 32.5%, passed 10.8%
+  lien_release       re-contact within 7 days: failed 27.3%, passed 12.0%
+  hardship           re-contact within 7 days: failed 24.3%, passed 12.7%
+  lien week of 2026-09-07: 220 traces, title recorded for 220, after 14 days 41 (19% of recorded)
+  lien week of 2026-09-14: 263 traces, title recorded for 263, after 14 days 44 (17% of recorded)
+  lien week of 2026-09-21: 241 traces, title recorded for 241, after 14 days 47 (20% of recorded)
+  lien week of 2026-09-28: 223 traces, title recorded for 219, after 14 days 38 (17% of recorded)
+  lien week of 2026-10-05: 249 traces, title recorded for 226, after 14 days 14 (6% of recorded)
+  lien week of 2026-10-12: 243 traces, title recorded for 86, after 14 days 0 (0% of recorded)
+  slow-release rate, all recorded so far: 184/1255 = 14.7%; matured traces only (30+ days old): 112/614 = 18.2%
+
+### inject.py
+rule added by privacy review: redact any dollar amount of $1,000 or more
+hardship evidence before: {"prior_deferral_on": "2026-03-09", "loan_amount": "$8,298.77", "monthly_payment": "$168.46", "stated_income": "$3,400 a month", "policy_version": "hardship-policy-2026-06"}
+hardship evidence after:  {"prior_deferral_on": "2026-03-09", "loan_amount": "[REDACTED]", "monthly_payment": "$168.46", "stated_income": "[REDACTED] a month", "policy_version": "hardship-policy-2026-06"}
+  account_question   evidence kept     0/9969    0.0%
+  fee_explanation    evidence kept  5151/5151  100.0%
+  statement_request  evidence kept  3427/3427  100.0%
+  payoff_letter      evidence kept     0/2587    0.0%
+  lien_release       evidence kept  1449/1449  100.0%
+  hardship           evidence kept     0/1428    0.0%
+first-pass sample: 175 of 300 traces lose evidence a reader needs; 58.2% of traffic becomes unjudgeable
+evidence check before the rule ships: BLOCK (evidence removed for account_question, payoff_letter, hardship)
+
+### try_its.py
+== Try 1: risk weights and budget ==
+  high tier x3, 300    hardship read    39; overall rate rmse 0.0152
+  high tier x10, 300   hardship read    77; overall rate rmse 0.0159
+  high tier x10, 600   hardship read   154; overall rate rmse 0.0109
+
+== Try 2: delete the date or shift it ==
+  hardship traces with a prior deferral: 136
+  12-month rule checkable after deleting dates: 0 of 136
+  12-month rule checkable after a consistent per-trace shift: 136 of 136
+
+== Try 3: the outcome join window ==
+  window  3 days: precision 0.708, recall 0.421
+  window  7 days: precision 0.744, recall 0.902
+  window 14 days: precision 0.708, recall 0.905

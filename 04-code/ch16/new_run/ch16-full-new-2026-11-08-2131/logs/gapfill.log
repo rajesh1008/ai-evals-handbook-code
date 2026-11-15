@@ -1,0 +1,6 @@
+2026-11-08T22:19:24 GAPFILL start {'cap_usd': 12.0, 'charged_usd': 6.158853, 'outstanding_reserved_usd': 0.050079, 'headroom_usd': 0.05, 'available_usd': 5.741068, 'open_reservations': 0, 'unreconciled': 8, 'committed': 3382}
+  [judge] calling the model for 2 uncached requests
+judge rows 2476
+  [agent_small] running 6 agent judgements
+agent_small 60
+2026-11-08T22:19:36 GAPFILL done {'cap_usd': 12.0, 'charged_usd': 6.191862, 'outstanding_reserved_usd': 0.050079, 'headroom_usd': 0.05, 'available_usd': 5.708059, 'open_reservations': 0, 'unreconciled': 8, 'committed': 3396}

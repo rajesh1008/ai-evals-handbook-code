@@ -1,0 +1,452 @@
+{
+  "seed": 2047,
+  "n_week": 70,
+  "SIMULATED": true,
+  "label": "ch47_incident_to_eval_weekly_sample",
+  "rows": [
+    {
+      "trace_id": "t-200001",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200002",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200003",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200004",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200005",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200006",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200007",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200008",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200009",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200010",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200011",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200012",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200013",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200014",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200015",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200016",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200017",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200018",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200019",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200020",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200021",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200022",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200023",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200024",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200025",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200026",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200027",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200028",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200029",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200030",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200031",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200032",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200033",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200034",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200035",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200036",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200037",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200038",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200039",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200040",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200041",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200042",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200043",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200044",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200045",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200046",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200047",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200048",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200049",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200050",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200051",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200052",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200053",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200054",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200055",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200056",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200057",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200058",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200059",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200060",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200061",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200062",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200063",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200064",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200065",
+      "flow": "lien",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200066",
+      "flow": "statement",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200067",
+      "flow": "account",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200068",
+      "flow": "fee",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200069",
+      "flow": "hardship",
+      "week": "2027-W24",
+      "sampled": true
+    },
+    {
+      "trace_id": "t-200070",
+      "flow": "payoff",
+      "week": "2027-W24",
+      "sampled": true
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "inc-2047-01",
+      "opened": "2027-06-12",
+      "channel": "complaint",
+      "summary": "EXAMPLE (hypothetical): borrower alleged hardship offer refused after bereavement disclosure",
+      "linked_trace_id": "t-199847",
+      "in_weekly_sample": false,
+      "severity_set": true
+    },
+    {
+      "incident_id": "inc-2047-02",
+      "opened": "2027-06-10",
+      "channel": "officer",
+      "summary": "EXAMPLE: fee explanation disputed; already in weekly sample",
+      "linked_trace_id": "t-200013",
+      "in_weekly_sample": true,
+      "progression_set": false
+    }
+  ],
+  "missed_incident_trace_id": "t-199847",
+  "traffic_share_teaching": 1.0,
+  "prior_traffic_share": 0.1,
+  "digest": "6212aade9fb2"
+}

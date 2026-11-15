@@ -1,0 +1,25 @@
+{
+  "try1_fee_escalation": {
+    "proxy": "fee",
+    "signal": "escalation",
+    "n": 40,
+    "r": -0.579,
+    "predicts": true,
+    "direction": "negative"
+  },
+  "try2_incomplete_cf": {
+    "trace_id": "t-350199",
+    "shown_arm": "a",
+    "logged_alt_arms": [],
+    "policy_hash": "",
+    "complete": false
+  },
+  "try3_rates": {
+    "resolution": 0.8,
+    "re_contact": 0.12,
+    "escalation": 0.04,
+    "complaint": 0.03,
+    "n_sessions": 1000
+  },
+  "simulated": true
+}

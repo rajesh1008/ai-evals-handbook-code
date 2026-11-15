@@ -1,0 +1,19 @@
+{
+  "try1_recomputed_floor": 1.4,
+  "try2_diagnose_1pt_drop": {
+    "delta_pts": -1.0,
+    "noise_floor_pts": 1.4,
+    "margin_pts": 0.5,
+    "threshold_pts": 1.9,
+    "label": "NOISE",
+    "call_regression": false
+  },
+  "try3_pass_contrast_k2": {
+    "n_tasks": 40,
+    "k": 2,
+    "pass_at_k": 0.7,
+    "pass_hat_k": 0.475,
+    "n_pass_hat_k": 19
+  },
+  "simulated": true
+}

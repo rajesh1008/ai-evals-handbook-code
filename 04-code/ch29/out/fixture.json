@@ -1,0 +1,4361 @@
+{
+  "kind": "SIMULATED",
+  "seed": 2029,
+  "n": 200,
+  "digest": "7d0f0586ab3f",
+  "schema_v1": {
+    "get_loan": [
+      "loan_id"
+    ],
+    "explain_fee": [
+      "loan_id",
+      "fee_code"
+    ],
+    "check_hardship": [
+      "loan_id",
+      "reason_code"
+    ],
+    "draft_offer": [
+      "loan_id",
+      "plan_id"
+    ]
+  },
+  "schema_v2_silent": {
+    "get_loan": [
+      "account_id"
+    ],
+    "explain_fee": [
+      "account_id",
+      "fee_code"
+    ],
+    "check_hardship": [
+      "loan_id",
+      "reason_code"
+    ],
+    "draft_offer": [
+      "loan_id",
+      "plan_id"
+    ]
+  },
+  "baseline_pin": "compass-hardship-2028-07-a",
+  "candidate_pin": "compass-hardship-2028-08-b",
+  "current_policy_version": "p3",
+  "cases": [
+    {
+      "case_id": "t-320101",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320101",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1000"
+        }
+      }
+    },
+    {
+      "case_id": "t-320102",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320102",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1001"
+        }
+      }
+    },
+    {
+      "case_id": "t-320103",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320103",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1002",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320104",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320104",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1003",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320105",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320105",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1004",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320106",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320106",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1005",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320107",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320107",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1006",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320108",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320108",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1007",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320109",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320109",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1008",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320110",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320110",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1009",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320111",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320111",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1010",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320112",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320112",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1011"
+        }
+      }
+    },
+    {
+      "case_id": "t-320113",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320113",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1012"
+        }
+      }
+    },
+    {
+      "case_id": "t-320114",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320114",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1013"
+        }
+      }
+    },
+    {
+      "case_id": "t-320115",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320115",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1014"
+        }
+      }
+    },
+    {
+      "case_id": "t-320116",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320116",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1015",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320117",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320117",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1016",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320118",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320118",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1118",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320119",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320119",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1018",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320120",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320120",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1019"
+        }
+      }
+    },
+    {
+      "case_id": "t-320121",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320121",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1020",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320122",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320122",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1021",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320123",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320123",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1022",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320124",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320124",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1023",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320125",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320125",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1024"
+        }
+      }
+    },
+    {
+      "case_id": "t-320126",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320126",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1025"
+        }
+      }
+    },
+    {
+      "case_id": "t-320127",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320127",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1026"
+        }
+      }
+    },
+    {
+      "case_id": "t-320128",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320128",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1027",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320129",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320129",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1028"
+        }
+      }
+    },
+    {
+      "case_id": "t-320130",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320130",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1029",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320131",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320131",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1030",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320132",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320132",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1031"
+        }
+      }
+    },
+    {
+      "case_id": "t-320133",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320133",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1032",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320134",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320134",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1033"
+        }
+      }
+    },
+    {
+      "case_id": "t-320135",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320135",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1034",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320136",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320136",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1035"
+        }
+      }
+    },
+    {
+      "case_id": "t-320137",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320137",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1036",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320138",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320138",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1037",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320139",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320139",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1038",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320140",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320140",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1039",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320141",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320141",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1040"
+        }
+      }
+    },
+    {
+      "case_id": "t-320142",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320142",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1041",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320143",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320143",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1042",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320144",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320144",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1043",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320145",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320145",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1044",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320146",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320146",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1045",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320147",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320147",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1046"
+        }
+      }
+    },
+    {
+      "case_id": "t-320148",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320148",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1047"
+        }
+      }
+    },
+    {
+      "case_id": "t-320149",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320149",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1048",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320150",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320150",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1049",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320151",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320151",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1050",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320152",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320152",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1051"
+        }
+      }
+    },
+    {
+      "case_id": "t-320153",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320153",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1052",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320154",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320154",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1053",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320155",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320155",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1054"
+        }
+      }
+    },
+    {
+      "case_id": "t-320156",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320156",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1055",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320157",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320157",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1056",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320158",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320158",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1057",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320159",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320159",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1058",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320160",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320160",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1059"
+        }
+      }
+    },
+    {
+      "case_id": "t-320161",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320161",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1060",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320162",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320162",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1061",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320163",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320163",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1062"
+        }
+      }
+    },
+    {
+      "case_id": "t-320164",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320164",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1063"
+        }
+      }
+    },
+    {
+      "case_id": "t-320165",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320165",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1064"
+        }
+      }
+    },
+    {
+      "case_id": "t-320166",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320166",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1065",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320167",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320167",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1066"
+        }
+      }
+    },
+    {
+      "case_id": "t-320168",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320168",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1067"
+        }
+      }
+    },
+    {
+      "case_id": "t-320169",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320169",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1068"
+        }
+      }
+    },
+    {
+      "case_id": "t-320170",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320170",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1069"
+        }
+      }
+    },
+    {
+      "case_id": "t-320171",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320171",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1070"
+        }
+      }
+    },
+    {
+      "case_id": "t-320172",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320172",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1071"
+        }
+      }
+    },
+    {
+      "case_id": "t-320173",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320173",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1072"
+        }
+      }
+    },
+    {
+      "case_id": "t-320174",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320174",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1073",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320175",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320175",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1074",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320176",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320176",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1075",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320177",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320177",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1076"
+        }
+      }
+    },
+    {
+      "case_id": "t-320178",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320178",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1077"
+        }
+      }
+    },
+    {
+      "case_id": "t-320179",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320179",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1078",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320180",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320180",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1079",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320181",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320181",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1080"
+        }
+      }
+    },
+    {
+      "case_id": "t-320182",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320182",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1081"
+        }
+      }
+    },
+    {
+      "case_id": "t-320183",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320183",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1082",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320184",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320184",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1083"
+        }
+      }
+    },
+    {
+      "case_id": "t-320185",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320185",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1084"
+        }
+      }
+    },
+    {
+      "case_id": "t-320186",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320186",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1085",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320187",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320187",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1086"
+        }
+      }
+    },
+    {
+      "case_id": "t-320188",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320188",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1087",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320189",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320189",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1088"
+        }
+      }
+    },
+    {
+      "case_id": "t-320190",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320190",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1089"
+        }
+      }
+    },
+    {
+      "case_id": "t-320191",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320191",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1090"
+        }
+      }
+    },
+    {
+      "case_id": "t-320192",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320192",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1091",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320193",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320193",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1092"
+        }
+      }
+    },
+    {
+      "case_id": "t-320194",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320194",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1093",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320195",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320195",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1094",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320196",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320196",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1095",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320197",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320197",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1096",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320198",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320198",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1097",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320199",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320199",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1098",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320200",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320200",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1099"
+        }
+      }
+    },
+    {
+      "case_id": "t-320201",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320201",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1100"
+        }
+      }
+    },
+    {
+      "case_id": "t-320202",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320202",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1101",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320203",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320203",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1102"
+        }
+      }
+    },
+    {
+      "case_id": "t-320204",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320204",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1103"
+        }
+      }
+    },
+    {
+      "case_id": "t-320205",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320205",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1104",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320206",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320206",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1105",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320207",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320207",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1106",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320208",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320208",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1107",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320209",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320209",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1108"
+        }
+      }
+    },
+    {
+      "case_id": "t-320210",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320210",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1109"
+        }
+      }
+    },
+    {
+      "case_id": "t-320211",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320211",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1110",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320212",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320212",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1111"
+        }
+      }
+    },
+    {
+      "case_id": "t-320213",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320213",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1112",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320214",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320214",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1113",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320215",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320215",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1114"
+        }
+      }
+    },
+    {
+      "case_id": "t-320216",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320216",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1115"
+        }
+      }
+    },
+    {
+      "case_id": "t-320217",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320217",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1116"
+        }
+      }
+    },
+    {
+      "case_id": "t-320218",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320218",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1117"
+        }
+      }
+    },
+    {
+      "case_id": "t-320219",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320219",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1118"
+        }
+      }
+    },
+    {
+      "case_id": "t-320220",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320220",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1119",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320221",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320221",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1120",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320222",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320222",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1121",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320223",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320223",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1122"
+        }
+      }
+    },
+    {
+      "case_id": "t-320224",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320224",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1123",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320225",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320225",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1124"
+        }
+      }
+    },
+    {
+      "case_id": "t-320226",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320226",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1125"
+        }
+      }
+    },
+    {
+      "case_id": "t-320227",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320227",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1126",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320228",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320228",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1127",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320229",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320229",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1128"
+        }
+      }
+    },
+    {
+      "case_id": "t-320230",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320230",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1129",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320231",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320231",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1130"
+        }
+      }
+    },
+    {
+      "case_id": "t-320232",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320232",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1131"
+        }
+      }
+    },
+    {
+      "case_id": "t-320233",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320233",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1132",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320234",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320234",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1133",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320235",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320235",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1134"
+        }
+      }
+    },
+    {
+      "case_id": "t-320236",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320236",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1135",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320237",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320237",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1136",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320238",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320238",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1137",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320239",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320239",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1138",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320240",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320240",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1139",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320241",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320241",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1140"
+        }
+      }
+    },
+    {
+      "case_id": "t-320242",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320242",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1141",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320243",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320243",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1142",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320244",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320244",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1143",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320245",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320245",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1144"
+        }
+      }
+    },
+    {
+      "case_id": "t-320246",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320246",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1145"
+        }
+      }
+    },
+    {
+      "case_id": "t-320247",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320247",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1146",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320248",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320248",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1147",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320249",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320249",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1148",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320250",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320250",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1149",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320251",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320251",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1150",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320252",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320252",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1151"
+        }
+      }
+    },
+    {
+      "case_id": "t-320253",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320253",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1152"
+        }
+      }
+    },
+    {
+      "case_id": "t-320254",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320254",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1153",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320255",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320255",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1154",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320256",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320256",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1155",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320257",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320257",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1156"
+        }
+      }
+    },
+    {
+      "case_id": "t-320258",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320258",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1157"
+        }
+      }
+    },
+    {
+      "case_id": "t-320259",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320259",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1158",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320260",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320260",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1159",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320261",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320261",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1160"
+        }
+      }
+    },
+    {
+      "case_id": "t-320262",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320262",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1161",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320263",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320263",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1162",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320264",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320264",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1163"
+        }
+      }
+    },
+    {
+      "case_id": "t-320265",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320265",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1164",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320266",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320266",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1165",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320267",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320267",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1166",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320268",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320268",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1167",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320269",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320269",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1168",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320270",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320270",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1169"
+        }
+      }
+    },
+    {
+      "case_id": "t-320271",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320271",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1170",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320272",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320272",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1171",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320273",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320273",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1172"
+        }
+      }
+    },
+    {
+      "case_id": "t-320274",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320274",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1173"
+        }
+      }
+    },
+    {
+      "case_id": "t-320275",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320275",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1174"
+        }
+      }
+    },
+    {
+      "case_id": "t-320276",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320276",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1175"
+        }
+      }
+    },
+    {
+      "case_id": "t-320277",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320277",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1176"
+        }
+      }
+    },
+    {
+      "case_id": "t-320278",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320278",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1177",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320279",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320279",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1178",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320280",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320280",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1179",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320281",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320281",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1180",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320282",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320282",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1181"
+        }
+      }
+    },
+    {
+      "case_id": "t-320283",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320283",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1182",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320284",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320284",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1183"
+        }
+      }
+    },
+    {
+      "case_id": "t-320285",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320285",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1184"
+        }
+      }
+    },
+    {
+      "case_id": "t-320286",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320286",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1185",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320287",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320287",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1186",
+          "plan_id": "H1"
+        }
+      }
+    },
+    {
+      "case_id": "t-320288",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320288",
+        "tool": "check_hardship",
+        "args": {
+          "loan_id": "L-1187",
+          "reason_code": "JOB"
+        }
+      }
+    },
+    {
+      "case_id": "t-320289",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320289",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1188",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320290",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": false,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320290",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1189"
+        }
+      }
+    },
+    {
+      "case_id": "t-320291",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320291",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1190"
+        }
+      }
+    },
+    {
+      "case_id": "t-320292",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320292",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1191",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320293",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p1",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320293",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1192"
+        }
+      }
+    },
+    {
+      "case_id": "t-320294",
+      "slice": "lien",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320294",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1193"
+        }
+      }
+    },
+    {
+      "case_id": "t-320295",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320295",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1194",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320296",
+      "slice": "payoff",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320296",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1195"
+        }
+      }
+    },
+    {
+      "case_id": "t-320297",
+      "slice": "statement",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320297",
+        "tool": "get_loan",
+        "args": {
+          "loan_id": "L-1196"
+        }
+      }
+    },
+    {
+      "case_id": "t-320298",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p3",
+      "gold_matches_current": true,
+      "tool_call": {
+        "case_id": "t-320298",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1197",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320299",
+      "slice": "fee",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320299",
+        "tool": "explain_fee",
+        "args": {
+          "loan_id": "L-1198",
+          "fee_code": "LATE"
+        }
+      }
+    },
+    {
+      "case_id": "t-320300",
+      "slice": "hardship",
+      "baseline": {
+        "text_pass": true,
+        "tool_pass": true
+      },
+      "candidate": {
+        "text_pass": true,
+        "tool_pass": false
+      },
+      "policy_version": "p2",
+      "gold_matches_current": false,
+      "tool_call": {
+        "case_id": "t-320300",
+        "tool": "draft_offer",
+        "args": {
+          "loan_id": "L-1199",
+          "plan_id": "H1"
+        }
+      }
+    }
+  ]
+}

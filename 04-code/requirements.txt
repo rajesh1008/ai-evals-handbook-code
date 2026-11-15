@@ -1,0 +1,13 @@
+# Pinned from packages the labs actually import (versions the book was
+# tested with, 2026-11-09). Offline teaching runs need pytest and scipy/numpy
+# (and the chapter extras below). anthropic is optional and used only when you
+# set ANTHROPIC_API_KEY and opt into a live script; no key is included here.
+numpy==2.5.4
+scipy==1.18.1
+pytest==9.2.0
+streamlit==1.66.1
+sacrebleu==2.6.0
+fastembed==0.9.1
+# bert-score is used only by the Chapter 10 reference-metric lab.
+bert-score==0.3.13
+anthropic==2.3.0

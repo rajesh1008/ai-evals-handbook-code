@@ -1,0 +1,71 @@
+{
+  "lesson": "Easy-first queue ordering hides fatigue: early window looks fine while late window collapses.",
+  "natural_fatigue": [
+    {
+      "bin": 0,
+      "n": 100,
+      "agreement": 0.73,
+      "mean_position": 50.5
+    },
+    {
+      "bin": 1,
+      "n": 100,
+      "agreement": 0.9,
+      "mean_position": 150.5
+    },
+    {
+      "bin": 2,
+      "n": 100,
+      "agreement": 0.91,
+      "mean_position": 250.5
+    },
+    {
+      "bin": 3,
+      "n": 100,
+      "agreement": 0.88,
+      "mean_position": 350.5
+    },
+    {
+      "bin": 4,
+      "n": 100,
+      "agreement": 0.78,
+      "mean_position": 450.5
+    }
+  ],
+  "easy_first_head_agreement": 1.0,
+  "easy_first_tail_agreement": 0.6,
+  "easy_first_curve": [
+    {
+      "bin": 0,
+      "n": 100,
+      "agreement": 1.0,
+      "mean_position": 50.5
+    },
+    {
+      "bin": 1,
+      "n": 100,
+      "agreement": 1.0,
+      "mean_position": 150.5
+    },
+    {
+      "bin": 2,
+      "n": 100,
+      "agreement": 1.0,
+      "mean_position": 250.5
+    },
+    {
+      "bin": 3,
+      "n": 100,
+      "agreement": 1.0,
+      "mean_position": 350.5
+    },
+    {
+      "bin": 4,
+      "n": 100,
+      "agreement": 0.2,
+      "mean_position": 450.5
+    }
+  ],
+  "named": "queue-order-injection",
+  "simulated": true
+}

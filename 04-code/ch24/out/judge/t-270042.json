@@ -1,0 +1,1 @@
+{"trace_id": "t-270042", "text": "VERDICT: fail\nREASON: Process skipped check_eligibility before computing the plan; hardship policy lookup and eligibility verification are required steps.", "usage": {"in": 246, "out": 35}, "planted_process_ok": false, "fixture_kind": "lucky"}

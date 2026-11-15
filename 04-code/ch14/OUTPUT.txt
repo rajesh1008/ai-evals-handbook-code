@@ -1,0 +1,126 @@
+### fixture
+1200 Counter({'draft_deferral': 551, 'ask_income': 177, 'refer_to_officer': 176, 'decline_window': 149, 'ask_which_loan': 140, 'cannot_tell': 7})
+anniversary 98 stated work 110
+compass wrong 116
+### pre-labeller (REAL, cached)
+REAL run, model claude-haiku-4-5-20251001: 1440 calls on 480 traces; tokens in 950,256, out 55,970; unparsed answers 0
+majority label right 362/480 (75.4%)
+### lab
+== Qualification, Thu 5 Aug 2027 (40 cases from hardship-gold, ops-1.0) SIMULATED
+   pass mark 34/40 (85%), set before the test; marisol 35/40, daniel 37/40, kevin 37/40
+== Weekly agreement, SIMULATED readers (60 random hardship traces a week)
+  week 1 9-13 Aug [ops-1.0] marisol-daniel 0.62 (n 30); marisol-kevin 0.41 (n 29); daniel-kevin 0.54 (n 25); Fleiss 0.512 on 12; anchors marisol 5/6, daniel 6/6, kevin 6/6; disagreements 24 {'fact': 1, 'slip': 14, 'guideline': 9}; pending 0; audit 0/4 wrong; final right 59/60
+  week 2 16-20 Aug [ops-1.1] marisol-daniel 0.56 (n 27); marisol-kevin 0.81 (n 28); daniel-kevin 0.76 (n 29); Fleiss 0.773 on 12; anchors marisol 6/6, daniel 5/6, kevin 6/6; disagreements 14 {'slip': 14}; pending 0; audit 0/5 wrong; final right 59/60
+  week 3 23-27 Aug [ops-1.1] marisol-daniel 0.95 (n 30); marisol-kevin 0.95 (n 30); daniel-kevin 0.89 (n 24); Fleiss 0.92 on 12; anchors marisol 6/6, daniel 4/6, kevin 6/6; disagreements 3 {'slip': 3}; pending 0; audit 0/6 wrong; final right 60/60
+  week 4 30 Aug-3 Sep [ops-1.1] marisol-daniel 0.73 (n 30); marisol-kevin 0.76 (n 29); daniel-kevin 0.82 (n 25); Fleiss 0.746 on 12; anchors marisol 6/6, daniel 4/6, kevin 6/6; disagreements 11 {'slip': 11}; pending 0; audit 0/5 wrong; final right 60/60
+  week 5 7-10 Sep [ops-1.1] marisol-kevin 0.91 (n 60); Fleiss None on 0; anchors marisol 6/6, kevin 5/6; disagreements 4 {'slip': 2}; pending 2; audit 0/6 wrong; final right 58/58
+  Marisol-Daniel kappa: week 1 0.621 (n 30); weeks 2-4 pooled 0.764 (n 87); Daniel absent in week 5
+  marisol-kevin weeks 2-5 pooled 0.872 (n 147)
+  daniel-kevin weeks 2-5 pooled 0.822 (n 78)
+== Anniversary traces in week 1 (ops-1.0 is silent)
+   {'trace': 't-142315', 'readings': {'kevin': 'draft_deferral', 'daniel': 'decline_window'}, 'required': 'draft_deferral', 'final': 'draft_deferral'}
+   {'trace': 't-142592', 'readings': {'marisol': 'refer_to_officer', 'daniel': 'decline_window'}, 'required': 'draft_deferral', 'final': 'draft_deferral'}
+   {'trace': 't-145113', 'readings': {'daniel': 'refer_to_officer', 'marisol': 'draft_deferral', 'kevin': 'draft_deferral'}, 'required': 'draft_deferral', 'final': 'draft_deferral'}
+   {'trace': 't-142706', 'readings': {'daniel': 'decline_window', 'kevin': 'draft_deferral'}, 'required': 'draft_deferral', 'final': 'draft_deferral'}
+   {'trace': 't-143356', 'readings': {'kevin': 'draft_deferral', 'marisol': 'decline_window', 'daniel': 'decline_window'}, 'required': 'draft_deferral', 'final': 'draft_deferral'}
+   {'trace': 't-143134', 'readings': {'kevin': 'refer_to_officer', 'marisol': 'decline_window'}, 'required': 'draft_deferral', 'final': 'draft_deferral'}
+   {'trace': 't-142895', 'readings': {'marisol': 'decline_window', 'daniel': 'decline_window'}, 'required': 'draft_deferral', 'final': 'decline_window'}
+  week 1 cell window x draft: officer-Kevin pairs 6, officer pair 1
+  week 1 cell refer x draft: officer-Kevin pairs 8, officer pair 5
+  week 1 disagreements from a reading habit: 9, of which with Kevin in the pair 8; traces Kevin shared with an officer 42, with a different label 18
+== Sittings: reads after minute 45 by week [{'kevin': 9, 'marisol': 24, 'daniel': 23}, {'marisol': 23, 'daniel': 24, 'kevin': 12}, {'kevin': 0, 'marisol': 0, 'daniel': 0}, {'kevin': 0, 'marisol': 0, 'daniel': 0}, {'marisol': 0, 'kevin': 0}]
+  Daniel on Spanish traces, wrong/read by week [(1, 3, 15), (2, 1, 3), (3, 1, 6), (4, 1, 7), (5, 0, 0)]
+  slips after minute 45 / all slips, late reads / all reads, by week [(1, 8, 18, 56, 150), (2, 8, 14, 59, 150), (3, 0, 5, 0, 150), (4, 0, 13, 0, 150), (5, 0, 5, 0, 132)]
+== Cost per final label (readers $60/h officers, $85/h Kevin; adjudication $60/h; session 30 minutes)
+  week 1: $23.37 a label, $1402 total; reader hours 16.17, adjudicator hours 2.58
+  week 2: $19.11 a label, $1146 total; reader hours 13.06, adjudicator hours 1.66
+  week 3: $16.35 a label, $981 total; reader hours 11.51, adjudicator hours 0.6
+  week 4: $15.55 a label, $933 total; reader hours 10.22, adjudicator hours 1.3
+  week 5: $13.90 a label, $834 total; reader hours 9.2, adjudicator hours 0.46
+== Designs on weeks 2-5 readings
+  single read: 228/240 right (95.0%), $5.14 a label
+  single + 20% double: 231/240 right (96.2%), $6.37 a label
+  double + adjudication: 239/240 right (99.6%), $11.17 a label
+  as run (double, 20% triple, audit): 237/238 right (99.6%), $13.68 a label
+== Debt register
+  end of week 1: 5.9 h, blocking items 7  {'re-read after guideline change': 0.4, 'authored awaiting review': 5.3, 'unadjudicated': 0.0, 'cannot tell open': 0.2, 'audit due': 0.0}
+  end of week 2: 6.2 h, blocking items 9  {'re-read after guideline change': 0.4, 'authored awaiting review': 5.3, 'unadjudicated': 0.0, 'cannot tell open': 0.5, 'audit due': 0.0}
+  end of week 3: 6.0 h, blocking items 6  {'re-read after guideline change': 0.2, 'authored awaiting review': 5.3, 'unadjudicated': 0.0, 'cannot tell open': 0.5, 'audit due': 0.0}
+  end of week 4: 6.2 h, blocking items 6  {'re-read after guideline change': 0.2, 'authored awaiting review': 3.5, 'unadjudicated': 0.0, 'cannot tell open': 0.5, 'audit due': 2.0}
+  end of week 5: 6.4 h, blocking items 8  {'re-read after guideline change': 0.2, 'authored awaiting review': 3.5, 'unadjudicated': 0.2, 'cannot tell open': 0.5, 'audit due': 2.0}
+    re-read after guideline change: 3 x 4 min, owner Marisol and Kevin, blocks a rate True; week-one labels on window or work traces read by the two officers only
+    authored awaiting review: 26 x 8 min, owner Grace or Ben, blocks a rate False; the officers' 40 adversarial cases from Chapter 12; never in a rate
+    unadjudicated: 2 x 6 min, owner Ben, blocks a rate True; rulings owed
+    cannot tell open: 3 x 10 min, owner Kevin with the trace owner, blocks a rate True; missing relief end date; the servicing record has to be fetched
+    audit due: 30 x 4 min, owner Grace, blocks a rate False; monthly re-read of 30 labels from four weeks ago
+== Failure injection: ops-1.1 with the anniversary sentence removed, weeks 2-5
+  marisol-kevin: window x draft cell 2 -> 5; kappa 0.872 -> 0.846
+  daniel-kevin: window x draft cell 4 -> 8; kappa 0.822 -> 0.739
+  marisol-daniel: window x draft cell 6 -> 6; kappa 0.764 -> 0.769
+  final labels right weeks 2-5: 237 -> 233 of 236; anniversary finals wrong under injection 2/18
+== Selection study on 480 traces (REAL pre-labels; Compass failures from the fixture)
+   {"frame": 480, "failures": 51, "true_rate": 0.10625, "by_kind": {"anniversary (FM-20)": 25, "take-home income": 13, "unclear loan": 4, "other": 4, "stated work": 5}, "random": {"found_mean": 6.355, "found_p5": 3, "found_p95": 10, "hours": 8.301596266666667, "rate_mean": 0.10591666666666666, "rate_sd": 0.03793625867454805}, "uncertainty": {"found": 3, "hours": 8.685133333333335, "naive_rate": 0.05, "kinds": {"anniversary (FM-20)": 2, "take-home income": 1}, "rate": "refused: inclusion probability unknown: a targeted draw cannot give a rate"}, "failure": {"found": 13, "hours": 8.732000000000001, "naive_rate": 0.21666666666666667, "kinds": {"anniversary (FM-20)": 6, "take-home income": 5, "other": 1, "stated work": 1}, "rate": "refused: inclusion probability unknown: a targeted draw cannot give a rate", "found_mean": 16.133, "found_p5": 12, "found_p95": 20}, "read_all_flagged": {"n": 142, "found": 38, "hours": 20.581866666666667}, "mixed": {"found_mean": 8.69, "hours": 8.385396333333334, "ht_rate_mean": 0.10750758471237196, "ht_rate_sd": 0.03151935537111184}, "suspect_count": 142, "suspect_true_fail": 38, "missed_by_prelabel": {"n": 13, "kinds": {"anniversary (FM-20)": 9, "stated work": 4}}}
+  pre-labeller: {"majority_right": 362, "unanimous": 435, "unanimous_right": 339, "split": 45, "split_right": 23, "conf_values": {"95": 935, "92": 399, "85": 98, "45": 5, "75": 1, "78": 1, "98": 1}, "by_required": {"ask_which_loan": [53, 63], "ask_income": [38, 65], "decline_window": [19, 53], "refer_to_officer": [73, 74], "draft_deferral": [176, 219], "cannot_tell": [3, 6]}, "by_conf": {"90-94": [189, 240], "95": [162, 220], "<90": [11, 20]}, "anniversary": [20, 44], "stated work": [20, 41], "spanish": [51, 67]}
+== Automation bias, SIMULATED readers with REAL pre-label suggestions (p_wrong 0.07, p_right 0.6)
+  blind: kappa 0.837, accuracy 93.8%, agreed but wrong 1 of 480; Compass failures hidden by an agreed label 0 of 51
+  Compass reply shown: kappa 0.889, accuracy 95.4%, agreed but wrong 2 of 480; Compass failures hidden by an agreed label 1 of 51
+  pre-label shown: kappa 0.865, accuracy 94.4%, agreed but wrong 3 of 480; Compass failures hidden by an agreed label 0 of 51
+  sensitivity p_wrong 0.2: {'blind': (0.837, 1, 0), 'Compass reply shown': (0.877, 5, 4), 'pre-label shown': (0.812, 8, 1)}
+== Bootstrap 95% intervals, Marisol-Daniel kappa (2,000 resamples)
+  weeks [1]: kappa 0.621, interval 0.40 to 0.80, n 30
+  weeks [2]: kappa 0.562, interval 0.25 to 0.80, n 27
+  weeks [3]: kappa 0.955, interval 0.86 to 1.00, n 30
+  weeks [4]: kappa 0.732, interval 0.53 to 0.91, n 30
+  weeks [2, 3, 4]: kappa 0.764, interval 0.64 to 0.87, n 87
+== Expert hours a week (Grace or Ben: rulings, audit, 30-minute session)
+   [3.08, 2.16, 1.1, 1.8, 0.96]
+== Compass's hardship failure rate from the final labels (cannot_tell excluded)
+  week 1: 9/59 (15.3%, Wilson 0.082 to 0.265); fixture truth 8; anniversary failures 6
+  week 2: 5/58 (8.6%, Wilson 0.037 to 0.186); fixture truth 4; anniversary failures 3
+  week 3: 2/60 (3.3%, Wilson 0.009 to 0.114); fixture truth 2; anniversary failures 0
+  week 4: 4/60 (6.7%, Wilson 0.026 to 0.159); fixture truth 4; anniversary failures 1
+  week 5: 5/58 (8.6%, Wilson 0.037 to 0.186); fixture truth 5; anniversary failures 2
+  five weeks: 25/295 (8.5%, Wilson 0.058 to 0.122)
+  wrong offers (Compass drafted a deferral the final label does not allow): 3/295 [('t-143377', 'ask_which_loan'), ('t-142895', 'decline_window'), ('t-146549', 'refer_to_officer')]
+  one-sided 95% upper bound with 1 wrong offers in 295: 1.60%
+  one-sided 95% upper bound with 3 wrong offers in 295: 2.61%
+  of these, wrong offers under the fixture's truth: ['t-143377']
+== Final labels over five weeks
+  296/298 final labels equal the policy's answer (99.3%; Wilson 95% 0.976 to 0.998); pending 2
+### failure injection
+== Daniel (rows) x Kevin (columns), weeks 2-5, ops-1.1 as written
+            ask_wh  ask_in  declin  refer_  draft_  cannot
+    ask_wh       7       0       0       0       1       0
+    ask_in       0       8       0       0       0       0
+    declin       0       0       9       1       1       0
+    refer_       0       0       1      12       1       0
+    draft_       0       1       3       1      31       0
+    cannot       0       0       0       0       0       1
+  window x draft cell (both directions): 4
+  anniversary traces with a wrong final label: 0 []
+== Daniel (rows) x Kevin (columns), weeks 2-5, ops-1.1 without the anniversary sentence
+            ask_wh  ask_in  declin  refer_  draft_  cannot
+    ask_wh       7       0       0       0       1       0
+    ask_in       0       8       0       0       0       0
+    declin       0       0       9       2       5       0
+    refer_       0       0       1      11       1       0
+    draft_       0       1       3       1      27       0
+    cannot       0       0       0       0       0       1
+  window x draft cell (both directions): 8
+  anniversary traces with a wrong final label: 2 [('t-148562', {'marisol': 'decline_window', 'kevin': 'decline_window'}), ('t-148472', {'marisol': 'decline_window', 'daniel': 'decline_window'})]
+### try it
+== Try it 1
+  triple share 0.2: week-one anniversary traces 7, surfaced as a disagreement 6, final label wrong 1; week-one reads 150
+  triple share 0.0: week-one anniversary traces 7, surfaced as a disagreement 5, final label wrong 1; week-one reads 138
+== Try it 2
+  targeted  0 of 60: failures found 6.4, rate estimate mean 0.106, sd 0.038 (true 0.106)
+  targeted 15 of 60: failures found 8.7, rate estimate mean 0.108, sd 0.032 (true 0.106)
+  targeted 30 of 60: failures found 11.0, rate estimate mean 0.108, sd 0.033 (true 0.106)
+  targeted 45 of 60: failures found 13.5, rate estimate mean 0.106, sd 0.041 (true 0.106)
+== Try it 3
+  REAL claude-haiku-4-5-20251001, anniversary traces (n 44): right under ops-1.0 29, under ops-1.1 20 (sample 0 of the main run)
+  REAL claude-haiku-4-5-20251001, stated work traces (n 41): right under ops-1.0 14, under ops-1.1 21 (sample 0 of the main run)
+### annotation screen
+1 passed in 1.45s
+### truss tests
+91 passed in 0.88s

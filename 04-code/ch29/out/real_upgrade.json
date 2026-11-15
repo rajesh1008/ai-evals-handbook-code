@@ -1,0 +1,71 @@
+{
+  "kind": "REAL",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 12,
+  "n_ok": 12,
+  "rate": 1.0,
+  "rows": [
+    {
+      "kind": "fee",
+      "ok": true,
+      "n_chars": 137
+    },
+    {
+      "kind": "fee",
+      "ok": true,
+      "n_chars": 285
+    },
+    {
+      "kind": "hardship",
+      "ok": true,
+      "n_chars": 465
+    },
+    {
+      "kind": "hardship",
+      "ok": true,
+      "n_chars": 586
+    },
+    {
+      "kind": "payoff",
+      "ok": true,
+      "n_chars": 151
+    },
+    {
+      "kind": "schema",
+      "ok": true,
+      "n_chars": 224
+    },
+    {
+      "kind": "schema",
+      "ok": true,
+      "n_chars": 226
+    },
+    {
+      "kind": "fee",
+      "ok": true,
+      "n_chars": 263
+    },
+    {
+      "kind": "hardship",
+      "ok": true,
+      "n_chars": 138
+    },
+    {
+      "kind": "fee",
+      "ok": true,
+      "n_chars": 526
+    },
+    {
+      "kind": "hardship",
+      "ok": true,
+      "n_chars": 103
+    },
+    {
+      "kind": "schema",
+      "ok": true,
+      "n_chars": 213
+    }
+  ],
+  "note": "Modest paired prompt sample for upgrade hygiene; not a decide-tier rate.",
+  "error_type": null
+}

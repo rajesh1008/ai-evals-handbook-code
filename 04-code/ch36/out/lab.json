@@ -1,0 +1,149 @@
+{
+  "kind": "SIMULATED",
+  "digest": "125f6221af44",
+  "seed": 2036,
+  "assignment": {
+    "n_control": 95,
+    "n_treatment": 105,
+    "salt": "harbor-hardship-ab-2028-11",
+    "unit": "borrower"
+  },
+  "peeks": [
+    {
+      "look": 1,
+      "n_per_arm": 50,
+      "k_control": 1,
+      "k_treatment": 0,
+      "rate_control": 0.02,
+      "rate_treatment": 0.0,
+      "delta": -0.02,
+      "alpha_spend": 0.001,
+      "p_approx": 0.3124222112426934,
+      "stop_efficacy": false,
+      "continue": true
+    },
+    {
+      "look": 2,
+      "n_per_arm": 100,
+      "k_control": 1,
+      "k_treatment": 0,
+      "rate_control": 0.01,
+      "rate_treatment": 0.0,
+      "delta": -0.01,
+      "alpha_spend": 0.005,
+      "p_approx": 0.3148786413364199,
+      "stop_efficacy": false,
+      "continue": true
+    },
+    {
+      "look": 3,
+      "n_per_arm": 200,
+      "k_control": 2,
+      "k_treatment": 1,
+      "rate_control": 0.01,
+      "rate_treatment": 0.005,
+      "delta": -0.005,
+      "alpha_spend": 0.01,
+      "p_approx": 0.5620690324203208,
+      "stop_efficacy": false,
+      "continue": true
+    },
+    {
+      "look": 4,
+      "n_per_arm": 400,
+      "k_control": 2,
+      "k_treatment": 1,
+      "rate_control": 0.005,
+      "rate_treatment": 0.0025,
+      "delta": -0.0025,
+      "alpha_spend": 0.04,
+      "p_approx": 0.56288822454856,
+      "stop_efficacy": false,
+      "continue": true
+    }
+  ],
+  "guardrail_pre_holiday": {
+    "k": 0,
+    "n": 100,
+    "rate": 0.0,
+    "target": 0.005,
+    "wilson_upper": 0.026347285857864715,
+    "trip": false,
+    "trip_reason": "ok_zero_errors"
+  },
+  "guardrail_n200": {
+    "k": 1,
+    "n": 200,
+    "rate": 0.005,
+    "target": 0.005,
+    "wilson_upper": 0.022099883116606066,
+    "trip": false,
+    "trip_reason": "ok"
+  },
+  "interleave": {
+    "interleaved": [
+      [
+        "control",
+        "doc-1"
+      ],
+      [
+        "treatment",
+        "doc-2"
+      ],
+      [
+        "control",
+        "doc-3"
+      ],
+      [
+        "treatment",
+        "doc-4"
+      ],
+      [
+        "control",
+        "doc-5"
+      ],
+      [
+        "control",
+        "doc-6"
+      ],
+      [
+        "treatment",
+        "doc-7"
+      ],
+      [
+        "control",
+        "doc-8"
+      ],
+      [
+        "control",
+        "doc-9"
+      ],
+      [
+        "treatment",
+        "doc-10"
+      ]
+    ],
+    "credit": {
+      "control": 0,
+      "treatment": 2
+    },
+    "winner": "treatment"
+  },
+  "experiment": {
+    "experiment_id": "exp-hardship-prompt-2028-11",
+    "unit_of_randomisation": "borrower",
+    "salt": "harbor-hardship-ab-2028-11",
+    "arms": {
+      "control": "prompt-hardship-2028-10-a",
+      "treatment": "prompt-hardship-2028-11-b"
+    },
+    "primary_metric": "wrong_hardship_offer_rate",
+    "guardrail_metric": "wrong_hardship_offer_rate",
+    "status": "running"
+  },
+  "study_window": "2028-11-06 to 2028-12-04",
+  "holiday_weekend": "2028-11-24 to 2028-11-25",
+  "target": 0.005,
+  "k_control_400": 2,
+  "k_treatment_400": 1
+}

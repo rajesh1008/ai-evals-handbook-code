@@ -1,0 +1,6 @@
+Chapter 36 OUTPUT
+digest 125f6221af44
+assignment control=95 treatment=105
+interleave_winner treatment
+inject_caught True k=40 n=140 arm=treatment
+real REAL 6/6

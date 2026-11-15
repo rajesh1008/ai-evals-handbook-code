@@ -1,0 +1,7 @@
+Chapter 33 OUTPUT
+digest dc5b4b836a16
+manifest 6971579ff595
+old_replay_ok False
+retire_rate 0.140
+redaction_inject_caught True destroyed 500
+real REAL 5/6

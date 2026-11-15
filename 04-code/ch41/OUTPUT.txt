@@ -1,0 +1,8 @@
+Chapter 41 lab OUTPUT (deterministic; no paid API)
+digest=1d3a6204f7f450c1 seed=2041
+Ch16 charged_usd=6.191862 ceiling=6.2919410000000005
+request_ids=3391 commits=3396 orphans=5 rows=3154 agent_turns=417
+waterfall 1900.0 -> 640.0 saved=1260.0 (SIMULATED)
+inject admit=False failed_bias=True
+try_its all_ok=True
+teaching={'release_1900_to_640': True, 'five_cuts': True, 'saved_usd': 1260.0, 'cheap_fails_bias': True, 'baseline_admits': True, 'ch16_ceiling_match': True, 'rows_not_requests': True, 'order_not_decide': True}

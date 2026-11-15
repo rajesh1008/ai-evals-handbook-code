@@ -1,0 +1,47 @@
+{
+  "n": 200,
+  "gold_fail": 46,
+  "gold_rate": 0.23,
+  "judge_fail": 45,
+  "judge_rate": 0.225,
+  "kinds": {
+    "right_waive": 48,
+    "tool_bug": 6,
+    "right_no": 76,
+    "defer_review": 13,
+    "fail_amount": 12,
+    "fail_loan": 7,
+    "fail_window": 11,
+    "fail_invent": 16,
+    "defer_tool": 11
+  },
+  "cm": {
+    "tp": 45,
+    "fn": 1,
+    "fp": 0,
+    "tn": 154,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+  },
+  "tpr": 0.9782608695652174,
+  "tnr": 1.0,
+  "tpr_ci": [
+    0.8866444550566697,
+    0.9961522448887572
+  ],
+  "tnr_ci": [
+    0.9756616760093663,
+    0.9999999999999999
+  ],
+  "kappa": 0.9857752489331436,
+  "kappa_ci": [
+    0.9535747446610956,
+    1.0
+  ],
+  "kind_tv": 0.09499999999999999,
+  "admit": false,
+  "role": "order",
+  "reasons": [
+    "validation kind-mix too close to reserved set (TV 0.095)"
+  ]
+}

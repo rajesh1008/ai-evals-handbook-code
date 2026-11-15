@@ -1,0 +1,171 @@
+
+====================================================================================================
+1. Fixture (SIMULATED): 200 fee-explanation pairs, seed 2026
+====================================================================================================
+pairs p-0001 to p-0200: 200
+gap: {'large': 130, 'close': 40, 'tied': 30}  lang: {'en': 160, 'es': 40}  gold: {'B': 96, 'A': 74, 'tie': 30}
+quality-matched (tied) pairs: 30; mixed-family pairs: 142
+
+====================================================================================================
+2. Position bias: each pair judged twice, slots swapped
+====================================================================================================
+  J-S: n=200  position 40/200 = 20.0%  (Wilson 15.0% to 26.1%)  consistency 80.0%  original 72 other 87 tie 1
+     single-order accuracy 88.2% on 170 pairs with a better reply; after dual-order mitigation kept 160, accuracy 97.3% on 149
+     gap=large n=130: position 0.8%
+     gap=close n=40: position 50.0%
+     gap=tied n=30: position 63.3%
+  J-L: n=200  position 18/200 = 9.0%  (Wilson 5.8% to 13.8%)  consistency 91.0%  original 80 other 102 tie 0
+     single-order accuracy 98.8% on 170 pairs with a better reply; after dual-order mitigation kept 182, accuracy 100.0% on 167
+     gap=large n=130: position 0.0%
+     gap=close n=40: position 7.5%
+     gap=tied n=30: position 50.0%
+  J-X: n=200  position 23/200 = 11.5%  (Wilson 7.8% to 16.7%)  consistency 88.5%  original 81 other 96 tie 0
+     single-order accuracy 97.6% on 170 pairs with a better reply; after dual-order mitigation kept 177, accuracy 99.4% on 162
+     gap=large n=130: position 0.0%
+     gap=close n=40: position 20.0%
+     gap=tied n=30: position 50.0%
+
+====================================================================================================
+3. Verbosity bias: pad reply A by 30% (courtesy filler, no new facts)
+====================================================================================================
+  J-S: flipped 32/200 = 16.0%  (Wilson 11.6% to 21.7%); toward padded A 18/32 = 56.2%
+     on 30 tied-quality pairs: flipped 11/30 = 36.7%; toward padded 72.7%
+     padding the worse reply: flipped 21/170 = 12.4%; onto the worse reply 9/21 = 42.9%
+  J-L: flipped 18/200 = 9.0%  (Wilson 5.8% to 13.8%); toward padded A 11/18 = 61.1%
+     on 30 tied-quality pairs: flipped 16/30 = 53.3%; toward padded 62.5%
+     padding the worse reply: flipped 2/170 = 1.2%; onto the worse reply 1/2 = 50.0%
+  J-X: flipped 18/200 = 9.0%  (Wilson 5.8% to 13.8%); toward padded A 9/18 = 50.0%
+     on 30 tied-quality pairs: flipped 13/30 = 43.3%; toward padded 38.5%
+     padding the worse reply: flipped 5/170 = 2.9%; onto the worse reply 1/5 = 20.0%
+
+====================================================================================================
+4. Self-preference: family match on quality-matched mixed-family pairs
+====================================================================================================
+  J-S gold-controlled (tied pairs, mixed family): used 20 decisive 20 own 13 other 7 self_pref 0.300 own_rate 65.0%
+     uncontrolled (every mixed-family pair): used 89 decisive 87 own 46 other 41 self_pref 0.057 own_rate 52.9%
+  J-L gold-controlled (tied pairs, mixed family): used 17 decisive 16 own 14 other 2 self_pref 0.750 own_rate 87.5%
+     uncontrolled (every mixed-family pair): used 101 decisive 100 own 56 other 44 self_pref 0.120 own_rate 56.0%
+  J-X gold-controlled (tied pairs, mixed family): used 17 decisive 17 own 12 other 5 self_pref 0.412 own_rate 70.6%
+     uncontrolled (every mixed-family pair): used 94 decisive 94 own 55 other 39 self_pref 0.170 own_rate 58.5%
+
+====================================================================================================
+5. Authorship labels: same replies, a self or other tag, no model name
+====================================================================================================
+  J-S: flipped 34/200 = 17.0%; toward self-tag 11, away from other-tag 14; directional 25/200 = 12.5%
+  J-L: flipped 18/200 = 9.0%; toward self-tag 12, away from other-tag 4; directional 16/200 = 8.0%
+  J-X: flipped 15/200 = 7.5%; toward self-tag 4, away from other-tag 4; directional 8/200 = 4.0%
+
+====================================================================================================
+6. Irrelevant authority cue: prepend a staff-newsletter attribution to A
+====================================================================================================
+  J-S: flipped 32/200 = 16.0%; toward the cued side 19/32 = 59.4%
+  J-L: flipped 11/200 = 5.5%; toward the cued side 5/11 = 45.5%
+  J-X: flipped 22/200 = 11.0%; toward the cued side 12/22 = 54.5%
+
+====================================================================================================
+7. Rubric anchoring: three MC-02 options, two orders
+====================================================================================================
+  J-S: n=400 first-slot 192/400 = 48.0% (excess +0.147 vs 1/3); last-slot 15.0%; content consistency 131/200 = 65.5%
+  J-L: n=400 first-slot 193/400 = 48.2% (excess +0.149 vs 1/3); last-slot 15.0%; content consistency 132/200 = 66.0%
+  J-X: n=400 first-slot 69/400 = 17.2% (excess -0.161 vs 1/3); last-slot 44.5%; content consistency 141/200 = 70.5%
+
+====================================================================================================
+8. Segment bias: English vs Spanish position consistency and single-order accuracy
+====================================================================================================
+  J-S consistency by language: en 134/160 = 83.8%; es 26/40 = 65.0%; gap 18.8%
+     accuracy by language: en 128/140 = 91.4%; es 22/30 = 73.3%; gap 18.1%
+  J-L consistency by language: en 150/160 = 93.8%; es 32/40 = 80.0%; gap 13.7%
+     accuracy by language: en 140/140 = 100.0%; es 28/30 = 93.3%; gap 6.7%
+  J-X consistency by language: en 147/160 = 91.9%; es 30/40 = 75.0%; gap 16.9%
+     accuracy by language: en 139/140 = 99.3%; es 27/30 = 90.0%; gap 9.3%
+
+====================================================================================================
+9. Battery report and admission (Harbor thresholds)
+====================================================================================================
+  J-S:
+     position_rate    0.200  fail  (flag 0.05, fail 0.1)
+     verbosity_flip   0.160  fail  (flag 0.05, fail 0.15)
+     self_pref        0.300  fail  (flag 0.05, fail 0.15)
+     label_shift      0.125  flag  (flag 0.05, fail 0.15)
+     authority_flip   0.160  fail  (flag 0.02, fail 0.08)
+     rubric_slot      0.147  flag  (flag 0.1, fail 0.25)
+     segment_gap      0.181  flag  (flag 0.1, fail 0.2)
+     admit order=False ['fail on authority_flip, position_rate, self_pref', '4 tests at fail']  flags=['label_shift', 'rubric_slot', 'segment_gap'] fails=['position_rate', 'verbosity_flip', 'self_pref', 'authority_flip']
+     admit pairwise=False ['fail on position_rate, self_pref, verbosity_flip', '4 tests at fail']; pointwise=False ['fail on authority_flip', '4 tests at fail']
+  J-L:
+     position_rate    0.090  flag  (flag 0.05, fail 0.1)
+     verbosity_flip   0.090  flag  (flag 0.05, fail 0.15)
+     self_pref        0.750  fail  (flag 0.05, fail 0.15)
+     label_shift      0.080  flag  (flag 0.05, fail 0.15)
+     authority_flip   0.055  flag  (flag 0.02, fail 0.08)
+     rubric_slot      0.149  flag  (flag 0.1, fail 0.25)
+     segment_gap      0.067  pass  (flag 0.1, fail 0.2)
+     admit order=False ['fail on self_pref']  flags=['position_rate', 'verbosity_flip', 'label_shift', 'authority_flip', 'rubric_slot'] fails=['self_pref']
+     admit pairwise=False ['fail on self_pref']; pointwise=True —
+  J-X:
+     position_rate    0.115  fail  (flag 0.05, fail 0.1)
+     verbosity_flip   0.090  flag  (flag 0.05, fail 0.15)
+     self_pref        0.412  fail  (flag 0.05, fail 0.15)
+     label_shift      0.040  pass  (flag 0.05, fail 0.15)
+     authority_flip   0.110  fail  (flag 0.02, fail 0.08)
+     rubric_slot      0.112  flag  (flag 0.1, fail 0.25)
+     segment_gap      0.093  pass  (flag 0.1, fail 0.2)
+     admit order=False ['fail on authority_flip, position_rate, self_pref', '3 tests at fail']  flags=['verbosity_flip', 'rubric_slot'] fails=['position_rate', 'self_pref', 'authority_flip']
+     admit pairwise=False ['fail on position_rate, self_pref', '3 tests at fail']; pointwise=False ['fail on authority_flip', '3 tests at fail']
+
+====================================================================================================
+10. Panel of three: majority and correlated errors (same-family S+L vs X)
+====================================================================================================
+  S         150/170 = 88.2%
+  L         168/170 = 98.8%
+  X         166/170 = 97.6%
+  majority  166/170 = 97.6%
+  pairwise agreement: S-L 82.5% (165/200); S-X 85.5%; L-X 89.5%
+  shared mistakes S-L: both 1/170 = 0.6%; both|either 4.8%; vs independence 0.001; ratio 4.25
+  shared mistakes S-X: both 3/170 = 1.8%; both|either 14.3%; vs independence 0.003; ratio 6.38
+  shared mistakes L-X: both 0/170 = 0.0%; both|either 0.0%; vs independence 0.000; ratio 0.00
+  shared position outcomes S-L: 10 (J-S has 40, J-L has 18)
+  shared position outcomes S-X: 13 (J-S has 40, J-X has 23)
+  shared position outcomes L-X: 12 (J-L has 18, J-X has 23)
+
+Wrote /workspace/ai-evals-book/04-code/ch17/out/lab.json
+================================================================================
+Injection: position bias at exactly 9% of pairwise verdicts
+================================================================================
+Gold-following judge (no slot preference): 0/200 = 0.0%
+After forcing 18 pairs (seed 2026, ['p-0027', 'p-0031', 'p-0058']...) to pick slot A both times: 18/200 = 9.0% (Wilson 5.8% to 13.8%)
+Dual-order mitigation keeps 182 of 200; accuracy on kept scored pairs 100.0% (n=160)
+Of the 18 injected pairs, 10 have a better reply; a first-slot-only reading would reverse 7 of them.
+Battery on the injected judge (position only): flag (flag 0.05, fail 0.1); pairwise admit=True —
+Wrote out/inject.json
+
+================================================================================
+Try It 1. Pad reply A by 50% instead of 30% (J-S)
+================================================================================
+30% pad: flipped 32/200 = 16.0%; toward A 18/32 = 56.2%
+50% pad: flipped 32/200 = 16.0%; toward A 22/32 = 68.8%
+
+================================================================================
+Try It 2. Position rate after dropping large-gap pairs (all three judges)
+================================================================================
+J-S: all pairs 40/200 = 20.0%; close+tied only 39/70 = 55.7%
+J-L: all pairs 18/200 = 9.0%; close+tied only 18/70 = 25.7%
+J-X: all pairs 23/200 = 11.5%; close+tied only 23/70 = 32.9%
+
+================================================================================
+Try It 3. Majority of same-family (S+L) vs a mixed pair (S+X) vs all three
+================================================================================
+accuracy on pairs with a better reply:
+  J-S                    150/170 = 88.2%
+  J-L                    168/170 = 98.8%
+  J-X                    166/170 = 97.6%
+  majority of three      166/170 = 97.6%
+  S+L agree-or-tie       149/170 = 87.6%
+  S+X agree-or-tie       149/170 = 87.6%
+shared-mistake ratio S-L 4.25 (both 1); S-X 6.38 (both 3)
+
+Wrote out/tryits.json
+[RESULT PENDING: run `cd 04-code/ch17 && python3 real_judge.py` once a provider client is wired; see 00-plan/pending-model-runs.md]
+This would judge 200 pairs twice (slots swapped) and once with reply A padded by 30%, on three models.
+Wrote /workspace/ai-evals-book/04-code/ch17/out/real_battery.json
+7 passed in 0.01s

@@ -1,0 +1,17 @@
+{
+  "single": {
+    "system_changed": true,
+    "judge_changed": false,
+    "dual_change": false,
+    "verdict": "HOLD_SINGLE_PIN",
+    "SIMULATED": true
+  },
+  "dual": {
+    "system_changed": true,
+    "judge_changed": true,
+    "dual_change": true,
+    "verdict": "HOLD_DUAL_PIN",
+    "SIMULATED": true
+  },
+  "SIMULATED": true
+}

@@ -1,0 +1,112 @@
+{
+  "run_id": "ch16-full-new-2026-11-08-2131",
+  "cap_usd": 12.0,
+  "charged_usd": 6.191862,
+  "headroom_usd": 0.05,
+  "reservation_counts": {
+    "committed": 3396,
+    "unreconciled": 8,
+    "released": 8
+  },
+  "unreconciled": [
+    {
+      "id": "2d02216c5f2248c4b6c785241a648900",
+      "worst_usd": 0.006314,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180867",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.006314
+      }
+    },
+    {
+      "id": "6878ba1d2d9d4c2abec6b0e918a45b5a",
+      "worst_usd": 0.006482,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180740",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.006482
+      }
+    },
+    {
+      "id": "72f516b7aaf34bbbb579ef98bda0b52a",
+      "worst_usd": 0.006408,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180694",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.006408
+      }
+    },
+    {
+      "id": "9c32a93871424c1289dc205e6681da5a",
+      "worst_usd": 0.005924,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180763",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.005924
+      }
+    },
+    {
+      "id": "abfd016ad7b5459a829876687a97897a",
+      "worst_usd": 0.006067,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180885",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.006067
+      }
+    },
+    {
+      "id": "ad3f50886bee4a10bb317d5293b6f1f5",
+      "worst_usd": 0.006024,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180797",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.006024
+      }
+    },
+    {
+      "id": "e5155ee341b04f4bad58daecfbf36308",
+      "worst_usd": 0.006546,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180793",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.006546
+      }
+    },
+    {
+      "id": "e9e742d3f4c942408d9f8571ec866888",
+      "worst_usd": 0.006314,
+      "error": "client_hang_killed_after_~7min_no_timeout",
+      "meta": {
+        "item": "t-180823",
+        "max_tokens": 600,
+        "model": "claude-haiku-4-5-20251001",
+        "tag": "judge",
+        "worst_usd": 0.006314
+      }
+    }
+  ],
+  "outstanding_reserved_usd": 0.050079,
+  "available_usd": 5.7080589999999995,
+  "events_truncated": 6824
+}

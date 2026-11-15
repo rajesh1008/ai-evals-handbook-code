@@ -1,0 +1,7 @@
+Chapter 43 lab OUTPUT (deterministic; no paid API)
+digest=0f6e150887374ca5 seed=2043
+platforms=langfuse,phoenix,braintrust,langsmith,promptfoo,deepeval
+all_pinned_admit=True ceiling=0.005
+inject platform=langsmith gate_changed=True extra_wrong=20
+try_its all_ok=True
+hosted_runs=PENDING — no paid API; adapters are offline contracts

@@ -1,0 +1,29 @@
+{
+  "try1_without_rubber": {
+    "n": 250,
+    "override_rate": 0.176
+  },
+  "try2_blind_on_plants": {
+    "bias_with_ai": {
+      "n_eligible": 20,
+      "n_biased": 20,
+      "automation_bias_rate": 1.0
+    },
+    "bias_blind_simulated": {
+      "n_eligible": 0,
+      "n_biased": 0,
+      "automation_bias_rate": 0.0
+    }
+  },
+  "try3_disagreement_pool": {
+    "n": 80,
+    "per_reviewer_errors": {
+      "R-ben": 14,
+      "R-daniel": 7,
+      "R-grace": 16,
+      "R-marisol": 6,
+      "R-ryan": 37
+    }
+  },
+  "simulated": true
+}

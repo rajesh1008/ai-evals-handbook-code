@@ -1,0 +1,215 @@
+
+================================================================================================
+1. The sets (SIMULATED decisions; gold is planted correctness)
+================================================================================================
+  fit: quota random, 27 Sep to 26 Dec 2027: n=372 offers=279 declines=93 wrong=20 (5.4%) accuracy 94.6% (Wilson 91.8% to 96.5%)
+  January calibration draw, 3 to 14 Jan 2028: n=400 offers=304 declines=96 wrong=12 (3.0%) accuracy 97.0% (Wilson 94.8% to 98.3%)
+  live routing, 17 Jan to 13 Feb 2028: n=560 offers=375 declines=185 wrong=24 (4.3%) accuracy 95.7% (Wilson 93.7% to 97.1%)
+  January IDs t-229202 .. t-237197; live IDs t-237220 .. t-253155
+
+================================================================================================
+2. Evidence is not probability: the citation field
+================================================================================================
+  citation present=True: n=754 right 722 = 95.8%
+  citation present=False: n=18 right 18 = 100.0%
+  wrong decisions citing policy and record: 32/32 = 100.0%
+
+================================================================================================
+3. Three confidence fields on the fit set and the January set
+================================================================================================
+  fit  verbal   n= 372 mean conf 0.931 accuracy 0.946 ECE 0.0152 (quantile 0.0240) AUROC 0.501 Brier 0.0518 resolution 0.0000 degenerate=['mode_share:198/372@0.92', 'distinct:4']
+  fit  logprob  n= 363 mean conf 0.996 accuracy 0.948 ECE 0.0483 (quantile 0.0483) AUROC 0.798 Brier 0.0485 resolution 0.0050 degenerate=[]
+  fit  judge    n= 372 mean conf 0.866 accuracy 0.946 ECE 0.0798 (quantile 0.0917) AUROC 0.790 Brier 0.0653 resolution 0.0090 degenerate=[]
+  jan  verbal   n= 400 mean conf 0.933 accuracy 0.970 ECE 0.0374 (quantile 0.0374) AUROC 0.583 Brier 0.0305 resolution 0.0001 degenerate=['mode_share:203/400@0.92', 'distinct:4']
+  jan  logprob  n= 390 mean conf 0.996 accuracy 0.969 ECE 0.0265 (quantile 0.0270) AUROC 0.808 Brier 0.0268 resolution 0.0073 degenerate=[]
+  jan  judge    n= 400 mean conf 0.860 accuracy 0.970 ECE 0.1097 (quantile 0.1097) AUROC 0.838 Brier 0.0658 resolution 0.0067 degenerate=[]
+  verbalised values: {'0.85': 30, '0.92': 401, '0.95': 308, '0.98': 33}
+
+================================================================================================
+4. Segment view: where each field is confidently wrong (fit + January, wrong decisions)
+================================================================================================
+  anniversary  wrong n=  4 mean verbal 0.943 logprob 0.873 judge 0.831
+  stated_work  wrong n= 17 mean verbal 0.936 logprob 0.993 judge 0.535
+  multi_loan   wrong n=  4 mean verbal 0.943 logprob 0.965 judge 0.595
+  none         wrong n= 10 mean verbal 0.909 logprob 0.892 judge 0.561
+
+================================================================================================
+5. Recalibration map on the fit set (logprob -> Platt), bound to model pin and policy
+================================================================================================
+  map digest 1930aeac8d9d kind platt params a=0.6624 b=-1.4776 n=363 pin compass-decision-2027-09 policy hp-2027-04+hb-2027-07
+  January: raw ECE 0.0265 -> calibrated ECE 0.0269; AUROC raw 0.808 calibrated 0.808 (a monotone map keeps the ranking)
+    calibrated bin (0.2,0.3] n=  1 conf 0.275 acc 0.000
+    calibrated bin (0.3,0.4] n=  2 conf 0.344 acc 0.000
+    calibrated bin (0.5,0.6] n=  2 conf 0.530 acc 0.500
+    calibrated bin (0.6,0.7] n=  3 conf 0.635 acc 1.000
+    calibrated bin (0.7,0.8] n= 11 conf 0.766 acc 0.909
+    calibrated bin (0.8,0.9] n= 29 conf 0.871 acc 0.931
+    calibrated bin (0.9,1.0] n=342 conf 0.971 acc 0.985
+
+================================================================================================
+6. Thresholds from the gold set: CRC and an exact bound on the fit set (unflagged cases)
+================================================================================================
+  alpha 0.5%: CRC infeasible; exact 95% bound infeasible on this set; feasibility floor 4.9% of all decisions withheld (base error 5.4%)
+  alpha 1.0%: CRC t=0.8207 auto 310 (95.4%), errors 2, bound 0.0096; exact 95% bound infeasible on this set; feasibility floor 4.4% of all decisions withheld (base error 5.4%)
+  alpha 2.0%: CRC t=0.6245 auto 325 (100.0%), errors 4, bound 0.0153; exact 95% bound infeasible on this set; feasibility floor 3.4% of all decisions withheld (base error 5.4%)
+  auto-route cases needed for an exact 95% bound under 1% with 0 errors: 299
+  auto-route cases needed for an exact 95% bound under 1% with 1 errors: 473
+  auto-route cases needed for an exact 95% bound under 1% with 2 errors: 628
+
+================================================================================================
+7. Three thresholds on the January set (t_refuse 0.85; refuse also takes missing scores)
+================================================================================================
+  status quo (offers reviewed, declines sent)  auto 24.0% review 76.0% refuse 0.0% post-review 4/400 = 1.00% minutes 1216
+  review everything                            auto 0.0% review 100.0% refuse 0.0% post-review 2/400 = 0.50% minutes 1600
+  t_auto 0.930                                  auto 72.2% review 20.0% refuse 7.8% post-review 3/400 = 0.75% auto errors 0/289 (exact 95% bound 1.03%) minutes 692 reasons {'above_auto': 289, 'between': 50, 'below_refuse': 21, 'flag': 30, 'fail_closed': 10}
+  t_auto 0.956 (chosen)                         auto 60.8% review 31.5% refuse 7.8% post-review 3/400 = 0.75% auto errors 0/243 (exact 95% bound 1.23%) minutes 876 reasons {'above_auto': 243, 'between': 96, 'below_refuse': 21, 'flag': 30, 'fail_closed': 10}
+  t_auto 0.990                                  auto 14.2% review 78.0% refuse 7.8% post-review 3/400 = 0.75% auto errors 0/57 (exact 95% bound 5.12%) minutes 1620 reasons {'above_auto': 57, 'between': 282, 'below_refuse': 21, 'flag': 30, 'fail_closed': 10}
+
+================================================================================================
+8. Threshold versus review load at three traffic levels (January mix scaled; capacity 720 min/week)
+================================================================================================
+  traffic  10% status_quo officer   7.1 h/week ok   post-review 1.00% review cost $426/week
+  traffic  10% all_review officer   9.3 h/week ok   post-review 0.50% review cost $560/week
+  traffic  10% 0.93       officer   4.0 h/week ok   post-review 0.75% review cost $242/week
+  traffic  10% 0.956      officer   5.1 h/week ok   post-review 0.75% review cost $307/week
+  traffic  10% 0.99       officer   9.4 h/week ok   post-review 0.75% review cost $567/week
+  traffic  25% status_quo officer  17.7 h/week OVER post-review 1.50% review cost $1,064/week
+  traffic  25% all_review officer  23.3 h/week OVER post-review 1.00% review cost $1,400/week
+  traffic  25% 0.93       officer  10.1 h/week ok   post-review 0.75% review cost $606/week
+  traffic  25% 0.956      officer  12.8 h/week OVER post-review 1.25% review cost $766/week
+  traffic  25% 0.99       officer  23.6 h/week OVER post-review 1.25% review cost $1,418/week
+  traffic  50% status_quo officer  35.5 h/week OVER post-review 1.50% review cost $2,128/week
+  traffic  50% all_review officer  46.7 h/week OVER post-review 1.00% review cost $2,800/week
+  traffic  50% 0.93       officer  20.2 h/week OVER post-review 1.25% review cost $1,211/week
+  traffic  50% 0.956      officer  25.6 h/week OVER post-review 1.25% review cost $1,533/week
+  traffic  50% 0.99       officer  47.2 h/week OVER post-review 1.25% review cost $2,835/week
+
+================================================================================================
+9. Live routing, 17 Jan to 13 Feb 2028 (t_auto 0.956, t_refuse 0.85; map 1930aeac8d9d)
+================================================================================================
+  week of 2028-01-17: n=140 auto 65.0% review 30.7% refuse 4.3% post-review 2 wrong; minutes 244
+  week of 2028-01-24: n=140 auto 57.1% review 31.4% refuse 11.4% post-review 1 wrong; minutes 368
+  week of 2028-01-31: n=140 auto 61.4% review 30.7% refuse 7.9% post-review 1 wrong; minutes 304
+  week of 2028-02-07: n=140 auto 60.7% review 32.9% refuse 6.4% post-review 0 wrong; minutes 292
+  four weeks, launch condition (every routed decision second-read by an officer): n=560 auto 61.1% review 31.4% refuse 7.5%; post-review 4/560 = 0.71%; by route {'auto': 1, 'review': 2, 'refuse': 1} route error auto 0.29% review 1.14% refuse 2.38%
+  exact 95% upper bound on 4/560: 1.63%
+  steady-state design after launch, stratified 60 labels a week (30 auto, 20 review, 10 refuse), same four weeks: labels {'auto': [0, 120], 'review': [1, 80], 'refuse': [1, 35]} -> estimate 0.61% (approx 95% 0.00% to 2.60%)
+  same four weeks under the status quo: 13/560 = 2.32% (declines sent: 10 wrong); review everything: 3/560 = 0.54%; officer minutes status quo 1500, routed 1208, all 2240
+  wrongful declines reaching a borrower: routed 1/185; status quo 10/185
+  wrong offers reaching a borrower: 3/375 offers = 0.80% (exact 95% bound 2.05%; Victor's <0.5% widening gate is not shown by four weeks)
+
+================================================================================================
+10. Model change, Monday 14 February 2028 (rc-0214-1, pin compass-decision-2028-02)
+================================================================================================
+  map 1930aeac8d9d valid for new pin? reasons=['model_pin_changed']
+  pinned (fail closed): auto 0.0% review 100.0% refuse 0.0% post-review 0.71% minutes/week 560
+  unpinned (old map on new scores): auto 77.9% review 17.9% refuse 4.3% post-review 1.43% auto errors 4/327
+  recalibration draw 14 to 25 Feb: n=300 (295 with a log-probability); ECE under the old map 0.0131
+  new map 2113bb13b165 a=0.6066 b=-1.6121; in-sample ECE 0.0132
+  week of 28 Feb on the new map: auto 61.4% review 30.7% refuse 7.9% post-review 1/140
+
+================================================================================================
+11. Costs (officer time at $60 an hour; labels at $13.90; both illustrative)
+================================================================================================
+  January calibration draw 400 labels: $5,560; February recalibration draw 300 labels: $4,170
+  officer review at 10% traffic: status quo 6.2 h/week ($375); routed 5.0 h/week ($302); fail-closed weeks 9.3 h/week
+
+wrote out/lab.json
+Schema check (float in [0, 1]) on the injected week: 560/560 pass
+Calibrated score of 1.0 under map 1930aeac8d9d: 0.9995 (t_auto 0.956)
+Injected field: ECE 0.0429, AUROC 0.500, resolution 0.0000, degenerate ['mode_share:560/560@1', 'distinct:1']
+  honest field                 auto  61.1% review  31.4% refuse  7.5% post-review 4/560 = 0.71% wrong by route {'auto': 1, 'review': 2, 'refuse': 1} officer minutes 1208
+  constant, no guard           auto  92.5% review   7.5% refuse  0.0% post-review 9/560 = 1.61% wrong by route {'auto': 9, 'review': 0, 'refuse': 0} officer minutes 168
+  constant, degenerate guard   auto   0.0% review 100.0% refuse  0.0% post-review 3/560 = 0.54% wrong by route {'auto': 0, 'review': 3, 'refuse': 0} officer minutes 2240
+The guard keeps every decision in front of an officer; the routing share itself (auto jumping from about 61% to the share of unflagged cases) is the label-free alarm.
+Try It 1: one set of scores, five ECE protocols (January)
+  logprob   5 uniform  bins: ECE 0.0265
+  logprob  10 uniform  bins: ECE 0.0265
+  logprob  20 uniform  bins: ECE 0.0265
+  logprob  10 quantile bins: ECE 0.0270
+  logprob  20 quantile bins: ECE 0.0271
+  judge     5 uniform  bins: ECE 0.1097
+  judge    10 uniform  bins: ECE 0.1097
+  judge    20 uniform  bins: ECE 0.1097
+  judge    10 quantile bins: ECE 0.1097
+  judge    20 quantile bins: ECE 0.1097
+  calibrated  5 uniform  bins: ECE 0.0269
+  calibrated 10 uniform  bins: ECE 0.0269
+  calibrated 20 uniform  bins: ECE 0.0278
+  calibrated 10 quantile bins: ECE 0.0273
+  calibrated 20 quantile bins: ECE 0.0309
+  cases with raw score above 0.99: 369/390, right 362 = 98.1%
+
+Try It 2: route on the verbalised confidence (same thresholds, Platt map fitted on the same fit set)
+  verbalised: map 7e647b9d52f3 a=-0.183 b=3.354; distinct calibrated values 4 [0.9336, 0.9435, 0.9482, 0.9542]
+    auto 0.0% review 100.0% refuse 0.0% post-review 2/400 = 0.50% wrong by route {'auto': 0, 'review': 2, 'refuse': 0} officer minutes 1600
+
+Try It 3: route on the judge-estimated confidence (one extra judge call per decision)
+  judge-estimated: map 0850c777225b a=0.604 b=1.679; distinct calibrated values 332
+    auto 58.8% review 33.5% refuse 7.8% post-review 3/400 = 0.75% wrong by route {'auto': 1, 'review': 1, 'refuse': 1} officer minutes 908
+    wrong decisions the judge sent to auto: 1; segments [[]]
+    judge calls for these 400 decisions at the Chapter 16 small-model price ($0.00143 a call): $0.57
+================================================================================================
+Pending live run: verbalised and log-probability confidence on 160 authored hardship cases
+================================================================================================
+  command: cd 04-code/ch20 && python3 real_confidence.py run
+  input:   Chapter 15 authored cases pr-001 to pr-160 (eight segments of 20), prompt rc-0917-3
+  asks:    action + stated confidence 0-100; action-token probability where the provider returns it
+  reports: ECE, AUROC, Brier, modal-value share and truss.calibration.degenerate per field
+  [RESULT PENDING: run `cd 04-code/ch20 && python3 real_confidence.py run` after a provider client is wired]
+--- Listing 20.1
+(0.6,0.7] n=  1 conf=0.683 acc=0.000
+(0.7,0.8] n=  1 conf=0.727 acc=0.000
+(0.8,0.9] n=  1 conf=0.821 acc=0.000
+(0.9,1.0] n=387 conf=0.998 acc=0.977
+ECE 0.0265  AUROC 0.808
+reliability 0.0047 resolution 0.0073 uncertainty 0.0298
+--- Listing 20.4
+1930aeac8d9d platt 363
+[]
+['model_pin_changed']
+--- Listing 20.2
+('auto', 'above_auto')
+('review', 'between')
+('review', 'flag:stated_work')
+('refuse', 'fail_closed:missing_score')
+('review', 'fail_closed:model_pin_changed')
+--- Listing 20.3
+['mode_share:198/372@0.92', 'distinct:4']
+['mode_share:560/560@1', 'distinct:1']
+[]
+--- Threshold sweep on unflagged auto-route decisions (fit map; fit set is in-sample)
+fit t=0.900 auto=289 wrong=2 exact95=2.16%
+fit t=0.930 auto=269 wrong=2 exact95=2.32%
+fit t=0.956 auto=221 wrong=2 exact95=2.82%
+fit t=0.970 auto=179 wrong=1 exact95=2.62%
+fit t=0.980 auto=135 wrong=0 exact95=2.19%
+fit t=0.990 auto= 54 wrong=0 exact95=5.40%
+jan t=0.900 auto=315 wrong=1 exact95=1.50%
+jan t=0.930 auto=289 wrong=0 exact95=1.03%
+jan t=0.956 auto=243 wrong=0 exact95=1.23%
+jan t=0.970 auto=203 wrong=0 exact95=1.46%
+jan t=0.980 auto=145 wrong=0 exact95=2.04%
+jan t=0.990 auto= 57 wrong=0 exact95=5.12%
+--- Below the refuse threshold (calibrated < 0.85)
+fit: 25 decisions, 18 right
+jan: 23 decisions, 18 right
+--- Decisions with no recorded action-token probability
+jan: 10 missing, 10 right as drafted
+live: 16 missing, 15 right as drafted
+--- Second-read decisions needed for an exact 95% bound under 1% at the live error rate
+4 wrong: 913 decisions
+6 wrong: 1182 decisions
+8 wrong: 1441 decisions
+launch second reads: 560 x $13.90 = $7,784; steady state 60 a week = $834
+--- Missing scores by live week
+2028-01-17 2
+2028-01-24 9
+2028-01-31 3
+2028-02-07 2
+--- Threshold sweep on the recalibration draw under the new map (in-sample)
+2113bb13b165
+recal t=0.930 auto=246 wrong=2 exact95=2.54%
+recal t=0.956 auto=214 wrong=1 exact95=2.20%
+recal t=0.990 auto= 65 wrong=0 exact95=4.50%
+7 passed in 0.78s

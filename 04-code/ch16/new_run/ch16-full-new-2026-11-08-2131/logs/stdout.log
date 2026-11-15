@@ -1,0 +1,46 @@
+2026-11-08T21:33:58 START run_id=ch16-full-new-2026-11-08-2131 out=/workspace/ai-evals-book/04-code/ch16/new_run/ch16-full-new-2026-11-08-2131/out cap=$12
+2026-11-08T21:33:58 PHASE gen
+  [replies] calling the model for 318 uncached requests
+  [alt_replies] calling the model for 80 uncached requests
+  [spanish] calling the model for 100 uncached requests
+2026-11-08T21:36:09 GEN done replies=318 alt=80 spanish=100 cost~$0.4838
+2026-11-08T21:36:09 PHASE judges
+  [judge] calling the model for 100 uncached requests
+  [judge] calling the model for 100 uncached requests
+  [judge] calling the model for 100 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] calling the model for 200 uncached requests
+2026-11-08T21:46:44 START run_id=ch16-full-new-2026-11-08-2131 out=/workspace/ai-evals-book/04-code/ch16/new_run/ch16-full-new-2026-11-08-2131/out cap=$12
+2026-11-08T21:46:44 PHASE gen
+2026-11-08T21:46:44 GEN done replies=318 alt=80 spanish=100 cost~$0.4838
+2026-11-08T21:46:44 PHASE judges
+  [judge] calling the model for 120 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] calling the model for 200 uncached requests
+  [judge] t-178920: APITimeoutError: Request timed out or interrupted. This could be due to a network timeout, dropped connection, or request cancellation. See https://docs.anthropic.com/en/api/errors#long-requests for more details.
+  [judge] t-179018: APITimeoutError: Request timed out or interrupted. This could be due to a network timeout, dropped connection, or request cancellation. See https://docs.anthropic.com/en/api/errors#long-requests for more details.
+  [judge] calling the model for 100 uncached requests
+  [judge] calling the model for 80 uncached requests
+  [judge] calling the model for 160 uncached requests
+  [judge] calling the model for 18 uncached requests
+  [judge] calling the model for 18 uncached requests
+2026-11-08T22:09:38 JUDGES done rows=2474 cost~$4.0291
+2026-11-08T22:09:38 PHASE agent
+  [agent_small] running 60 agent judgements
+  [agent_small] t-180694: APITimeoutError
+  [agent_small] t-180484: APITimeoutError
+  [agent_small] t-181305: APITimeoutError
+  [agent_small] t-181159: APITimeoutError
+  [agent_small] t-181239: APITimeoutError
+  [agent_small] t-181317: APITimeoutError
+2026-11-08T22:13:22   agent_small: n=54 cost~$0.2733
+  [agent_large] running 60 agent judgements
+2026-11-08T22:15:19   agent_large: n=60 cost~$0.9664
+  [agent_small_calc] running 60 agent judgements
+2026-11-08T22:16:22   agent_small_calc: n=60 cost~$0.4091
+2026-11-08T22:16:22 COMPLETE charged=$6.1589 available=$5.7411

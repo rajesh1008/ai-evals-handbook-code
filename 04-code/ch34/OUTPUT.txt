@@ -1,0 +1,9 @@
+Ch34 OUTPUT — Evals in the Pull Request
+digest=2af638b31e64 seed=2034 SIMULATED
+candidate_fast={'mode': 'fast', 'n': 80, 'n_pass': 80, 'pass_rate': 1.0} candidate_slow={'mode': 'slow', 'n': 80, 'n_pass': 61, 'pass_rate': 0.7625}
+teaching={'candidate_passes_fast': True, 'candidate_fails_slow': True, 'slow_fail_count': 19}
+ladder={'signature': 9, 'ladder': ['deterministic', 'fast_suite', 'slow_suite', 'canary', 'full_traffic'], 'failed_at': 'slow_suite', 'next_step': 'slow_suite', 'decision': 'BLOCK'}
+inject_flake_blocks=True
+median_days 11->2
+cost_fast=0.16 cost_slow=1.6
+REAL status=ok correct=18/24

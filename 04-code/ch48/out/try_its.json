@@ -1,0 +1,22 @@
+{
+  "SIMULATED": true,
+  "coached_B_findings": {
+    "rubric": "findings",
+    "hits": 2,
+    "s1_hits": 2,
+    "false_alarms": 0,
+    "score": 20,
+    "rank_key": 20
+  },
+  "trophy": {
+    "vocab_tokens_without_planted_hits": 18,
+    "planted_hits_b": 0,
+    "coached_s1_hits": 2,
+    "coached_findings_score": 20
+  },
+  "try_its": [
+    "replace vocabulary rubric with findings rubric before any hire decision",
+    "coach candidate B to label planted S1 findings with evidence spans",
+    "require at least one S1 hit before vocabulary may be scored at all"
+  ]
+}

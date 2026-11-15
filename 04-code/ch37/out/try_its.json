@@ -1,0 +1,11 @@
+{
+  "try_evaluate_guard_n": 1200,
+  "try_vocab_keys": [
+    "example_ids",
+    "n_benign_scary",
+    "n_overrefuse",
+    "overrefuse_rate",
+    "scary_words"
+  ],
+  "try_coverage_100": true
+}

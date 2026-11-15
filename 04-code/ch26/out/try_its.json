@@ -1,0 +1,15 @@
+{
+  "try1_channel_mix": {
+    "pdf": 37,
+    "photo": 63
+  },
+  "try2_clean_vs_glare": {
+    "clean_e2e": 0.83,
+    "glare_e2e": 0.59,
+    "drop": 0.24
+  },
+  "try3_wer_gate": {
+    "n_wer_lt_0_1": 16,
+    "task_fails_inside_gate": 8
+  }
+}

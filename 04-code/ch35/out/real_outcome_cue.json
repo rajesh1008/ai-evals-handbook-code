@@ -1,0 +1,154 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 24,
+  "correct": 9,
+  "accuracy": 0.375,
+  "rows": [
+    {
+      "gold": "trust_fee",
+      "pred": "need_cf",
+      "ok": false,
+      "desc": "Fee offline r=-0.62 with re-contact; tone r=0.05. Which proxy gates?"
+    },
+    {
+      "gold": "reject_tone",
+      "pred": "reject_tone",
+      "ok": true,
+      "desc": "Tone offline high; re-contact unchanged. Ship on tone?"
+    },
+    {
+      "gold": "reject_delight",
+      "pred": "list_signals",
+      "ok": false,
+      "desc": "Delight score rises with complaints (r=+0.71). Gate on delight?"
+    },
+    {
+      "gold": "need_cf",
+      "pred": "need_cf",
+      "ok": true,
+      "desc": "Want offline ship without A/B; no counterfactual logs. Safe?"
+    },
+    {
+      "gold": "list_signals",
+      "pred": "list_signals",
+      "ok": true,
+      "desc": "Name online signals Harbor tracks for Compass."
+    },
+    {
+      "gold": "honest_corr",
+      "pred": "need_cf",
+      "ok": false,
+      "desc": "Offline fee improves 4pts; re-contact flat across releases. Surrogate?"
+    },
+    {
+      "gold": "trust_fee",
+      "pred": "need_cf",
+      "ok": false,
+      "desc": "Fee explanation score predicts lower re-contact across 40 weeks."
+    },
+    {
+      "gold": "reject_tone",
+      "pred": "list_signals",
+      "ok": false,
+      "desc": "Tone score predicts nothing useful online."
+    },
+    {
+      "gold": "reject_delight",
+      "pred": "list_signals",
+      "ok": false,
+      "desc": "Proxy anti-correlates with harm signal."
+    },
+    {
+      "gold": "need_cf",
+      "pred": "need_cf",
+      "ok": true,
+      "desc": "Counterfactual logging incomplete; policy_hash missing."
+    },
+    {
+      "gold": "trust_fee",
+      "pred": "reject_tone",
+      "ok": false,
+      "desc": "Signature 8 marks fee usable, tone failed."
+    },
+    {
+      "gold": "reject_tone",
+      "pred": "reject_tone",
+      "ok": true,
+      "desc": "Ship because users liked the tone in offline panel."
+    },
+    {
+      "gold": "honest_corr",
+      "pred": "list_signals",
+      "ok": false,
+      "desc": "Report r with n and signal name, not vibes."
+    },
+    {
+      "gold": "list_signals",
+      "pred": "need_cf",
+      "ok": false,
+      "desc": "resolution, re_contact, escalation, complaint."
+    },
+    {
+      "gold": "reject_delight",
+      "pred": "reject_tone",
+      "ok": false,
+      "desc": "Satisfaction up, complaints up \u2014 refuse gate."
+    },
+    {
+      "gold": "need_cf",
+      "pred": "need_cf",
+      "ok": true,
+      "desc": "Design CF log: shown_arm, alt arms, policy_hash."
+    },
+    {
+      "gold": "trust_fee",
+      "pred": "trust_fee",
+      "ok": true,
+      "desc": "Use fee offline to prioritise, still audit online."
+    },
+    {
+      "gold": "reject_tone",
+      "pred": "honest_corr",
+      "ok": false,
+      "desc": "Tone is not a surrogate for borrower outcomes."
+    },
+    {
+      "gold": "honest_corr",
+      "pred": "need_cf",
+      "ok": false,
+      "desc": "Trial-level surrogacy not unit agreement with judges."
+    },
+    {
+      "gold": "list_signals",
+      "pred": "reject_tone",
+      "ok": false,
+      "desc": "Online signals are business events, not judge Likert."
+    },
+    {
+      "gold": "reject_delight",
+      "pred": "list_signals",
+      "ok": false,
+      "desc": "BAD_PROXY label from anti_correlation_injection."
+    },
+    {
+      "gold": "trust_fee",
+      "pred": "trust_fee",
+      "ok": true,
+      "desc": "Harbor scoreboard: fee predicts; tone predicts nothing."
+    },
+    {
+      "gold": "need_cf",
+      "pred": "need_cf",
+      "ok": true,
+      "desc": "Without CF logs, offline ranking is not a ship ticket."
+    },
+    {
+      "gold": "honest_corr",
+      "pred": "need_cf",
+      "ok": false,
+      "desc": "Weak pooled surrogacy means send to live experiment."
+    }
+  ],
+  "simulated_suite": true
+}

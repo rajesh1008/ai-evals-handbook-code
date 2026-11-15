@@ -1,0 +1,9 @@
+seed 2052
+digest 73ee6bb8ebe5
+record 41fe5560fb71
+inject JUDGE_VERSION_PINNED_NOWHERE caught on compass_hardship_unpinned_judge
+scoreboard open_targets 2 (hardship OPEN, fee OPEN); Rachel CONDITIONAL; Sarah MEETS_KINDS
+CH16 ceiling 6.291941 kinds unchanged
+live_provider_sweeps PENDING
+tests 7 passed
+SIMULATED teaching lab — no paid calls

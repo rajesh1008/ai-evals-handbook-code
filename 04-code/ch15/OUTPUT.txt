@@ -1,0 +1,185 @@
+== Decision-step probe (REAL, claude-haiku-4-5-20251001, default sampling; this SDK takes no temperature argument): 1280 calls cached, 851,952 input / 61,343 output tokens
+  parser check, production prompt, rep 1: first-action-word parser 110/160 right; JSON parser 136/160 right; 926 of 1280 replies add reasoning after the JSON
+  hardship-prompt-p7 (rep 1 / rep 2)
+    employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
+    self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    window_inside          decline_window    right 16/20 16/20  wrong {'draft_deferral': 4} | {'draft_deferral': 4}
+    anniversary            draft_deferral    right  0/20  0/20  wrong {'decline_window': 20} | {'decline_window': 20}
+    three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
+    no_income              ask_income        right 20/20 20/20  wrong {} | {}
+    two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
+    rep 1: right 136/160; wrong offers 4 (4 after a payment extension); eligible borrowers not offered 20
+    rep 2: right 136/160; wrong offers 4 (4 after a payment extension); eligible borrowers not offered 20
+  rc-0913-1 (rep 1 / rep 2)
+    employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
+    self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    window_inside          decline_window    right  4/20  3/20  wrong {'draft_deferral': 16} | {'draft_deferral': 17}
+    anniversary            draft_deferral    right 18/20 16/20  wrong {'decline_window': 2} | {'decline_window': 4}
+    three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
+    no_income              ask_income        right 20/20 20/20  wrong {} | {}
+    two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
+    rep 1: right 142/160; wrong offers 16 (11 after a payment extension); eligible borrowers not offered 2
+    rep 2: right 139/160; wrong offers 17 (11 after a payment extension); eligible borrowers not offered 4
+  rc-0915-2 (rep 1 / rep 2)
+    employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
+    self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    window_inside          decline_window    right 13/20 14/20  wrong {'draft_deferral': 7} | {'draft_deferral': 6}
+    anniversary            draft_deferral    right  2/20  4/20  wrong {'decline_window': 18} | {'decline_window': 16}
+    three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
+    no_income              ask_income        right 20/20 20/20  wrong {} | {}
+    two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
+    rep 1: right 135/160; wrong offers 7 (6 after a payment extension); eligible borrowers not offered 18
+    rep 2: right 138/160; wrong offers 6 (5 after a payment extension); eligible borrowers not offered 16
+  rc-0917-3 (rep 1 / rep 2)
+    employed_eligible      draft_deferral    right 20/20 20/20  wrong {} | {}
+    self_employed_record   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    self_employed_stated   refer_to_officer  right 20/20 20/20  wrong {} | {}
+    window_inside          decline_window    right 19/20 19/20  wrong {'draft_deferral': 1} | {'draft_deferral': 1}
+    anniversary            draft_deferral    right 20/20 20/20  wrong {} | {}
+    three_behind           refer_to_officer  right 20/20 20/20  wrong {} | {}
+    no_income              ask_income        right 20/20 20/20  wrong {} | {}
+    two_loans_unnamed      ask_which_loan    right 20/20 20/20  wrong {} | {}
+    rep 1: right 159/160; wrong offers 1 (1 after a payment extension); eligible borrowers not offered 0
+    rep 2: right 159/160; wrong offers 1 (1 after a payment extension); eligible borrowers not offered 0
+  rep 1 and rep 2 chose the same action on 628 of 640 case-prompt pairs
+
+== A. The flow: every hardship conversation, Mon 6 to Sun 19 September 2027 (SIMULATED)
+  480 conversations, t-161626 to t-169472; required first action {'draft_deferral': 214, 'ask_income': 69, 'ask_which_loan': 56, 'refer_to_officer': 77, 'decline_window': 64}
+  production build's action {'draft_deferral': 203, 'ask_income': 69, 'ask_which_loan': 56, 'refer_to_officer': 70, 'decline_window': 82}
+  1 intent           router labels hardship                                           FM-21 (bereavement routed as hardship)
+  2 account lookup   servicing core: loans, arrears, employment on file, relief history FM-22, FM-24
+  3 which loan       4.6                                                              FM-08, FM-22
+  4 income           4.2                                                              FM-01
+  5 window           4.3 with HB-2027-07                                              FM-04 (offer inside), FM-20 (refusal outside)
+  6 referral         4.5 (self-employed, three or more behind)                        no mode yet (see B)
+  7 draft            deferral drafted for officer approval                            FM-03 (approval sentence missing)
+  8 hand-off         officer callback or queue                                        FM-14, FM-15, FM-16
+  offers drafted 203 (42.3% of conversations); documented income 226; tool errors 22
+
+== B. Its taxonomy: the production build replayed on hardship gold (654 labels; SIMULATED replay)
+  gold 654: {'hardship-gold v1.0 (Chapter 13)': 299, 'operational weeks (Chapter 14)': 295, 'week of 6 September': 60}
+  offers drafted on replay 253 of 654 gold conversations
+  MC-01 wrong offers 3/253 (1.2%) of offers drafted, Wilson 0.40% to 3.43%, one-sided bound 3.04%  (per gold conversation 0.46%)
+  wrong offers by source {'hardship-gold v1.0 (Chapter 13)': 1, 'operational weeks (Chapter 14)': 2}
+  eligible borrowers not offered 11/261 (4.2%), Wilson 2.4% to 7.4%
+  other wrong first actions (neither direction of the offer) 8: {('decline_window', 'ask_which_loan'): 1, ('refer_to_officer', 'decline_window'): 4, ('ask_which_loan', 'refer_to_officer'): 2, ('decline_window', 'ask_income'): 1}
+    refusal  anniversary              FM-20                        Compass decline_window    gold draft_deferral
+    refusal  anniversary              FM-20                        Compass decline_window    gold draft_deferral
+    refusal  anniversary              FM-20                        Compass decline_window    gold draft_deferral
+    refusal  anniversary              FM-20                        Compass decline_window    gold draft_deferral
+    refusal  anniversary              FM-20                        Compass decline_window    gold draft_deferral
+    refusal  anniversary              FM-20                        Compass decline_window    gold draft_deferral
+    refusal  eligible, plain          FM-20                        Compass decline_window    gold draft_deferral
+    refusal  eligible, plain          none                         Compass ask_income        gold draft_deferral
+    refusal  eligible, plain          none                         Compass ask_which_loan    gold draft_deferral
+    refusal  eligible, plain          none                         Compass refer_to_officer  gold draft_deferral
+    refusal  eligible, plain          none                         Compass refer_to_officer  gold draft_deferral
+    offer    relief inside window     FM-04                        Compass draft_deferral    gold decline_window
+    offer    relief inside window     FM-04                        Compass draft_deferral    gold decline_window
+    offer    relief inside window     FM-04                        Compass draft_deferral    gold decline_window
+  by mode {'FM-04': 3, 'none': 4, 'FM-20': 7}; uncoded 4 of 14
+
+== C. Code checks: census over the September frame (480 conversations; spans SIMULATED)
+  C-01: v1.0 (anniversary inside) {'pass': 21, 'fail': 1, 'cannot_tell': 0, 'not_applicable': 458}   v1.1 (anniversary outside) {'pass': 21, 'fail': 1, 'cannot_tell': 0, 'not_applicable': 458}
+  C-02: v1.0 (anniversary inside) {'pass': 52, 'fail': 1, 'cannot_tell': 0, 'not_applicable': 427}   v1.1 (anniversary outside) {'pass': 52, 'fail': 1, 'cannot_tell': 0, 'not_applicable': 427}
+  C-03: v1.0 (anniversary inside) {'pass': 273, 'fail': 12, 'cannot_tell': 1, 'not_applicable': 194}   v1.1 (anniversary outside) {'pass': 263, 'fail': 22, 'cannot_tell': 1, 'not_applicable': 194}
+  C-04: v1.0 (anniversary inside) {'pass': 198, 'fail': 5, 'cannot_tell': 0, 'not_applicable': 277}   v1.1 (anniversary outside) {'pass': 198, 'fail': 5, 'cannot_tell': 0, 'not_applicable': 277}
+  C-09: v1.0 (anniversary inside) {'pass': 201, 'fail': 2, 'cannot_tell': 0, 'not_applicable': 277}   v1.1 (anniversary outside) {'pass': 201, 'fail': 2, 'cannot_tell': 0, 'not_applicable': 277}
+  480 conversations checked in 2 ms
+  anniversary conversations 31; production declined 18; C-03 v1.0 passes 18 of those, v1.1 fails 18
+  C-03 fails under v1.0 only: 8 {('anniversary', 'draft_deferral'): 8}; under v1.1 only: 18 {('anniversary', 'decline_window'): 18}
+  wrong offers in the frame (fixture truth) 5; flagged by C-03 or C-09 3; precision (1, 3), recall (1, 5); missed ['t-165762', 't-167192', 't-168501', 't-169305']
+    missed by code, by segment: {'stated change of work': 4}
+  C-03 refusal flags that are not wrongful refusals: 7, required {'refer_to_officer': 7}
+  wrongful refusals in the frame (fixture truth) 16; flagged by C-03 v1.1 21; precision (14, 21), recall (14, 16)
+    missed by code: {('eligible, plain', 'ask_which_loan'): 1, ('eligible, plain', 'refer_to_officer'): 1}
+  against the 60 gold labels from the week of 6 September: gold wrong offers 0, flagged 0; gold wrongful refusals 3, flagged 4
+
+== D. The golden set against September traffic (truss.flowsuite.composition_audit, min 20 cases, share at least half of traffic)
+  Spanish                    gold  114 (17.4%)  traffic  68 (14.2%)  ok                                            bound at zero failures 2.6%
+  anniversary                gold   17 ( 2.6%)  traffic  31 ( 6.5%)  FAIL 17 cases, minimum 20; share 2.6% against 6.5% of traffic bound at zero failures 16.2%
+  disaster forbearance       gold   32 ( 4.9%)  traffic  38 ( 7.9%)  ok                                            bound at zero failures 8.9%
+  eligible, plain            gold  246 (37.6%)  traffic 194 (40.4%)  ok                                            bound at zero failures 1.2%
+  no income stated           gold  114 (17.4%)  traffic  69 (14.4%)  ok                                            bound at zero failures 2.6%
+  prior payment extension    gold  104 (15.9%)  traffic  80 (16.7%)  ok                                            bound at zero failures 2.8%
+  relief inside window       gold  119 (18.2%)  traffic  64 (13.3%)  ok                                            bound at zero failures 2.5%
+  self-employed              gold   38 ( 5.8%)  traffic  19 ( 4.0%)  ok                                            bound at zero failures 7.6%
+  self-employed (any route)  gold   91 (13.9%)  traffic 101 (21.0%)  ok                                            bound at zero failures 3.2%
+  stated change of work      gold   10 ( 1.5%)  traffic  27 ( 5.6%)  FAIL 10 cases, minimum 20; share 1.5% against 5.6% of traffic bound at zero failures 25.9%
+  three or more behind       gold   39 ( 6.0%)  traffic  20 ( 4.2%)  ok                                            bound at zero failures 7.4%
+  two loans, unnamed         gold   71 (10.9%)  traffic  56 (11.7%)  ok                                            bound at zero failures 4.1%
+  verdict refuse; failing ['anniversary', 'stated change of work']
+  anniversary and stated-work cases among the 299 Chapter 13 labels: 0
+
+== E. The two metrics that gate
+  keep gate    MC-01              any stable new failure on replay; rate reported to Victor with its bound Grace Holloway
+  keep gate    MC-17              any stable new failure on replay                               Grace Holloway
+  keep gate    C-01..C-04         any failure                                                    Ryan Mitchell
+  keep monitor MC-03              weekly rate above 1%                                           Grace Holloway
+  keep monitor MC-11              weekly count above 3                                           Grace Holloway
+  keep monitor MC-13              any in a week                                                  Ryan Mitchell
+  keep monitor MC-18              any in a week                                                  Grace Holloway
+  keep inform  S-02                                                                              Rachel Foster
+  drop         decision accuracy  no threshold, no owner, no action
+  drop         offer rate         no threshold, no action
+  REAL probe (claude-haiku-4-5-20251001, 160 authored cases, two runs each; 1280 calls cached)
+  rc-0913-1: accuracy [136, 136] -> [142, 139] of 160; wrong offers [4, 4] -> [16, 17], stable new 10, one run only 1; refusals [20, 20] -> [2, 4] of 40, stable new 0; verdict HOLD ['offer']
+    one-run-only new wrong offers ['pr-076']; production's own flips between runs 4 ['pr-061', 'pr-075', 'pr-078', 'pr-080']
+  rc-0915-2: accuracy [136, 136] -> [135, 138] of 160; wrong offers [4, 4] -> [7, 6], stable new 5, one run only 1; refusals [20, 20] -> [18, 16] of 40, stable new 0; verdict HOLD ['offer']
+    one-run-only new wrong offers ['pr-079']; production's own flips between runs 4 ['pr-061', 'pr-075', 'pr-078', 'pr-080']
+  rc-0917-3: accuracy [136, 136] -> [159, 159] of 160; wrong offers [4, 4] -> [1, 1], stable new 0, one run only 0; refusals [20, 20] -> [0, 0] of 40, stable new 0; verdict SHIP []
+  an accuracy-only gate (ship if correct first actions rise over both runs): {'rc-0913-1': 'ship', 'rc-0915-2': 'ship', 'rc-0917-3': 'ship'}
+
+== F. What Victor asked: is the wrong-offer rate under 0.5%?
+  observed 3/253 offers = 1.19%; Wilson 0.40% to 3.43%; one-sided 95% bound 3.04%; target 0.50%
+  reachable by sampling alone: False (the observed rate is above the target)
+  offers needed for a bound under 0.5% at 0, 1, 2, 3 wrong: [598, 947, 1258, 1549]
+  offers a week: 23.2 from 60 gold labels; 101.5 in live traffic (census)
+  if the true rate were 0.10%: about 947 offers; 30 more weeks of gold at 60 labels a week, 9 weeks of census
+  if the true rate were 0.20%: about 1549 offers; 56 more weeks of gold at 60 labels a week, 15 weeks of census
+  if the true rate were 0.30%: about 3138 offers; 124 more weeks of gold at 60 labels a week, 31 weeks of census
+  if the true rate were 0.40%: about 13542 offers; 573 more weeks of gold at 60 labels a week, 133 weeks of census
+  if the true rate were 1.19%: about no offers; no sample size is enough
+  odds a set of 253 offers shows 0 wrong if the true rate is 1.19%: 0.0489
+
+wrote out/lab.json
+== The documented-only gate set (Ryan's proposal, Mon 20 September 2027)
+  traffic, 6-19 Sep      n  480; self-employed (any route) 101 (21.0%); self-employed referrals in gold 51
+  hardship gold (654)    n  654; self-employed (any route)  91 (13.9%); self-employed referrals in gold 49
+  documented only        n  281; self-employed (any route)  10 (3.6%); self-employed referrals in gold 4
+  gate on documented only        n 281: wrong offers 3 -> 3, stable new 0; verdict SHIP
+  gate on stratified (all gold)  n 654: wrong offers 3 -> 34, stable new 31; verdict HOLD
+  the new wrong offers by route: {'record': 25, 'stated': 6}; documented among them 0
+
+== Composition audit of the documented-only set against September traffic (min 20, at least half the traffic share)
+  FAIL anniversary                6 cases, minimum 20; share 2.1% against 6.5% of traffic
+  FAIL disaster forbearance       11 cases, minimum 20; share 3.9% against 7.9% of traffic
+  FAIL no income document         0 cases, minimum 20; share 0.0% against 52.9% of traffic
+  FAIL no income stated           0 cases, minimum 20; share 0.0% against 14.4% of traffic
+  FAIL self-employed              2 cases, minimum 20; share 0.7% against 4.0% of traffic
+  FAIL self-employed (any route)  10 cases, minimum 20; share 3.6% against 21.0% of traffic
+  FAIL stated change of work      3 cases, minimum 20; share 1.1% against 5.6% of traffic
+  verdict REFUSE: 7 segments failing
+  same audit on all 654 gold: REFUSE, failing ['anniversary', 'stated change of work']
+== 1. Composition audit thresholds on the 654 gold labels
+  minimum 10, share at least 50% of traffic: refuse failing ['anniversary', 'stated change of work']
+  minimum 20, share at least 50% of traffic: refuse failing ['anniversary', 'stated change of work']
+  minimum 30, share at least 50% of traffic: refuse failing ['anniversary', 'stated change of work']
+  minimum 20, share at least 80% of traffic: refuse failing ['anniversary', 'disaster forbearance', 'self-employed (any route)', 'stated change of work']
+  minimum 40, share at least 80% of traffic: refuse failing ['anniversary', 'disaster forbearance', 'self-employed', 'self-employed (any route)', 'stated change of work', 'three or more behind']
+
+== 2. One direction, accuracy, or both (REAL probe, two runs per prompt)
+  rc-0913-1: MC-01 only HOLD; MC-17 only SHIP; accuracy only SHIP; both HOLD
+  rc-0915-2: MC-01 only HOLD; MC-17 only SHIP; accuracy only SHIP; both HOLD
+  rc-0917-3: MC-01 only SHIP; MC-17 only SHIP; accuracy only SHIP; both SHIP
+
+== 3. Weeks until MC-01's bound is under 0.5%, if a fix brings the true rate to ...
+  replaying the fix on the gold gives 253 offers at once; 60 gold labels a week add 23.2, 120 add 46.4; live traffic drafts 101.5 a week
+  0.05%: 598 offers; gold 14.9 weeks at 60 labels, 7.4 at 120; census 5.9 weeks, if its checks catch every kind of wrong offer
+  0.10%: 947 offers; gold 29.9 weeks at 60 labels, 14.9 at 120; census 9.3 weeks, if its checks catch every kind of wrong offer
+  0.20%: 1549 offers; gold 55.8 weeks at 60 labels, 27.9 at 120; census 15.3 weeks, if its checks catch every kind of wrong offer
+  0.30%: 3138 offers; gold 124.3 weeks at 60 labels, 62.1 at 120; census 30.9 weeks, if its checks catch every kind of wrong offer
+7 passed in 0.83s

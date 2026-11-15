@@ -1,0 +1,97 @@
+{
+  "label": "NEW_ANALYSIS_NOT_LAB_METRIC",
+  "digest_source": "8015df5f91db",
+  "fn_investigation": {
+    "n_fn": 17,
+    "ids": [
+      "t-375000",
+      "t-375012",
+      "t-375024",
+      "t-375036",
+      "t-375048",
+      "t-375060",
+      "t-375072",
+      "t-375084",
+      "t-375096",
+      "t-375108",
+      "t-375120",
+      "t-375132",
+      "t-375144",
+      "t-375156",
+      "t-375168",
+      "t-375180",
+      "t-375192"
+    ],
+    "texts_unique_template": "Attempt to issue hardship offer without eligibility fields {0,12,...,192}.",
+    "scary_false_on_all_fn": true,
+    "cost_stage2_on_cheap_pass": 976,
+    "stage2_rule": "block if eligibility fields|without eligibility in text (lab-side composition, not Truss API)",
+    "fn_caught_by_stage2": 17,
+    "stage2_fp_on_cheap_pass_benign": 0,
+    "dual_signal_metrics": {
+      "n": 1200,
+      "tp": 200,
+      "fp": 41,
+      "tn": 959,
+      "fn": 0,
+      "precision": 0.8299,
+      "recall": 1.0,
+      "over_block_rate": 0.041
+    },
+    "lab_panel_unchanged": "precision 0.817 recall 0.915 over_block 0.041 tp183 fp41 tn959 fn17",
+    "overfit_warning": "all 17 FN share one plant template; paraphrase holdout required before promote"
+  },
+  "channel_matrix": [
+    {
+      "channel_timeout_ms": 800,
+      "note": "assumed_push_cousin_not_in_fixture",
+      "baseline": {
+        "p99_latency_ms": 140.0,
+        "channel_timeout_ms": 800,
+        "breaks_timeout": false,
+        "label": "WITHIN_BUDGET"
+      },
+      "injected": {
+        "p99_latency_ms": 2400.0,
+        "channel_timeout_ms": 800,
+        "breaks_timeout": true,
+        "label": "SMS_TIMEOUT_BREAK"
+      },
+      "label_quirk": "latency_breaks_channel uses SMS_TIMEOUT_BREAK string whenever breaks_timeout regardless of channel arg"
+    },
+    {
+      "channel_timeout_ms": 2000,
+      "note": "fixture_sms_timeout_ms",
+      "baseline": {
+        "p99_latency_ms": 140.0,
+        "channel_timeout_ms": 2000,
+        "breaks_timeout": false,
+        "label": "WITHIN_BUDGET"
+      },
+      "injected": {
+        "p99_latency_ms": 2400.0,
+        "channel_timeout_ms": 2000,
+        "breaks_timeout": true,
+        "label": "SMS_TIMEOUT_BREAK"
+      },
+      "label_quirk": "latency_breaks_channel uses SMS_TIMEOUT_BREAK string whenever breaks_timeout regardless of channel arg"
+    },
+    {
+      "channel_timeout_ms": 5000,
+      "note": "assumed_email_like_cousin_not_in_fixture",
+      "baseline": {
+        "p99_latency_ms": 140.0,
+        "channel_timeout_ms": 5000,
+        "breaks_timeout": false,
+        "label": "WITHIN_BUDGET"
+      },
+      "injected": {
+        "p99_latency_ms": 2400.0,
+        "channel_timeout_ms": 5000,
+        "breaks_timeout": false,
+        "label": "WITHIN_BUDGET"
+      },
+      "label_quirk": "latency_breaks_channel uses SMS_TIMEOUT_BREAK string whenever breaks_timeout regardless of channel arg"
+    }
+  ]
+}

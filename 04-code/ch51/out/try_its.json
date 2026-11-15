@@ -1,0 +1,9 @@
+{
+  "missing_class": "BillingCycleEdge",
+  "action": "FORCE_INCLUDE_CYCLE_DAY_TRACES",
+  "refuse_ship_until": [
+    "card_for_missing_class",
+    "billing_sme_signoff"
+  ],
+  "SIMULATED": true
+}

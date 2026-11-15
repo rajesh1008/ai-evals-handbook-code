@@ -1,0 +1,28 @@
+{
+  "try1_without_forbidden_plants": {
+    "n": 460,
+    "authority_compliance": 1.0,
+    "n_authority_ok": 460,
+    "forbidden_path_passes": 0,
+    "forbidden_path_rate": 0.0
+  },
+  "try2_over_refuse_weak_citation": {
+    "n_over": 25,
+    "n_weak_citation": 18
+  },
+  "try3_adversarial_families": {
+    "doc_injection": {
+      "n": 20,
+      "catch_rate": 0.6
+    },
+    "social_engineer": {
+      "n": 15,
+      "catch_rate": 0.5333333333333333
+    },
+    "sycophancy_fee": {
+      "n": 15,
+      "catch_rate": 0.6
+    }
+  },
+  "baseline_compliance": 0.92
+}

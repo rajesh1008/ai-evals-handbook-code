@@ -1,0 +1,103 @@
+{
+  "seed": 2032,
+  "digest": "4ef10ae44b4c",
+  "simulated": true,
+  "n_cases": 200,
+  "n_runs": 5,
+  "hardship": {
+    "n_runs": 5,
+    "scores": [
+      87.0,
+      88.5,
+      89.8,
+      88.0,
+      87.4
+    ],
+    "mean": 88.14,
+    "sd": 1.089954127475095,
+    "min": 87.0,
+    "max": 89.8,
+    "half_range": 1.3999999999999986,
+    "noise_floor_pts": 1.4
+  },
+  "fee": {
+    "n_runs": 5,
+    "scores": [
+      89.0,
+      90.5,
+      91.8,
+      90.2,
+      89.6
+    ],
+    "mean": 90.22,
+    "sd": 1.0545141061171253,
+    "min": 89.0,
+    "max": 91.8,
+    "half_range": 1.3999999999999986,
+    "noise_floor_pts": 1.4
+  },
+  "table": {
+    "metrics": [
+      {
+        "metric": "fee_pct",
+        "n_runs": 5,
+        "mean": 90.22,
+        "sd": 1.0545141061171253,
+        "min": 89.0,
+        "max": 91.8,
+        "noise_floor_pts": 1.4
+      },
+      {
+        "metric": "hardship_pct",
+        "n_runs": 5,
+        "mean": 88.14,
+        "sd": 1.089954127475095,
+        "min": 87.0,
+        "max": 89.8,
+        "noise_floor_pts": 1.4
+      }
+    ],
+    "n_runs": 5
+  },
+  "measured_noise_floor_pts": 1.4,
+  "published_noise_floor_pts": 1.4,
+  "margin_pts": 0.5,
+  "gate_threshold_pts": 1.9,
+  "pass_contrast": {
+    "n_tasks": 40,
+    "k": 3,
+    "pass_at_k": 0.65,
+    "pass_hat_k": 0.325,
+    "n_pass_hat_k": 13
+  },
+  "nondeterminism_sources": [
+    "sampling_temperature",
+    "unset_or_ignored_seed",
+    "batching_and_floating_point",
+    "provider_silent_updates",
+    "prompt_surface_and_hidden_context",
+    "tool_and_retrieval_race",
+    "judge_flip_on_repeats",
+    "retry_context_contamination"
+  ],
+  "baseline_hardship_mean": 88.14,
+  "inside_floor_diag": {
+    "delta_pts": -0.8,
+    "noise_floor_pts": 1.4,
+    "margin_pts": 0.5,
+    "threshold_pts": 1.9,
+    "label": "NOISE",
+    "call_regression": false
+  },
+  "outside_floor_diag": {
+    "delta_pts": -2.5,
+    "noise_floor_pts": 1.4,
+    "margin_pts": 0.5,
+    "threshold_pts": 1.9,
+    "label": "REGRESSION",
+    "call_regression": true
+  },
+  "gate_rule": "require |delta| > floor(1.4) + margin(0.5) = 1.9 pts to call REGRESSION",
+  "study_window": "Mon 30 Oct 2028 \u2013 Mon 27 Nov 2028",
+  "scoreboard_date": "Mon 27 Nov 2028"
+}

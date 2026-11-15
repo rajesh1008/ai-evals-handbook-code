@@ -1,0 +1,14 @@
+{
+  "kind": "SIMULATED_INJECTION",
+  "name": "shadow_tool_not_dry_run",
+  "tool": "send_offer_sms",
+  "result": {
+    "ok": false,
+    "side_effect": true,
+    "blocked": false,
+    "tool": "send_offer_sms",
+    "error": "tool_not_in_dry_run"
+  },
+  "caught": true,
+  "action": "abort_shadow_run"
+}

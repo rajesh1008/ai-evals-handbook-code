@@ -1,0 +1,30 @@
+{
+  "injection": "metric_definition_drift_pack_vs_dashboard",
+  "caught": true,
+  "mismatch_count": 4,
+  "mismatches": [
+    {
+      "field": "definition",
+      "pack": "binary wrong-offer under pinned gold on frozen hardship offers; Wilson 95% upper vs 0.5%",
+      "dashboard": "binary wrong-offer under pinned gold on frozen hardship conversations; Wilson 95% upper vs 0.5%"
+    },
+    {
+      "field": "unit",
+      "pack": "offer",
+      "dashboard": "conversation"
+    },
+    {
+      "field": "denominator",
+      "pack": "frozen hardship offers in digest population",
+      "dashboard": "hardship conversations in last 30 days (rolling)"
+    },
+    {
+      "field": "version",
+      "pack": "v1-pack",
+      "dashboard": "v1-dashboard-drift"
+    }
+  ],
+  "rule": "pack metric is authoritative; dashboard must match unit, denominator, definition, version",
+  "pack_sha12": "7110cb6b0108",
+  "table_sha12": "3ca1646f42bf"
+}

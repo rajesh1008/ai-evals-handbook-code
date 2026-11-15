@@ -1,0 +1,13 @@
+{
+  "system_from": "sys-m3",
+  "system_to": "sys-m4",
+  "judge_pin": "judge-v3",
+  "gold_freeze": "gold-freeze-m10",
+  "shadow_hours_required": 72,
+  "refuse_if_missing": [
+    "gold_freeze",
+    "judge_pin",
+    "shadow_hours"
+  ],
+  "SIMULATED": true
+}

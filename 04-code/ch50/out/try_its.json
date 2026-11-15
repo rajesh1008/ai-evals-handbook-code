@@ -1,0 +1,19 @@
+{
+  "validate_judge_then_pass": {
+    "lint_pass": true,
+    "gate": "PASS"
+  },
+  "short_digest_lint_hold": {
+    "lint_pass": false,
+    "gate": "HOLD",
+    "errors": [
+      "suite_digest_too_short"
+    ]
+  },
+  "monitor_still_holds_unvalidated": {
+    "lint_pass": true,
+    "gate": "HOLD",
+    "reason": "unvalidated_judge"
+  },
+  "SIMULATED": true
+}

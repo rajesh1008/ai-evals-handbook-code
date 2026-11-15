@@ -1,0 +1,46 @@
+{
+  "actual_pooled_kappa": 0.6197718631178706,
+  "actual_verdict": "fail",
+  "actual_diagnostic": "world_moved",
+  "fresh_slices": {
+    "plan_fee": {
+      "n": 20,
+      "agree": 6,
+      "disagree": 14,
+      "disagree_rate": 0.7
+    },
+    "other": {
+      "n": 40,
+      "agree": 40,
+      "disagree": 0,
+      "disagree_rate": 0.0
+    }
+  },
+  "counterfactual_fresh": {
+    "n": 60,
+    "tp": 20,
+    "fn": 0,
+    "fp": 0,
+    "tn": 40,
+    "abstain_pos": 0,
+    "abstain_neg": 0,
+    "agreement": 1.0,
+    "agree_n": 60,
+    "kappa": 1.0,
+    "tpr": 1.0,
+    "tpr_ci": [
+      0.8388698745050667,
+      1.0
+    ],
+    "tnr": 1.0,
+    "tnr_ci": [
+      0.9123754607496077,
+      1.0
+    ],
+    "precision": 1.0,
+    "P": 20,
+    "N": 40,
+    "gold_fail": 20,
+    "judge_fail": 20
+  }
+}

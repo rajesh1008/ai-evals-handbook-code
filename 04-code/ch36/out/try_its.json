@@ -1,0 +1,6 @@
+{
+  "same_unit_stable_arm": "treatment",
+  "salt_change_may_flip": "treatment",
+  "interleave_winner": "treatment",
+  "small_n_guardrail_trip": true
+}

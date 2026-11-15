@@ -1,0 +1,15 @@
+{
+  "injection": "cheaper_judge_fails_bias_battery",
+  "simulated": true,
+  "gate": {
+    "tpr": 0.92,
+    "tnr": 0.91,
+    "position_flip_rate": 0.18,
+    "tpr_floor": 0.8,
+    "tnr_floor": 0.9,
+    "flip_ceiling": 0.05,
+    "admit": false,
+    "failed_bias_battery": true
+  },
+  "lesson": "A cheaper judge that clears TPR/TNR floors can still fail the bias battery; Harbor refuses the cost cut until flip rate falls."
+}

@@ -1,0 +1,188 @@
+### lab.py
+A. Draw (Tue 15 Dec 2026)
+   frame 23,697 pilot traces after excluding 314 (first-pass/gate 300, complaints 14)
+   re-contacted within 7 days, in frame: 3,415
+   flow               read  fail  cannot_tell  notes_on_passes
+   hardship             40     2            0                3
+   fee_explanation      30     3            2                3
+   account_question     25     4            0                0
+   payoff_letter        20     1            0                5
+   lien_release         20     2            0                1
+   statement_request    15     0            0                1
+   total 150 read, 12 failures (8.0%); 42 of 150 had a re-contact
+   a uniform draw within the same quotas expects 12.8 failures
+
+B. Open coding: one sentence per trace, before any category
+   #1   t-000389 fee_explanation    fail        Said the $25 fee was fair because the payment came after the tenth day.
+   #2   t-011832 account_question   pass        
+   #3   t-022701 account_question   pass        
+   #1   t-000389 fee_explanation    fail        Said the $25 fee was fair because the payment came after the tenth day.
+   #12  t-015446 lien_release       fail        Release date promised is earlier than the title office can record it in 
+   #23  t-012226 fee_explanation    fail        Told the borrower the fee applies after ten days; payment was day 13 and
+   #25  t-013233 account_question   fail        Balance quoted with the wrong date; tool says as of the last statement d
+   pooled failing notes: sample 12, first pass 27, complaints 14 = 53
+   distinct wordings 33; words per note median 10; notes the lint sends back 6
+     t-014474: ['nothing a second reader could check']
+     t-004767: ['too short to check', 'names a category, not what happened']
+     t-012804: ['too short to check', 'names a category, not what happened']
+     t-020169: ['too short to check', 'names a category, not what happened']
+   lint on three vague notes: [['nothing a second reader could check'], ['too short to check', 'names a category, not what happened', 'nothing a second reader could check'], ['names a category, not what happened', 'nothing a second reader could check']]
+
+C. Axial coding (Mon 21 Dec)
+   suggested groups at similarity 0.25: 17 groups, purity 87%, singletons 6
+   suggested groups at similarity 0.35: 26 groups, purity 100%, singletons 12
+   suggested groups at similarity 0.45: 29 groups, purity 100%, singletons 14
+   suggested groups at similarity 0.55: 31 groups, purity 100%, singletons 16
+   draft clusters: 12; unassigned failing notes 0
+   after the payoff split: 13 categories; unassigned 0
+   drop  notes on passing traces: Nothing went wrong: verbosity and repeated questions are style, not failure. Kept in the n
+   rule  day-15 payments: Victor Lane ruled day 15 is inside the grace period; both cannot-tell traces become passes
+   merge three wordings of 'asked for a person': Ignored, out-of-hours and Spanish requests kept as one category at v0.1: one owner, three 
+   merge income notes: 'Before asking income', 'built on income from the tool' and 'plan before earnings' share o
+   split fee cluster: Ten-day quotes and unwaived fees have different causes (a retired document, a reading of p
+   split payoff cluster: Ryan Mitchell expected different fixes: per diem lives in the letter template, the good-th
+   keep  second deferral: One complaint only. Kept: severity critical, and the eligibility tool already holds the fa
+   code   name                                                   S  FP   C  all
+   FM-01  offer drafted before income confirmed                 2   6   0    8
+   FM-02  no hand-off when borrower asked for a person          0   3   0    3
+   FM-03  offer sent without saying a loan officer must approv  0   2   0    2
+   FM-04  second deferral within 12 months offered              0   0   1    1
+   FM-05  ten-day grace period quoted (policy is 15)            3   4   3   10
+   FM-06  fee not waived when policy says waive                 0   2   0    2
+   FM-07  wrong balance date                                    3   2   2    7
+   FM-08  missed borrower's second loan                         1   1   1    3
+   FM-09  per diem interest omitted                             1   2   2    5
+   FM-10  wrong good-through date                               0   1   1    2
+   FM-11  release promised before title office date             2   2   1    5
+   FM-12  wrong title state                                     0   1   1    2
+   FM-13  wrong statement period                                0   1   2    3
+   wrong-fee notes: {'FM-05': 10, 'FM-06': 2} -> FM-05 share 83%; two modes cover 100%
+   modes seen per source: {'sample': 6, 'first_pass': 12, 'complaint': 9}  only there: {'sample': [], 'first_pass': ['FM-02', 'FM-03', 'FM-06'], 'complaint': ['FM-04']}
+
+D. Saturation in the 150, reading order
+   categories found in the 150: 6; last new category at trace 48; 102 traces since without a new one
+   (traces read, categories): [(25, 3), (50, 6), (75, 6), (100, 6), (125, 6), (150, 6)]
+   first appearance: {'FM-05': 1, 'FM-11': 12, 'FM-07': 25, 'FM-08': 32, 'FM-09': 41, 'FM-01': 48}
+   flow               read  rate seen at 95%   planted modes (frame rate, P(seen))
+   hardship             40    7.2%          FM-02 5.3% 89%; FM-01 3.7% 78%; FM-03 1.3% 40%; FM-04 0.1% 3%
+   fee_explanation      30    9.5%          FM-05 5.7% 83%; FM-06 2.7% 57%
+   account_question     25   11.3%          FM-07 5.3% 75%; FM-08 2.3% 45%
+   payoff_letter        20   13.9%          FM-09 5.5% 68%; FM-10 2.0% 33%
+   lien_release         20   13.9%          FM-11 6.2% 72%; FM-12 4.1% 57%
+   statement_request    15   18.1%          FM-13 4.1% 47%
+
+E. Hours (stated rates: you $85/h, loan officers $60/h, Ryan at $85/h)
+   you_read    $   1,587
+   grace_pair  $     480
+   complaints  $     123
+   axial       $     690
+   ben         $     168
+   ryan        $     324
+   total      $   3,372   (your reading hours 18.7; Grace paired 8.0)
+   three readers on every trace instead: about $6,540 for the reading alone, before reconciliation
+
+F. Agreement: Ben (hardship) and Ryan (other flows) code every failing trace, notes hidden
+   agreement 47/53; kappa 0.874
+    ('t-007256', 'sample', 'FM-07', 'pass', 'facts')
+    ('t-017516', 'first_pass', 'FM-01', 'pass', 'is it a failure')
+    ('t-020169', 'first_pass', 'FM-10', 'FM-09', 'two categories fit')
+    ('t-014276', 'complaint', 'FM-09', 'FM-10', 'two categories fit')
+    ('t-017702', 'complaint', 'FM-07', 'pass', 'facts')
+    ('t-023812', 'complaint', 'FM-10', 'FM-09', 'two categories fit')
+   kinds: {'facts': 2, 'is it a failure': 1, 'two categories fit': 3}
+   after the income ruling and the facts re-read: kappa 0.936; left: payoff swaps 3
+
+G. From categories to hypotheses
+   H1 FM-05 comes from retrieving the retired schedule. In the 33 December fee traces:
+      FM-05 & retired 6, FM-05 & current 0, other & retired 0, other & current 27
+      census over all 5,151 fee traces: retired schedule retrieved in 336
+   H2 FM-01 follows from the pilot prompt, which never asked for income first: prompt read, instruction absent; turns FM-01 [9, 17] vs passing median 15; needs post-fix traces
+   H3 FM-11 concentrates in slow title states (NM, CO). December lien traces 22: FM-11 slow 1 of 3; other slow 4 of 19; all lien slow share 15%
+
+H. Trajectories: the first step that went wrong
+   December failing traces 26: median spans 13
+   origin: {'retrieval': 6, 'reading a tool result': 13, 'tool arguments': 4, 'action out of order': 2, 'action despite tool result': 1}
+   visible from replies alone 8/26; first wrong step before the last reply 23/26; median position 43% of the way through
+   example FM-04: {'trace_id': 't-005026', 'code': 'FM-04', 'spans': 14, 'first': 6, 'kind': 'execute_tool', 'origin': 'action despite tool result', 'visible_in_replies': False, 'final_reply': 13, 'turns': 7}
+
+I. Searching notes by meaning (lexical stand-in for an embedding model)
+   precision@3 over 26 December notes: vector 74%, word overlap 71%
+   complaint texts as queries: a same-category note in the top 3 for 85% of 13 (the FM-04 complaint has no other note to find)
+   t-004683 [FM-05] 'Your chat said I had ten days before a late fee, I paid on d' -> [('FM-05', 0.368), ('FM-05', 0.23), ('FM-07', 0.196)]
+   t-005026 [FM-04] 'I was offered a deferral and now I'm told I can't have one b' -> [('FM-05', 0.147), ('FM-05', 0.147), ('FM-05', 0.122)]
+   t-007114 [FM-12] 'The release was sent to the wrong state's title office.' -> [('FM-12', 0.364), ('FM-11', 0.362), ('FM-11', 0.362)]
+
+J. Taxonomy v0.1 released Wed 23 Dec 2026: 13 categories; codebook at out/taxonomy-v0.1.md
+
+### inject.py
+fee traces 100 (first pass 70, December 30)
+your failures 9: {'F_waive': 2, 'F_tenday': 7}
+Ryan, narrow definition: failures 7, agreement 98/100, kappa 0.864, disagreements {('fail', 'pass'): 2}
+wrong-fee rate on these traces: yours 9.0%, Ryan's 7.0%
+under Ryan's definition the fee flow has 1 mode(s); FM-06 disappears and its owner with it
+after the written definition: agreement 100/100, kappa 1.000
+share of all 53 pooled failing notes affected: 2/53 = 3.8%
+
+### model_coding.py (cached real responses; --live re-calls the API)
+notes 53; human categories 13
+
+1. open grouping, claude-haiku-4-5-20251001
+   groups 14; notes placed 53 of 53 (duplicates 0)
+   purity 100%; completeness 91%
+   human categories split across model groups: ['FM-05']
+   model groups mixing human categories: []
+      5  Grace period policy misunderstanding  -> {'FM-05': 5}
+      5  Fee application logic error  -> {'FM-05': 5}
+      2  Fee waiver policy not applied  -> {'FM-06': 2}
+      7  Account balance dated incorrectly  -> {'FM-07': 7}
+      3  Multiple loans not addressed  -> {'FM-08': 3}
+      5  Per diem interest omitted from payoff  -> {'FM-09': 5}
+      2  Payoff letter good-through date mismatch  -> {'FM-10': 2}
+      5  Lien release date unrealistic  -> {'FM-11': 5}
+      2  Wrong state for lien release  -> {'FM-12': 2}
+      8  Hardship offer before income assessment  -> {'FM-01': 8}
+      2  Hardship offer lacks approval disclaimer  -> {'FM-03': 2}
+      3  Hardship escalation failure  -> {'FM-02': 3}
+      1  Hardship offer ignores existing deferral  -> {'FM-04': 1}
+      3  Wrong statement period sent  -> {'FM-13': 3}
+
+1. open grouping, claude-sonnet-4-6
+   groups 13; notes placed 53 of 53 (duplicates 0)
+   purity 100%; completeness 100%
+   human categories split across model groups: []
+   model groups mixing human categories: []
+     10  Wrong grace period (10 vs 15 days)  -> {'FM-05': 10}
+      2  Fee not waived per policy  -> {'FM-06': 2}
+      7  Balance date misrepresented as current  -> {'FM-07': 7}
+      3  Second loan not surfaced  -> {'FM-08': 3}
+      5  Payoff letter missing per diem interest  -> {'FM-09': 5}
+      2  Payoff letter wrong good-through date  -> {'FM-10': 2}
+      5  Lien release date too early for title office  -> {'FM-11': 5}
+      2  Lien release names wrong state  -> {'FM-12': 2}
+      8  Hardship offer before income confirmed  -> {'FM-01': 8}
+      2  Hardship offer missing approval disclaimer  -> {'FM-03': 2}
+      1  Hardship deferral offered despite recent deferral on record  -> {'FM-04': 1}
+      3  No escalation to human agent on request  -> {'FM-02': 3}
+      3  Wrong statement period sent  -> {'FM-13': 3}
+
+2. closed coding against v0.1, claude-haiku-4-5-20251001
+   agreement 53/53; kappa 1.000
+
+2. closed coding against v0.1, claude-sonnet-4-6
+   agreement 51/53; kappa 0.958
+     human FM-05 -> model FM-06 x2: "Said the $25 fee was fair because the payment came after the tenth day."
+
+tokens used: {'claude-haiku-4-5-20251001': 4433, 'claude-sonnet-4-6': 4336}
+
+### try_its.py
+1. Uniform against risk-weighted, same quotas (mean failures [10th-90th], mean modes [10th-90th])
+   uniform        failures 12.7 [8-17]  modes 7.4 [5-9]
+   risk-weighted  failures 15.3 [11-21]  modes 8.1 [6-10]
+2. Read more: quotas scaled (risk-weighted)
+     75 traces: failures 7.9, modes 5.6 [4-8], all thirteen in 0 of 100
+    150 traces: failures 15.3, modes 8.2 [6-10], all thirteen in 0 of 100
+    300 traces: failures 30.5, modes 10.5 [9-12], all thirteen in 0 of 100
+    600 traces: failures 60.5, modes 11.7 [11-12], all thirteen in 0 of 100
+3. Reading order: shuffled against flow by flow (December draw), last new category at
+   shuffled      trace  48; categories at 50/100/150: [6, 6, 6]
+   flow by flow  trace 116; categories at 50/100/150: [2, 5, 6]

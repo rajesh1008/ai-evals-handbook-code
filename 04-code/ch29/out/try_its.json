@@ -1,0 +1,7 @@
+{
+  "try1_plant_in_regress": true,
+  "try1_n_regress": 16,
+  "try2_all_stale": 200,
+  "try3_ownership_rejects_incomplete": true,
+  "lab_decision": "hold"
+}

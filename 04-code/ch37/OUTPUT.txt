@@ -1,0 +1,9 @@
+Ch37 OUTPUT — Guardrails, Monitoring and Evals: One Family
+digest=8015df5f91db seed=2037 SIMULATED
+guards_promoted=2
+metrics={'n': 1200, 'tp': 183, 'fp': 41, 'tn': 959, 'fn': 17, 'precision': 0.817, 'recall': 0.915, 'over_block_rate': 0.041}
+vocab_overrefuse=0.2088
+hardship_coverage=1.0
+sms_break=True
+REAL cues 7/12 status=ok
+teaching={'two_checks_promoted': True, 'hardship_100pct': True, 'sms_break_caught': True, 'over_block_measured': True}

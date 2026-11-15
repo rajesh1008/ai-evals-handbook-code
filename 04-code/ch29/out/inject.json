@@ -1,0 +1,19 @@
+{
+  "kind": "SIMULATED_INJECTION",
+  "name": "silent_loan_id_to_account_id",
+  "text_metrics_pass": true,
+  "text_pass_rate": 0.925,
+  "text_regressions": 0,
+  "schema_v1_pass_rate": 1.0,
+  "schema_silent_pass_rate": 0.24,
+  "schema_silent_n_fail": 152,
+  "gate": {
+    "text_pass": true,
+    "tool_pass": false,
+    "ship": false,
+    "kind": "text_green_tool_red"
+  },
+  "caught_by": "schema_diff_catch + text_vs_tool_gate",
+  "would_ship_on_text_only": true,
+  "ships_with_tool_gate": false
+}

@@ -1,0 +1,236 @@
+{
+  "seed": 2053,
+  "SIMULATED": true,
+  "live_provider_comparison": "PENDING",
+  "no_paid_calls": true,
+  "models": [
+    {
+      "id": "sim_gen_N",
+      "label": "SIMULATED baseline generation",
+      "generations_ahead_of_baseline": 0,
+      "SIMULATED": true
+    },
+    {
+      "id": "sim_gen_N_plus_2",
+      "label": "SIMULATED two generations newer",
+      "generations_ahead_of_baseline": 2,
+      "SIMULATED": true
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "T01",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T02",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T03",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T04",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T05",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T06",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T07",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T08",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T09",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T10",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T11",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T12",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T13",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T14",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T15",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T16",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T17",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": false,
+      "inject": "TRAJECTORY_CATCH_OUTCOME_MISS",
+      "notes": "SIMULATED inject: skipped required officer_tool check; final hardship offer text still matches gold label",
+      "FAILURE_INJECTION": true
+    },
+    {
+      "case_id": "T18",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T19",
+      "population": "hardship_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T20",
+      "population": "fee_explanation_decide_traces",
+      "gold_outcome_ok": true,
+      "trajectory_ok": true,
+      "notes": "clean teaching case"
+    },
+    {
+      "case_id": "T21",
+      "population": "capability_probe_teaching",
+      "gold_outcome_ok": false,
+      "trajectory_ok": false,
+      "inject": null,
+      "notes": "SIMULATED capability probe; not a live dangerous-capability eval",
+      "FAILURE_INJECTION": false
+    }
+  ],
+  "gates": [
+    {
+      "model_id": "sim_gen_N",
+      "n_cases": 21,
+      "trajectory_fail_ids": [
+        "T17"
+      ],
+      "outcome_fail_ids": [
+        "T21"
+      ],
+      "trajectory_pass_rate": 0.9524,
+      "outcome_pass_rate": 0.9524,
+      "inject_caught_trajectory": true,
+      "inject_missed_by_outcome": true,
+      "SIMULATED": true,
+      "live_provider_comparison": "PENDING"
+    },
+    {
+      "model_id": "sim_gen_N_plus_2",
+      "n_cases": 21,
+      "trajectory_fail_ids": [
+        "T17"
+      ],
+      "outcome_fail_ids": [],
+      "trajectory_pass_rate": 0.9524,
+      "outcome_pass_rate": 1.0,
+      "inject_caught_trajectory": true,
+      "inject_missed_by_outcome": true,
+      "SIMULATED": true,
+      "live_provider_comparison": "PENDING"
+    }
+  ],
+  "harbor_last_look": {
+    "SIMULATED": true,
+    "inherited_from_ch52": true,
+    "ch52_seed": 2052,
+    "ch52_digest": "73ee6bb8ebe5",
+    "ch52_record": "e93a7515e856",
+    "hardship_status": "OPEN",
+    "fee_status": "OPEN",
+    "rachel_share": "CONDITIONAL_10pct",
+    "sarah_kinds": "MEETS_KINDS",
+    "CH16": {
+      "known_incurred_usd": 6.191862,
+      "uncertain_reserve_usd": 0.050079,
+      "policy_headroom_usd": 0.05,
+      "ceiling_sum_usd": 6.291941,
+      "cap_usd": 12.0,
+      "note": "kinds under $12 cap; ceiling is conservative sum not invoice; do not release/respend uncertain reserve without billing reconciliation"
+    }
+  },
+  "CH16": {
+    "known_incurred_usd": 6.191862,
+    "uncertain_reserve_usd": 0.050079,
+    "policy_headroom_usd": 0.05,
+    "ceiling_sum_usd": 6.291941,
+    "cap_usd": 12.0,
+    "note": "kinds under $12 cap; ceiling is conservative sum not invoice; do not release/respend uncertain reserve without billing reconciliation"
+  },
+  "inject_primary": "TRAJECTORY_CATCH_OUTCOME_MISS",
+  "inject_case": "T17",
+  "control_objective": "full gate suite on SIMULATED two-generations-newer fixture; trajectory catches what outcome misses",
+  "digest": "3d636670d406"
+}

@@ -1,0 +1,17 @@
+{
+  "injection": "unpaired_comparison_reverses_ranking",
+  "paired_ranking": [
+    "prompt_v2",
+    "small_fee_model",
+    "prompt_v1",
+    "prompt_v3"
+  ],
+  "unpaired_ranking": [
+    "prompt_v1",
+    "prompt_v2",
+    "small_fee_model",
+    "prompt_v3"
+  ],
+  "caught": true,
+  "digest": "71e446918c27"
+}

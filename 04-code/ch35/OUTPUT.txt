@@ -1,0 +1,8 @@
+Ch35 OUTPUT — From Offline Scores to Online Outcomes
+digest=4de7adcc9dea seed=2035 SIMULATED
+fee_recontact={'proxy': 'fee_explanation', 'signal': 're_contact', 'n': 40, 'r': -0.7539, 'predicts': True, 'direction': 'negative', 'useful_direction': 'higher_offline_lower_recontact'}
+tone_recontact={'proxy': 'tone', 'signal': 're_contact', 'n': 40, 'r': 0.2121, 'predicts': False, 'direction': 'positive'}
+teaching={'fee_predicts_recontact': True, 'tone_predicts_nothing': True}
+injection={'r': 0.935, 'anti_correlated_with_harm': True, 'label': 'BAD_PROXY', 'lesson': 'A proxy that tracks compliments while complaints rise must not gate releases.'}
+surrogacy_usable=['fee_explanation']
+REAL status=ok correct=9/24

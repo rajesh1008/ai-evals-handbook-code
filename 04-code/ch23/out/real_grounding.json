@@ -1,0 +1,251 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "n": 24,
+  "supported": 22,
+  "rate": 0.9166666666666666,
+  "input_tokens": 4340,
+  "output_tokens": 1117,
+  "approx_usd": 0.009925,
+  "rows": [
+    {
+      "query_id": "rq-001",
+      "claim": "The grace period is fifteen days before a late fee.",
+      "relevant": "fee-schedule-2026-03::grace",
+      "supported": true,
+      "text": "SUPPORTED. The first passage explicitly states \"A payment is late after a fifteen-day grace period from the due date\" and \"No late fee is charged during the grace period,\" which directly supports the claim that there is a fifteen-day grace period before a late fee is applied.",
+      "in_tokens": 155,
+      "out_tokens": 61,
+      "seconds": 0.8967087268829346
+    },
+    {
+      "query_id": "rq-002",
+      "claim": "The late fee is twenty-five dollars.",
+      "relevant": "fee-schedule-2026-03::amount",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states \"The late fee is twenty-five dollars ($25) once the grace period ends,\" which directly confirms the claim.",
+      "in_tokens": 171,
+      "out_tokens": 35,
+      "seconds": 0.7202484607696533
+    },
+    {
+      "query_id": "rq-003",
+      "claim": "Autopay borrowers get one courtesy waiver in twelve months.",
+      "relevant": "fee-schedule-2026-03::waiver",
+      "supported": true,
+      "text": "SUPPORTED. The first passage explicitly states that \"One late-fee waiver is available in any twelve-month window for borrowers on autopay,\" which directly matches the claim that autopay borrowers get one courtesy waiver in twelve months.",
+      "in_tokens": 173,
+      "out_tokens": 53,
+      "seconds": 0.7385571002960205
+    },
+    {
+      "query_id": "rq-004",
+      "claim": "A returned payment fee is fifteen dollars.",
+      "relevant": "fee-schedule-2026-03::returned",
+      "supported": true,
+      "text": "SUPPORTED, because the first passage explicitly states \"A returned payment incurs a fifteen-dollar ($15) fee.\"",
+      "in_tokens": 152,
+      "out_tokens": 27,
+      "seconds": 0.6265690326690674
+    },
+    {
+      "query_id": "rq-005",
+      "claim": "Hardship is once in twelve calendar months.",
+      "relevant": "hardship-policy-2027-04::window",
+      "supported": true,
+      "text": "SUPPORTED. The second passage explicitly states \"A borrower may receive one hardship arrangement in any twelve calendar months,\" which directly supports the claim that hardship is once in twelve calendar months.",
+      "in_tokens": 183,
+      "out_tokens": 42,
+      "seconds": 0.802746057510376
+    },
+    {
+      "query_id": "rq-006",
+      "claim": "Income must be confirmed before drafting a hardship offer.",
+      "relevant": "hardship-policy-2027-04::income",
+      "supported": true,
+      "text": "SUPPORTED. The first passage explicitly states that \"Before drafting an offer, Compass must confirm income and essential expenses with a document or a stated figure the officer accepts,\" which directly supports the claim that income must be confirmed before drafting a hardship offer.",
+      "in_tokens": 184,
+      "out_tokens": 56,
+      "seconds": 0.8377609252929688
+    },
+    {
+      "query_id": "rq-007",
+      "claim": "Medical expense spikes can make a borrower hardship eligible.",
+      "relevant": "hardship-policy-2027-04::eligibility",
+      "supported": true,
+      "text": "SUPPORTED. The first passage explicitly states that \"Hardship relief covers temporary loss of income, medical expense spikes, and disaster declarations that affect the borrower's county,\" directly confirming that medical expense spikes make a borrower eligible for hardship relief.",
+      "in_tokens": 158,
+      "out_tokens": 57,
+      "seconds": 0.8770103454589844
+    },
+    {
+      "query_id": "rq-008",
+      "claim": "Lien release is requested within five business days after payoff.",
+      "relevant": "lien-release-guide-2026-02::timing",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage directly states that \"After payoff clears, Harbor Lending requests the lien release within five business days,\" which matches the claim's requirement.",
+      "in_tokens": 201,
+      "out_tokens": 39,
+      "seconds": 0.7014915943145752
+    },
+    {
+      "query_id": "rq-009",
+      "claim": "A payoff letter includes the good-through date and per-diem.",
+      "relevant": "payoff-procedures-2026-01::letter",
+      "supported": false,
+      "text": "UNSUPPORTED\n\nThe passages are operational notes about staff routing and explicitly state they do not set payoff policy. They contain no information about what elements are included in a payoff letter, such as good-through dates or per-diem amounts.",
+      "in_tokens": 243,
+      "out_tokens": 55,
+      "seconds": 0.9599525928497314
+    },
+    {
+      "query_id": "rq-010",
+      "claim": "Compass can send statements for the most recent twenty-four months.",
+      "relevant": "statement-guide-2025-11::history",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states that \"Borrowers may request monthly statements for the most recent twenty-four months through Compass,\" which directly supports the claim that Compass can send statements for the most recent twenty-four months.",
+      "in_tokens": 184,
+      "out_tokens": 52,
+      "seconds": 0.7783515453338623
+    },
+    {
+      "query_id": "rq-011",
+      "claim": "The grace period is fifteen days before a late fee.",
+      "relevant": "fee-schedule-2026-03::grace",
+      "supported": true,
+      "text": "SUPPORTED. The passages explicitly state \"A payment is late after a fifteen-day grace period from the due date\" and \"No late fee is charged during the grace period,\" which directly supports that there is a fifteen-day grace period before a late fee is applied.",
+      "in_tokens": 155,
+      "out_tokens": 58,
+      "seconds": 0.9047880172729492
+    },
+    {
+      "query_id": "rq-012",
+      "claim": "The late fee is twenty-five dollars.",
+      "relevant": "fee-schedule-2026-03::amount",
+      "supported": true,
+      "text": "SUPPORTED. The second passage explicitly states \"The late fee is twenty-five dollars ($25) once the grace period ends, applied once per late payment event.\"",
+      "in_tokens": 153,
+      "out_tokens": 36,
+      "seconds": 0.634727954864502
+    },
+    {
+      "query_id": "rq-013",
+      "claim": "Autopay borrowers get one courtesy waiver in twelve months.",
+      "relevant": "fee-schedule-2026-03::waiver",
+      "supported": true,
+      "text": "SUPPORTED. The passages explicitly state that \"One late-fee waiver is available in any twelve-month window for borrowers on autopay,\" which directly matches the claim.",
+      "in_tokens": 202,
+      "out_tokens": 39,
+      "seconds": 0.7380008697509766
+    },
+    {
+      "query_id": "rq-014",
+      "claim": "A returned payment fee is fifteen dollars.",
+      "relevant": "fee-schedule-2026-03::returned",
+      "supported": true,
+      "text": "SUPPORTED. The first passage explicitly states that \"A returned payment incurs a fifteen-dollar ($15) fee,\" which directly confirms the claim.",
+      "in_tokens": 152,
+      "out_tokens": 33,
+      "seconds": 0.7283825874328613
+    },
+    {
+      "query_id": "rq-015",
+      "claim": "Hardship is once in twelve calendar months.",
+      "relevant": "hardship-policy-2027-04::window",
+      "supported": true,
+      "text": "SUPPORTED. The third passage explicitly states \"A borrower may receive one hardship arrangement in any twelve calendar months,\" which directly supports the claim that hardship is once in twelve calendar months.",
+      "in_tokens": 155,
+      "out_tokens": 42,
+      "seconds": 0.7548081874847412
+    },
+    {
+      "query_id": "rq-016",
+      "claim": "Income must be confirmed before drafting a hardship offer.",
+      "relevant": "hardship-policy-2027-04::income",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe third passage explicitly states that \"Before drafting an offer, Compass must confirm income and essential expenses with a document or a stated figure the officer accepts,\" which directly supports the claim that income must be confirmed before drafting a hardship offer.",
+      "in_tokens": 157,
+      "out_tokens": 56,
+      "seconds": 0.8133046627044678
+    },
+    {
+      "query_id": "rq-017",
+      "claim": "Medical expense spikes can make a borrower hardship eligible.",
+      "relevant": "hardship-policy-2027-04::eligibility",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states that \"Hardship relief covers temporary loss of income, medical expense spikes, and disaster declarations that affect the borrower's county,\" directly confirming that medical expense spikes can make a borrower hardship eligible.",
+      "in_tokens": 213,
+      "out_tokens": 56,
+      "seconds": 0.8329067230224609
+    },
+    {
+      "query_id": "rq-018",
+      "claim": "Lien release is requested within five business days after payoff.",
+      "relevant": "lien-release-guide-2026-02::timing",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states that \"After payoff clears, Harbor Lending requests the lien release within five business days,\" which directly supports the claim that lien release is requested within five business days after payoff.",
+      "in_tokens": 204,
+      "out_tokens": 51,
+      "seconds": 0.7578830718994141
+    },
+    {
+      "query_id": "rq-019",
+      "claim": "A payoff letter includes the good-through date and per-diem.",
+      "relevant": "payoff-procedures-2026-01::letter",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states that \"A payoff letter states the good-through date, the per-diem, the total due, and the wiring instructions,\" which directly confirms both elements mentioned in the claim.",
+      "in_tokens": 233,
+      "out_tokens": 50,
+      "seconds": 0.824519157409668
+    },
+    {
+      "query_id": "rq-020",
+      "claim": "Compass can send statements for the most recent twenty-four months.",
+      "relevant": "statement-guide-2025-11::history",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states that \"Borrowers may request monthly statements for the most recent twenty-four months through Compass,\" which directly supports the claim that Compass can send statements for the most recent twenty-four months.",
+      "in_tokens": 213,
+      "out_tokens": 52,
+      "seconds": 0.7948691844940186
+    },
+    {
+      "query_id": "rq-021",
+      "claim": "The grace period is fifteen days before a late fee.",
+      "relevant": "fee-schedule-2026-03::grace",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states \"A payment is late after a fifteen-day grace period from the due date. No late fee is charged during the grace period,\" which directly supports the claim that the grace period is fifteen days before a late fee is charged.",
+      "in_tokens": 183,
+      "out_tokens": 57,
+      "seconds": 0.8934447765350342
+    },
+    {
+      "query_id": "rq-022",
+      "claim": "The late fee is twenty-five dollars.",
+      "relevant": "fee-schedule-2026-03::amount",
+      "supported": true,
+      "text": "SUPPORTED. The first passage explicitly states \"The late fee is twenty-five dollars ($25) once the grace period ends, applied once per late payment event.\"",
+      "in_tokens": 154,
+      "out_tokens": 36,
+      "seconds": 0.6197488307952881
+    },
+    {
+      "query_id": "rq-023",
+      "claim": "Autopay borrowers get one courtesy waiver in twelve months.",
+      "relevant": "fee-schedule-2026-03::waiver",
+      "supported": false,
+      "text": "UNSUPPORTED\n\nThe passages provided discuss returned-payment fees, late fees, and internal staff routing guidance, but contain no information about autopay borrowers or courtesy waivers.",
+      "in_tokens": 184,
+      "out_tokens": 41,
+      "seconds": 0.7412424087524414
+    },
+    {
+      "query_id": "rq-024",
+      "claim": "A returned payment fee is fifteen dollars.",
+      "relevant": "fee-schedule-2026-03::returned",
+      "supported": true,
+      "text": "SUPPORTED\n\nThe first passage explicitly states that \"A returned payment incurs a fifteen-dollar ($15) fee,\" which directly confirms the claim.",
+      "in_tokens": 178,
+      "out_tokens": 33,
+      "seconds": 0.7004597187042236
+    }
+  ]
+}

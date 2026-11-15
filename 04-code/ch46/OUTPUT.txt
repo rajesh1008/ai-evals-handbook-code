@@ -1,0 +1,11 @@
+kind=SIMULATED seed=2046 pack_sha12=7110cb6b0108
+table_sha12=3ca1646f42bf
+ch45_digest_ref=af63808723f1 record_ref=3d4c15e44e50
+pre_overall k=23 wilson_hi=0.0143 OPEN=True
+post_overall k=11 wilson_hi=0.0082 OPEN=True
+hot=phone×signature pre_hi=0.0579 post_hi=0.0180
+metric_drift_caught=True mismatches=4
+returned_artefact=A4_outcome_analysis
+artefacts=A1_use_case_inventory,A2_conceptual_soundness,A3_metric_digest_register,A4_outcome_analysis,A5_reproducibility_recipe,A6_monitoring_plan,A7_limitations_pending_scope,A8_challenge_log
+sr26_2_genai_excluded=True
+live_pending=PENDING

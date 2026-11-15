@@ -1,0 +1,127 @@
+{
+ "ece_protocols": {
+  "logprob:5-uniform": 0.0264513809624983,
+  "logprob:10-uniform": 0.026451380962498224,
+  "logprob:20-uniform": 0.026451380962498192,
+  "logprob:10-quantile": 0.027000242330798743,
+  "logprob:20-quantile": 0.027123912552617934,
+  "judge:5-uniform": 0.10968823918919714,
+  "judge:10-uniform": 0.10968823918919718,
+  "judge:20-uniform": 0.10968823918919716,
+  "judge:10-quantile": 0.10968823918919711,
+  "judge:20-quantile": 0.10968823918919712,
+  "calibrated:5-uniform": 0.026880131616611087,
+  "calibrated:10-uniform": 0.026880131616611215,
+  "calibrated:20-uniform": 0.027790948511706725,
+  "calibrated:10-quantile": 0.02732878202823511,
+  "calibrated:20-quantile": 0.030912441536732373
+ },
+ "top": [
+  369,
+  362,
+  390
+ ],
+ "verbal": {
+  "map": {
+   "source": "verbal",
+   "model_pin": "compass-decision-2027-09",
+   "policy_digest": "hp-2027-04+hb-2027-07",
+   "fit_set_digest": "efe812de132c",
+   "n": 372,
+   "kind": "platt",
+   "params": [
+    -0.18288,
+    3.354348
+   ],
+   "digest": "7e647b9d52f3"
+  },
+  "route": {
+   "n": 400,
+   "share": {
+    "auto": 0.0,
+    "review": 1.0,
+    "refuse": 0.0
+   },
+   "count": {
+    "auto": 0,
+    "review": 400,
+    "refuse": 0
+   },
+   "wrong": {
+    "auto": 0,
+    "review": 2,
+    "refuse": 0
+   },
+   "route_error": {
+    "auto": NaN,
+    "review": 0.005,
+    "refuse": NaN
+   },
+   "post_review_error": 0.005,
+   "post_review_wrong": 2,
+   "officer_minutes": 1600.0,
+   "reasons": {
+    "between": 369,
+    "flag": 31
+   },
+   "overloaded": false
+  },
+  "distinct": [
+   0.9336,
+   0.9435,
+   0.9482,
+   0.9542
+  ]
+ },
+ "judge": {
+  "map": {
+   "source": "judge",
+   "model_pin": "compass-decision-2027-09",
+   "policy_digest": "hp-2027-04+hb-2027-07",
+   "fit_set_digest": "d0b89a3dbd19",
+   "n": 372,
+   "kind": "platt",
+   "params": [
+    0.603821,
+    1.678986
+   ],
+   "digest": "0850c777225b"
+  },
+  "route": {
+   "n": 400,
+   "share": {
+    "auto": 0.5875,
+    "review": 0.335,
+    "refuse": 0.0775
+   },
+   "count": {
+    "auto": 235,
+    "review": 134,
+    "refuse": 31
+   },
+   "wrong": {
+    "auto": 1,
+    "review": 1,
+    "refuse": 1
+   },
+   "route_error": {
+    "auto": 0.00425531914893617,
+    "review": 0.007462686567164179,
+    "refuse": 0.03225806451612903
+   },
+   "post_review_error": 0.0075,
+   "post_review_wrong": 3,
+   "officer_minutes": 908.0,
+   "reasons": {
+    "above_auto": 235,
+    "between": 103,
+    "below_refuse": 31,
+    "flag": 31
+   },
+   "overloaded": false
+  },
+  "auto_wrong_segments": [
+   []
+  ]
+ }
+}

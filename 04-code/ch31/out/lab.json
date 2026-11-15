@@ -1,0 +1,180 @@
+{
+  "kind": "SIMULATED",
+  "digest": "f4eb1860dd14",
+  "board_ci": {
+    "k": 10,
+    "n": 2400,
+    "rate": 0.004166666666666667,
+    "lo": 0.0022648217302840114,
+    "hi": 0.007653302658610832,
+    "method": "wilson"
+  },
+  "board_upper": {
+    "failures": 10,
+    "n": 2400,
+    "rate": 0.004166666666666667,
+    "upper": 0.007057340320308547,
+    "confidence": 0.95,
+    "method": "clopper_pearson_one_sided"
+  },
+  "n_zero_fail_for_0_5pct": 598,
+  "n_margin_0_5pct_pm_0_2pp": 5256,
+  "stratified": [
+    {
+      "slice": "adversarial",
+      "k": 1,
+      "n": 128,
+      "rate": 0.0078125,
+      "lo": 0.0013803963628788857,
+      "hi": 0.04292731834932121,
+      "method": "wilson",
+      "upper95": 0.03652382505354843
+    },
+    {
+      "slice": "common",
+      "k": 5,
+      "n": 1270,
+      "rate": 0.003937007874015748,
+      "lo": 0.0016827664772939253,
+      "hi": 0.009183262705612334,
+      "method": "wilson",
+      "upper95": 0.008260023437034303
+    },
+    {
+      "slice": "hard",
+      "k": 3,
+      "n": 377,
+      "rate": 0.007957559681697613,
+      "lo": 0.0027098562312679996,
+      "hi": 0.023131858539387304,
+      "method": "wilson",
+      "upper95": 0.02043738584297576
+    },
+    {
+      "slice": "uncommon",
+      "k": 1,
+      "n": 625,
+      "rate": 0.0016,
+      "lo": 0.00028248787709146857,
+      "hi": 0.009006973888796795,
+      "method": "wilson",
+      "upper95": 0.0075674878061070105
+    }
+  ],
+  "paired": {
+    "n": 400,
+    "point_diff": -0.01,
+    "lo": -0.0425,
+    "hi": 0.02,
+    "includes_zero": true,
+    "baseline_rate": 0.7775,
+    "candidate_rate": 0.7675,
+    "method": "paired_bootstrap",
+    "reps": 2000
+  },
+  "unpaired_paired_labels": {
+    "n_base": 400,
+    "n_cand": 400,
+    "baseline_rate": 0.7775,
+    "candidate_rate": 0.7675,
+    "diff": -0.010000000000000009,
+    "method": "unpaired_mean_diff"
+  },
+  "unpaired_injection": {
+    "n_base": 200,
+    "n_cand": 600,
+    "baseline_rate": 0.775,
+    "candidate_rate": 0.7716666666666666,
+    "diff": -0.0033333333333334103,
+    "method": "unpaired_mean_diff"
+  },
+  "permutation": {
+    "n": 400,
+    "point_diff": -0.01,
+    "p": 0.692,
+    "reps": 2000,
+    "method": "paired_permutation"
+  },
+  "holm": [
+    {
+      "index": 0,
+      "p": 0.01,
+      "p_holm": 0.08
+    },
+    {
+      "index": 1,
+      "p": 0.04,
+      "p_holm": 0.2
+    },
+    {
+      "index": 2,
+      "p": 0.03,
+      "p_holm": 0.18
+    },
+    {
+      "index": 3,
+      "p": 0.2,
+      "p_holm": 0.44999999999999996
+    },
+    {
+      "index": 4,
+      "p": 0.15,
+      "p_holm": 0.44999999999999996
+    },
+    {
+      "index": 5,
+      "p": 0.02,
+      "p_holm": 0.14
+    },
+    {
+      "index": 6,
+      "p": 0.08,
+      "p_holm": 0.32
+    },
+    {
+      "index": 7,
+      "p": 0.45,
+      "p_holm": 0.45
+    }
+  ],
+  "bonferroni_alpha_05_m8": 0.00625,
+  "signature7": [
+    {
+      "claim": "0.5% upper bound with zero failures",
+      "kind": "zero_fail_upper",
+      "n_required": 598,
+      "target": 0.005
+    },
+    {
+      "claim": "estimate ~0.5% rate \u00b10.2 pp",
+      "kind": "margin",
+      "n_required": 5256,
+      "p": 0.005,
+      "margin": 0.002
+    },
+    {
+      "claim": "Victor board hardship set",
+      "kind": "fixed",
+      "n_required": 2400,
+      "n": 2400
+    },
+    {
+      "claim": "2% fee upper bound zero fail",
+      "kind": "zero_fail_upper",
+      "n_required": 149,
+      "target": 0.02
+    },
+    {
+      "claim": "Is 2% on 100 real? (n=100 toy)",
+      "kind": "fixed",
+      "n_required": 100,
+      "n": 100
+    }
+  ],
+  "effect": {
+    "risk_diff": -0.010000000000000009,
+    "risk_ratio": 0.9871382636655949,
+    "abs_risk_diff": 0.010000000000000009
+  },
+  "victor_n": 2400
+}

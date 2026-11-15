@@ -1,0 +1,154 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 24,
+  "correct": 23,
+  "accuracy": 0.9583333333333334,
+  "rows": [
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Hardship +2pts, fee +1pt, latency +18% slower on paired suite."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Hardship +1pt, fee +1pt, latency -5% faster; canary flips 0/40."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Same version string; canary flip rate 0.12 on frozen set."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Gateway mid-run model id changed from June pin to September pin."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Deprecation notice 75 days; suite green; no regressions."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Notice 20 days; suite not ready; one fee regression."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Judge model rotated; flip rate 0.08 on fee canary."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Pinned digest match; migration deltas all non-negative on lower-is-bet"
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Vendor claims +10% quality; Harbor paired suite shows fee -3pts."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Hidden date string in system prompt changed; outputs shift on canary."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Re-validation complete after model pin; triggers cleared."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Cost down but hardship_ok down 4 points on 300 paired cases."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Default gateway route upgraded without eval ticket."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Canary SLO met; two metrics up; latency flat."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Deprecation Friday; migration HOLD still open."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Sixty-day notice; HOLD cleared after latency fix."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Silent provider update behind fixed alias; canary flips 5/40."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Alias pinned to dated snapshot; repeats stable."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Judge revalidation skipped after model change."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Judge revalidated; TPR/TNR floors held."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Migration table mixed models mid-run; invalidate."
+    },
+    {
+      "gold": "ship",
+      "pred": "ship",
+      "ok": true,
+      "desc": "Clean single-model run log; deltas trusted."
+    },
+    {
+      "gold": "hold",
+      "pred": "hold",
+      "ok": true,
+      "desc": "Vendor bake-off without Harbor gold pins."
+    },
+    {
+      "gold": "ship",
+      "pred": "hold",
+      "ok": false,
+      "desc": "Harbor pins + paired delta table + HOLD rule followed."
+    }
+  ],
+  "simulated_suite": true
+}

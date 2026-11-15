@@ -1,0 +1,6 @@
+digest=6212aade9fb2 seed=2047 SIMULATED n_week=70
+n_missed=1 ship=HOLD
+proxy_or_inject_caught=True missed_trace=t-199847
+record_sha12=6ae3ea143e20
+live_provider_eval_sweeps=PENDING
+traffic_share_teaching=1.0 prior=0.1

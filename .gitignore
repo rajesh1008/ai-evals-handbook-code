@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets: export API keys in your shell, never commit them
+.env
+.env.*
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
+
+# Note: chapter out/ folders hold the reference outputs printed in the book
+# and are tracked on purpose. run_all.sh rewrites them; use `git diff` to compare.

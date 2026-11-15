@@ -1,0 +1,267 @@
+{
+ "ja": {
+  "n": 200,
+  "tp": 32,
+  "fn": 1,
+  "fp": 3,
+  "tn": 164,
+  "abstain_pos": 0,
+  "abstain_neg": 0,
+  "P": 33,
+  "N": 167,
+  "tpr": 0.9696969696969697,
+  "tpr_ci": [
+   0.8468093832683193,
+   0.9946307279103482
+  ],
+  "tnr": 0.9820359281437125,
+  "tnr_ci": [
+   0.9485212152499501,
+   0.9938722064927635
+  ],
+  "agree_n": 196,
+  "kappa": 0.929140832595217,
+  "agreement": 0.98,
+  "by_kind": {
+   "anniversary_outside": {
+    "n": 10,
+    "gold_fail": 0,
+    "right": 10,
+    "abstain": 0
+   },
+   "disaster_correct": {
+    "n": 8,
+    "gold_fail": 0,
+    "right": 7,
+    "abstain": 0
+   },
+   "income": {
+    "n": 9,
+    "gold_fail": 9,
+    "right": 9,
+    "abstain": 0
+   },
+   "ordinary": {
+    "n": 110,
+    "gold_fail": 0,
+    "right": 108,
+    "abstain": 0
+   },
+   "referral": {
+    "n": 7,
+    "gold_fail": 0,
+    "right": 7,
+    "abstain": 0
+   },
+   "stated_correct": {
+    "n": 12,
+    "gold_fail": 12,
+    "right": 12,
+    "abstain": 0
+   },
+   "stated_work": {
+    "n": 12,
+    "gold_fail": 12,
+    "right": 11,
+    "abstain": 0
+   },
+   "two_loans_correct": {
+    "n": 12,
+    "gold_fail": 0,
+    "right": 12,
+    "abstain": 0
+   },
+   "window": {
+    "n": 14,
+    "gold_fail": 0,
+    "right": 14,
+    "abstain": 0
+   },
+   "wrong_loan": {
+    "n": 6,
+    "gold_fail": 0,
+    "right": 6,
+    "abstain": 0
+   }
+  }
+ },
+ "jb": {
+  "n": 200,
+  "tp": 36,
+  "fn": 12,
+  "fp": 6,
+  "tn": 146,
+  "abstain_pos": 0,
+  "abstain_neg": 0,
+  "P": 48,
+  "N": 152,
+  "tpr": 0.75,
+  "tpr_ci": [
+   0.6121535625207293,
+   0.8507951119028996
+  ],
+  "tnr": 0.9605263157894737,
+  "tnr_ci": [
+   0.916562422565575,
+   0.9817856436760447
+  ],
+  "agree_n": 182,
+  "kappa": 0.7422680412371134,
+  "agreement": 0.91,
+  "by_kind": {
+   "anniversary_outside": {
+    "n": 10,
+    "gold_fail": 0,
+    "right": 10,
+    "abstain": 0
+   },
+   "disaster_correct": {
+    "n": 8,
+    "gold_fail": 0,
+    "right": 7,
+    "abstain": 0
+   },
+   "income": {
+    "n": 9,
+    "gold_fail": 9,
+    "right": 5,
+    "abstain": 0
+   },
+   "ordinary": {
+    "n": 110,
+    "gold_fail": 0,
+    "right": 108,
+    "abstain": 0
+   },
+   "referral": {
+    "n": 7,
+    "gold_fail": 7,
+    "right": 6,
+    "abstain": 0
+   },
+   "stated_correct": {
+    "n": 12,
+    "gold_fail": 0,
+    "right": 9,
+    "abstain": 0
+   },
+   "stated_work": {
+    "n": 12,
+    "gold_fail": 12,
+    "right": 7,
+    "abstain": 0
+   },
+   "two_loans_correct": {
+    "n": 12,
+    "gold_fail": 0,
+    "right": 12,
+    "abstain": 0
+   },
+   "window": {
+    "n": 14,
+    "gold_fail": 14,
+    "right": 13,
+    "abstain": 0
+   },
+   "wrong_loan": {
+    "n": 6,
+    "gold_fail": 6,
+    "right": 5,
+    "abstain": 0
+   }
+  }
+ },
+ "admit_a": {
+  "part": "stated-change-judge-v1",
+  "admit": true,
+  "role": "order",
+  "reasons": []
+ },
+ "admit_b": {
+  "part": "permission-judge-v1",
+  "admit": false,
+  "role": "none",
+  "reasons": [
+   "TPR lower bound 0.61 < 0.80"
+  ]
+ },
+ "split": {
+  "gate_allowed": false,
+  "failed_parts": [
+   "permission-judge-v1"
+  ],
+  "admitted": [
+   [
+    "stated-change-judge-v1",
+    "order"
+   ]
+  ]
+ },
+ "jb_miss": {
+  "income": 4,
+  "referral": 1,
+  "stated_work": 5,
+  "window": 1,
+  "wrong_loan": 1
+ },
+ "construct_jb": {
+  "S": 0.95,
+  "S_k": 38,
+  "S_n": 40,
+  "S_ci": [
+   0.834958291820748,
+   0.9861796228538989
+  ],
+  "R": 0.825,
+  "R_k": 33,
+  "R_n": 40,
+  "R_ci": [
+   0.6804970794560755,
+   0.9125469700311694
+  ],
+  "R_by_type": {
+   "arrears": {
+    "n": 10,
+    "changed": 10
+   },
+   "date": {
+    "n": 10,
+    "changed": 10
+   },
+   "loan": {
+    "n": 10,
+    "changed": 10
+   },
+   "stated": {
+    "n": 10,
+    "changed": 3
+   }
+  }
+ },
+ "decision": {
+  "fix": {
+   "supported_today": false,
+   "why_not": [
+    "score is on traces the change was designed from",
+    "fails the admission floors"
+   ],
+   "weeks": 10,
+   "cost": 2780
+  },
+  "split": {
+   "supported_today": false,
+   "why_not": [
+    "score is on traces the change was designed from",
+    "fails the admission floors"
+   ],
+   "weeks": 10,
+   "cost": 2780
+  },
+  "abandon": {
+   "supported_today": true,
+   "why_not": [],
+   "weeks": 0,
+   "cost": 0
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "try_its": [
+    {
+      "name": "wilson_upper_0_of_n",
+      "n": 800,
+      "hi": 0.004779050997111869,
+      "ok": true
+    },
+    {
+      "name": "six_platform_agree_admit",
+      "admits": {
+        "langfuse": true,
+        "phoenix": true,
+        "braintrust": true,
+        "langsmith": true,
+        "promptfoo": true,
+        "deepeval": true
+      },
+      "ok": true
+    },
+    {
+      "name": "two_wrong_offers_opens_gate",
+      "admit": false,
+      "wilson_upper": 0.009069311993955125,
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}

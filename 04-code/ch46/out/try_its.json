@@ -1,0 +1,17 @@
+{
+  "try_rebuild_table": {
+    "instruction": "Recompute hardship_overall_pre_post from fixture k/n; match table_sha12",
+    "expected_sha12": "3ca1646f42bf"
+  },
+  "try_catch_metric_drift": {
+    "instruction": "Diff pack_metric vs dashboard_metric_drift; require caught=true",
+    "expected_caught": true,
+    "actual_caught": true
+  },
+  "anti_patterns": [
+    "Treat public benchmark score as Harbor validation",
+    "Claim SR 26-2 covers generative Compass as in-scope model",
+    "Author alone signs MEETS without challenger",
+    "Ship while pack/dashboard metric unit disagrees"
+  ]
+}

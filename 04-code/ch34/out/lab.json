@@ -1,0 +1,85 @@
+{
+  "seed": 2034,
+  "digest": "2af638b31e64",
+  "simulated": true,
+  "baseline_fast": {
+    "mode": "fast",
+    "n": 80,
+    "n_pass": 80,
+    "pass_rate": 1.0
+  },
+  "baseline_slow": {
+    "mode": "slow",
+    "n": 80,
+    "n_pass": 72,
+    "pass_rate": 0.9
+  },
+  "candidate_fast": {
+    "mode": "fast",
+    "n": 80,
+    "n_pass": 80,
+    "pass_rate": 1.0
+  },
+  "candidate_slow": {
+    "mode": "slow",
+    "n": 80,
+    "n_pass": 61,
+    "pass_rate": 0.7625
+  },
+  "teaching": {
+    "candidate_passes_fast": true,
+    "candidate_fails_slow": true,
+    "slow_fail_count": 19
+  },
+  "flake": {
+    "n": 5,
+    "fail_rate": 0.4,
+    "flip_transitions": 4,
+    "quarantine": true
+  },
+  "quarantine": {
+    "flake_floor": 0.1,
+    "quarantined": [
+      "judge-fee-flaky"
+    ],
+    "gate_cases": []
+  },
+  "cost_fast_usd": {
+    "n_cases": 80,
+    "repeats": 1,
+    "deterministic_usd": 0.16,
+    "judge_usd": 0.0,
+    "total_usd": 0.16
+  },
+  "cost_slow_usd": {
+    "n_cases": 80,
+    "repeats": 1,
+    "deterministic_usd": 0.24,
+    "judge_usd": 1.36,
+    "total_usd": 1.6
+  },
+  "ladder": {
+    "signature": 9,
+    "ladder": [
+      "deterministic",
+      "fast_suite",
+      "slow_suite",
+      "canary",
+      "full_traffic"
+    ],
+    "failed_at": "slow_suite",
+    "next_step": "slow_suite",
+    "decision": "BLOCK"
+  },
+  "workflow": {
+    "pr_id": "pr-4821",
+    "decision": "BLOCK",
+    "suite_digest": "2af638b31e64",
+    "runner": "github_actions",
+    "truss": "v5"
+  },
+  "median_days_before": 11,
+  "median_days_after": 2,
+  "study_window": "Mon 4 Dec 2028 \u2013 Mon 8 Jan 2029",
+  "scoreboard_date": "Mon 8 Jan 2029"
+}

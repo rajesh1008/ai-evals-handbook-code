@@ -1,0 +1,205 @@
+### lab.py
+
+== A. The registry: one metric per active v0.3 failure mode
+Truss 0.11.0; taxonomy v0.3 digest 961c7955ebfc
+MC-01  gate    code      FM-04,FM-22         wrong hardship offer rate                                  t-089546
+MC-02  gate    judge     FM-06,FM-22,FM-24   wrong fee explanation rate                                 t-086089
+MC-03  gate    judge     FM-01               offer drafted before income confirmed rate                 t-084137
+MC-04  gate    code      FM-03               offer sent without saying a loan officer must approve it r t-087044
+MC-05  gate    code      FM-04               second deferral within 12 months offered rate              t-089546
+MC-06  monitor judge     FM-06               fee not waived when policy says waive rate                 t-086089
+MC-07  monitor reference FM-07               wrong balance date rate                                    t-084125
+MC-08  monitor judge     FM-08               missed borrower's second loan rate                         t-084126
+MC-09  monitor reference FM-11               release promised before title office date rate             t-084179
+MC-10  monitor reference FM-12               wrong title state rate                                     t-084469
+MC-11  gate    judge     FM-14               request for a person not acted on rate                     t-088791
+MC-12  gate    code      FM-15               out-of-hours hand-off with no callback offered rate        t-021059
+MC-13  gate    code      FM-16               request for a person in Spanish not recognised rate        t-020266
+MC-14  monitor reference FM-17               statement for the wrong month rate                         t-084950
+MC-15  monitor code      FM-18               year-end interest statement asked for, monthly statement s t-084106
+MC-16  monitor reference FM-19               payoff quote's per diem or good-through date wrong or miss t-084033
+MC-17  gate    code      FM-20               eligible borrower refused: payment extension counted as a  t-087723
+MC-18  gate    judge     FM-21               bereavement handled as ordinary hardship rate              t-072609
+MC-19  gate    code      FM-22               tool called on a loan other than the one the borrower name t-089334
+MC-20  monitor reference FM-23               lien release letter mailed to an address the borrower said t-087375
+MC-21  gate    code      FM-24               answer given as if a failed tool call had returned rate    t-089795
+S-01  inform  signal    -                   CSAT (mean of 1 to 5 survey)                               -
+S-02  inform  signal    -                   self-serve rate                                            -
+S-03  inform  signal    -                   reply length in words                                      -
+S-04  inform  signal    -                   tool-error rate                                            -
+by tier: {'gate': 12, 'monitor': 9, 'inform': 4}  by kind: {'code': 9, 'judge': 6, 'reference': 6, 'signal': 4}
+active modes with no metric: none
+refused:
+  P-01 answer completeness (vendor dashboard, 0 to 1): no failure mode: only an inform-tier signal may have none
+  P-02 helpfulness (1 to 5): no failure mode: only an inform-tier signal may have none
+  P-03 toxicity score: no failure mode: only an inform-tier signal may have none; gate tier needs a validated instrument
+  P-04 stale grace period quoted: FM-05 is retired
+  P-05 wrong-loan payoff rate: same modes as MC-19: one metric per failure mode
+
+== B. Wrong fee explanation, card v1.0 (draft) on the March fee draw
+March frame 8,050 conversations, t-092049 to t-100098; fee 1,633 of which abandoned 80 (declared exclusion); draw 200, seed 2026
+v1.0 (deferred counts as fail): 38 in 200 (19.0%, Wilson 14.2% to 25.0%)
+Chapter 2 pooled: 14 in 147 (9.5%, Wilson 5.8% to 15.4%)
+    6  deferred: fee tool failed, Compass said so
+    1  deferred: tool gave a definite answer
+   16  deferred: waiver under review (tool says review)
+   10  wrong: FM-06 waiver not applied
+    4  wrong: FM-22 other loan's fee
+    1  wrong: FM-24 fee stated after tool error
+v1.1 (deferred counts as pass): 15 in 200 (7.5%, Wilson 4.6% to 12.0%); deferred 23 (11.5%); one-sided 95% bound 11.3%; meets 2% target: False
+   if deferred were excluded: 15 in 177 (8.5%, Wilson 5.2% to 13.5%)
+fixture truth over the whole fee frame: 84 in 1553 (5.4%, Wilson 4.4% to 6.6%)
+traces needed to show under 2% at 95% with 0 / 1 / 2 failures: 149 / 236 / 313
+FM-06 ids: ['t-094483', 't-094796', 't-095682', 't-095867', 't-096545', 't-096898', 't-097409', 't-098065', 't-098145', 't-098837'] 
+FM-22 ids: ['t-094037', 't-095839', 't-096899', 't-099666'] 
+FM-24 ids: ['t-098074'] 
+needless deferral ids: ['t-099018']
+
+== C. Binary, 1 to 5 and pairwise on the same 200 (simulated readers; assumptions in compass_sim.py)
+binary: agreement 96.5%, kappa 0.89; fails found lead 15, Ben 16, truth 15
+1 to 5: exact agreement 44.0%, within one point 92.0%, quadratic-weighted kappa 0.55
+  lead  scores of wrong replies [4, 8, 2, 0, 1], of right replies [0, 0, 22, 84, 56], of deferrals [0, 3, 13, 7, 0]
+  Ben   scores of wrong replies [2, 6, 5, 1, 1], of right replies [0, 0, 8, 54, 100], of deferrals [0, 1, 9, 12, 1]
+  lead  'wrong' if score <= 1: 4, <= 2: 15, <= 3: 52
+  Ben   'wrong' if score <= 1: 2, <= 2: 9, <= 3: 31
+  among right replies, lead's score vs length: Spearman 0.48
+pairwise production (A) vs rc-0322-1 (B): lead prefers B 123, A 56, tie 21; readers agree 39.0%, kappa -0.07
+  equally right pairs with a preference: 168; longer reply preferred 115 (68.5%)
+  what pairwise cannot say: production wrong 15 in 200, candidate wrong 10 in 200
+
+== D. Composites: the March pass rate by flow, weighted by traffic
+  account_question   share 39%  pass 90.0%  contributes 0.351  pass-rate change that alone moves the score 0.01: 2.6%
+  fee_explanation    share 20%  pass 94.6%  contributes 0.189  pass-rate change that alone moves the score 0.01: 5.0%
+  statement_request  share 19%  pass 93.2%  contributes 0.177  pass-rate change that alone moves the score 0.01: 5.3%
+  payoff_letter      share 10%  pass 89.2%  contributes 0.089  pass-rate change that alone moves the score 0.01: 10.0%
+  lien_release       share 6%  pass 88.5%  contributes 0.053  pass-rate change that alone moves the score 0.01: 16.7%
+  hardship           share 6%  pass 87.1%  contributes 0.052  pass-rate change that alone moves the score 0.01: 16.7%
+Compass score (traffic-weighted pass rate): 0.912
+hardship: 472 conversations, 254 offers drafted, wrong offers (fixture truth) 1
+scenario: every hardship failure doubles -> score 0.904 (moves -0.008)
+scenario: FM-18 fixed (5.1% of statements) while FM-20 doubles (4.4% more of hardship) -> 0.919 (+0.007)
+scenario: hardship share doubles to 12% (account 33%), no rate changes -> 0.910 (-0.002)
+
+== E. Monitor alerts, reset 26 March 2027 for a four-week pooled draw of 200 (exact binomial; alerts.py)
+  MC-06 FM-06 rate 3.2%: weekly 50 at 5% alerts 22% of quiet weeks; new alert 5.7% on 200 pooled catches a doubling 64%
+  MC-07 FM-07 rate 4.8%: weekly 50 at 8% alerts 9% of quiet weeks; new alert 7.8% on 200 pooled catches a doubling 81%
+  MC-08 FM-08 rate 2.8%: weekly 50 at 6% alerts 5% of quiet weeks; new alert 5.3% on 200 pooled catches a doubling 59%
+  MC-09 FM-11 rate 5.2%: weekly 50 at 9% alerts 12% of quiet weeks; new alert 8.2% on 200 pooled catches a doubling 85%
+  MC-10 FM-12 rate 2.0%: weekly 50 at 5% alerts 7% of quiet weeks; new alert 4.0% on 200 pooled catches a doubling 53%
+  MC-14 FM-17 rate 1.8%: weekly 50 at 4% alerts 6% of quiet weeks; new alert 3.8% on 200 pooled catches a doubling 41%
+  MC-15 FM-18 rate 5.1%: weekly 50 at 7% alerts 25% of quiet weeks; new alert 7.6% on 200 pooled catches a doubling 87%
+  MC-16 FM-19 rate 8.5%: weekly 50 at 8% alerts 42% of quiet weeks; new alert 12.5% on 200 pooled catches a doubling 96%
+  MC-20 FM-23 rate 4.4%: weekly 50 at 5% alerts 37% of quiet weeks; new alert 7.4% on 200 pooled catches a doubling 76%
+
+== G. Fee replay set: the 70 frozen fee cases and the 200 March fee draw
+replay set 270 (70 frozen + 200 March); manifest fee-replay-2027-03
+
+rc-0322-1: decision HOLD  ['MC-02: 5 newly fail (t-009856, t-019474, t-092510, t-093315...)']
+  MC-02 wrong fee explanation rate                    18/270  ->   14/270  (after 5.2%, 3.1% to 8.5%)  newly fail 5  newly pass 9  hold
+  MC-06 fee not waived when policy says waive rate    12/270  ->    3/270  (after 1.1%, 0.4% to 3.2%)  newly fail 0  newly pass 9  
+  MC-19 tool called on a loan other than the one the   5/270  ->    5/270  (after 1.9%, 0.8% to 4.3%)  newly fail 0  newly pass 0  pass
+  MC-21 answer given as if a failed tool call had re   1/270  ->    1/270  (after 0.4%, 0.1% to 2.1%)  newly fail 0  newly pass 0  pass
+  signals: mean words 114 -> 168; vendor completeness 0.52 -> 0.72; deferred 24 -> 24
+  vendor fee quality index (0.5 completeness + 0.5 pass): 0.725 -> 0.835
+  L1 checks on candidate replays: {'FM-22 census check': 5, 'FM-24 census check': 1}; MC-02 newly failing: ['t-009856', 't-019474', 't-092510', 't-093315', 't-098041']
+
+rc-0326-2: decision SHIP  []
+  MC-02 wrong fee explanation rate                    18/270  ->    9/270  (after 3.3%, 1.8% to 6.2%)  newly fail 0  newly pass 9  pass
+  MC-06 fee not waived when policy says waive rate    12/270  ->    3/270  (after 1.1%, 0.4% to 3.2%)  newly fail 0  newly pass 9  
+  MC-19 tool called on a loan other than the one the   5/270  ->    5/270  (after 1.9%, 0.8% to 4.3%)  newly fail 0  newly pass 0  pass
+  MC-21 answer given as if a failed tool call had re   1/270  ->    1/270  (after 0.4%, 0.1% to 2.1%)  newly fail 0  newly pass 0  pass
+  signals: mean words 114 -> 141; vendor completeness 0.52 -> 0.63; deferred 24 -> 24
+  vendor fee quality index (0.5 completeness + 0.5 pass): 0.725 -> 0.798
+  L1 checks on candidate replays: {'FM-22 census check': 5, 'FM-24 census check': 1}; MC-02 newly failing: []
+
+== H. Hours
+  first reading, March fee draw (200 x 2.0 min)                               lead    6.7 h  $567
+  dispute reading, 38 non-passing traces with Ryan (x 4 min each)             lead    2.5 h  $215
+  dispute reading (Ryan)                                                      Ryan    2.5 h  $215
+  scale study, lead: binary 1.2 + 1-5 1.3 + pairwise 2.2 min x 200            lead   15.7 h  $1,332
+  scale study, Ben Fletcher (same)                                            Ben    15.7 h  $940
+  metric cards, 21 (20 min each)                                              lead    7.0 h  $595
+  gate reading of newly failing traces, two runs                              lead    1.0 h  $85
+  total 51.1 h, $3,949
+
+wrote out/lab.json, out/metric-cards.md
+
+### inject.py
+
+production: 246 replies that state a fee; mean completeness 0.52; mean completeness of the wrong ones 0.58
+  words             n  completeness   wrong fee
+  under 80         33          0.34     4 (12.1%)
+  80 to 119       120          0.43     7 (5.8%)
+  120 to 159       62          0.62     4 (6.5%)
+  160 to 219       25          0.86     1 (4.0%)
+  220 and over      6          1.00     2 (33.3%)
+  Spearman with length 0.68; with being right -0.07; length_bias flag: True
+
+rc-0322-1: 246 replies that state a fee; mean completeness 0.75; mean completeness of the wrong ones 0.79
+  words             n  completeness   wrong fee
+  under 80          2          0.25     0 (0.0%)
+  80 to 119        36          0.49     1 (2.8%)
+  120 to 159       84          0.63     5 (6.0%)
+  160 to 219       70          0.89     5 (7.1%)
+  220 and over     54          0.95     3 (5.6%)
+  Spearman with length 0.78; with being right -0.04; length_bias flag: True
+
+### alerts.py
+card   mode   flow                 rate  alert  week   false alert / catches a doubling, weekly n = 50 | 100 | 200 | census
+MC-06  FM-06  fee_explanation      3.2%     5%   776   22%/63% | 10%/63% | 6%/75% | 0%/95%
+MC-07  FM-07  account_question     4.8%     8%  1456   9%/53% | 5%/63% | 2%/74% | 0%/98%
+MC-08  FM-08  account_question     2.8%     6%  1456   5%/32% | 2%/34% | 1%/35% | 0%/30%
+MC-09  FM-11  lien_release         5.2%     9%   229   12%/61% | 4%/61% | 1%/70% | 1%/77%
+MC-10  FM-12  lien_release         2.0%     5%   229   7%/31% | 1%/20% | 0%/16% | 0%/19%
+MC-14  FM-17  statement_request    1.8%     4%   711   6%/26% | 3%/28% | 1%/27% | 0%/24%
+MC-15  FM-18  statement_request    5.1%     7%   711   25%/76% | 13%/81% | 8%/92% | 1%/100%
+MC-16  FM-19  payoff_letter        8.5%     8%   384   42%/94% | 47%/99% | 53%/100% | 63%/100%
+MC-20  FM-23  lien_release         4.4%     5%   229   37%/82% | 27%/88% | 26%/97% | 30%/98%
+
+alert set so a quiet week alerts at most 5% of the time; chance it catches a doubling
+card     rate   weekly draw of 50    four weeks pooled (200)   weekly census
+MC-06    3.2%    8.2% ->  22%             5.7% ->  64%             4.7% ->  98%       
+MC-07    4.8%   10.3% ->  35%             7.8% ->  81%             5.8% -> 100%       
+MC-08    2.8%    8.3% ->  15%             5.3% ->  59%             3.8% -> 100%       
+MC-09    5.2%   10.2% ->  43%             8.2% ->  85%             8.2% ->  88%       
+MC-10    2.0%    6.5% ->  13%             4.0% ->  53%             4.0% ->  41%       
+MC-14    1.8%    6.3% ->  10%             3.8% ->  41%             2.8% ->  87%       
+MC-15    5.1%   10.1% ->  40%             7.6% ->  87%             6.6% -> 100%       
+MC-16    8.5%   16.5% ->  48%            12.5% ->  96%            11.0% -> 100%       
+MC-20    4.4%   10.4% ->  27%             7.4% ->  76%             6.9% ->  85%       
+
+### try_its.py
+== 1. A release that defers every fee question
+  production        wrong 18/270 (6.7%); deferred 24 (9%)
+  defer-everything  wrong 0/270 (0.0%); deferred 270 (100%)
+  The card passes a release that answers nothing. Add a deferral alert (say 15%, owner the lead) and the
+  companion count catches it; under v1.0 (deferred as fail) the same release scores 100% wrong.
+  v1.0 on defer-everything: 100% wrong
+
+== 2. 1-to-5 readers with no polish effect and no leniency
+  polish 0.45, Ben's leniency +0.45: exact 44%, weighted kappa 0.55; 'wrong' at <=2: lead 15, Ben 9; kappa on that cut 0.47
+  polish 0.00, Ben's leniency +0.00: exact 45%, weighted kappa 0.48; 'wrong' at <=2: lead 15, Ben 13; kappa on that cut 0.62
+  Weighted kappa falls without polish: part of the 1-to-5 agreement was both readers liking longer replies.
+  The cut-point kappa rises but stays under the binary question's, and the cut is still a choice nobody wrote down.
+
+== 3. Make-or-break composite
+  March                                weighted mean 0.912; make-or-break 0.912
+  trade (FM-18 fixed, FM-20 doubled)   weighted mean 0.919; make-or-break 0.000
+
+### judge_scale.py (real model run, 1 November 2026; analyses the cached calls)
+model claude-haiku-4-5-20251001; calls 320; unparsed 6; tokens in 93824, out 67241
+binary: agreement with planted truth 94.9% of 158; kappa 0.92
+  short: agreement 96.2%; FAIL verdicts 29 of 80 (truth 30)
+  long: agreement 93.6%; FAIL verdicts 34 of 78 (truth 29)
+  unparsed: [('binary', 'right_waive', 'long', 'Despite this omission, the reply does not state an'), ('likert', 'deferred', 'short', 'While the response provides helpful information ab'), ('binary', 'X_wrongloan', 'long', 'Since the question asks specifically if the reply '), ('likert', 'X_wrongloan', 'long', 'The core answer about why the fee was charged is c'), ('likert', 'X_wrongloan', 'short', 'The reply is accurate, relevant, and provides a cl'), ('likert', 'X_invent', 'long', 'The reply appears confident but is built on a fail')]
+  same reply asked twice, verdict changed: 8 of 78; short vs long of same case changed (run 1): 5 of 40
+  disagreements (truth, model): [('deferred', 'fail', 3), ('deferred', 'pass', 2), ('fail', 'pass', 1), ('pass', 'fail', 2)]
+1-to-5 pass: mean short 3.37, long 2.90
+1-to-5 deferred: mean short 2.95, long 2.80
+1-to-5 fail: mean short 2.17, long 2.18
+  right replies, run 1: long scored higher 1, lower 6, same 8 of 15
+  same reply asked twice (76 pairs both parsed): exact 55.3%, weighted kappa 0.69
+  run 1, scored 1 or less: 2 of 79, of which wrong 2 (truth fail 29)
+  run 1, scored 2 or less: 41 of 79, of which wrong 24 (truth fail 29)
+  run 1, scored 3 or less: 65 of 79, of which wrong 28 (truth fail 29)
+  wrong replies' scores (both runs): 1:6, 2:38, 3:10, 4:3, 5:0

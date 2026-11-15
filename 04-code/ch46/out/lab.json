@@ -1,0 +1,226 @@
+{
+  "kind": "SIMULATED",
+  "seed": 2046,
+  "pack_id": "harbor-hardship-validation-pack-teaching",
+  "artefacts": {
+    "A1_use_case_inventory": {
+      "system": "Compass hardship-offer assistance",
+      "population": "frozen hardship offers",
+      "n": 2400,
+      "business_use": "draft hardship offers; human ship verb retained",
+      "inventory_status": "candidate_for_model_inventory_discussion",
+      "sr26_2_scope_note": "Generative and agentic AI are outside SR 26-2 scope per interagency guidance 17 Apr 2026; pack still uses MRM vocabulary as translation without claiming in-scope model status."
+    },
+    "A2_conceptual_soundness": {
+      "unit_of_analysis": "offer",
+      "assumptions": [
+        "pinned gold and policy digests before scoring",
+        "ordinary Wilson intervals are approximate finite-sample diagnostics",
+        "SIM independence assumption for teaching cards; production may need cluster-aware methods"
+      ],
+      "design_choices": [
+        "channel\u00d7product strata pre-declared",
+        "proxy fields refused as decide inputs"
+      ]
+    },
+    "A3_metric_digest_register": {
+      "pack_metric": {
+        "metric_id": "wrong_hardship_offer_rate",
+        "definition": "binary wrong-offer under pinned gold on frozen hardship offers; Wilson 95% upper vs 0.5%",
+        "unit": "offer",
+        "denominator": "frozen hardship offers in digest population",
+        "gold_digest": "af63808723f1",
+        "version": "v1-pack"
+      },
+      "gold_digest": "af63808723f1",
+      "record_sha12": "3d4c15e44e50",
+      "target": 0.005
+    },
+    "A4_outcome_analysis": {
+      "source": "Ch45 teaching freeze by digest reference",
+      "overall_pre": {
+        "k": 23,
+        "n": 2400,
+        "rate": 0.009583333333333333,
+        "wilson_lo": 0.006394329819241455,
+        "wilson_hi": 0.014339815059522603,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      },
+      "overall_post": {
+        "k": 11,
+        "n": 2400,
+        "rate": 0.004583333333333333,
+        "wilson_lo": 0.002561181499450393,
+        "wilson_hi": 0.008188944465588236,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      },
+      "hot_segment": "phone\u00d7signature",
+      "hot_pre": {
+        "k": 14,
+        "n": 400,
+        "rate": 0.035,
+        "wilson_lo": 0.0209610999014911,
+        "wilson_hi": 0.05788565585621193,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      },
+      "hot_post": {
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      },
+      "ship_language": "OPEN; residual risk only with Victor signature \u2014 not MEETS"
+    },
+    "A5_reproducibility_recipe": {
+      "input": [
+        "tag ch46-validation-pack-teaching",
+        "digest af63808723f1",
+        "record 3d4c15e44e50"
+      ],
+      "command": "./run_all.sh",
+      "output_must_include": [
+        "SIMULATED",
+        "table_sha12",
+        "metric_drift_caught"
+      ],
+      "second_person_table_sha12": "3ca1646f42bf"
+    },
+    "A6_monitoring_plan": {
+      "weekly_segment_cards": true,
+      "stop_rules": "Wilson hi or count budget; under-powered weeks labelled",
+      "retest_triggers": [
+        "provider model bump",
+        "prompt change",
+        "policy change",
+        "mix shock",
+        "hardship incident",
+        "quarterly calendar"
+      ]
+    },
+    "A7_limitations_pending_scope": {
+      "live_provider_batteries": "PENDING",
+      "name_swap_counterfactual": "PENDING",
+      "paid_calls_this_chapter": false,
+      "sr26_2_generative_agentic_excluded": true,
+      "wilson_exact_iut_guarantee": false
+    },
+    "A8_challenge_log": {
+      "challenges": [
+        {
+          "id": "C1",
+          "probe": "metric unit offer vs conversation",
+          "result": "pack unit=offer"
+        },
+        {
+          "id": "C2",
+          "probe": "MEETS while Wilson OPEN",
+          "result": "refused"
+        },
+        {
+          "id": "C3",
+          "probe": "benchmark score as validation",
+          "result": "refused"
+        },
+        {
+          "id": "C4",
+          "probe": "author marks own homework",
+          "result": "challenger required"
+        }
+      ],
+      "independence": "effective challenge by non-author role before committee"
+    }
+  },
+  "artefact_order": [
+    "A1_use_case_inventory",
+    "A2_conceptual_soundness",
+    "A3_metric_digest_register",
+    "A4_outcome_analysis",
+    "A5_reproducibility_recipe",
+    "A6_monitoring_plan",
+    "A7_limitations_pending_scope",
+    "A8_challenge_log"
+  ],
+  "reproduce_table": {
+    "table_id": "hardship_overall_pre_post",
+    "rows": [
+      {
+        "label": "pre_overall",
+        "k": 23,
+        "n": 2400,
+        "rate": 0.009583333333333333,
+        "wilson_lo": 0.006394329819241455,
+        "wilson_hi": 0.014339815059522603,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      },
+      {
+        "label": "post_overall",
+        "k": 11,
+        "n": 2400,
+        "rate": 0.004583333333333333,
+        "wilson_lo": 0.002561181499450393,
+        "wilson_hi": 0.008188944465588236,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      },
+      {
+        "label": "hot_pre",
+        "segment": "phone\u00d7signature",
+        "k": 14,
+        "n": 400,
+        "rate": 0.035,
+        "wilson_lo": 0.0209610999014911,
+        "wilson_hi": 0.05788565585621193,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      },
+      {
+        "label": "hot_post",
+        "segment": "phone\u00d7signature",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "OPEN": true,
+        "meets_upper_bound_target": false,
+        "interval_kind": "ordinary_wilson_95_approximate_finite_sample",
+        "design_note": "SIM teaching; not an exact level-alpha certificate"
+      }
+    ]
+  },
+  "table_sha12": "3ca1646f42bf",
+  "owners": {
+    "ship": "Victor Lane",
+    "eval_lead": "evaluation lead",
+    "product": "product",
+    "counsel_challenge": "counsel"
+  },
+  "returned_artefact": {
+    "id": "A4_outcome_analysis",
+    "reason": "validator requests borrower-level sensitivity note beside offer-level Wilson cards",
+    "status": "returned_for_more_evidence",
+    "remediation_design": "add DESIGN borrower-level sensitivity appendix; do not invent borrower k/n for teaching digest"
+  },
+  "pack_sha12": "7110cb6b0108"
+}

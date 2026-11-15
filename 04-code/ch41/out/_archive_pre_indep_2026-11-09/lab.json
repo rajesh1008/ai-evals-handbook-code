@@ -1,0 +1,217 @@
+{
+  "seed": 2041,
+  "digest": "1d3a6204f7f450c1",
+  "simulated": true,
+  "ch16_verified": {
+    "run_id": "ch16-full-new-2026-11-08-2131",
+    "cap_usd": 12.0,
+    "charged_usd": 6.191862,
+    "unreconciled_usd": 0.050079,
+    "unreconciled_n": 8,
+    "headroom_usd": 0.05,
+    "safe_ceiling_usd": 6.291941,
+    "jsonl_rows": 3154,
+    "request_ids": 3391,
+    "ledger_commits": 3396,
+    "orphans": 5,
+    "agent_turns": 417,
+    "prices_usd_per_mtok_as_of": "2026-11-08",
+    "prices_usd_per_mtok": {
+      "haiku": [
+        1.0,
+        5.0
+      ],
+      "sonnet": [
+        3.0,
+        15.0
+      ]
+    },
+    "prices_kind": "list_price_assumption_at_study_date",
+    "small_judge_per_call_usd": 0.001441445,
+    "large_judge_per_call_usd": 0.00403281,
+    "thinking_per_call_usd": 0.003397395,
+    "month_small_judge_plus_reads_usd": 635.0,
+    "month_read_everything_usd": 7028.0,
+    "order_not_decide": true
+  },
+  "study_ceiling": {
+    "charged_usd": 6.191862,
+    "unreconciled_usd": 0.050079,
+    "headroom_usd": 0.05,
+    "safe_ceiling_usd": 6.2919410000000005
+  },
+  "cost_lines": [
+    {
+      "amount_usd": 6.191862,
+      "kind": "invoice_actual",
+      "unit": "USD study total (ledger committed)",
+      "currency": "USD",
+      "as_of": "2026-11-08",
+      "source": "ch16-full-new-2026-11-08-2131"
+    },
+    {
+      "amount_usd": 0.050079,
+      "kind": "unknown_reserve_worst_case",
+      "unit": "USD worst-case unreconciled hung-judge reserves",
+      "currency": "USD",
+      "as_of": "2026-11-08",
+      "source": "ch16-full-new-2026-11-08-2131/budget_ledger"
+    },
+    {
+      "amount_usd": 0.05,
+      "kind": "safety_headroom",
+      "unit": "USD safety headroom (not a charge)",
+      "currency": "USD",
+      "as_of": "2026-11-08",
+      "source": "budget policy"
+    },
+    {
+      "amount_usd": 0.001441445,
+      "kind": "token_priced_estimate",
+      "unit": "USD per judge call (token-priced at study list prices)",
+      "currency": "USD",
+      "as_of": "2026-11-08",
+      "source": "lab.json models.small.per_call"
+    }
+  ],
+  "waterfall": {
+    "steps": [
+      {
+        "step": 0,
+        "name": "baseline_release_eval",
+        "total_usd": 1900.0,
+        "delta_usd": 0.0,
+        "kind": "simulated_forecast"
+      },
+      {
+        "step": 1,
+        "name": "drop_unused_suites",
+        "total_usd": 1520.0,
+        "delta_usd": -380.0,
+        "kind": "simulated_forecast"
+      },
+      {
+        "step": 2,
+        "name": "sample_by_risk",
+        "total_usd": 1180.0,
+        "delta_usd": -340.0,
+        "kind": "simulated_forecast"
+      },
+      {
+        "step": 3,
+        "name": "cheap_first_cascade",
+        "total_usd": 890.0,
+        "delta_usd": -290.0,
+        "kind": "simulated_forecast"
+      },
+      {
+        "step": 4,
+        "name": "cache_and_reuse",
+        "total_usd": 740.0,
+        "delta_usd": -150.0,
+        "kind": "simulated_forecast"
+      },
+      {
+        "step": 5,
+        "name": "stop_when_settled",
+        "total_usd": 640.0,
+        "delta_usd": -100.0,
+        "kind": "simulated_forecast"
+      }
+    ],
+    "start_usd": 1900.0,
+    "end_usd": 640.0,
+    "saved_usd": 1260.0
+  },
+  "cascade": {
+    "deterministic_usd": 0.07028000000000001,
+    "judge_usd": 4.612624,
+    "read_usd": 630.0,
+    "total_usd": 634.682904,
+    "n_traces": 3514,
+    "n_after_deterministic": 3200,
+    "n_ordered_reads": 315
+  },
+  "risk_sample": {
+    "strata": [
+      {
+        "name": "hardship",
+        "traffic_share": 0.059,
+        "risk_weight": 40.0,
+        "draw_share": 0.4,
+        "unit_cost_usd": 2.4
+      },
+      {
+        "name": "fee",
+        "traffic_share": 0.215,
+        "risk_weight": 25.0,
+        "draw_share": 0.25,
+        "unit_cost_usd": 0.9
+      },
+      {
+        "name": "payoff_lien",
+        "traffic_share": 0.168,
+        "risk_weight": 20.0,
+        "draw_share": 0.2,
+        "unit_cost_usd": 1.2
+      },
+      {
+        "name": "account_statement",
+        "traffic_share": 0.558,
+        "risk_weight": 15.0,
+        "draw_share": 0.15,
+        "unit_cost_usd": 0.35
+      }
+    ],
+    "weight_sum": 100.0
+  },
+  "inject_gate": {
+    "tpr": 0.92,
+    "tnr": 0.91,
+    "position_flip_rate": 0.18,
+    "tpr_floor": 0.8,
+    "tnr_floor": 0.9,
+    "flip_ceiling": 0.05,
+    "admit": false,
+    "failed_bias_battery": true
+  },
+  "baseline_gate": {
+    "tpr": 0.98,
+    "tnr": 0.993,
+    "position_flip_rate": 0.02,
+    "tpr_floor": 0.8,
+    "tnr_floor": 0.9,
+    "flip_ceiling": 0.05,
+    "admit": true,
+    "failed_bias_battery": false
+  },
+  "amortisation": {
+    "study_usd": 6.191862,
+    "n_releases": 12,
+    "amortised_per_release_usd": 0.5159885000000001,
+    "note": "amortisation is an accounting allocation; the cash was spent once"
+  },
+  "end_release_bill": {
+    "call_usd": 40.0,
+    "ordered_read_usd": 520.0,
+    "ci_usd": 60.0,
+    "other_usd": 20.0,
+    "total_usd": 640.0
+  },
+  "cost_per_decision": {
+    "total_usd": 640.0,
+    "n_decisions": 80,
+    "usd_per_decision": 8.0
+  },
+  "teaching": {
+    "release_1900_to_640": true,
+    "five_cuts": true,
+    "saved_usd": 1260.0,
+    "cheap_fails_bias": true,
+    "baseline_admits": true,
+    "ch16_ceiling_match": true,
+    "rows_not_requests": true,
+    "order_not_decide": true
+  },
+  "label": "SIMULATED release waterfall; Ch16 study costs are verified ledger figures"
+}

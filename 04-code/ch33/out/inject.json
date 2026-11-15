@@ -1,0 +1,10 @@
+{
+  "kind": "SIMULATED_INJECTION",
+  "name": "redact_fee_amount",
+  "signal_ok": false,
+  "n_destroyed": 500,
+  "overlap_removed": [
+    "fee_amount"
+  ],
+  "caught": true
+}

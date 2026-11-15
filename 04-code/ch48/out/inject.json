@@ -1,0 +1,8 @@
+{
+  "caught": true,
+  "failure": "rubric_rewards_vocabulary_over_findings",
+  "winner_under_bad_rubric": "B",
+  "winner_under_findings_rubric": "A",
+  "inversion": true,
+  "SIMULATED": true
+}

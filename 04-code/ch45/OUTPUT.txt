@@ -1,0 +1,7 @@
+digest=af63808723f1 seed=2045 SIMULATED n=2400
+target_wrong_offer=0.005
+pre_overall k=23 rate=0.0096 wilson_hi=0.0143 OPEN=True
+post_overall k=11 rate=0.0046 wilson_hi=0.0082 OPEN=True
+hot_segment=phone×signature pre_hi=0.0579 post_hi=0.0180
+proxy_caught=True field=affinity_bucket
+record_sha12=3d4c15e44e50

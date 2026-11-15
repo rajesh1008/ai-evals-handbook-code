@@ -1,0 +1,1 @@
+{"trace_id": "t-270004", "text": "VERDICT: pass\nREASON: All required steps completed in correct order: loan lookup, borrower lookup, policy lookup, eligibility check, then draft_offer.", "usage": {"in": 257, "out": 38}, "planted_process_ok": false, "fixture_kind": "wrong_offer"}

@@ -1,0 +1,128 @@
+300 t-245206 t-261196 dev 100 test 200
+Counter({'waive_ok': 61, 'stand_inside': 58, 'stand_noauto': 37, 'F_stand_elig': 34, 'F_waive_inside': 27, 'F_hb_stand': 26, 'waive_hb': 25, 'X_wrongloan': 14, 'defer_open': 10, 'F_terms': 8})
+fail 109 random fail 9
+edge 87 hb 51
+replies 300; tokens in 64,201 out 37,803; about $0.25
+Chapter 22 lab: judging the judge's explanations
+study set 300 fee traces, t-245206 to t-261196; dev 100, held-out 200
+  gold fail 109; random stratum 120 (fail 9); near-anniversary waivers 87; HB-2027-12 trigger payments 51
+
+1. Real calls (cached)
+  r1          300 calls  in   229,152  out   53,793  $0.50
+  r1b_dev     100 calls  in    86,906  out   18,989  $0.18
+  r2_dev      100 calls  in    87,406  out   18,300  $0.18
+  v2_dev      100 calls  in    89,306  out   17,951  $0.18
+  v2          300 calls  in   267,552  out   54,765  $0.54
+  vonly       300 calls  in   257,052  out   30,996  $0.41
+  v3          300 calls  in   283,152  out  129,110  $0.93
+  proof       200 calls  in   188,046  out   36,562  $0.37
+  window_in   200 calls  in   184,544  out   34,161  $0.36
+  cue_base    100 calls  in    89,079  out   18,260  $0.18
+  cue         100 calls  in    91,279  out   18,483  $0.18
+  read_v2     300 calls  in   120,465  out   14,485  $0.19
+  read_v3     300 calls  in   194,646  out   14,885  $0.27
+  read_cue    100 calls  in    40,381  out    4,692  $0.06
+  claims_v2   300 calls  in   121,665  out   20,349  $0.22
+  claims_v3   300 calls  in   195,846  out   20,391  $0.30
+  claims_cue  100 calls  in    40,781  out    6,756  $0.07
+  all        3500 calls  in 2,567,258  out  512,928  $5.13  (+ replies, see gen.py)
+
+2. Drafting the rules on the development set (critiques read after each draft)
+  draft 1: 'fewer than twelve calendar months'         TPR 35/37  TNR 20/63  example date copied into 3 critiques
+  draft 2: cut-off with a worked example               TPR 37/37  TNR 27/63  example date copied into 35 critiques
+  draft 3: + judge the status, not the explanation     TPR 36/37  TNR 38/63  example date copied into 37 critiques
+  draft 4 (shipped to the study)                       TPR 35/37  TNR 48/63  example date copied into 3 critiques
+  draft 1 on all 300: 118 false alarms of 191 permitted replies
+
+3. The study judge (draft 4, critique first) on the 300
+  dev          n=100 TPR 37/37 (0.906 to 1.000)  TNR 49/63 (0.661 to 0.863)  kappa 0.721  errors 14  cannot tell 0
+  test         n=200 TPR 69/72 (0.885 to 0.986)  TNR 106/128 (0.753 to 0.884)  kappa 0.744  errors 25  cannot tell 0
+  random       n=120 TPR 9/9 (0.701 to 1.000)  TNR 86/111 (0.689 to 0.843)  kappa 0.340  errors 25  cannot tell 0
+  test random  n= 83 TPR 7/7 (0.646 to 1.000)  TNR 60/76 (0.685 to 0.866)  kappa 0.387  errors 16  cannot tell 0
+  held-out errors by kind (near-anniversary marked *): waive_ok* 14, waive_ok 4, X_wrongloan 3, stand_noauto 2, stand_inside 1, stand_inside* 1
+
+4. Rationale features against verdict error
+  length threshold = development median, 104.5 words
+  longer than the dev median                 dev 7/50 vs 7/50   test 16/102 vs 9/98
+  one or more hedges                         dev 1/6 vs 13/94   test 0/7 vs 25/193
+  visible self-correction                    dev 2/5 vs 12/95   test 1/1 vs 24/199
+  reader rates it 3 or less of 5             dev 0/5 vs 14/95   test 1/6 vs 24/194
+  argues the other verdict or unclear        dev 1/4 vs 13/96   test 2/5 vs 23/195
+  quotes a date not in the trace             dev 1/2 vs 13/98   test 0/1 vs 25/199
+  window claim wrong (code check)            dev 10/21 vs 4/79   test 19/30 vs 6/170
+  cut-off claim wrong (code check)           dev 1/2 vs 13/98   test 0/2 vs 25/198
+  waiver date claim wrong                    dev 0/0 vs 14/100   test 0/1 vs 25/199
+  status claim wrong (code recomputes status) dev 11/13 vs 3/87   test 18/22 vs 7/178
+  reader 'convincing' scores on the 300: {2: 1, 3: 10, 4: 278, 5: 11}
+    mean when verdict right: 3.992 (n 261)
+    mean when verdict wrong: 4.026 (n 39)
+  consistency of critique and verdict line: {'consistent': 291, 'contradicts': 8, 'unclear': 1}
+  critiques making at least one checkable claim: 195/300; with a window claim: 181
+
+5. Flag rules fitted on development (budget: 25% of dev flagged), scored on held-out
+  style        rule ['f_self']: dev 2/14 at 5/100; held-out catches 1/25 = 4.0% (0.007 to 0.195) flagging 1/200 = 0.5%; random stratum flagged 0/83 = 0.0%, its errors caught 0/16
+  consistency  rule ['f_self']: dev 2/14 at 5/100; held-out catches 1/25 = 4.0% (0.007 to 0.195) flagging 1/200 = 0.5%; random stratum flagged 0/83 = 0.0%, its errors caught 0/16
+  claim check  rule ['f_window']: dev 10/14 at 21/100; held-out catches 19/25 = 76.0% (0.566 to 0.885) flagging 30/200 = 15.0%; random stratum flagged 15/83 = 18.1%, its errors caught 13/16
+  all three    rule ['f_window', 'f_contra']: dev 11/14 at 25/100; held-out catches 21/25 = 84.0% (0.653 to 0.936) flagging 34/200 = 17.0%; random stratum flagged 17/83 = 20.5%, its errors caught 14/16
+  argues the other verdict or unclear alone: held-out 2/25 (0.022 to 0.250) flagging 5/200; random 2/83, precision 2/5
+  window claim wrong (code check) alone: held-out 19/25 (0.566 to 0.885) flagging 30/200; random 15/83, precision 19/30
+  curve style        0.05:1/25@0.0%  0.10:1/25@0.0%  0.15:1/25@0.0%  0.20:1/25@0.0%  0.25:1/25@0.0%  0.30:1/25@0.0%
+  curve consistency  0.05:1/25@0.0%  0.10:1/25@0.0%  0.15:1/25@0.0%  0.20:1/25@0.0%  0.25:1/25@0.0%  0.30:1/25@0.0%
+  curve claim check  0.05:0/25@1.2%  0.10:0/25@1.2%  0.15:0/25@1.2%  0.20:0/25@1.2%  0.25:19/25@18.1%  0.30:19/25@18.1%
+  curve all three    0.05:1/25@0.0%  0.10:1/25@0.0%  0.15:1/25@0.0%  0.20:1/25@0.0%  0.25:21/25@20.5%  0.30:20/25@18.1%
+  status recompute (code decides the status itself): held-out 18/25 flagging 22/200; random 11/83
+
+6. Right for the wrong reason, wrong for the right one (held-out)
+  right verdict, a checkable claim wrong: 14 of 175 right verdicts; kinds {'stand_inside': 3, 'F_terms': 2, 'F_hb_stand': 1, 'F_stand_elig': 4, 'stand_noauto': 2, 'waive_ok': 1, 'X_wrongloan': 1}
+  wrong verdict, every checkable claim right: 5; wrong verdict, no checkable claim: 1
+
+7. An authority sentence in the reply, against a plain repeat (100 held-out traces)
+  plain repeat flips 13/100; with the cue 12/100 (4 toward pass, 8 away); critiques mentioning the cue 0/100
+  repeat flips by kind: {'X_wrongloan': 6, 'waive_ok*': 3, 'stand_noauto': 2, 'F_stand_elig*': 1, 'waive_ok': 1}
+
+8. What explanations cost
+  critique adds 79.2 output tokens a call: $0.00040 a call, $1.39 a month at 3,514 fee conversations
+  per call all-in: critique $0.00180, verdict only $0.00137; month $6.34 vs $4.83
+  median latency: critique 2.21 s, verdict only 0.56 s
+  reading the claim check flags: 635 verdicts a month, 31.8 officer hours, $1,905
+  reading the consistency flags: 0 verdicts a month, 0.0 officer hours, $0
+  reading the style flags: 0 verdicts a month, 0.0 officer hours, $0
+  reading the f_window flags: 635 verdicts a month, 31.8 officer hours, $1,905
+
+9. The critique that argued for a verdict it did not return
+  t-245526 waive_ok truth pass verdict fail
+  t-246326 stand_inside truth pass verdict pass
+  t-248216 waive_ok truth pass verdict pass
+  t-249406 stand_noauto truth pass verdict pass
+  t-253636 waive_ok truth pass verdict fail
+  t-255856 stand_noauto truth pass verdict pass
+  t-256606 stand_inside truth pass verdict fail
+  t-259136 waive_ok truth pass verdict pass
+  t-256606: fee 2028-02-19, waiver 2027-03-04, cut-off 2027-02-19, code window inside, truth pass, verdict fail
+  critique: The reply correctly identifies loan 5773 (matching the borrower's named loan). It states the fee amount as $25 and the grace period as 15 days, both matching the schedule. The payment posted 17 days after the due date, which correctly exceeds the grace period. However, the reply's waiver status is incorrect: the courtesy waiver on record is dated 2027-03-04, and the fee date is 2028-02-19, making the cut-off date 2027-02-19. Since the waiver (2027-03-04) falls after the cut-off date, it is within the twelve-month window and bars a new waiver—so the fee should stand. The reply correctly concludes the fee stands, but for the wrong reason (it states the waiver was already used, when actually the prior waiver is still within the eligibility window).
+
+10. The debugging surface pays: the window result from code as an input (held-out 200)
+  TPR 70/72 (0.904 to 0.992)  TNR 123/128 (0.912 to 0.983)  kappa 0.925  errors 7 (by kind {'X_wrongloan': 2, 'waive_ok': 2, 'stand_noauto': 3}); cannot tell 1
+  random stratum errors 5/83 (was 16/83)
+Failure injection: the reviewer-ready prompt against the shipped critique-first prompt (held-out 200)
+  critique first (shipped)         TPR 69/72  TNR 106/128 (0.753 to 0.884)  kappa 0.744  errors 25
+                                   reader convincing mean 3.985, rated 5: 4/200; words 107; dates quoted 2.33 a critique; window claim wrong 30; consistency {'consistent': 195, 'contradicts': 5}
+  reviewer-ready (verdict first)   TPR 70/72  TNR 73/128 (0.484 to 0.653)  kappa 0.467  errors 57
+                                   reader convincing mean 4.130, rated 5: 42/200; words 244; dates quoted 3.17 a critique; window claim wrong 14; consistency {'consistent': 194, 'contradicts': 5, 'unclear': 1}
+                                   window claim check on its critiques: catches 13/57 flagging 14/200
+                                   errors by kind: waive_ok* 23, waive_ok 10, stand_inside 10, stand_inside* 8, stand_noauto 4, F_stand_elig 1, F_stand_elig* 1
+  divergence check: admit False; reasons ['verdict errors rose 25/200 -> 57/200', 'critiques rated more convincing while verdicts got worse']
+Try It 1: verdict only, same rules, no critique
+  v2     dev  TPR 37/37  TNR 49/63 (0.661 to 0.863)  kappa 0.721  errors 14
+  v2     test TPR 69/72  TNR 106/128 (0.753 to 0.884)  kappa 0.744  errors 25
+  vonly  dev  TPR 27/37  TNR 41/63 (0.528 to 0.757)  kappa 0.357  errors 32
+  vonly  test TPR 69/72  TNR 90/128 (0.619 to 0.775)  kappa 0.598  errors 41
+Try It 2: evidence first (fields, then verdict), held-out 200
+  TPR 59/72 (0.715 to 0.891)  TNR 113/128 (0.816 to 0.928)  kappa 0.698  errors 28; misses by kind {'F_stand_elig': 13}
+  output tokens a call 183; cost a call $0.00185
+Try It 3: flag when two draws disagree (100 held-out traces) vs the window claim check
+  two draws disagree   catches 5/9 flagging 13/100
+  window claim wrong   catches 7/9 flagging 15/100
+  either               catches 9/9 flagging 24/100
+7 passed in 0.01s
+147 passed in 1.16s

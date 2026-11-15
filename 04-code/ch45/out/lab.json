@@ -1,0 +1,275 @@
+{
+  "evidence_pack": {
+    "control_objective": "wrong_hardship_offer_rate upper bound under 0.5%",
+    "population": "hardship_offer_traces",
+    "n": 2400,
+    "digest": "af63808723f1",
+    "metric": "wrong_offer",
+    "target": 0.005,
+    "legitimate_strata": [
+      "web\u00d7signature",
+      "web\u00d7compass",
+      "phone\u00d7signature",
+      "phone\u00d7compass",
+      "branch\u00d7signature",
+      "branch\u00d7compass"
+    ],
+    "pre_overall": {
+      "k": 23,
+      "n": 2400,
+      "rate": 0.009583333333333333,
+      "wilson_lo": 0.006394329819241455,
+      "wilson_hi": 0.014339815059522603,
+      "meets": false,
+      "OPEN": true
+    },
+    "post_overall": {
+      "k": 11,
+      "n": 2400,
+      "rate": 0.004583333333333333,
+      "wilson_lo": 0.002561181499450393,
+      "wilson_hi": 0.008188944465588236,
+      "meets": false,
+      "OPEN": true
+    },
+    "pre_segments": [
+      {
+        "segment": "branch\u00d7compass",
+        "k": 1,
+        "n": 400,
+        "rate": 0.0025,
+        "wilson_lo": 0.00044143642943440895,
+        "wilson_hi": 0.014023640967247855,
+        "clopper_upper_approx": 0.01180430445398703,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "branch\u00d7signature",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "phone\u00d7compass",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "phone\u00d7signature",
+        "k": 14,
+        "n": 400,
+        "rate": 0.035,
+        "wilson_lo": 0.0209610999014911,
+        "wilson_hi": 0.05788565585621193,
+        "clopper_upper_approx": 0.05417600089375991,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "web\u00d7compass",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "web\u00d7signature",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      }
+    ],
+    "post_segments": [
+      {
+        "segment": "branch\u00d7compass",
+        "k": 1,
+        "n": 400,
+        "rate": 0.0025,
+        "wilson_lo": 0.00044143642943440895,
+        "wilson_hi": 0.014023640967247855,
+        "clopper_upper_approx": 0.01180430445398703,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "branch\u00d7signature",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "phone\u00d7compass",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "phone\u00d7signature",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "web\u00d7compass",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "web\u00d7signature",
+        "k": 2,
+        "n": 400,
+        "rate": 0.005,
+        "wilson_lo": 0.0013722242215711469,
+        "wilson_hi": 0.018045289972112716,
+        "clopper_upper_approx": 0.015655179936468217,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      }
+    ],
+    "hot_segment_pre": {
+      "segment": "phone\u00d7signature",
+      "k": 14,
+      "n": 400,
+      "rate": 0.035,
+      "wilson_lo": 0.0209610999014911,
+      "wilson_hi": 0.05788565585621193,
+      "clopper_upper_approx": 0.05417600089375991,
+      "meets_upper_bound_target": false,
+      "OPEN": true
+    },
+    "hot_segment_post": {
+      "segment": "phone\u00d7signature",
+      "k": 2,
+      "n": 400,
+      "rate": 0.005,
+      "wilson_lo": 0.0013722242215711469,
+      "wilson_hi": 0.018045289972112716,
+      "clopper_upper_approx": 0.015655179936468217,
+      "meets_upper_bound_target": false,
+      "OPEN": true
+    },
+    "adverse_ratios_pre": [
+      {
+        "segment": "branch\u00d7compass",
+        "rate": 0.0025,
+        "ratio_vs_baseline": 0.5,
+        "baseline": "web\u00d7compass"
+      },
+      {
+        "segment": "branch\u00d7signature",
+        "rate": 0.005,
+        "ratio_vs_baseline": 1.0,
+        "baseline": "web\u00d7compass"
+      },
+      {
+        "segment": "phone\u00d7compass",
+        "rate": 0.005,
+        "ratio_vs_baseline": 1.0,
+        "baseline": "web\u00d7compass"
+      },
+      {
+        "segment": "phone\u00d7signature",
+        "rate": 0.035,
+        "ratio_vs_baseline": 7.000000000000001,
+        "baseline": "web\u00d7compass"
+      },
+      {
+        "segment": "web\u00d7compass",
+        "rate": 0.005,
+        "ratio_vs_baseline": 1.0,
+        "baseline": "web\u00d7compass"
+      },
+      {
+        "segment": "web\u00d7signature",
+        "rate": 0.005,
+        "ratio_vs_baseline": 1.0,
+        "baseline": "web\u00d7compass"
+      }
+    ],
+    "owner": "Victor",
+    "SIMULATED": true
+  },
+  "record": {
+    "experiment_id": "ch45-hardship-segment-fairness",
+    "digest": "af63808723f1",
+    "seed": 2045,
+    "n": 2400,
+    "hypothesis": "legitimate channel\u00d7product strata; affinity_bucket is illegal proxy",
+    "owner": "Victor",
+    "record_sha12": "3d4c15e44e50"
+  },
+  "proxy_injection": {
+    "field": "affinity_bucket",
+    "caught": true,
+    "reason": "name-coded affinity bucket is a protected-characteristic proxy, not a business stratum",
+    "cards_must_not_decide": [
+      {
+        "segment": "affinity_A",
+        "k": 10,
+        "n": 1200,
+        "rate": 0.008333333333333333,
+        "wilson_lo": 0.0045326909695818495,
+        "wilson_hi": 0.015271907907878439,
+        "clopper_upper_approx": 0.014094179496020947,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      },
+      {
+        "segment": "affinity_B",
+        "k": 13,
+        "n": 1200,
+        "rate": 0.010833333333333334,
+        "wilson_lo": 0.0063418336421987576,
+        "wilson_hi": 0.018446809647749023,
+        "clopper_upper_approx": 0.017168754177537156,
+        "meets_upper_bound_target": false,
+        "OPEN": true
+      }
+    ],
+    "rate_spread": 0.0025000000000000005
+  },
+  "target": 0.005,
+  "SIMULATED": true
+}

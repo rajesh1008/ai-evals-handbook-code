@@ -1,0 +1,36 @@
+Compass Weekly Quality Report
+Week ending 2029-05-28
+
+HEADLINE
+Overall monitor flat; hardship segment regression hidden until slice lines are read.
+
+METRIC HIERARCHY (decide → gate → monitor → inform)
+  [DECIDE]
+    wrong_hardship_offer: 2/420 = 0.48% (Wilson 0.13%–1.72%; target 0.005; OPEN) — owner Victor; action hold_widen_until_bound
+  [GATE]
+    wrong_fee_explanation: 4/280 = 1.43% (Wilson 0.56%–3.62%; target 0.02; OPEN) — owner Ryan; action replay_fee_set
+  [MONITOR]
+    fee_slice_monitor: 1/212 = 0.47% (Wilson 0.08%–2.62%; target 0.03; MEETS) — owner eval-lead; action read_if_flag
+    hardship_slice_monitor: 5/200 = 2.50% (Wilson 1.07%–5.72%; target 0.01; OPEN) — owner eval-lead; action escalate_to_decide
+  [INFORM]
+    (none this week)
+
+WHAT CHANGED
+  - Overall delta -0.0001 (failures/n first→last).
+  - Hardship delta +0.0194.
+  - Hidden-regression flag: True.
+  - Ch39 packet: median TTE 4.0d; complaints 42→31.
+
+ASK / DECISION
+  - Victor: hold traffic widen on hardship until decide-tier Wilson upper bound is under 0.5%.
+  - Ryan: keep fee gate replay; do not celebrate overall flatness alone.
+  - Rachel: read the one-pager; ad-hoc number requests route to this page first.
+
+INCIDENT→EVAL PACKET
+  median_tte_days: 4.0
+  n_incidents_closed_to_eval: 3
+  complaints_this_month: 31
+  complaints_prev_month: 42
+  inctoeval_digest: 810f8f17e55a
+
+End of page.

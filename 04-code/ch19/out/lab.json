@@ -1,0 +1,823 @@
+{
+  "seed": 2026,
+  "thresholds": {
+    "kappa_floor_flag": 0.75,
+    "kappa_floor_fail": 0.7,
+    "drop_flag": 0.1,
+    "drop_fail": 0.15,
+    "track_gap_flag": 0.15
+  },
+  "fixture": {
+    "seed": 2026,
+    "frozen_ids": [
+      "t-184901",
+      "t-184940"
+    ],
+    "n_frozen": 40,
+    "n_fresh": 60,
+    "weeks": [
+      "w1",
+      "w2",
+      "w3",
+      "w4",
+      "w5",
+      "w6"
+    ],
+    "policy_change": "HB-2027-12",
+    "effective": "2027-12-06",
+    "fixture_digest": "9aac221d4661"
+  },
+  "weeks": [
+    {
+      "week": "w1",
+      "start": "2027-11-15",
+      "policy": "HP-2027-04",
+      "judge": "fee-judge-v1",
+      "frozen": {
+        "n": 40,
+        "tp": 7,
+        "fn": 1,
+        "fp": 1,
+        "tn": 31,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 38,
+        "kappa": 0.8437499999999999,
+        "tpr": 0.875,
+        "tpr_ci": [
+          0.5291051942301386,
+          0.9775830911367038
+        ],
+        "tnr": 0.96875,
+        "tnr_ci": [
+          0.8425539219962727,
+          0.9944622826374491
+        ],
+        "precision": 0.875,
+        "P": 8,
+        "N": 32,
+        "gold_fail": 8,
+        "judge_fail": 8
+      },
+      "fresh": {
+        "n": 60,
+        "tp": 10,
+        "fn": 2,
+        "fp": 2,
+        "tn": 46,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.9333333333333333,
+        "agree_n": 56,
+        "kappa": 0.7916666666666666,
+        "tpr": 0.8333333333333334,
+        "tpr_ci": [
+          0.5519636426153274,
+          0.9530358523851776
+        ],
+        "tnr": 0.9583333333333334,
+        "tnr_ci": [
+          0.8602408885222853,
+          0.9884983479210344
+        ],
+        "precision": 0.8333333333333334,
+        "P": 12,
+        "N": 48,
+        "gold_fail": 12,
+        "judge_fail": 12
+      },
+      "pooled": {
+        "n": 100,
+        "tp": 17,
+        "fn": 3,
+        "fp": 3,
+        "tn": 77,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.94,
+        "agree_n": 94,
+        "kappa": 0.8124999999999998,
+        "tpr": 0.85,
+        "tpr_ci": [
+          0.6395767041130426,
+          0.9476322080405041
+        ],
+        "tnr": 0.9625,
+        "tnr_ci": [
+          0.8954510802560568,
+          0.9871656636992113
+        ],
+        "precision": 0.85,
+        "P": 20,
+        "N": 80,
+        "gold_fail": 20,
+        "judge_fail": 20
+      },
+      "gap": 0.05208333333333326
+    },
+    {
+      "week": "w2",
+      "start": "2027-11-22",
+      "policy": "HP-2027-04",
+      "judge": "fee-judge-v1",
+      "frozen": {
+        "n": 40,
+        "tp": 7,
+        "fn": 1,
+        "fp": 1,
+        "tn": 31,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 38,
+        "kappa": 0.8437499999999999,
+        "tpr": 0.875,
+        "tpr_ci": [
+          0.5291051942301386,
+          0.9775830911367038
+        ],
+        "tnr": 0.96875,
+        "tnr_ci": [
+          0.8425539219962727,
+          0.9944622826374491
+        ],
+        "precision": 0.875,
+        "P": 8,
+        "N": 32,
+        "gold_fail": 8,
+        "judge_fail": 8
+      },
+      "fresh": {
+        "n": 60,
+        "tp": 11,
+        "fn": 2,
+        "fp": 3,
+        "tn": 44,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.9166666666666666,
+        "agree_n": 55,
+        "kappa": 0.7611464968152866,
+        "tpr": 0.8461538461538461,
+        "tpr_ci": [
+          0.5776482949136899,
+          0.9567427368172621
+        ],
+        "tnr": 0.9361702127659575,
+        "tnr_ci": [
+          0.828371220656221,
+          0.9780550129792271
+        ],
+        "precision": 0.7857142857142857,
+        "P": 13,
+        "N": 47,
+        "gold_fail": 13,
+        "judge_fail": 14
+      },
+      "pooled": {
+        "n": 100,
+        "tp": 18,
+        "fn": 3,
+        "fp": 4,
+        "tn": 75,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.93,
+        "agree_n": 93,
+        "kappa": 0.7926540284360191,
+        "tpr": 0.8571428571428571,
+        "tpr_ci": [
+          0.6536350585077049,
+          0.950190782017865
+        ],
+        "tnr": 0.9493670886075949,
+        "tnr_ci": [
+          0.8769210451713461,
+          0.980136278685267
+        ],
+        "precision": 0.8181818181818182,
+        "P": 21,
+        "N": 79,
+        "gold_fail": 21,
+        "judge_fail": 22
+      },
+      "gap": 0.08260350318471332
+    },
+    {
+      "week": "w3",
+      "start": "2027-11-29",
+      "policy": "HP-2027-04",
+      "judge": "fee-judge-v1",
+      "frozen": {
+        "n": 40,
+        "tp": 7,
+        "fn": 1,
+        "fp": 1,
+        "tn": 31,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 38,
+        "kappa": 0.8437499999999999,
+        "tpr": 0.875,
+        "tpr_ci": [
+          0.5291051942301386,
+          0.9775830911367038
+        ],
+        "tnr": 0.96875,
+        "tnr_ci": [
+          0.8425539219962727,
+          0.9944622826374491
+        ],
+        "precision": 0.875,
+        "P": 8,
+        "N": 32,
+        "gold_fail": 8,
+        "judge_fail": 8
+      },
+      "fresh": {
+        "n": 60,
+        "tp": 10,
+        "fn": 1,
+        "fp": 2,
+        "tn": 47,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 57,
+        "kappa": 0.8387096774193548,
+        "tpr": 0.9090909090909091,
+        "tpr_ci": [
+          0.6226353745137962,
+          0.9837682477371741
+        ],
+        "tnr": 0.9591836734693877,
+        "tnr_ci": [
+          0.8628671652316889,
+          0.9887346030720717
+        ],
+        "precision": 0.8333333333333334,
+        "P": 11,
+        "N": 49,
+        "gold_fail": 11,
+        "judge_fail": 12
+      },
+      "pooled": {
+        "n": 100,
+        "tp": 17,
+        "fn": 2,
+        "fp": 3,
+        "tn": 78,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 95,
+        "kappa": 0.8407643312101909,
+        "tpr": 0.8947368421052632,
+        "tpr_ci": [
+          0.686054495051583,
+          0.9706420586049034
+        ],
+        "tnr": 0.9629629629629629,
+        "tnr_ci": [
+          0.896675186197318,
+          0.9873251155414514
+        ],
+        "precision": 0.85,
+        "P": 19,
+        "N": 81,
+        "gold_fail": 19,
+        "judge_fail": 20
+      },
+      "gap": 0.005040322580645129
+    },
+    {
+      "week": "w4",
+      "start": "2027-12-06",
+      "policy": "HB-2027-12",
+      "judge": "fee-judge-v1",
+      "frozen": {
+        "n": 40,
+        "tp": 7,
+        "fn": 1,
+        "fp": 1,
+        "tn": 31,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 38,
+        "kappa": 0.8437499999999999,
+        "tpr": 0.875,
+        "tpr_ci": [
+          0.5291051942301386,
+          0.9775830911367038
+        ],
+        "tnr": 0.96875,
+        "tnr_ci": [
+          0.8425539219962727,
+          0.9944622826374491
+        ],
+        "precision": 0.875,
+        "P": 8,
+        "N": 32,
+        "gold_fail": 8,
+        "judge_fail": 8
+      },
+      "fresh": {
+        "n": 60,
+        "tp": 15,
+        "fn": 5,
+        "fp": 9,
+        "tn": 31,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.7666666666666667,
+        "agree_n": 46,
+        "kappa": 0.5000000000000001,
+        "tpr": 0.75,
+        "tpr_ci": [
+          0.5312949900419365,
+          0.888139947210597
+        ],
+        "tnr": 0.775,
+        "tnr_ci": [
+          0.6249660359590695,
+          0.8768404674532148
+        ],
+        "precision": 0.625,
+        "P": 20,
+        "N": 40,
+        "gold_fail": 20,
+        "judge_fail": 24
+      },
+      "pooled": {
+        "n": 100,
+        "tp": 22,
+        "fn": 6,
+        "fp": 10,
+        "tn": 62,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.84,
+        "agree_n": 84,
+        "kappa": 0.6197718631178706,
+        "tpr": 0.7857142857142857,
+        "tpr_ci": [
+          0.6046105292072612,
+          0.8978767829881058
+        ],
+        "tnr": 0.8611111111111112,
+        "tnr_ci": [
+          0.7628660215842661,
+          0.922773521885281
+        ],
+        "precision": 0.6875,
+        "P": 28,
+        "N": 72,
+        "gold_fail": 28,
+        "judge_fail": 32
+      },
+      "gap": 0.3437499999999998
+    },
+    {
+      "week": "w5",
+      "start": "2027-12-13",
+      "policy": "HB-2027-12",
+      "judge": "fee-judge-v1",
+      "frozen": {
+        "n": 40,
+        "tp": 7,
+        "fn": 1,
+        "fp": 1,
+        "tn": 31,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 38,
+        "kappa": 0.8437499999999999,
+        "tpr": 0.875,
+        "tpr_ci": [
+          0.5291051942301386,
+          0.9775830911367038
+        ],
+        "tnr": 0.96875,
+        "tnr_ci": [
+          0.8425539219962727,
+          0.9944622826374491
+        ],
+        "precision": 0.875,
+        "P": 8,
+        "N": 32,
+        "gold_fail": 8,
+        "judge_fail": 8
+      },
+      "fresh": {
+        "n": 60,
+        "tp": 14,
+        "fn": 6,
+        "fp": 8,
+        "tn": 32,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.7666666666666667,
+        "agree_n": 46,
+        "kappa": 0.48780487804878064,
+        "tpr": 0.7,
+        "tpr_ci": [
+          0.4810232237710206,
+          0.854524726031006
+        ],
+        "tnr": 0.8,
+        "tnr_ci": [
+          0.6524239261814333,
+          0.8950013502683314
+        ],
+        "precision": 0.6363636363636364,
+        "P": 20,
+        "N": 40,
+        "gold_fail": 20,
+        "judge_fail": 22
+      },
+      "pooled": {
+        "n": 100,
+        "tp": 21,
+        "fn": 7,
+        "fp": 9,
+        "tn": 63,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.84,
+        "agree_n": 84,
+        "kappa": 0.6116504854368932,
+        "tpr": 0.75,
+        "tpr_ci": [
+          0.566439747592954,
+          0.8732366505779922
+        ],
+        "tnr": 0.875,
+        "tnr_ci": [
+          0.7791873780725083,
+          0.9328229170689444
+        ],
+        "precision": 0.7,
+        "P": 28,
+        "N": 72,
+        "gold_fail": 28,
+        "judge_fail": 30
+      },
+      "gap": 0.35594512195121925
+    },
+    {
+      "week": "w6",
+      "start": "2027-12-20",
+      "policy": "HB-2027-12",
+      "judge": "fee-judge-v2",
+      "frozen": {
+        "n": 40,
+        "tp": 8,
+        "fn": 1,
+        "fp": 1,
+        "tn": 30,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.95,
+        "agree_n": 38,
+        "kappa": 0.8566308243727597,
+        "tpr": 0.8888888888888888,
+        "tpr_ci": [
+          0.5649937852319399,
+          0.9801096286728695
+        ],
+        "tnr": 0.967741935483871,
+        "tnr_ci": [
+          0.8380554282383037,
+          0.9942829259130554
+        ],
+        "precision": 0.8888888888888888,
+        "P": 9,
+        "N": 31,
+        "gold_fail": 9,
+        "judge_fail": 9
+      },
+      "fresh": {
+        "n": 60,
+        "tp": 18,
+        "fn": 0,
+        "fp": 1,
+        "tn": 41,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.9833333333333333,
+        "agree_n": 59,
+        "kappa": 0.9609374999999999,
+        "tpr": 1.0,
+        "tpr_ci": [
+          0.8241154494176252,
+          1.0
+        ],
+        "tnr": 0.9761904761904762,
+        "tnr_ci": [
+          0.8767851883475174,
+          0.9957847045008997
+        ],
+        "precision": 0.9473684210526315,
+        "P": 18,
+        "N": 42,
+        "gold_fail": 18,
+        "judge_fail": 19
+      },
+      "pooled": {
+        "n": 100,
+        "tp": 26,
+        "fn": 1,
+        "fp": 2,
+        "tn": 71,
+        "abstain_pos": 0,
+        "abstain_neg": 0,
+        "agreement": 0.97,
+        "agree_n": 97,
+        "kappa": 0.9247743229689067,
+        "tpr": 0.9629629629629629,
+        "tpr_ci": [
+          0.8171614606584348,
+          0.9934320234669025
+        ],
+        "tnr": 0.9726027397260274,
+        "tnr_ci": [
+          0.9054967102680322,
+          0.9924543995474844
+        ],
+        "precision": 0.9285714285714286,
+        "P": 27,
+        "N": 73,
+        "gold_fail": 27,
+        "judge_fail": 28
+      },
+      "gap": -0.10430667562724016
+    }
+  ],
+  "alerts": [
+    {
+      "week": "w1",
+      "verdict": "pass",
+      "diagnostic": "none",
+      "kappa": 0.8124999999999998,
+      "baseline": null,
+      "drop": null,
+      "frozen_kappa": 0.8437499999999999,
+      "fresh_kappa": 0.7916666666666666,
+      "frozen_drop": null,
+      "fresh_drop": null,
+      "gap": 0.05208333333333326,
+      "n_history": 0
+    },
+    {
+      "week": "w2",
+      "verdict": "pass",
+      "diagnostic": "none",
+      "kappa": 0.7926540284360191,
+      "baseline": 0.8124999999999998,
+      "drop": 0.019845971563980713,
+      "frozen_kappa": 0.8437499999999999,
+      "fresh_kappa": 0.7611464968152866,
+      "frozen_drop": 0.0,
+      "fresh_drop": 0.030520169851380063,
+      "gap": 0.08260350318471332,
+      "n_history": 1
+    },
+    {
+      "week": "w3",
+      "verdict": "pass",
+      "diagnostic": "none",
+      "kappa": 0.8407643312101909,
+      "baseline": 0.8025770142180094,
+      "drop": -0.038187316992181475,
+      "frozen_kappa": 0.8437499999999999,
+      "fresh_kappa": 0.8387096774193548,
+      "frozen_drop": 0.0,
+      "fresh_drop": -0.062303095678378106,
+      "gap": 0.005040322580645129,
+      "n_history": 2
+    },
+    {
+      "week": "w4",
+      "verdict": "fail",
+      "diagnostic": "world_moved",
+      "kappa": 0.6197718631178706,
+      "baseline": 0.8124999999999998,
+      "drop": 0.1927281368821292,
+      "frozen_kappa": 0.8437499999999999,
+      "fresh_kappa": 0.5000000000000001,
+      "frozen_drop": 0.0,
+      "fresh_drop": 0.2916666666666665,
+      "gap": 0.3437499999999998,
+      "n_history": 3
+    },
+    {
+      "week": "w5",
+      "verdict": "fail",
+      "diagnostic": "world_moved",
+      "kappa": 0.6116504854368932,
+      "baseline": 0.8025770142180094,
+      "drop": 0.19092652878111627,
+      "frozen_kappa": 0.8437499999999999,
+      "fresh_kappa": 0.48780487804878064,
+      "frozen_drop": 0.0,
+      "fresh_drop": 0.288601703692196,
+      "gap": 0.35594512195121925,
+      "n_history": 4
+    },
+    {
+      "week": "w6",
+      "verdict": "pass",
+      "diagnostic": "none",
+      "kappa": 0.9247743229689067,
+      "baseline": 0.7926540284360191,
+      "drop": -0.13212029453288765,
+      "frozen_kappa": 0.8566308243727597,
+      "fresh_kappa": 0.9609374999999999,
+      "frozen_drop": -0.012880824372759836,
+      "fresh_drop": -0.19979100318471332,
+      "gap": -0.10430667562724016,
+      "n_history": 5
+    }
+  ],
+  "w4_fresh_slices": {
+    "plan_fee": {
+      "n": 20,
+      "agree": 6,
+      "disagree": 14,
+      "disagree_rate": 0.7
+    },
+    "other": {
+      "n": 40,
+      "agree": 40,
+      "disagree": 0,
+      "disagree_rate": 0.0
+    }
+  },
+  "w4_pooled_slices": {
+    "plan_fee": {
+      "n": 28,
+      "agree": 13,
+      "disagree": 15,
+      "disagree_rate": 0.5357142857142857
+    },
+    "other": {
+      "n": 72,
+      "agree": 71,
+      "disagree": 1,
+      "disagree_rate": 0.013888888888888888
+    }
+  },
+  "versions": {
+    "v1": "1902893a2c17",
+    "v2": "a038df41146a",
+    "same_content_same_digest": true
+  },
+  "change_control": {
+    "silent": {
+      "verdict": "hold",
+      "deleted": [],
+      "added": [],
+      "rewritten": [
+        "waive_or_charge"
+      ],
+      "deleted_frozen": [],
+      "rewritten_unapproved": [
+        "waive_or_charge"
+      ],
+      "rewritten_approved": [],
+      "rewritten_free": [],
+      "rulings": {}
+    },
+    "ruled": {
+      "verdict": "pass",
+      "deleted": [],
+      "added": [],
+      "rewritten": [
+        "waive_or_charge"
+      ],
+      "deleted_frozen": [],
+      "rewritten_unapproved": [],
+      "rewritten_approved": [
+        "waive_or_charge"
+      ],
+      "rewritten_free": [],
+      "rulings": {
+        "waive_or_charge": "HB-2027-12"
+      }
+    },
+    "deleted_window": {
+      "verdict": "hold",
+      "deleted": [
+        "window"
+      ],
+      "added": [],
+      "rewritten": [
+        "waive_or_charge"
+      ],
+      "deleted_frozen": [
+        "window"
+      ],
+      "rewritten_unapproved": [],
+      "rewritten_approved": [
+        "waive_or_charge"
+      ],
+      "rewritten_free": [],
+      "rulings": {
+        "waive_or_charge": "HB-2027-12"
+      }
+    }
+  },
+  "revalidation": {
+    "report": {
+      "n": 200,
+      "tp": 46,
+      "fn": 4,
+      "fp": 6,
+      "tn": 144,
+      "abstain_pos": 0,
+      "abstain_neg": 0,
+      "agreement": 0.95,
+      "agree_n": 190,
+      "kappa": 0.8684210526315789,
+      "tpr": 0.92,
+      "tpr_ci": [
+        0.8116149745493629,
+        0.9684509967442093
+      ],
+      "tnr": 0.96,
+      "tnr_ci": [
+        0.9154854608728422,
+        0.9815410911130964
+      ],
+      "precision": 0.8846153846153846,
+      "P": 50,
+      "N": 150,
+      "gold_fail": 50,
+      "judge_fail": 52
+    },
+    "decision": {
+      "verdict": "admit",
+      "reasons": [],
+      "tpr": 0.92,
+      "tpr_lo": 0.8116149745493629,
+      "tnr": 0.96,
+      "tnr_lo": 0.9154854608728422,
+      "kappa": 0.8684210526315789,
+      "n": 200
+    }
+  },
+  "peek_w1": {
+    "report": {
+      "n": 100,
+      "tp": 17,
+      "fn": 3,
+      "fp": 3,
+      "tn": 77,
+      "abstain_pos": 0,
+      "abstain_neg": 0,
+      "agreement": 0.94,
+      "agree_n": 94,
+      "kappa": 0.8124999999999998,
+      "tpr": 0.85,
+      "tpr_ci": [
+        0.6395767041130426,
+        0.9476322080405041
+      ],
+      "tnr": 0.9625,
+      "tnr_ci": [
+        0.8954510802560568,
+        0.9871656636992113
+      ],
+      "precision": 0.85,
+      "P": 20,
+      "N": 80,
+      "gold_fail": 20,
+      "judge_fail": 20
+    },
+    "decision": {
+      "verdict": "refuse",
+      "reasons": [
+        "tpr_bound",
+        "tnr_bound"
+      ],
+      "tpr": 0.85,
+      "tpr_lo": 0.6395767041130426,
+      "tnr": 0.9625,
+      "tnr_lo": 0.8954510802560568,
+      "kappa": 0.8124999999999998,
+      "n": 100
+    }
+  },
+  "cost": {
+    "label_cost": 13.9,
+    "weekly_fresh": 834.0,
+    "weekly_frozen_calls": 0.0572,
+    "revalidation": 2780.0,
+    "frozen_rederive": 556.0,
+    "recovery_package": 3336.0
+  }
+}

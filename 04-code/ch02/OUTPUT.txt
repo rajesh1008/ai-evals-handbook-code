@@ -1,0 +1,177 @@
+### lab.py
+== 1. Ryan's sheet against the pilot ==
+account_question   sheet 19/40 (47.5%)   pilot 41.5%
+fee_explanation    sheet  6/40 (15.0%)   pilot 21.5%
+statement_request  sheet 11/40 (27.5%)   pilot 14.3%
+payoff_letter      sheet  3/40 ( 7.5%)   pilot 10.8%
+lien_release       sheet  0/40 ( 0.0%)   pilot  6.0%
+hardship           sheet  1/40 ( 2.5%)   pilot  5.9%
+mean turns: sheet 2.0, pilot 5.25
+0 failures in 40: one-sided 95% upper bound 7.2%
+0 failures in 1 hardship: upper bound 95%
+traces_needed(0.005) = 598
+0 failures in 100: one-sided 95% bound 3.0%; two-sided Wilson 95% 0.0% to 3.7%
+1 failure in 100: one-sided 95% bound 4.7%; two-sided Wilson 95% 0.2% to 5.4%
+2 failures in 100: one-sided 95% bound 6.2%; two-sided Wilson 95% 0.6% to 7.0%
+
+== 2. The stratified sample ==
+account_question   pilot  9969  proportional 125  quota  40  hardship-style bound at quota: 7.2%
+fee_explanation    pilot  5151  proportional  64  quota  70  hardship-style bound at quota: 4.2%
+statement_request  pilot  3427  proportional  43  quota  25  hardship-style bound at quota: 11.3%
+payoff_letter      pilot  2587  proportional  32  quota  35  hardship-style bound at quota: 8.2%
+lien_release       pilot  1449  proportional  18  quota  30  hardship-style bound at quota: 9.5%
+hardship           pilot  1428  proportional  18  quota 100  hardship-style bound at quota: 3.0%
+300 ['t-000073', 't-000339', 't-000776']
+risk tiers in sample: high 100, low 65, medium 135
+channel in sample: chat 156, sms 144
+pilot weeks 1-6 in sample: [45, 44, 41, 48, 71, 51] chi-square p = 0.038 (pilot traffic was flat by week)
+
+== 3. Completeness check before labelling ==
+complete 300, incomplete 0
+
+== 4. Labelling (first two hardship traces, replayed from the record) ==
+[1/2] t-000073  flow=hardship  turns=13
+  tools: get_account, get_account_history, check_hardship_eligibility, draft_offer
+  borrower: I lost hours at work and can't make this month's payment.
+   Compass: I'm sorry to hear that. Can you tell me your current monthly income? Then I can check what options you have.
+[2/2] t-002995  flow=hardship  turns=7
+  tools: get_account, get_account_history, check_hardship_eligibility, draft_offer
+  borrower: I lost hours at work and can't make this month's payment.
+   Compass: I can offer you a three-month deferral. I've sent it to a loan officer to finalise.
+t-000073,hardship,pass,,Grace Holloway
+t-002995,hardship,fail,offer drafted before income confirmed,Grace Holloway
+
+== 5. First report ==
+flow               pass/n    rate   Wilson 95%      traffic share
+account_question    37/40    92.5%  80.1% to 97.4%   41.5%
+fee_explanation     64/70    91.4%  82.5% to 96.0%   21.5%
+statement_request   24/25    96.0%  80.5% to 99.3%   14.3%
+payoff_letter       32/35    91.4%  77.6% to 97.0%   10.8%
+lien_release        27/30    90.0%  74.4% to 96.5%    6.0%
+hardship            89/100   89.0%  81.4% to 93.7%    5.9%
+raw, all strata    273/300   91.0%  (sample mix, not traffic)
+traffic-weighted             92.3%
+
+failure notes:
+  hardship           6  offer drafted before income confirmed
+  hardship           3  no hand-off when borrower asked for a person
+  hardship           2  offer sent without saying a loan officer must approve it
+  fee_explanation    4  ten-day grace period quoted (policy is 15)
+  fee_explanation    2  fee not waived when policy says waive
+  account_question   2  wrong balance date
+  account_question   1  missed borrower's second loan
+  payoff_letter      2  per diem interest omitted
+  payoff_letter      1  wrong good-through date
+  lien_release       2  release promised before title office date
+  lien_release       1  wrong title state
+  statement_request  1  wrong statement period
+
+wrong hardship offers per hardship conversation: 0 in 100; one-sided 95% upper bound 3.0%; target under 0.5% needs 598 traces at this failure count
+wrong hardship offers per drafted offer: 0 in 62; one-sided 95% upper bound 4.7%; target under 0.5% needs 598 traces at this failure count
+wrong fee explanations: 6 in 70 = 8.6%, Wilson 4.0% to 17.5%
+
+== 5b. Pass rate by conversation length in the sample ==
+1-2 turns (like Ryan's 40)    24/24  100.0%
+3-6 turns                    110/121  90.9%
+7+ turns                     139/155  89.7%
+
+== 6. Second reader: every hardship fail plus random passes, 20 in all ==
+Ben read 20 (11 of Grace's fails, 9 passes); agreed on 16; disagreed on 4, all 'offer drafted before income confirmed'
+
+== 7. Spot check of the builder's labels ==
+re-read 20 of Ryan's 100 (including 1 of his fails); agreed on 20; one-sided 95% bound on the disagreement rate: 13.9%
+
+### inject.py
+traces with tool calls dropped by the bug: 36 of 300
+
+-- labelled without the check --
+flow               pass/n    rate   Wilson 95%      traffic share
+account_question    30/40    75.0%  59.8% to 85.8%   41.5%
+fee_explanation     57/70    81.4%  70.8% to 88.8%   21.5%
+statement_request   19/25    76.0%  56.6% to 88.5%   14.3%
+payoff_letter       29/35    82.9%  67.3% to 91.9%   10.8%
+lien_release        24/30    80.0%  62.7% to 90.5%    6.0%
+hardship            81/100   81.0%  72.2% to 87.5%    5.9%
+raw, all strata    240/300   80.0%  (sample mix, not traffic)
+traffic-weighted             78.0%
+
+-- completeness check: 36 incomplete, e.g. t-002434 (hardship) missing get_account, get_account_history
+
+-- labelled with the check (incomplete traces refused) --
+flow               pass/n    rate   Wilson 95%      traffic share
+account_question    30/33    90.9%  76.4% to 96.9%   41.5%
+fee_explanation     57/63    90.5%  80.7% to 95.6%   21.5%
+statement_request   19/20    95.0%  76.4% to 99.1%   14.3%
+payoff_letter       29/31    93.5%  79.3% to 98.2%   10.8%
+lien_release        24/26    92.3%  75.9% to 97.9%    6.0%
+hardship            81/91    89.0%  80.9% to 93.9%    5.9%
+raw, all strata    240/264   90.9%  (sample mix, not traffic)
+traffic-weighted             91.7%
+
+### gate_run.py
+candidate adds: 'Be concise. Reassure the borrower. Do not ask the borrower for information you do not need.'
+flow               baseline  candidate  newly fail  newly pass
+account_question     37/40      38/40          0          1
+fee_explanation      64/70      62/70          2          0
+statement_request    24/25      25/25          0          1
+payoff_letter        32/35      31/35          1          0
+lien_release         27/30      27/30          0          0
+hardship             89/100     84/100         5          0
+all strata          273/300    267/300
+traffic-weighted      92.3%     92.7%
+gate: HOLD
+  - hardship: 5 traces newly fail (loan officer review required)
+newly failing traces (annotator note):
+  t-000781  hardship           offer drafted before income confirmed
+  t-006979  payoff_letter      per diem interest omitted
+  t-010256  fee_explanation    fee amount given without the grace period
+  t-011103  hardship           offer drafted before income confirmed
+  t-011256  hardship           offer drafted before income confirmed
+  t-012145  hardship           offer drafted before income confirmed
+  t-014290  hardship           offer drafted before income confirmed
+  t-018018  fee_explanation    fee amount given without the grace period
+
+### monitor.py
+week        labelled  pass (as read)  pass (complete only)  incomplete  hardship read  wrong offers
+2-8 Nov           70   63 (90.0%)     63/70 (90.0%)           0            125             0
+9-15 Nov          70   63 (90.0%)     63/70 (90.0%)           0            150             0
+16-22 Nov         70   50 (71.4%)     50/60 (83.3%)          10            171             0
+23-29 Nov         70   64 (91.4%)     64/70 (91.4%)           0            196             1
+
+week by flow, complete traces only (pass/read):
+  2-8 Nov    hardship 24/25  fee 18/20  account 9/10  statement 4/5  payoff 5/5  lien 3/5
+  9-15 Nov   hardship 22/25  fee 18/20  account 9/10  statement 5/5  payoff 4/5  lien 5/5
+  16-22 Nov  hardship 17/21  fee 14/17  account 6/8  statement 5/5  payoff 5/5  lien 3/4
+  23-29 Nov  hardship 22/25  fee 19/20  account 10/10  statement 5/5  payoff 4/5  lien 4/5
+
+month, complete traces only, by flow:
+  hardship           11 fail in 96  (11.5%, Wilson 6.5% to 19.4%)
+  fee_explanation     8 fail in 77  (10.4%, Wilson 5.4% to 19.2%)
+  account_question    4 fail in 38  (10.5%, Wilson 4.2% to 24.1%)
+  statement_request   1 fail in 20  ( 5.0%, Wilson 0.9% to 23.6%)
+  payoff_letter       2 fail in 20  (10.0%, Wilson 2.8% to 30.1%)
+  lien_release        4 fail in 19  (21.1%, Wilson 8.5% to 43.3%)
+wrong fee explanations pooled with the first pass: 14 in 147 (9.5%, Wilson 5.8% to 15.4%)
+wrong hardship offers, Wilson two-sided: 0.09% to 2.8%
+
+wrong hardship offers: 1 in 196; one-sided 95% upper bound 2.4%; under 0.5% now needs 947 traces (was 598 at zero failures)
+
+### try_its.py
+== Try 1: proportional allocation of 300 ==
+account_question   n=125  bound on zero failures  2.4%
+fee_explanation    n= 64  bound on zero failures  4.6%
+statement_request  n= 43  bound on zero failures  6.7%
+payoff_letter      n= 32  bound on zero failures  8.9%
+lien_release       n= 18  bound on zero failures 15.3%
+hardship           n= 18  bound on zero failures 15.3%
+
+== Try 2: traces needed for a one-sided 95% bound under the target ==
+target   0 failures  1 failure  2 failures
+  0.5%        598        947       1258
+  1.0%        299        473        628
+  2.0%        149        236        313
+  5.0%         59         93        124
+
+== Try 3: gate on the traffic-weighted overall rate alone ==
+baseline 92.3%, candidate 92.7%: SHIP under an overall-only rule
+hardship traces newly failing, unseen by that rule: 5

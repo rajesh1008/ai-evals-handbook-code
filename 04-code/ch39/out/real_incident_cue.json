@@ -1,0 +1,82 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 12,
+  "correct": 12,
+  "accuracy": 1.0,
+  "rows": [
+    {
+      "gold": "failure_mode",
+      "pred": "failure_mode",
+      "ok": true,
+      "desc": "Fee explanation flatters borrower while amount is wrong; coded as FM-fee-sycophancy."
+    },
+    {
+      "gold": "symptom",
+      "pred": "symptom",
+      "ok": true,
+      "desc": "User said the SMS felt rude; no field or policy violation found yet."
+    },
+    {
+      "gold": "failure_mode",
+      "pred": "failure_mode",
+      "ok": true,
+      "desc": "Hardship tool completes without error but eligibility false; silent failure."
+    },
+    {
+      "gold": "failure_mode",
+      "pred": "failure_mode",
+      "ok": true,
+      "desc": "Compaction summary claims confirmed after process was killed."
+    },
+    {
+      "gold": "symptom",
+      "pred": "symptom",
+      "ok": true,
+      "desc": "Dashboard latency spike; root cause unknown; no borrower-facing wrong answer yet."
+    },
+    {
+      "gold": "failure_mode",
+      "pred": "failure_mode",
+      "ok": true,
+      "desc": "Model vs harness attribution: scaffold drops required tool arg."
+    },
+    {
+      "gold": "taxonomy",
+      "pred": "taxonomy",
+      "ok": true,
+      "desc": "Review ends by adding FM-fee-sycophancy to the active taxonomy."
+    },
+    {
+      "gold": "taxonomy",
+      "pred": "taxonomy",
+      "ok": true,
+      "desc": "Incident review splits FM-hardship into silent-fail vs schema-miss."
+    },
+    {
+      "gold": "symptom",
+      "pred": "symptom",
+      "ok": true,
+      "desc": "Officer disliked the wording tone; no wrong amount or eligibility."
+    },
+    {
+      "gold": "failure_mode",
+      "pred": "failure_mode",
+      "ok": true,
+      "desc": "Trajectory finishes green while intermediate agent fabricated a receipt."
+    },
+    {
+      "gold": "failure_mode",
+      "pred": "failure_mode",
+      "ok": true,
+      "desc": "Computer-use agent failed; localise the first critical failing step as a failure_mode case, not a tone complaint."
+    },
+    {
+      "gold": "taxonomy",
+      "pred": "taxonomy",
+      "ok": true,
+      "desc": "Post-mortem produces a failure mode and owner, not only a hotfix."
+    }
+  ],
+  "simulated_suite": true
+}

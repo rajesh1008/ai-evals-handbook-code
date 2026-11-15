@@ -1,0 +1,950 @@
+{
+  "run_id": "ch16-full-new-2026-11-08-2131",
+  "label": "NEW Anthropic experiment \u2014 NOT recovered historical",
+  "fixture": "SIMULATED (fixture.py seed 2026); reply/judge/agent texts REAL Anthropic",
+  "models": {
+    "small": "claude-haiku-4-5-20251001",
+    "large": "claude-sonnet-4-5-20250929"
+  },
+  "prices_usd_per_mtok": {
+    "haiku": [
+      1.0,
+      5.0
+    ],
+    "sonnet": [
+      3.0,
+      15.0
+    ]
+  },
+  "scoring_authority": "04-code/ch16/common.score \u2192 truss.judge.confusion/rates (abstain IN denominator)",
+  "provenance": {
+    "lab_json": "new_run/ch16-full-new-2026-11-08-2131/out/lab.json",
+    "lab_stdout": "new_run/ch16-full-new-2026-11-08-2131/reports/lab_NEW_stdout.txt",
+    "raw_out": "new_run/ch16-full-new-2026-11-08-2131/out",
+    "ledger": "new_run/ch16-full-new-2026-11-08-2131/budget_ledger.json",
+    "generated_at": "2026-11-08T23:48:37+0530",
+    "supersedes": "new_run/ch16-full-new-2026-11-08-2131/reports/superseded_2026-11-08-bad-aggregate"
+  },
+  "budget": {
+    "cap_usd": 12.0,
+    "charged_usd": 6.191862,
+    "unreconciled_usd": 0.050079,
+    "unreconciled_n": 8,
+    "headroom_usd": 0.05,
+    "safe_ceiling_usd": 6.291941,
+    "available_usd": 5.708059,
+    "open_reservations": 0,
+    "note": "8 unreconciled hung-judge worst-case reserves retained; not treated as free"
+  },
+  "api_accounting": {
+    "jsonl_rows": 3154,
+    "jsonl_row_breakdown": {
+      "gen": 498,
+      "judge_unique_digests": 2476,
+      "agent_traces": 180
+    },
+    "anthropic_request_ids_in_final_caches": 3391,
+    "agent_turns_request_ids": 417,
+    "agent_turns_by_variant": {
+      "agent_large": 120,
+      "agent_small": 120,
+      "agent_small_calc": 177
+    },
+    "ledger_committed_entries": 3396,
+    "ledger_orphan_vs_final_ids": 5,
+    "token_cost_unique_jsonl_rows_usd": 6.18318,
+    "by_file": {
+      "agent_large": {
+        "calls": 60,
+        "in": 157494,
+        "out": 32926,
+        "cost": 0.966372
+      },
+      "agent_small": {
+        "calls": 60,
+        "in": 157384,
+        "out": 29340,
+        "cost": 0.304084
+      },
+      "agent_small_calc": {
+        "calls": 60,
+        "in": 263005,
+        "out": 29223,
+        "cost": 0.40912
+      },
+      "alt_replies": {
+        "calls": 80,
+        "in": 15827,
+        "out": 14760,
+        "cost": 0.089627
+      },
+      "judge": {
+        "calls": 2476,
+        "in": 1458020,
+        "out": 394587,
+        "cost": 4.019781
+      },
+      "replies": {
+        "calls": 318,
+        "in": 64012,
+        "out": 41125,
+        "cost": 0.269637
+      },
+      "spanish": {
+        "calls": 100,
+        "in": 19544,
+        "out": 21003,
+        "cost": 0.124559
+      }
+    }
+  },
+  "fixture_summary": {
+    "n": 1640,
+    "kinds": {
+      "right_no": 842,
+      "right_waive": 489,
+      "defer_review": 67,
+      "X_invent": 39,
+      "defer_tool": 65,
+      "F_waive": 39,
+      "X_wrongloan": 31,
+      "F_hedge": 38,
+      "tool_bug": 30
+    },
+    "v11_fail": 147,
+    "truth_fail": 177,
+    "dev_fail": 27,
+    "test_fail": 52
+  },
+  "judges": {
+    "test_j0": {
+      "tpr": 0.0,
+      "tnr": 0.02027027027027027,
+      "tpr_ci": [
+        0.0,
+        0.06879459041288215
+      ],
+      "tnr_ci": [
+        0.00691716898447111,
+        0.057897743397906314
+      ],
+      "kappa": 0.003943775912630194,
+      "cm": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 3,
+        "abstain_pos": 52,
+        "abstain_neg": 145
+      },
+      "n": 200,
+      "precision": NaN,
+      "P": 52,
+      "N": 148,
+      "abstain": 197
+    },
+    "test_v0": {
+      "tpr": 0.7115384615384616,
+      "tnr": 0.7027027027027027,
+      "tpr_ci": [
+        0.5772695428589907,
+        0.816701976581713
+      ],
+      "tnr_ci": [
+        0.6246923922718681,
+        0.7704562362989584
+      ],
+      "kappa": 0.4229264475743348,
+      "cm": {
+        "tp": 37,
+        "fn": 0,
+        "fp": 43,
+        "tn": 104,
+        "abstain_pos": 15,
+        "abstain_neg": 1
+      },
+      "n": 200,
+      "precision": 0.4625,
+      "P": 52,
+      "N": 148,
+      "abstain": 16
+    },
+    "test_v1_small_r0": {
+      "tpr": 1.0,
+      "tnr": 0.9932432432432432,
+      "tpr_ci": [
+        0.9312054095871178,
+        1.0
+      ],
+      "tnr_ci": [
+        0.9627220296906855,
+        0.9988062998316587
+      ],
+      "kappa": 0.9870867768595041,
+      "cm": {
+        "tp": 52,
+        "fn": 0,
+        "fp": 1,
+        "tn": 147,
+        "abstain_pos": 0,
+        "abstain_neg": 0
+      },
+      "n": 200,
+      "precision": 0.9811320754716981,
+      "P": 52,
+      "N": 148,
+      "abstain": 0
+    },
+    "models": {
+      "small": {
+        "tpr": 1.0,
+        "tnr": 0.9932432432432432,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9627220296906855,
+          0.9988062998316587
+        ],
+        "kappa": 0.9870867768595041,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 1,
+          "tn": 147,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "P": 52,
+        "N": 148,
+        "abstain": 0,
+        "per_call": 0.0014414450000000002,
+        "p50": 1.905,
+        "p95": 2.515099999999999,
+        "cost": 0.288289,
+        "in_per": 730.07,
+        "out_per": 142.275
+      },
+      "large": {
+        "tpr": 1.0,
+        "tnr": 0.9932432432432432,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9627220296906855,
+          0.9988062998316587
+        ],
+        "kappa": 0.9870867768595041,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 1,
+          "tn": 147,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "P": 52,
+        "N": 148,
+        "abstain": 0,
+        "per_call": 0.00403281,
+        "p50": 3.519,
+        "p95": 4.4533000000000005,
+        "cost": 0.806562,
+        "in_per": 730.07,
+        "out_per": 122.84
+      },
+      "small + extended thinking": {
+        "tpr": 1.0,
+        "tnr": 1.0,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9746999504747053,
+          1.0
+        ],
+        "kappa": 1.0,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 0,
+          "tn": 148,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "P": 52,
+        "N": 148,
+        "abstain": 0,
+        "per_call": 0.0033973949999999997,
+        "p50": 5.4055,
+        "p95": 6.314349999999999,
+        "cost": 0.6794789999999999,
+        "in_per": 759.07,
+        "out_per": 527.665
+      }
+    },
+    "runs": [
+      {
+        "tpr": 1.0,
+        "tnr": 0.9932432432432432,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 1,
+          "tn": 147,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        }
+      },
+      {
+        "tpr": 1.0,
+        "tnr": 1.0,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 0,
+          "tn": 148,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        }
+      },
+      {
+        "tpr": 1.0,
+        "tnr": 0.9932432432432432,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 1,
+          "tn": 147,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        }
+      }
+    ],
+    "flips": {
+      "flipped": 1,
+      "n": 200,
+      "where": [
+        "t-178668"
+      ]
+    },
+    "majority": {
+      "tpr": 1.0,
+      "tnr": 0.9932432432432432,
+      "kappa": 0.9870867768595041,
+      "cm": {
+        "tp": 52,
+        "fn": 0,
+        "fp": 1,
+        "tn": 147,
+        "abstain_pos": 0,
+        "abstain_neg": 0
+      },
+      "P": 52,
+      "N": 148,
+      "abstain": 0
+    },
+    "pairs": {
+      "contrast": {
+        "position": 2,
+        "right reply preferred": 37,
+        "wrong reply preferred": 1
+      },
+      "equal": {
+        "position": 18,
+        "longer preferred": 21,
+        "shorter preferred": 1
+      },
+      "abs_contrast": 40,
+      "abs_equal": 40,
+      "raw_equal": {
+        "B|B": 2,
+        "B|A": 21,
+        "A|A": 16,
+        "A|B": 1
+      },
+      "cost": 0.214335,
+      "calls": 160
+    },
+    "admit_order": {
+      "admit": true,
+      "role": "order",
+      "card": "MC-02 v1.1",
+      "reasons": []
+    },
+    "admit_decide": {
+      "admit": false,
+      "role": "none",
+      "card": "MC-02 v1.1",
+      "reasons": [
+        "role decide needs a Judge Report Card"
+      ]
+    },
+    "total_judge_calls_from_lab": {
+      "calls": 2480,
+      "in": 1461058,
+      "out": 395151,
+      "cost": 4.031347,
+      "per_call": 0.0016255431451612904,
+      "p50": 1.9435,
+      "p95": 5.346449999999997,
+      "in_per": 589.1362903225806,
+      "out_per": 159.3350806451613
+    },
+    "note_2480_vs_2476": "lab usage iterates RES experiments (2480 job slots); raw judge.jsonl has 2476 unique digests; 4 shared bugs\u2229test jobs",
+    "dev_j0": {
+      "tpr": 0.0,
+      "tnr": 0.0410958904109589,
+      "kappa": 0.008281361823944382,
+      "cm": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 3,
+        "abstain_pos": 27,
+        "abstain_neg": 70
+      },
+      "n": 100,
+      "P": 27,
+      "N": 73,
+      "abstain": 97
+    },
+    "dev_v0": {
+      "tpr": 0.6296296296296297,
+      "tnr": 0.7123287671232876,
+      "kappa": 0.3748739665255091,
+      "cm": {
+        "tp": 17,
+        "fn": 3,
+        "fp": 21,
+        "tn": 52,
+        "abstain_pos": 7,
+        "abstain_neg": 0
+      },
+      "n": 100,
+      "P": 27,
+      "N": 73,
+      "abstain": 7
+    },
+    "dev_v1": {
+      "tpr": 0.9629629629629629,
+      "tnr": 1.0,
+      "kappa": 0.9743326488706365,
+      "cm": {
+        "tp": 26,
+        "fn": 1,
+        "fp": 0,
+        "tn": 73,
+        "abstain_pos": 0,
+        "abstain_neg": 0
+      },
+      "n": 100,
+      "P": 27,
+      "N": 73,
+      "abstain": 0
+    },
+    "common_score_all": {
+      "test_j0": {
+        "tpr": 0.0,
+        "tnr": 0.02027027027027027,
+        "tpr_ci": [
+          0.0,
+          0.06879459041288215
+        ],
+        "tnr_ci": [
+          0.00691716898447111,
+          0.057897743397906314
+        ],
+        "kappa": 0.003943775912630194,
+        "cm": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 3,
+          "abstain_pos": 52,
+          "abstain_neg": 145
+        },
+        "n": 200,
+        "precision": NaN,
+        "P": 52,
+        "N": 148,
+        "abstain": 197
+      },
+      "test_v0": {
+        "tpr": 0.7115384615384616,
+        "tnr": 0.7027027027027027,
+        "tpr_ci": [
+          0.5772695428589907,
+          0.816701976581713
+        ],
+        "tnr_ci": [
+          0.6246923922718681,
+          0.7704562362989584
+        ],
+        "kappa": 0.4229264475743348,
+        "cm": {
+          "tp": 37,
+          "fn": 0,
+          "fp": 43,
+          "tn": 104,
+          "abstain_pos": 15,
+          "abstain_neg": 1
+        },
+        "n": 200,
+        "precision": 0.4625,
+        "P": 52,
+        "N": 148,
+        "abstain": 16
+      },
+      "test_v1_small_r0": {
+        "tpr": 1.0,
+        "tnr": 0.9932432432432432,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9627220296906855,
+          0.9988062998316587
+        ],
+        "kappa": 0.9870867768595041,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 1,
+          "tn": 147,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 200,
+        "precision": 0.9811320754716981,
+        "P": 52,
+        "N": 148,
+        "abstain": 0
+      },
+      "test_v1_small_r1": {
+        "tpr": 1.0,
+        "tnr": 1.0,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9746999504747053,
+          1.0
+        ],
+        "kappa": 1.0,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 0,
+          "tn": 148,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 200,
+        "precision": 1.0,
+        "P": 52,
+        "N": 148,
+        "abstain": 0
+      },
+      "test_v1_small_r2": {
+        "tpr": 1.0,
+        "tnr": 0.9932432432432432,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9627220296906855,
+          0.9988062998316587
+        ],
+        "kappa": 0.9870867768595041,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 1,
+          "tn": 147,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 200,
+        "precision": 0.9811320754716981,
+        "P": 52,
+        "N": 148,
+        "abstain": 0
+      },
+      "test_v1_large": {
+        "tpr": 1.0,
+        "tnr": 0.9932432432432432,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9627220296906855,
+          0.9988062998316587
+        ],
+        "kappa": 0.9870867768595041,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 1,
+          "tn": 147,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 200,
+        "precision": 0.9811320754716981,
+        "P": 52,
+        "N": 148,
+        "abstain": 0
+      },
+      "test_v1_think": {
+        "tpr": 1.0,
+        "tnr": 1.0,
+        "tpr_ci": [
+          0.9312054095871178,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9746999504747053,
+          1.0
+        ],
+        "kappa": 1.0,
+        "cm": {
+          "tp": 52,
+          "fn": 0,
+          "fp": 0,
+          "tn": 148,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 200,
+        "precision": 1.0,
+        "P": 52,
+        "N": 148,
+        "abstain": 0
+      },
+      "test_verdict_only": {
+        "tpr": 0.9807692307692307,
+        "tnr": 0.9459459459459459,
+        "tpr_ci": [
+          0.8987925373197556,
+          0.9965972795909344
+        ],
+        "tnr_ci": [
+          0.8969681162654677,
+          0.9723588665903506
+        ],
+        "kappa": 0.8879482071713146,
+        "cm": {
+          "tp": 51,
+          "fn": 1,
+          "fp": 8,
+          "tn": 140,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 200,
+        "precision": 0.864406779661017,
+        "P": 52,
+        "N": 148,
+        "abstain": 0
+      },
+      "test_tone": {
+        "tpr": 0.9807692307692307,
+        "tnr": 0.5337837837837838,
+        "tpr_ci": [
+          0.8987925373197556,
+          0.9965972795909344
+        ],
+        "tnr_ci": [
+          0.45357625226530063,
+          0.6122818524965037
+        ],
+        "kappa": 0.36282541416348085,
+        "cm": {
+          "tp": 51,
+          "fn": 1,
+          "fp": 68,
+          "tn": 79,
+          "abstain_pos": 0,
+          "abstain_neg": 1
+        },
+        "n": 200,
+        "precision": 0.42857142857142855,
+        "P": 52,
+        "N": 148,
+        "abstain": 1
+      },
+      "test_v1_spanish": {
+        "tpr": 1.0,
+        "tnr": 1.0,
+        "tpr_ci": [
+          0.8830264055344442,
+          1.0
+        ],
+        "tnr_ci": [
+          0.9486702582520953,
+          1.0
+        ],
+        "kappa": 1.0,
+        "cm": {
+          "tp": 29,
+          "fn": 0,
+          "fp": 0,
+          "tn": 71,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 100,
+        "precision": 1.0,
+        "P": 29,
+        "N": 71,
+        "abstain": 0
+      }
+    }
+  },
+  "agent": {
+    "agent small": {
+      "bugs": {
+        "tpr": 0.45,
+        "tnr": NaN,
+        "tpr_ci": [
+          0.25819502085709295,
+          0.6579179916924003
+        ],
+        "tnr_ci": [
+          NaN,
+          NaN
+        ],
+        "kappa": 0.0,
+        "cm": {
+          "tp": 9,
+          "fn": 11,
+          "fp": 0,
+          "tn": 0,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 20,
+        "P": 20,
+        "N": 0
+      },
+      "normal": {
+        "tpr": 1.0,
+        "tnr": 0.8518518518518519,
+        "tpr_ci": [
+          0.7718981569447083,
+          1.0
+        ],
+        "tnr_ci": [
+          0.6752093665317052,
+          0.9408416814035512
+        ],
+        "kappa": 0.7889182058047494,
+        "cm": {
+          "tp": 13,
+          "fn": 0,
+          "fp": 4,
+          "tn": 23,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 40,
+        "P": 13,
+        "N": 27
+      },
+      "caught": 9,
+      "cost": 0.304084,
+      "calls_dist": {
+        "2": 60
+      },
+      "by_name": {
+        "get_account_history": 60,
+        "get_fee_schedule": 60
+      },
+      "per_call": 0.005068066666666667,
+      "p50": 5.5635,
+      "p95": 24.480900000000002
+    },
+    "agent large": {
+      "bugs": {
+        "tpr": 0.95,
+        "tnr": NaN,
+        "tpr_ci": [
+          0.7638641064874331,
+          0.9911187805671268
+        ],
+        "tnr_ci": [
+          NaN,
+          NaN
+        ],
+        "kappa": 0.0,
+        "cm": {
+          "tp": 19,
+          "fn": 1,
+          "fp": 0,
+          "tn": 0,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 20,
+        "P": 20,
+        "N": 0
+      },
+      "normal": {
+        "tpr": 1.0,
+        "tnr": 0.9259259259259259,
+        "tpr_ci": [
+          0.7718981569447083,
+          1.0
+        ],
+        "tnr_ci": [
+          0.7663002270926937,
+          0.9794457783026165
+        ],
+        "kappa": 0.8904109589041095,
+        "cm": {
+          "tp": 13,
+          "fn": 0,
+          "fp": 2,
+          "tn": 25,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 40,
+        "P": 13,
+        "N": 27
+      },
+      "caught": 19,
+      "cost": 0.966372,
+      "calls_dist": {
+        "2": 60
+      },
+      "by_name": {
+        "get_account_history": 60,
+        "get_fee_schedule": 60
+      },
+      "per_call": 0.0161062,
+      "p50": 10.8715,
+      "p95": 14.48035
+    },
+    "agent small + days_between": {
+      "bugs": {
+        "tpr": 0.9,
+        "tnr": NaN,
+        "tpr_ci": [
+          0.6989617935882066,
+          0.9721341060158468
+        ],
+        "tnr_ci": [
+          NaN,
+          NaN
+        ],
+        "kappa": 0.0,
+        "cm": {
+          "tp": 18,
+          "fn": 2,
+          "fp": 0,
+          "tn": 0,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 20,
+        "P": 20,
+        "N": 0
+      },
+      "normal": {
+        "tpr": 1.0,
+        "tnr": 0.8148148148148148,
+        "tpr_ci": [
+          0.7718981569447083,
+          1.0
+        ],
+        "tnr_ci": [
+          0.6330094349480825,
+          0.9181941342571468
+        ],
+        "kappa": 0.7409326424870466,
+        "cm": {
+          "tp": 13,
+          "fn": 0,
+          "fp": 5,
+          "tn": 22,
+          "abstain_pos": 0,
+          "abstain_neg": 0
+        },
+        "n": 40,
+        "P": 13,
+        "N": 27
+      },
+      "caught": 18,
+      "cost": 0.40912,
+      "calls_dist": {
+        "3": 57,
+        "2": 3
+      },
+      "by_name": {
+        "get_account_history": 60,
+        "get_fee_schedule": 60,
+        "days_between": 57
+      },
+      "per_call": 0.0068186666666666665,
+      "p50": 5.9425,
+      "p95": 7.346399999999999
+    }
+  },
+  "month": {
+    "n": 3514,
+    "small judge": {
+      "judge_cost": 5.065237730000001,
+      "ordered_reads": 314.9743902439024,
+      "read_ordered_cost": 629.9487804878048,
+      "judge_plus_reads": 635.0140182178048,
+      "read_everything": 7028.0
+    },
+    "large judge": {
+      "judge_cost": 14.171294340000001,
+      "ordered_reads": 314.9743902439024,
+      "read_ordered_cost": 629.9487804878048,
+      "judge_plus_reads": 644.1200748278048,
+      "read_everything": 7028.0
+    },
+    "agent large": {
+      "judge_cost": 56.5971868,
+      "ordered_reads": 314.9743902439024,
+      "read_ordered_cost": 629.9487804878048,
+      "judge_plus_reads": 686.5459672878048,
+      "read_everything": 7028.0
+    }
+  },
+  "verification_spotchecks": {
+    "v1r0_TNR": "147/148",
+    "v1r0_TPR": "52/52",
+    "spanish_TPR": "29/29",
+    "spanish_TNR": "71/71",
+    "flips": {
+      "flipped": 1,
+      "n": 200,
+      "where": [
+        "t-178668"
+      ]
+    },
+    "pairwise_contrast": {
+      "position": 2,
+      "right reply preferred": 37,
+      "wrong reply preferred": 1
+    },
+    "agent_caught": {
+      "agent small": 9,
+      "agent large": 19,
+      "agent small + days_between": 18
+    }
+  }
+}

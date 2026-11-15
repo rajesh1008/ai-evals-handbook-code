@@ -1,0 +1,7 @@
+{
+  "caught": true,
+  "failure": "incident_trace_never_sampled",
+  "missed_trace_id": "t-199847",
+  "force_include_required": true,
+  "ship_blocked": true
+}

@@ -1,0 +1,1 @@
+{"trace_id": "t-270069", "text": "VERDICT: fail\nREASON: Missing check_eligibility step before draft_offer; eligibility validation with loan_id and reason was not performed.", "usage": {"in": 223, "out": 35}, "planted_process_ok": false, "fixture_kind": "missing_elig"}

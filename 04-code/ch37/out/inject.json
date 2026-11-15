@@ -1,0 +1,10 @@
+{
+  "simulated": true,
+  "injection": "SMS_TIMEOUT_BREAK",
+  "wall_p99_ms": 2400,
+  "sms_timeout_ms": 2000,
+  "breaks_timeout": true,
+  "run_decision": "timeout",
+  "caught": true,
+  "lesson": "A guard that answers after the SMS timeout is a production outage, not a safety win."
+}

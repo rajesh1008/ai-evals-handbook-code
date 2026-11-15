@@ -1,0 +1,77 @@
+{
+  "SIMULATED": true,
+  "evidence_pack": {
+    "control_objective": "config linter passes structure; release gate still HOLDs unvalidated judges",
+    "digest": "b261d8b6093e",
+    "seed": 2050,
+    "n_configs": 3,
+    "rows": [
+      {
+        "lint": {
+          "config": "harbor_compass_v3",
+          "lint_pass": true,
+          "errors": [],
+          "note": "linter checks structure only; judge validity is a separate gate"
+        },
+        "gate": {
+          "config": "harbor_compass_v3",
+          "gate_result": "PASS",
+          "reason": "lint_ok_and_judge_validated",
+          "judge_id": "fee_span_judge_v2"
+        },
+        "FAILURE_INJECTION": false
+      },
+      {
+        "lint": {
+          "config": "linter_pass_unvalidated_judge",
+          "lint_pass": true,
+          "errors": [],
+          "note": "linter checks structure only; judge validity is a separate gate"
+        },
+        "gate": {
+          "config": "linter_pass_unvalidated_judge",
+          "gate_result": "HOLD",
+          "reason": "unvalidated_judge",
+          "judge_id": "vendor_score_judge_v0",
+          "gold_n": 0,
+          "FAILURE_INJECTION_CAUGHT": true
+        },
+        "FAILURE_INJECTION": true
+      },
+      {
+        "lint": {
+          "config": "missing_population",
+          "lint_pass": false,
+          "errors": [
+            "population_empty"
+          ],
+          "note": "linter checks structure only; judge validity is a separate gate"
+        },
+        "gate": {
+          "config": "missing_population",
+          "gate_result": "HOLD",
+          "reason": "lint_failed",
+          "lint_errors": [
+            "population_empty"
+          ]
+        },
+        "FAILURE_INJECTION": false
+      }
+    ],
+    "inject_config": "linter_pass_unvalidated_judge",
+    "inject_lint_pass": true,
+    "inject_gate": "HOLD",
+    "inject_reason": "unvalidated_judge",
+    "inject_caught": true,
+    "SIMULATED": true,
+    "live_provider_eval_sweeps": "PENDING",
+    "paid_calls": false,
+    "ch16_ceiling_kinds_unchanged": true,
+    "ch16_ceiling_sum": 6.291941
+  },
+  "record": {
+    "record_sha12": "3f7a1b60bfc0",
+    "experiment_id": "ch50-config-linter-unvalidated-judge"
+  },
+  "digest": "b261d8b6093e"
+}

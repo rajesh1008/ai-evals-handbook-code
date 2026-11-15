@@ -1,0 +1,1 @@
+{"trace_id": "t-270152", "text": "VERDICT: fail\nREASON: Process skipped check_eligibility step and guessed a plan directly via compute_plan instead of verifying hardship policy and borrower eligibility first.", "usage": {"in": 246, "out": 43}, "planted_process_ok": false, "fixture_kind": "lucky"}

@@ -1,0 +1,124 @@
+{
+  "seed": 2044,
+  "simulated": true,
+  "label": "offline_vendor_trial_acceptance_plus_SIM_overlap_inject",
+  "ceiling": 0.005,
+  "vendor_name": "EXAMPLE CollectEase collections assistant",
+  "vendor_claim_rate": 0.97,
+  "n": 120,
+  "receipt": {
+    "suite": "harbor-vendor-collections-v0",
+    "n": 120,
+    "wrong_offers": 20,
+    "rate": 0.16666666666666666,
+    "wilson_upper": 0.24345439391023815,
+    "ceiling": 0.005,
+    "admit": false,
+    "vendor_claim_rate": 0.97,
+    "harbor_rate": 0.16666666666666666,
+    "overlap_count": 24,
+    "kind": "offline_acceptance",
+    "notes": "Black-box acceptance on trial fixture; not a live vendor HTTP run"
+  },
+  "inject": {
+    "injection": "vendor_demo_set_overlaps_acceptance_set",
+    "simulated": true,
+    "clean": {
+      "suite": "harbor-vendor-collections-v0",
+      "n": 120,
+      "wrong_offers": 20,
+      "rate": 0.16666666666666666,
+      "wilson_upper": 0.24345439391023815,
+      "ceiling": 0.005,
+      "admit": false,
+      "vendor_claim_rate": 0.97,
+      "harbor_rate": 0.16666666666666666,
+      "overlap_count": 24,
+      "kind": "offline_acceptance",
+      "notes": "Black-box acceptance on trial fixture; not a live vendor HTTP run"
+    },
+    "contaminated": {
+      "suite": "harbor-vendor-collections-v0",
+      "n": 120,
+      "wrong_offers": 15,
+      "rate": 0.125,
+      "wilson_upper": 0.19603091448225035,
+      "ceiling": 0.005,
+      "admit": false,
+      "vendor_claim_rate": 0.97,
+      "harbor_rate": 0.125,
+      "overlap_count": 24,
+      "kind": "offline_acceptance",
+      "notes": "Black-box acceptance on trial fixture; not a live vendor HTTP run"
+    },
+    "overlap_count": 24,
+    "rate_moved_toward_claim": true,
+    "admit_changed": false,
+    "decline_purchase": true,
+    "lesson": "A vendor demo that overlaps your acceptance set can inflate agreement without changing borrower outcomes; pin disjoint demo and acceptance ids."
+  },
+  "decline_purchase": true,
+  "claim_checklist": [
+    {
+      "field": "population",
+      "ask": "Which borrower flows and jurisdictions?"
+    },
+    {
+      "field": "denominator",
+      "ask": "Per conversation, per offer, or per demo turn?"
+    },
+    {
+      "field": "harness",
+      "ask": "Who wrote prompts, tools, and graders?"
+    },
+    {
+      "field": "date",
+      "ask": "As-of date and model/scaffold versions?"
+    },
+    {
+      "field": "held_out",
+      "ask": "Was the published set disjoint from demos?"
+    },
+    {
+      "field": "interval",
+      "ask": "Point estimate only, or Wilson/CI?"
+    },
+    {
+      "field": "role",
+      "ask": "Order or decide for hardship-adjacent cells?"
+    }
+  ],
+  "public_benchmark_notes": [
+    {
+      "bench": "SWE-bench family",
+      "measures": "issue resolution in repos under a harness",
+      "does_not": "Harbor hardship policy; contamination-free scores without audit"
+    },
+    {
+      "bench": "WebArena",
+      "measures": "web-agent task completion in a simulated web",
+      "does_not": "regulated collections deferral rules"
+    },
+    {
+      "bench": "GAIA",
+      "measures": "assistant questions with unambiguous answers",
+      "does_not": "tool-order fidelity on loan systems"
+    },
+    {
+      "bench": "tau-bench",
+      "measures": "tool-agent-user dialog in domains",
+      "does_not": "Victor's 0.5% Wilson ceiling"
+    }
+  ],
+  "ch16_ceiling_immutable": {
+    "usage_incurred_usd": 6.191862,
+    "uncertain_reserve_usd": 0.050079,
+    "uncertain_reserve_status": "not_known_spent_or_known_unspent",
+    "headroom_usd": 0.05,
+    "headroom_status": "not_spent",
+    "conservative_ceiling_usd": 6.291941,
+    "order_not_decide": true
+  },
+  "live_vendor_http": "PENDING \u2014 no paid API; trial responses are offline fixtures",
+  "digest": "51b7633c4ef1d384"
+}

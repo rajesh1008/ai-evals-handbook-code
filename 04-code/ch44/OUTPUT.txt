@@ -1,0 +1,7 @@
+Chapter 44 lab OUTPUT (deterministic; no paid API)
+digest=51b7633c4ef1d384 seed=2044
+n=120 vendor_claim=0.97
+wrong=20 rate=0.1667 wilson_upper=0.2435 admit=False
+inject overlap=24 rate_moved=True decline=True
+try_its all_ok=True
+live_vendor_http=PENDING — no paid API; trial responses are offline fixtures

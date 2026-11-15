@@ -1,0 +1,85 @@
+{
+  "seed": 2026,
+  "digest": "390256faa8de",
+  "simulated": true,
+  "pins": [
+    {
+      "model_id": "compass-llm-2028-06",
+      "provider": "harbor-gateway",
+      "pinned_at": "2028-06-01",
+      "digest": "390256faa8de-b"
+    },
+    {
+      "model_id": "compass-llm-2028-09",
+      "provider": "harbor-gateway",
+      "pinned_at": "2028-09-01",
+      "digest": "390256faa8de-c"
+    }
+  ],
+  "baseline_rates": {
+    "hardship_ok": 0.8833333333333333,
+    "fee_ok": 0.91,
+    "latency_ms": 812.0703333333333
+  },
+  "candidate_rates": {
+    "hardship_ok": 0.9366666666666666,
+    "fee_ok": 0.9466666666666667,
+    "latency_ms": 935.4146666666668
+  },
+  "delta": {
+    "rows": [
+      {
+        "metric": "fee_ok",
+        "baseline": 0.91,
+        "candidate": 0.9466666666666667,
+        "delta": 0.036666666666666625
+      },
+      {
+        "metric": "hardship_ok",
+        "baseline": 0.8833333333333333,
+        "candidate": 0.9366666666666666,
+        "delta": 0.053333333333333344
+      },
+      {
+        "metric": "latency_ms",
+        "baseline": 812.0703333333333,
+        "candidate": 935.4146666666668,
+        "delta": 123.34433333333345
+      }
+    ],
+    "n_improved": 3,
+    "n_regressed": 0
+  },
+  "decision": {
+    "decision": "HOLD",
+    "reason": "regression",
+    "regressions": [
+      {
+        "metric": "latency_ms",
+        "baseline": 812.0703333333333,
+        "candidate": 935.4146666666668,
+        "delta": -123.34433333333345
+      }
+    ]
+  },
+  "silent_canary": {
+    "n": 40,
+    "n_flip": 6,
+    "flip_rate": 0.15
+  },
+  "deprecation": {
+    "notice_days": 60,
+    "suite_ready": true,
+    "migration_hold": true,
+    "accept_cutover": false,
+    "status": "NOT_READY"
+  },
+  "judge_triggers": {
+    "triggers": [
+      "model",
+      "canary_flip"
+    ],
+    "must_revalidate": true
+  },
+  "touchpoint": "deprecation migration; two metrics improve, latency regresses; HOLD"
+}

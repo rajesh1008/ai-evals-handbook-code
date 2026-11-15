@@ -1,0 +1,1 @@
+{"trace_id": "t-270219", "text": "VERDICT: fail\nREASON: Process skipped required check_eligibility step; jumped directly from borrower lookup to compute_plan without verifying hardship policy compliance.", "usage": {"in": 248, "out": 39}, "planted_process_ok": false, "fixture_kind": "lucky"}

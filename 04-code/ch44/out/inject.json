@@ -1,0 +1,37 @@
+{
+  "injection": "vendor_demo_set_overlaps_acceptance_set",
+  "simulated": true,
+  "clean": {
+    "suite": "harbor-vendor-collections-v0",
+    "n": 120,
+    "wrong_offers": 20,
+    "rate": 0.16666666666666666,
+    "wilson_upper": 0.24345439391023815,
+    "ceiling": 0.005,
+    "admit": false,
+    "vendor_claim_rate": 0.97,
+    "harbor_rate": 0.16666666666666666,
+    "overlap_count": 24,
+    "kind": "offline_acceptance",
+    "notes": "Black-box acceptance on trial fixture; not a live vendor HTTP run"
+  },
+  "contaminated": {
+    "suite": "harbor-vendor-collections-v0",
+    "n": 120,
+    "wrong_offers": 15,
+    "rate": 0.125,
+    "wilson_upper": 0.19603091448225035,
+    "ceiling": 0.005,
+    "admit": false,
+    "vendor_claim_rate": 0.97,
+    "harbor_rate": 0.125,
+    "overlap_count": 24,
+    "kind": "offline_acceptance",
+    "notes": "Black-box acceptance on trial fixture; not a live vendor HTTP run"
+  },
+  "overlap_count": 24,
+  "rate_moved_toward_claim": true,
+  "admit_changed": false,
+  "decline_purchase": true,
+  "lesson": "A vendor demo that overlaps your acceptance set can inflate agreement without changing borrower outcomes; pin disjoint demo and acceptance ids."
+}

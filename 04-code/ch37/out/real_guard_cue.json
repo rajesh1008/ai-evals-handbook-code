@@ -1,0 +1,82 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 12,
+  "correct": 7,
+  "accuracy": 0.5833,
+  "rows": [
+    {
+      "gold": "guard",
+      "pred": "guard",
+      "ok": true,
+      "desc": "Block hardship offer missing income field before officer UI."
+    },
+    {
+      "gold": "monitor",
+      "pred": "monitor",
+      "ok": true,
+      "desc": "Weekly sample of 200 production turns scored offline overnight."
+    },
+    {
+      "gold": "eval",
+      "pred": "monitor",
+      "ok": false,
+      "desc": "PR slow suite with judges on fee explanations before merge."
+    },
+    {
+      "gold": "guard",
+      "pred": "guard",
+      "ok": true,
+      "desc": "Refuse tool call that would SMS outside policy window."
+    },
+    {
+      "gold": "monitor",
+      "pred": "monitor",
+      "ok": true,
+      "desc": "Alert when over-block rate on benign scary words rises."
+    },
+    {
+      "gold": "eval",
+      "pred": "monitor",
+      "ok": false,
+      "desc": "Signature 8 offline-online correlation study for fee proxy."
+    },
+    {
+      "gold": "guard",
+      "pred": "monitor",
+      "ok": false,
+      "desc": "In-flight schema check on fee_amount parse under 80ms."
+    },
+    {
+      "gold": "monitor",
+      "pred": "monitor",
+      "ok": true,
+      "desc": "Drift detector on proxy embeddings without raw text."
+    },
+    {
+      "gold": "eval",
+      "pred": "guard",
+      "ok": false,
+      "desc": "Promote two code checks only after offline precision report."
+    },
+    {
+      "gold": "guard",
+      "pred": "guard",
+      "ok": true,
+      "desc": "Timeout path when guard p99 exceeds SMS 2000ms budget."
+    },
+    {
+      "gold": "monitor",
+      "pred": "monitor",
+      "ok": true,
+      "desc": "Post-hoc review of blocked benign foreclosure vocabulary."
+    },
+    {
+      "gold": "eval",
+      "pred": "guard",
+      "ok": false,
+      "desc": "Pre-deploy red team of guard with MonitoringBench-style attacks."
+    }
+  ],
+  "simulated_suite": true
+}

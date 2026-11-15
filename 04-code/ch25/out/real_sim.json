@@ -1,0 +1,178 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 24,
+  "correct": 20,
+  "accuracy": 0.8333333333333334,
+  "pushback_flagged": 9,
+  "rows": [
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.92,
+      "true_kind": "sim",
+      "snippet": "User: I need a deferral because hours were cut. Assistant: I can offer two month"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.85,
+      "true_kind": "sim",
+      "snippet": "User: My pay stub shows overtime dropped. Assistant: Please upload the stub. Use"
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.85,
+      "true_kind": "real",
+      "snippet": "User: Hold on, that grace period sounds wrong. Assistant: Let me recompute. User"
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.85,
+      "true_kind": "real",
+      "snippet": "User: No, I already sent the hardship packet last Tuesday. Assistant: I don't se"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.95,
+      "true_kind": "sim",
+      "snippet": "User: Extension please. Assistant: Approved for thirty days. User: Great."
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.82,
+      "true_kind": "real",
+      "snippet": "User: Why are you asking for YTD again? I gave it. Assistant: Policy requires it"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.85,
+      "true_kind": "sim",
+      "snippet": "User: Can I skip a payment? Assistant: A deferral may apply. User: Whatever you "
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.85,
+      "true_kind": "real",
+      "snippet": "User: That offer is less than Diane explained last month. Assistant: Let me open"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.92,
+      "true_kind": "sim",
+      "snippet": "User: Payment plan. Assistant: Three equal instalments. User: OK."
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.78,
+      "true_kind": "real",
+      "snippet": "User: Stop. You just quoted the retired schedule. Assistant: Checking index. Use"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.75,
+      "true_kind": "sim",
+      "snippet": "User: Refer me to an officer. Assistant: Connecting you. User: Thanks."
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.75,
+      "true_kind": "real",
+      "snippet": "User: I'm not agreeing until you confirm the anniversary rule. Assistant: Within"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.92,
+      "true_kind": "sim",
+      "snippet": "User: Hardship packet. Assistant: Forms sent. User: Got them."
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.72,
+      "true_kind": "real",
+      "snippet": "User: Your last message ignored the Spanish stub. Assistant: Re-reading. User: N"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.92,
+      "true_kind": "sim",
+      "snippet": "User: Hours cut at Desert Ridge. Assistant: Qualifies. User: Proceed."
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.85,
+      "true_kind": "real",
+      "snippet": "User: Don't draft yet \u2014 eligibility failed last week. Assistant: Re-running chec"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.95,
+      "true_kind": "sim",
+      "snippet": "User: Two month deferral. Assistant: Done. User: Perfect."
+    },
+    {
+      "label": "simulator",
+      "pushback": true,
+      "confidence": 0.85,
+      "true_kind": "real",
+      "snippet": "User: Push back: stated work is not unemployment. Assistant: Correcting label. U"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.92,
+      "true_kind": "sim",
+      "snippet": "User: Need help. Assistant: Hardship options. User: Deferral is fine."
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.85,
+      "true_kind": "real",
+      "snippet": "User: I will not accept a wrong offer again. Assistant: Reading MC-01. User: Bou"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.85,
+      "true_kind": "sim",
+      "snippet": "User: Plan please. Assistant: Drafted. User: Submit."
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.82,
+      "true_kind": "real",
+      "snippet": "User: Clarify the tool you called. Assistant: get_loan. User: Wrong loan_id last"
+    },
+    {
+      "label": "simulator",
+      "pushback": false,
+      "confidence": 0.92,
+      "true_kind": "sim",
+      "snippet": "User: Extension. Assistant: Thirty days. User: Thanks so much!"
+    },
+    {
+      "label": "realish",
+      "pushback": true,
+      "confidence": 0.72,
+      "true_kind": "real",
+      "snippet": "User: That answer is incomplete. Ask me about dependents. Assistant: How many? U"
+    }
+  ]
+}

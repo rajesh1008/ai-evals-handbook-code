@@ -1,0 +1,8 @@
+Ch40 OUTPUT — The Weekly Report
+digest=826ca96a1c3c seed=2040 SIMULATED
+weeks=8 hidden=True caught=True
+overall_delta=-0.000142 hardship_delta=+0.019444
+decide=2/420 wilson_hi=0.0172 meets=False
+page_chars=1376
+try_its=['tighten_target', 'force_visible_segment', 'shorter_page']
+teaching={'hidden_segment_regression': True, 'overall_flat_or_better': True, 'hardship_regressed': True, 'eight_weeks': True, 'page_rendered': True}

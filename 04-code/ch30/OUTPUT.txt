@@ -1,0 +1,72 @@
+=== Chapter 30 OUTPUT ===
+date: 2026-11-08T11:52:11+00:00
+truss 0.33.0
+{'seed': 2026, 'digest': '390256faa8de', 'simulated': True, 'pins': [{'model_id': 'compass-llm-2028-06', 'provider': 'harbor-gateway', 'pinned_at': '2028-06-01', 'digest': '390256faa8de-b'}, {'model_id': 'compass-llm-2028-09', 'provider': 'harbor-gateway', 'pinned_at': '2028-09-01', 'digest': '390256faa8de-c'}], 'baseline_rates': {'hardship_ok': 0.8833333333333333, 'fee_ok': 0.91, 'latency_ms': 812.0703333333333}, 'candidate_rates': {'hardship_ok': 0.9366666666666666, 'fee_ok': 0.9466666666666667, 'latency_ms': 935.4146666666668}, 'decision': {'decision': 'HOLD', 'reason': 'regression', 'regressions': [{'metric': 'latency_ms', 'baseline': 812.0703333333333, 'candidate': 935.4146666666668, 'delta': -123.34433333333345}]}, 'silent_canary': {'n': 40, 'n_flip': 6, 'flip_rate': 0.15}, 'deprecation': {'notice_days': 60, 'suite_ready': True, 'migration_hold': True, 'accept_cutover': False, 'status': 'NOT_READY'}, 'judge_triggers': {'triggers': ['model', 'canary_flip'], 'must_revalidate': True}, 'touchpoint': 'deprecation migration; two metrics improve, latency regresses; HOLD'}
+delta {'rows': [{'metric': 'fee_ok', 'baseline': 0.91, 'candidate': 0.9466666666666667, 'delta': 0.036666666666666625}, {'metric': 'hardship_ok', 'baseline': 0.8833333333333333, 'candidate': 0.9366666666666666, 'delta': 0.053333333333333344}, {'metric': 'latency_ms', 'baseline': 812.0703333333333, 'candidate': 935.4146666666668, 'delta': 123.34433333333345}], 'n_improved': 3, 'n_regressed': 0}
+--- inject ---
+{
+  "lesson": "A gateway default that upgrades the model mid-run invalidates the paired migration table.",
+  "clean": {
+    "n_models": 1,
+    "models": [
+      "compass-llm-2028-06"
+    ],
+    "midrun_upgrade": false,
+    "first": "compass-llm-2028-06",
+    "last": "compass-llm-2028-06"
+  },
+  "injected": {
+    "n_models": 2,
+    "models": [
+      "compass-llm-2028-06",
+      "compass-llm-2028-09"
+    ],
+    "midrun_upgrade": true,
+    "first": "compass-llm-2028-06",
+    "last": "compass-llm-2028-09"
+  },
+  "named": "midrun-gateway-default",
+  "simulated": true
+}--- try_its ---
+{
+  "try1_ignore_latency_decision": {
+    "decision": "SHIP",
+    "reason": "no_hold_regressions",
+    "regressions": []
+  },
+  "try2_notice_windows": {
+    "days90": {
+      "notice_days": 90,
+      "suite_ready": true,
+      "migration_hold": true,
+      "accept_cutover": false,
+      "status": "NOT_READY"
+    },
+    "days45": {
+      "notice_days": 45,
+      "suite_ready": true,
+      "migration_hold": false,
+      "accept_cutover": false,
+      "status": "NOT_READY"
+    }
+  },
+  "try3_if_latency_improved": {
+    "decision": "SHIP",
+    "reason": "no_hold_regressions",
+    "regressions": []
+  },
+  "baseline_hold": {
+    "decision": "HOLD",
+    "reason": "regression",
+    "regressions": [
+      {
+        "metric": "latency_ms",
+        "baseline": 812.0703333333333,
+        "candidate": 935.4146666666668,
+        "delta": -123.34433333333345
+      }
+    ]
+  },
+  "simulated": true
+}--- real ---
+{'status': 'ok', 'model': 'claude-haiku-4-5-20251001', 'n': 24, 'correct': 23, 'accuracy': 0.9583333333333334, 'simulated_suite': True}

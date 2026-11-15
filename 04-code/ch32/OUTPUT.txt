@@ -1,0 +1,9 @@
+Ch32 OUTPUT — Variance, Repeats and the Noise Floor
+digest=4ef10ae44b4c seed=2032 SIMULATED suite
+hardship scores=[87.0, 88.5, 89.8, 88.0, 87.4] mean=88.14 sd=1.090
+fee scores=[89.0, 90.5, 91.8, 90.2, 89.6] mean=90.22
+measured_floor=1.4 published_floor=1.4 margin=0.5 threshold=1.9
+pass@k=0.650 pass^k=0.325 n_tasks=40 k=3
+inside_floor=NOISE outside_floor=REGRESSION
+inject correct_noise=True naive_alarm=True
+REAL status=ok correct=14/24 model=claude-haiku-4-5-20251001

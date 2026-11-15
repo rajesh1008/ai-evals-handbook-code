@@ -1,0 +1,24 @@
+{
+  "simulated": true,
+  "flake": {
+    "n": 5,
+    "fail_rate": 0.4,
+    "flip_transitions": 4,
+    "quarantine": true
+  },
+  "ladder": {
+    "signature": 9,
+    "ladder": [
+      "deterministic",
+      "fast_suite",
+      "slow_suite",
+      "canary",
+      "full_traffic"
+    ],
+    "failed_at": "fast_suite",
+    "next_step": "fast_suite",
+    "decision": "BLOCK_FLAKE"
+  },
+  "correct_release_blocked_by_flake": true,
+  "lesson": "Quarantine flaky judges from the PR gate; do not block correct releases on noise."
+}

@@ -1,0 +1,89 @@
+{
+  "run_id": "ch16-modest-2026-11-08",
+  "label": "NEW modest study \u2014 not a recovery of missing full caches",
+  "started_ist": "2026-11-08T18:09:09.336837+05:30",
+  "ended_ist": "2026-11-08T18:09:34.392934+05:30",
+  "timezone": "Asia/Calcutta",
+  "model_small": "claude-haiku-4-5-20251001",
+  "n_traces": 24,
+  "selection": "12 fail + 12 pass from fee-judge-v1 test set, sorted by trace_id",
+  "trace_ids": [
+    "t-177556",
+    "t-178090",
+    "t-178134",
+    "t-178163",
+    "t-178487",
+    "t-178501",
+    "t-178520",
+    "t-178799",
+    "t-179018",
+    "t-179218",
+    "t-179402",
+    "t-179525",
+    "t-177443",
+    "t-177462",
+    "t-177479",
+    "t-177631",
+    "t-177633",
+    "t-177684",
+    "t-177706",
+    "t-177779",
+    "t-177796",
+    "t-177878",
+    "t-177976",
+    "t-178026"
+  ],
+  "experiments": {
+    "modest_j0": {
+      "n": 24,
+      "n_fail_gold": 12,
+      "n_pass_gold": 12,
+      "tp": 0,
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "abstain": 24,
+      "tpr": 0.0,
+      "tnr": 0.0,
+      "model": "claude-haiku-4-5-20251001"
+    },
+    "modest_v0": {
+      "n": 24,
+      "n_fail_gold": 12,
+      "n_pass_gold": 12,
+      "tp": 5,
+      "fn": 0,
+      "fp": 3,
+      "tn": 9,
+      "abstain": 7,
+      "tpr": 0.4166666666666667,
+      "tnr": 0.75,
+      "model": "claude-haiku-4-5-20251001"
+    },
+    "modest_v1": {
+      "n": 24,
+      "n_fail_gold": 12,
+      "n_pass_gold": 12,
+      "tp": 12,
+      "fn": 0,
+      "fp": 0,
+      "tn": 12,
+      "abstain": 0,
+      "tpr": 1.0,
+      "tnr": 1.0,
+      "model": "claude-haiku-4-5-20251001"
+    }
+  },
+  "raw_paths": {
+    "replies": "/workspace/ai-evals-book/04-code/ch16/out/modest_study/replies_raw.jsonl",
+    "judges": "/workspace/ai-evals-book/04-code/ch16/out/modest_study/judges_raw.jsonl",
+    "llm_cache_replies": "/workspace/ai-evals-book/04-code/ch16/out/modest_replies.jsonl",
+    "llm_cache_judge": "/workspace/ai-evals-book/04-code/ch16/out/modest_judge.jsonl"
+  },
+  "does_not_replace": [
+    "historical OUTPUT.txt n=200 / 2480-call claims",
+    "out/judge.jsonl full experiment matrix",
+    "out/replies.jsonl full fixture replies"
+  ],
+  "chapter_policy": "Keep full-study numbers [RESULT PENDING: full re-cache]. Cite this run only as modest NEW evidence with n=24."
+}

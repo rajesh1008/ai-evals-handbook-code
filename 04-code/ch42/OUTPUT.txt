@@ -1,0 +1,10 @@
+Ch42 OUTPUT — Comparative Evals (SIMULATED)
+digest=71e446918c27 seed=2042 SIMULATED n_paired=600
+paired_ranking=['prompt_v2', 'small_fee_model', 'prompt_v1', 'prompt_v3']
+unpaired_ranking=['prompt_v1', 'prompt_v2', 'small_fee_model', 'prompt_v3'] reversed=True caught=True
+slm_cost_ratio=0.3333333333333333
+router_gap=0.180 plateau=True
+experiment_record=be5f9dff605f
+n_comparisons=6 per_alpha=0.00833 structure=all_pairs
+mcnemar_v2_slm_p=0.5 discordant=2
+mcnemar_v2_v1_p=0.03125

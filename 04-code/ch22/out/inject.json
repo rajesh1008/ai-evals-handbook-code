@@ -1,0 +1,86 @@
+{
+ "v2": {
+  "tp": 69,
+  "P": 72,
+  "tn": 106,
+  "N": 128,
+  "tnr_ci": [
+   0.7534585042802074,
+   0.8836696859116592
+  ],
+  "kappa": 0.7435371358227328,
+  "errors": 25,
+  "convincing": 3.985,
+  "fives": 4,
+  "words": 107.465,
+  "dates": 2.33,
+  "window_wrong": 30,
+  "consistency": {
+   "consistent": 195,
+   "contradicts": 5
+  },
+  "tokens_out": 182.735
+ },
+ "v3": {
+  "tp": 70,
+  "P": 72,
+  "tn": 73,
+  "N": 128,
+  "tnr_ci": [
+   0.4837377469365458,
+   0.6527897223902828
+  ],
+  "kappa": 0.46728971962616817,
+  "errors": 57,
+  "convincing": 4.13,
+  "fives": 42,
+  "words": 243.825,
+  "dates": 3.175,
+  "window_wrong": 14,
+  "consistency": {
+   "consistent": 194,
+   "contradicts": 5,
+   "unclear": 1
+  },
+  "tokens_out": 427.935
+ },
+ "v3_flag": {
+  "rule": [
+   "f_window"
+  ],
+  "n": 200,
+  "errors": 57,
+  "caught": 13,
+  "catch": 0.22807017543859648,
+  "catch_ci": [
+   0.13841760968495653,
+   0.3520625880744711
+  ],
+  "flagged": 14,
+  "flag_share": 0.07,
+  "precision": 0.9285714285714286,
+  "prod_n": 83,
+  "prod_flagged": 8,
+  "prod_flag_share": 0.0963855421686747,
+  "prod_errors": 37,
+  "prod_caught": 7
+ },
+ "v3_err_kinds": {
+  "waive_ok*": 23,
+  "waive_ok": 10,
+  "stand_inside*": 8,
+  "stand_inside": 10,
+  "F_stand_elig": 1,
+  "stand_noauto": 4,
+  "F_stand_elig*": 1
+ },
+ "divergence": {
+  "quality_up": true,
+  "errors_up": true,
+  "admit": false,
+  "reasons": [
+   "verdict errors rose 25/200 -> 57/200",
+   "critiques rated more convincing while verdicts got worse"
+  ]
+ }
+}

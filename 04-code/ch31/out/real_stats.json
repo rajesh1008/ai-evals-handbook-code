@@ -1,0 +1,41 @@
+{
+  "kind": "REAL",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 6,
+  "n_ok": 4,
+  "rate": 0.6666666666666666,
+  "rows": [
+    {
+      "i": 0,
+      "ok": false,
+      "n_chars": 5
+    },
+    {
+      "i": 1,
+      "ok": true,
+      "n_chars": 195
+    },
+    {
+      "i": 2,
+      "ok": true,
+      "n_chars": 6
+    },
+    {
+      "i": 3,
+      "ok": true,
+      "n_chars": 111
+    },
+    {
+      "i": 4,
+      "ok": true,
+      "n_chars": 273
+    },
+    {
+      "i": 5,
+      "ok": false,
+      "n_chars": 339
+    }
+  ],
+  "error_type": null,
+  "note": "Monitor-only hygiene on statistical judgment prompts; not a decide-tier rate."
+}

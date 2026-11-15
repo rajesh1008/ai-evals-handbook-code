@@ -1,0 +1,156 @@
+### lab.py
+
+== 1. the frame and the draw
+window Mon 1 - Sun 14 Feb 2027: 8025 conversations, t-084024 to t-092048
+frame (abandoned excluded, declared): 7548; frame hash 3d57e6b001673ee2; truss 0.10.0
+  fee                    frame 20.0%  sample 20.0%  (10 traces)
+  payoff and lien        frame 16.3%  sample 30.0%  (15 traces)
+  hardship               frame  6.3%  sample 30.0%  (15 traces)
+  account and statement  frame 57.4%  sample 20.0%  (10 traces)
+tool-error conversations: frame 5.0% (374), sample 4 of 50 (8%)
+first trace t-084160, last t-086624; hardship weight range 26.1-39.6
+
+== 2. the notebook
+flagged at first pass or after: 15; failures after decisions: 10
+  fee 1-10                     failures  2: 3 FM-06, 6 FM-22
+  payoff and lien 11-25        failures  3: 13 FM-22, 15 FM-24, 21 FM-23
+  hardship 26-40               failures  3: 30 FM-20, 32 FM-14, 33 FM-22
+  account and statement 41-50  failures  2: 43 FM-24, 48 FM-18
+decisions: {'pass': 35, 'existing mode': 4, 'new mode': 6, 'policy question': 1, 'noise': 4}
+  excerpt 3 t-086089 fee_explanation 2027-02-04T17:37
+  excerpt 6 t-089334 fee_explanation 2027-02-10T15:03
+  excerpt 15 t-089795 payoff_letter 2027-02-11T14:15
+  excerpt 33 t-089546 hardship 2027-02-10T11:06
+  excerpt 43 t-085991 account_question 2027-02-04T14:58
+
+== 3. saturation (clusters among flagged traces, in reading order)
+5:1 10:3 15:4 20:4 25:5 30:6 35:7 40:7 45:9 50:10
+cluster first seen at: {'fee not waived': 3, 'wrong loan used': 6, 'courtesy waiver': 7, 'answer after tool error': 15, 'letter to old address': 21, 'eligible borrower refused': 30, 'request for a person not acted on': 32, 'verbose or repeated': 42, 'borrower left': 45, 'year-end asked, monthly sent': 48}
+last new cluster at trace 48; clusters 10; new in last ten 3
+
+== 4. agreement before adjudication (first reader vs Grace on 26-40, Ryan on the rest)
+traces 50; verdict agree 47 (kappa 0.82); label agree 44 (kappa 0.68)
+  Grace, hardship: 13/15 labels agree, kappa 0.56
+  Ryan, other flows: 31/35 labels agree, kappa 0.71
+   7 t-089847 verdict first pass                         second FM-06                      -> pass   [is it a failure; Victor Lane]
+  15 t-089795 code    first open:answer after tool error second FM-19                      -> FM-24  [facts; the trace (payoff tool span status error)]
+  21 t-087375 code    first open:letter to old address   second FM-12                      -> FM-23  [facts; Victor Lane, on whether Compass owns it]
+  32 t-088791 verdict first pass                         second FM-14                      -> FM-14  [test meaning; Grace Holloway, owner of FM-14]
+  33 t-089546 code    first open:wrong loan used         second FM-04                      -> FM-22  [two tests pass; Grace Holloway, applying the earliest-step rule]
+  42 t-085213 verdict first pass                         second open:verbose or repeated   -> pass   [is it a failure; the cluster rule (no borrower or policy harm)]
+settled by: {'is it a failure': 2, 'facts': 2, 'test meaning': 1, 'two tests pass': 1}
+
+== 5. v0.2 against February's fifty
+failures 10; fitted by a v0.2 mode 4 (40%, Wilson 17%-69%); new-mode rate 12 per 100 read (Wilson 5.6-23.8); v0.2 holdout bound was 1.8 per 100
+  wrong loan used            -> new mode
+  answer after tool error    -> new mode
+  letter to old address      -> new mode
+  courtesy waiver            -> noise
+  verbose or repeated        -> noise
+  borrower left              -> noise
+
+== 6. taxonomy v0.3
+0.2 -> 0.3, digest 961c7955ebfc; 19 active, 4 closed, 1 retired
+  add     FM-22    three traces in three flows (6, 13, 33), one a wrong hardship offer; one cause in the tool-call wrapper
+  add     FM-23    January open code t-071074 and February trace 21; one fix (apply the address before mailing)
+  add     FM-24    two traces in two flows (15, 43); the February wrapper returns an empty result on error
+  reword  FM-04    test read the eligibility tool, which can be called on the wrong loan (trace 33)
+  reword  FM-08    exclusion line against FM-22
+  reword  FM-14    Grace's ruling on trace 32
+in-sample fitted coverage under v0.3: 10/10 (circular: the modes were written from these traces)
+
+== 7. check coverage (a check at or below the mode's lowest layer)
+v0.2: 7/16 = 44%; missing ['FM-03', 'FM-07', 'FM-12', 'FM-15', 'FM-16', 'FM-17', 'FM-18', 'FM-19', 'FM-20']
+v0.3: 9/19 = 47%; missing ['FM-03', 'FM-07', 'FM-12', 'FM-15', 'FM-16', 'FM-17', 'FM-18', 'FM-19', 'FM-20', 'FM-23']
+
+== 8. census over all conversations 1-14 Feb (layer-one checks, every trace)
+loan-flow conversations 6033; borrower named a loan by its last four digits 199; FM-22 flagged 103 (1.7% of loan-flow, 52% of named-by-digits)
+  by flow: {'hardship': 8, 'account_question': 57, 'payoff_letter': 21, 'fee_explanation': 17}
+  hardship offers drafted in window 285; on the wrong loan 5; of those, offered loan had a deferral in the last 12 months (wrong offers) 2: ['t-084169 2027-02-01', 't-089546 2027-02-10']
+  wrong offers in the fifty: ['t-089546']
+FM-24 flagged 44 of 374 tool-error conversations (12%); by flow {'fee_explanation': 17, 'account_question': 22, 'payoff_letter': 5}
+FM-23 has no layer-one check; its layer-two detector is not built (planted in fixture: 15, not reported)
+
+== 9. restatement under v0.2 (owed from Chapter 6)
+conversations re-read 41; labels changed 18; passes that became failures 5
+  statement_request  FM-13  -> FM-18  5
+  statement_request  FM-13  -> FM-17  1
+  statement_request  pass   -> FM-18  2
+  statement_request  pass   -> pass   22
+  hardship           FM-02  -> FM-14  2
+  hardship           FM-02  -> FM-15  4
+  hardship           FM-02  -> FM-16  1
+  hardship           pass   -> FM-20  3
+  hardship           pass   -> pass   1
+FM-20 in the weekly hardship draws: 3 in 150 = 2.0% (Wilson 0.7%-5.7%)
+
+== 10. what the notebook cost
+  draw, manifest, frame audit                  lead     1 x  30 min =  0.50 h  $  42.50
+  first reading: fee explanation               lead    10 x   6 min =  1.00 h  $  85.00
+  first reading: payoff letter                 lead     8 x   7 min =  0.93 h  $  79.33
+  first reading: lien release                  lead     7 x   8 min =  0.93 h  $  79.33
+  first reading: hardship                      lead    15 x  12 min =  3.00 h  $ 255.00
+  first reading: account question              lead     6 x   4 min =  0.40 h  $  34.00
+  first reading: statement request             lead     4 x   4 min =  0.27 h  $  22.67
+  axial session                                lead     1 x 120 min =  2.00 h  $ 170.00
+  second reading: hardship                     Grace   15 x  10 min =  2.50 h  $ 150.00
+  second reading: other flows                  Ryan    35 x   3 min =  1.75 h  $ 148.75
+  adjudication (first reader)                  lead     6 x  15 min =  1.50 h  $ 127.50
+  adjudication: hardship                       Grace    2 x  15 min =  0.50 h  $  30.00
+  adjudication: other flows                    Ryan     4 x  15 min =  1.00 h  $  85.00
+  v0.3 release: tests, exclusions, crosswalk   lead     1 x 120 min =  2.00 h  $ 170.00
+  FM-22 census check                           Ryan     1 x  90 min =  1.50 h  $ 127.50
+  restatement: statements                      lead    30 x   3 min =  1.50 h  $ 127.50
+  restatement: hardship                        Grace   11 x  10 min =  1.83 h  $ 110.00
+total 23.1 hours, $1,844; by person {'lead': 14.0, 'Grace': 4.8, 'Ryan': 4.2}
+by activity {'draw, manifest, frame audit': 0.5, 'first reading': 6.5, 'axial session': 2.0, 'second reading': 4.2, 'adjudication (first reader)': 1.5, 'adjudication': 1.5, 'v0.3 release': 2.0, 'FM-22 census check': 1.5, 'restatement': 3.3}
+first reading alone 6.5 h (28%); per trace read 7.8 min
+
+### inject.py
+
+== injection: the frame query
+intended  7548 traces; excluded {'abandoned': 477}; undeclared none; audit ok
+injected  7174 traces; excluded {'abandoned': 477, 'error': 374}; undeclared ['error']; audit REFUSE
+
+== what the injected frame cannot contain
+  error status   374 conversations, planted failures   49 (13.1%)
+  completed     7174 conversations, planted failures  621 (8.7%)
+  intended  frame: FM-24 conversations 44, tool errors 374
+  injected  frame: FM-24 conversations 0, tool errors 0
+injected draw (seed 2026): 0 tool errors; shares 1 trace with the read fifty; tool-error share frame 5.0% sample 0.0% -> FLAG
+intended draw: 4 tool errors; tool-error share sample 8.0% -> ok
+over 200 seeds, a fifty containing at least one FM-24 conversation: intended 29%, injected 0%
+
+### try_its.py
+
+== Try it 1: 25, 50 or 100 traces (same quotas, scaled; 200 seeds; the read fifty excluded)
+  n= 26: FM-22 42%, FM-23 14%, FM-24 16%, wrong offer 2%; hardship read 8; failures per draw 3.5, ten or more 0%
+  n= 50: FM-22 62%, FM-23 26%, FM-24 30%, wrong offer 5%; hardship read 15; failures per draw 7.0, ten or more 12%
+  n=100: FM-22 82%, FM-23 43%, FM-24 54%, wrong offer 10%; hardship read 30; failures per draw 14.0, ten or more 92%
+
+== Try it 2: a uniform fifty instead of risk-weighted quotas
+  uniform: FM-22 46%, FM-23 4%, FM-24 25%, wrong offer 2%; hardship read 3.1; failures per draw 4.2
+
+== Try it 3: second reading of the first reader's failures only (the Chapter 6 shortcut)
+  first reader's failures 9; second readings needed 9 instead of 50
+  disagreements still found 3: [15, 21, 33]; never seen 3: 7 (final pass), 32 (final FM-14), 42 (final pass)
+  second-reading minutes 41 instead of 255; a real failure missed: [32]
+
+### fresh.py
+
+== Lab: a fresh fifty, seed 2027, read fifty excluded
+CLI screen, first trace:
+[1/50] t-084252  flow=fee_explanation  turns=5  status=completed
+   borrower: (fee explanation conversation, 5 turns)
+notebook has 50 entries
+traces read 50, failing 8, distinct open codes 7
+   2  FM-19
+   1  FM-06
+   1  FM-24
+   1  FM-12
+   1  FM-01
+   1  FM-14
+   1  FM-22
+saturation (n: clusters) 10:1, 20:4, 30:4, 40:6, 50:7
+v0.3 codes found: {'FM-01': 1, 'FM-06': 1, 'FM-12': 1, 'FM-14': 1, 'FM-19': 2, 'FM-22': 1, 'FM-24': 1} ; new since v0.3: none
+tool errors in the fresh fifty: 5

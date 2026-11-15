@@ -1,0 +1,120 @@
+{
+  "SIMULATED": true,
+  "evidence_pack": {
+    "control_objective": "operate eval practice across twelve months with owned calendar, dual-pin detection, and honest rollback",
+    "digest": "9aa91eeb5d57",
+    "seed": 2049,
+    "scoreboard": {
+      "n_months": 12,
+      "wrong_offer_hi_by_month": [
+        0.0143,
+        0.0128,
+        0.0111,
+        0.0098,
+        0.0091,
+        0.0086,
+        0.0084,
+        0.0081,
+        0.0079,
+        0.0088,
+        0.0119,
+        0.0082
+      ],
+      "fee_hi_by_month": [
+        0.028,
+        0.026,
+        0.024,
+        0.022,
+        0.021,
+        0.02,
+        0.019,
+        0.0185,
+        0.018,
+        0.0195,
+        0.023,
+        0.0182
+      ],
+      "kappa_by_month": [
+        0.61,
+        0.63,
+        0.64,
+        0.66,
+        0.67,
+        0.68,
+        0.62,
+        0.64,
+        0.66,
+        0.65,
+        0.58,
+        0.63
+      ],
+      "rollback_months": [
+        11
+      ],
+      "kind": "SIMULATED"
+    },
+    "calendar_rows": 12,
+    "pin_diff": {
+      "system_changed": true,
+      "judge_changed": true,
+      "dual_change": true,
+      "verdict": "HOLD_DUAL_PIN",
+      "SIMULATED": true
+    },
+    "upgrade_ticket_example": {
+      "system_from": "sys-m2",
+      "system_to": "sys-m3",
+      "judge_pin": "judge-v2",
+      "gold_freeze": "gold-freeze-m4",
+      "shadow_hours_required": 72,
+      "refuse_if_missing": [
+        "gold_freeze",
+        "judge_pin",
+        "shadow_hours"
+      ],
+      "SIMULATED": true
+    },
+    "rollback": {
+      "candidate": "RC-49-11",
+      "gates_green": true,
+      "online_complaint_spike": true,
+      "action": "ROLLBACK_WITHIN_72H",
+      "lesson": "gate_green_not_trial_level_surrogacy",
+      "surrogacy_note": "gates_green_is_not_trial_level_surrogacy",
+      "live_ab_audit": "PENDING",
+      "SIMULATED": true
+    },
+    "sidebar_q2_judge_skipped": {
+      "quarter": "Q2",
+      "judge_revalidation_scheduled": true,
+      "executed": false,
+      "consequence": "M8 policy change hit stale rubric"
+    },
+    "annotator_turnover_m7": {
+      "departed": "GraceHolloway_primary",
+      "new": 2,
+      "kappa_pre": 0.68,
+      "kappa_post": 0.62
+    },
+    "policy_change_m8": {
+      "from": "hardship-policy-v4",
+      "to": "hardship-policy-v5",
+      "judge_retune_required": true
+    },
+    "CH16": {
+      "usage_incurred_usd": 6.191862,
+      "uncertain_reserve_usd": 0.050079,
+      "policy_headroom_usd": 0.05,
+      "ceiling_usd": 6.291941,
+      "note": "kinds under $12 cap; not invoice; not historical cache recovery"
+    },
+    "SIMULATED": true,
+    "live_provider_sweeps": "PENDING",
+    "label": "Harbor Year-1 illustrative SIMULATED scoreboard"
+  },
+  "record": {
+    "record_sha12": "7fe834b5e830",
+    "experiment_id": "ch49-twelve-month-ops"
+  },
+  "digest": "9aa91eeb5d57"
+}

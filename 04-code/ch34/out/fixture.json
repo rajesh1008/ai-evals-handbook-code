@@ -1,0 +1,1622 @@
+{
+  "seed": 2034,
+  "simulated": true,
+  "label": "SIMULATED",
+  "baseline_cases": [
+    {
+      "id": "t-340100",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.74,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340101",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.93,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340102",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.751,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340103",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.77,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340104",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.811,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340105",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.93,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340106",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.848,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340107",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.946,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340108",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.772,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340109",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.845,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340110",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.813,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340111",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.835,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340112",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.768,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340113",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.918,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340114",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.724,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340115",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.872,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340116",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.744,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340117",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.88,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340118",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.913,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340119",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.783,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340120",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.89,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340121",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.822,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340122",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.875,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340123",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.812,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340124",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.808,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340125",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.891,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340126",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.744,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340127",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.854,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340128",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.95,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340129",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.896,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340130",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.893,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340131",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.882,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340132",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.903,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340133",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.82,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340134",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.934,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340135",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.748,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340136",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.721,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340137",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.813,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340138",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.772,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340139",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.94,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340140",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.949,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340141",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.844,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340142",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.88,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340143",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.97,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340144",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.936,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340145",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.971,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340146",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.797,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340147",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.967,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340148",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.839,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340149",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.723,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340150",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.792,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340151",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.947,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340152",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.871,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340153",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.927,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340154",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.95,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340155",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.727,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340156",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.747,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340157",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.942,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340158",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.792,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340159",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.762,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340160",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.977,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340161",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.863,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340162",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.765,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340163",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.739,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340164",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.804,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340165",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.931,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340166",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.818,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340167",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.901,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340168",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.72,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340169",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.978,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340170",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.795,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340171",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.732,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340172",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.761,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340173",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.824,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340174",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.735,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340175",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.784,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340176",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.722,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340177",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.747,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340178",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.867,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340179",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.754,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    }
+  ],
+  "candidate_cases": [
+    {
+      "id": "t-340100",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.74,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340101",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.93,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340102",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.751,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340103",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.77,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340104",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.811,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340105",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.93,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340106",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.848,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340107",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.946,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340108",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.772,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340109",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.845,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340110",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.813,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340111",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.835,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340112",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.768,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340113",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.918,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340114",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.724,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340115",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.872,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340116",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.744,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340117",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.88,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340118",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.913,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340119",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.783,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340120",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.89,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340121",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.822,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340122",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.875,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340123",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.812,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340124",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.808,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340125",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.891,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340126",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.744,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340127",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.854,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340128",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.95,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340129",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.896,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340130",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.893,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340131",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.882,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340132",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.903,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340133",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.82,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340134",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.934,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340135",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.748,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340136",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.721,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340137",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.813,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340138",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.772,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340139",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.94,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340140",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.949,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340141",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.844,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340142",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.88,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340143",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.97,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340144",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.936,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340145",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.971,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340146",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.797,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340147",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.967,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340148",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.839,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340149",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.723,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340150",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.792,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340151",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.947,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340152",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.871,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340153",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.927,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340154",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.95,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340155",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.727,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340156",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.747,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340157",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.942,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340158",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.792,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340159",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.762,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340160",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.977,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340161",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.863,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340162",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.765,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340163",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.739,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340164",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.804,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340165",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.931,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340166",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.818,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340167",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.901,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340168",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.72,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340169",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.978,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340170",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.795,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340171",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.732,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340172",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.761,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340173",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.824,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340174",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.735,
+      "similarity_floor": 0.7,
+      "judge_ok": false,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340175",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.784,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340176",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.722,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340177",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.747,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340178",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.867,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    },
+    {
+      "id": "t-340179",
+      "schema_ok": true,
+      "pattern_ok": true,
+      "status": "ok",
+      "similarity": 0.754,
+      "similarity_floor": 0.7,
+      "judge_ok": true,
+      "flake_rate": 0.0
+    }
+  ],
+  "flake_repeats": [
+    true,
+    false,
+    true,
+    false,
+    true
+  ],
+  "median_days_before": 11,
+  "median_days_after": 2,
+  "study_window": "Mon 4 Dec 2028 \u2013 Mon 8 Jan 2029",
+  "scoreboard_date": "Mon 8 Jan 2029",
+  "pr_id": "pr-4821",
+  "digest": "2af638b31e64"
+}

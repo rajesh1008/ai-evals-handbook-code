@@ -1,0 +1,20 @@
+{
+  "kind": "SIMULATED_INJECTION",
+  "name": "holiday_weekend_guardrail",
+  "window": "2028-11-24 to 2028-11-25",
+  "n": 140,
+  "k_errors": 40,
+  "rate": 0.2857142857142857,
+  "guardrail": {
+    "k": 40,
+    "n": 140,
+    "rate": 0.2857142857142857,
+    "target": 0.005,
+    "wilson_upper": 0.3521182528465699,
+    "trip": true,
+    "trip_reason": "holiday_weekend_spike"
+  },
+  "arm_stopped": "treatment",
+  "caught": true,
+  "action": "stop_treatment_arm_early"
+}

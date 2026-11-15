@@ -1,0 +1,581 @@
+{
+ "fixture": {
+  "n": 1640,
+  "kinds": {
+   "right_no": 842,
+   "right_waive": 489,
+   "defer_review": 67,
+   "X_invent": 39,
+   "defer_tool": 65,
+   "F_waive": 39,
+   "X_wrongloan": 31,
+   "F_hedge": 38,
+   "tool_bug": 30
+  },
+  "v11_fail": 147,
+  "truth_fail": 177,
+  "dev_fail": 27,
+  "test_fail": 52
+ },
+ "dev_j0": {
+  "tpr": 0.0,
+  "tnr": 0.0410958904109589,
+  "kappa": 0.008281361823944382,
+  "cm": {
+   "tp": 0,
+   "fn": 0,
+   "fp": 0,
+   "tn": 3,
+   "abstain_pos": 27,
+   "abstain_neg": 70
+  },
+  "n": 100
+ },
+ "test_j0": {
+  "tpr": 0.0,
+  "tnr": 0.02027027027027027,
+  "kappa": 0.003943775912630194,
+  "cm": {
+   "tp": 0,
+   "fn": 0,
+   "fp": 0,
+   "tn": 3,
+   "abstain_pos": 52,
+   "abstain_neg": 145
+  },
+  "n": 200
+ },
+ "dev_v0": {
+  "tpr": 0.6296296296296297,
+  "tnr": 0.7123287671232876,
+  "kappa": 0.3748739665255091,
+  "cm": {
+   "tp": 17,
+   "fn": 3,
+   "fp": 21,
+   "tn": 52,
+   "abstain_pos": 7,
+   "abstain_neg": 0
+  },
+  "n": 100,
+  "by_kind": {
+   "right_waive": {
+    "right": 20,
+    "wrong": 4
+   },
+   "F_waive": {
+    "right": 5,
+    "wrong": 1
+   },
+   "defer_tool": {
+    "right": 3
+   },
+   "X_wrongloan": {
+    "wrong": 2,
+    "right": 3
+   },
+   "F_hedge": {
+    "right": 9
+   },
+   "right_no": {
+    "wrong": 17,
+    "right": 23
+   },
+   "defer_review": {
+    "right": 5
+   },
+   "X_invent": {
+    "wrong": 7
+   },
+   "tool_bug": {
+    "right": 1
+   }
+  }
+ },
+ "dev_v1": {
+  "tpr": 0.9629629629629629,
+  "tnr": 1.0,
+  "kappa": 0.9743326488706365,
+  "cm": {
+   "tp": 26,
+   "fn": 1,
+   "fp": 0,
+   "tn": 73,
+   "abstain_pos": 0,
+   "abstain_neg": 0
+  },
+  "n": 100,
+  "by_kind": {
+   "right_waive": {
+    "right": 24
+   },
+   "F_waive": {
+    "right": 6
+   },
+   "defer_tool": {
+    "right": 3
+   },
+   "X_wrongloan": {
+    "wrong": 1,
+    "right": 4
+   },
+   "F_hedge": {
+    "right": 9
+   },
+   "right_no": {
+    "right": 40
+   },
+   "defer_review": {
+    "right": 5
+   },
+   "X_invent": {
+    "right": 7
+   },
+   "tool_bug": {
+    "right": 1
+   }
+  }
+ },
+ "v0_reason_fp": {
+  "no_autopay": 13,
+  "waiver_inside": 4
+ },
+ "v0_verdict_first": 100,
+ "test_v1": {
+  "tpr": 1.0,
+  "tnr": 0.9932432432432432,
+  "tpr_ci": [
+   0.9312054095871178,
+   1.0
+  ],
+  "tnr_ci": [
+   0.9627220296906855,
+   0.9988062998316587
+  ],
+  "kappa": 0.9870867768595041,
+  "cm": {
+   "tp": 52,
+   "fn": 0,
+   "fp": 1,
+   "tn": 147,
+   "abstain_pos": 0,
+   "abstain_neg": 0
+  },
+  "n": 200,
+  "precision": 0.9811320754716981,
+  "by_kind": {
+   "right_no": {
+    "right": 80,
+    "wrong": 1
+   },
+   "right_waive": {
+    "right": 47
+   },
+   "X_invent": {
+    "right": 15
+   },
+   "F_hedge": {
+    "right": 16
+   },
+   "defer_review": {
+    "right": 11
+   },
+   "X_wrongloan": {
+    "right": 9
+   },
+   "F_waive": {
+    "right": 12
+   },
+   "defer_tool": {
+    "right": 6
+   },
+   "tool_bug": {
+    "right": 3
+   }
+  }
+ },
+ "test_v1_wrong": [
+  [
+   "t-178668",
+   "right_no",
+   "fail"
+  ]
+ ],
+ "test_v0": {
+  "tpr": 0.7115384615384616,
+  "tnr": 0.7027027027027027,
+  "kappa": 0.4229264475743348,
+  "cm": {
+   "tp": 37,
+   "fn": 0,
+   "fp": 43,
+   "tn": 104,
+   "abstain_pos": 15,
+   "abstain_neg": 1
+  }
+ },
+ "models": {
+  "small": {
+   "tpr": 1.0,
+   "tnr": 0.9932432432432432,
+   "tpr_ci": [
+    0.9312054095871178,
+    1.0
+   ],
+   "tnr_ci": [
+    0.9627220296906855,
+    0.9988062998316587
+   ],
+   "kappa": 0.9870867768595041,
+   "cm": {
+    "tp": 52,
+    "fn": 0,
+    "fp": 1,
+    "tn": 147,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   },
+   "per_call": 0.0014414450000000002,
+   "p50": 1.905,
+   "p95": 2.515099999999999,
+   "in_per": 730.07,
+   "out_per": 142.275,
+   "cost": 0.288289,
+   "wrong": [
+    [
+     "t-178668",
+     "right_no",
+     "fail"
+    ]
+   ]
+  },
+  "large": {
+   "tpr": 1.0,
+   "tnr": 0.9932432432432432,
+   "tpr_ci": [
+    0.9312054095871178,
+    1.0
+   ],
+   "tnr_ci": [
+    0.9627220296906855,
+    0.9988062998316587
+   ],
+   "kappa": 0.9870867768595041,
+   "cm": {
+    "tp": 52,
+    "fn": 0,
+    "fp": 1,
+    "tn": 147,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   },
+   "per_call": 0.00403281,
+   "p50": 3.519,
+   "p95": 4.4533000000000005,
+   "in_per": 730.07,
+   "out_per": 122.84,
+   "cost": 0.806562,
+   "wrong": [
+    [
+     "t-179264",
+     "right_waive",
+     "fail"
+    ]
+   ]
+  },
+  "small + extended thinking": {
+   "tpr": 1.0,
+   "tnr": 1.0,
+   "tpr_ci": [
+    0.9312054095871178,
+    1.0
+   ],
+   "tnr_ci": [
+    0.9746999504747053,
+    1.0
+   ],
+   "kappa": 1.0,
+   "cm": {
+    "tp": 52,
+    "fn": 0,
+    "fp": 0,
+    "tn": 148,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   },
+   "per_call": 0.0033973949999999997,
+   "p50": 5.4055,
+   "p95": 6.314349999999999,
+   "in_per": 759.07,
+   "out_per": 527.665,
+   "cost": 0.6794789999999999,
+   "wrong": []
+  }
+ },
+ "flips": {
+  "flipped": 1,
+  "n": 200,
+  "where": [
+   "t-178668"
+  ]
+ },
+ "majority": {
+  "tpr": 1.0,
+  "tnr": 0.9932432432432432,
+  "kappa": 0.9870867768595041,
+  "cm": {
+   "tp": 52,
+   "fn": 0,
+   "fp": 1,
+   "tn": 147,
+   "abstain_pos": 0,
+   "abstain_neg": 0
+  }
+ },
+ "runs": [
+  {
+   "tpr": 1.0,
+   "tnr": 0.9932432432432432,
+   "cm": {
+    "tp": 52,
+    "fn": 0,
+    "fp": 1,
+    "tn": 147,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   }
+  },
+  {
+   "tpr": 1.0,
+   "tnr": 1.0,
+   "cm": {
+    "tp": 52,
+    "fn": 0,
+    "fp": 0,
+    "tn": 148,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   }
+  },
+  {
+   "tpr": 1.0,
+   "tnr": 0.9932432432432432,
+   "cm": {
+    "tp": 52,
+    "fn": 0,
+    "fp": 1,
+    "tn": 147,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   }
+  }
+ ],
+ "pairs": {
+  "contrast": {
+   "position": 2,
+   "right reply preferred": 37,
+   "wrong reply preferred": 1
+  },
+  "equal": {
+   "position": 18,
+   "longer preferred": 21,
+   "shorter preferred": 1
+  },
+  "abs_contrast": 40,
+  "abs_equal": 40,
+  "raw_equal": {
+   "B|B": 2,
+   "B|A": 21,
+   "A|A": 16,
+   "A|B": 1
+  },
+  "cost": 0.214335,
+  "calls": 160
+ },
+ "agent": {
+  "agent small": {
+   "caught": 9,
+   "normal_cm": {
+    "tp": 13,
+    "fn": 0,
+    "fp": 4,
+    "tn": 23,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   },
+   "normal_wrong": [
+    [
+     "t-180484",
+     "right_no",
+     "fail"
+    ],
+    [
+     "t-181753",
+     "right_waive",
+     "fail"
+    ],
+    [
+     "t-183402",
+     "right_no",
+     "fail"
+    ],
+    [
+     "t-183536",
+     "right_waive",
+     "fail"
+    ]
+   ],
+   "per_call": 0.005068066666666667,
+   "p50": 5.5635,
+   "p95": 24.480900000000002,
+   "in_per": 2623.0666666666666,
+   "out_per": 489.0,
+   "cost": 0.304084,
+   "calls_dist": {
+    "2": 60
+   },
+   "by_name": {
+    "get_account_history": 60,
+    "get_fee_schedule": 60
+   }
+  },
+  "agent large": {
+   "caught": 19,
+   "normal_cm": {
+    "tp": 13,
+    "fn": 0,
+    "fp": 2,
+    "tn": 25,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   },
+   "normal_wrong": [
+    [
+     "t-183353",
+     "right_no",
+     "fail"
+    ],
+    [
+     "t-183536",
+     "right_waive",
+     "fail"
+    ]
+   ],
+   "per_call": 0.0161062,
+   "p50": 10.8715,
+   "p95": 14.48035,
+   "in_per": 2624.9,
+   "out_per": 548.7666666666667,
+   "cost": 0.966372,
+   "calls_dist": {
+    "2": 60
+   },
+   "by_name": {
+    "get_account_history": 60,
+    "get_fee_schedule": 60
+   }
+  },
+  "agent small + days_between": {
+   "caught": 18,
+   "normal_cm": {
+    "tp": 13,
+    "fn": 0,
+    "fp": 5,
+    "tn": 22,
+    "abstain_pos": 0,
+    "abstain_neg": 0
+   },
+   "normal_wrong": [
+    [
+     "t-182392",
+     "right_no",
+     "fail"
+    ],
+    [
+     "t-183402",
+     "right_no",
+     "fail"
+    ],
+    [
+     "t-183536",
+     "right_waive",
+     "fail"
+    ],
+    [
+     "t-183849",
+     "right_waive",
+     "fail"
+    ],
+    [
+     "t-184291",
+     "right_no",
+     "fail"
+    ]
+   ],
+   "per_call": 0.0068186666666666665,
+   "p50": 5.9425,
+   "p95": 7.346399999999999,
+   "in_per": 4383.416666666667,
+   "out_per": 487.05,
+   "cost": 0.40912,
+   "calls_dist": {
+    "3": 57,
+    "2": 3
+   },
+   "by_name": {
+    "get_account_history": 60,
+    "get_fee_schedule": 60,
+    "days_between": 57
+   }
+  }
+ },
+ "month": {
+  "n": 3514,
+  "small judge": {
+   "judge_cost": 5.065237730000001,
+   "ordered_reads": 314.9743902439024,
+   "read_ordered_cost": 629.9487804878048,
+   "judge_plus_reads": 635.0140182178048,
+   "read_everything": 7028.0
+  },
+  "large judge": {
+   "judge_cost": 14.171294340000001,
+   "ordered_reads": 314.9743902439024,
+   "read_ordered_cost": 629.9487804878048,
+   "judge_plus_reads": 644.1200748278048,
+   "read_everything": 7028.0
+  },
+  "agent large": {
+   "judge_cost": 56.5971868,
+   "ordered_reads": 314.9743902439024,
+   "read_ordered_cost": 629.9487804878048,
+   "judge_plus_reads": 686.5459672878048,
+   "read_everything": 7028.0
+  }
+ },
+ "admit_order": {
+  "admit": true,
+  "role": "order",
+  "card": "MC-02 v1.1",
+  "reasons": []
+ },
+ "admit_decide": {
+  "admit": false,
+  "role": "none",
+  "card": "MC-02 v1.1",
+  "reasons": [
+   "role decide needs a Judge Report Card"
+  ]
+ },
+ "total_judge_calls": {
+  "calls": 2480,
+  "in": 1461058,
+  "out": 395151,
+  "cost": 4.031347,
+  "per_call": 0.0016255431451612904,
+  "p50": 1.9435,
+  "p95": 5.346449999999997,
+  "in_per": 589.1362903225806,
+  "out_per": 159.3350806451613
+ }
+}

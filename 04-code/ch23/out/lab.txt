@@ -1,0 +1,36 @@
+Chapter 23 lab: evaluating retrieval and grounding
+seed 2026; gold queries 100; live chunks 50; retired 2
+live index digest f03d84dbc9b0; stale index digest e09b73e8a23f
+
+1. Index staleness
+  live : {'n_chunks': 50, 'n_retired_live': 0, 'retired_live': [], 'stale': False, 'index_digest': 'f03d84dbc9b0'}
+  stale: {'n_chunks': 52, 'n_retired_live': 2, 'retired_live': ['fee-schedule-2024-01::amount', 'fee-schedule-2024-01::grace'], 'stale': True, 'index_digest': 'e09b73e8a23f'}
+
+2. Ranking metrics on the gold set (k=5)
+  live: n=100 recall@5=0.910 MRR=0.823 nDCG@5=0.840 hit@5=0.910 (91/100) Wilson 0.838 to 0.952
+  stale: n=100 recall@5=0.830 MRR=0.678 nDCG@5=0.705 hit@5=0.830 (83/100) Wilson 0.745 to 0.891
+  Harbor touchpoint target recall@5=0.91; observed live=0.910
+
+3. Production wrong-fee cases traced to retrieval
+  t-262418 2028-03-22: retrieved ['fee-schedule-2024-01::grace', 'fee-schedule-2026-03::grace']; claim='You have a ten-day grace period before a late fee.'; root_cause=retrieval
+  t-263055 2028-03-24: retrieved ['fee-schedule-2024-01::amount', 'fee-schedule-2026-03::waiver']; claim='The late fee is thirty dollars.'; root_cause=retrieval
+
+4. Groundedness on claims against top-5 passages (SIMULATED claims)
+  live  supported 92/100 rate=0.920 Wilson 0.850 to 0.959
+  stale supported 87/100 rate=0.870 Wilson 0.790 to 0.922
+
+5. Chunking coverage of gold passages
+  chars_180_overlap_40: covered 100/100 rate=1.000 n_chunks=72
+  chars_320_overlap_80: covered 100/100 rate=1.000 n_chunks=43
+  section_native: covered 100/100 rate=1.000 n_chunks=50
+
+6. Synthetic queries filtered against the live corpus
+  kept 5 dropped 43 reasons={'too_short': 1, 'unanswerable': 2, 'duplicate': 40} digest=74fa33256e78
+
+7. Choosing an embedding stand-in on this corpus (bag-of-words A vs B)
+  mean Spearman(A,B)=0.568; hit@5 A=81/100 B=48/100
+
+8. Where retrieval metrics fail to predict answer quality
+  among first 40: high-retrieval unsupported answers=3; low-retrieval parametric-correct=0
+
+wrote out/summary.json

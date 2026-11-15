@@ -1,0 +1,85 @@
+{
+  "seed": 2039,
+  "simulated": true,
+  "label": "SIMULATED",
+  "digest": "810f8f17e55a",
+  "incidents": [
+    {
+      "incident_id": "inc-3901",
+      "opened": "2029-04-24",
+      "symptom": "Borrower praised; fee amount wrong",
+      "failure_mode": "FM-fee-sycophancy",
+      "owner": "eval-lead",
+      "eval_merged": "2029-04-28",
+      "seed_trace": "t-390101",
+      "stratum": "fee"
+    },
+    {
+      "incident_id": "inc-3902",
+      "opened": "2029-04-26",
+      "symptom": "Hardship SMS silent wrong eligibility",
+      "failure_mode": "FM-hardship-silent-fail",
+      "owner": "compass-eng",
+      "eval_merged": "2029-04-30",
+      "seed_trace": "t-390201",
+      "stratum": "hardship"
+    },
+    {
+      "incident_id": "inc-3903",
+      "opened": "2029-05-01",
+      "symptom": "Tool said confirmed after killed process",
+      "failure_mode": "FM-compaction-fabricate",
+      "owner": "platform",
+      "eval_merged": "2029-05-05",
+      "seed_trace": "t-390301",
+      "stratum": "tools"
+    }
+  ],
+  "releases": [
+    {
+      "name": "r-2029-03",
+      "fails_modes": [
+        "FM-fee-sycophancy",
+        "FM-hardship-silent-fail",
+        "FM-compaction-fabricate"
+      ],
+      "symptom_still_visible": true
+    },
+    {
+      "name": "r-2029-03b",
+      "fails_modes": [
+        "FM-fee-sycophancy",
+        "FM-hardship-silent-fail",
+        "FM-compaction-fabricate"
+      ],
+      "symptom_still_visible": true
+    },
+    {
+      "name": "r-2029-04",
+      "fails_modes": [
+        "FM-fee-sycophancy",
+        "FM-hardship-silent-fail"
+      ],
+      "symptom_still_visible": false
+    },
+    {
+      "name": "r-2029-04b",
+      "fails_modes": [
+        "FM-hardship-silent-fail"
+      ],
+      "symptom_still_visible": false
+    },
+    {
+      "name": "r-2029-05",
+      "fails_modes": [],
+      "symptom_still_visible": false
+    }
+  ],
+  "tte_before_days": 19,
+  "tte_after_median": 4,
+  "complaints_prev_month": 42,
+  "complaints_this_month": 31,
+  "study_window": "Mon 23 Apr 2029 \u2013 Mon 21 May 2029",
+  "scoreboard_date": "Mon 21 May 2029",
+  "neighbours_per_incident": 13
+}

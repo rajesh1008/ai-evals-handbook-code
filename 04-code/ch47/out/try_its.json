@@ -1,0 +1,19 @@
+{
+  "after_force_include_n_missed": 0,
+  "after_force_include_ship": "SHIP_CANDIDATE",
+  "trophy": {
+    "visible_incidents": [
+      {
+        "incident_id": "inc-2047-02",
+        "opened": "2027-06-10",
+        "channel": "officer",
+        "summary": "EXAMPLE: fee explanation disputed; already in weekly sample",
+        "linked_trace_id": "t-200013",
+        "in_weekly_sample": true,
+        "progression_set": false
+      }
+    ],
+    "hidden_missed": 1,
+    "refuse": "hiding unsampled incident traces is trophy coverage"
+  }
+}

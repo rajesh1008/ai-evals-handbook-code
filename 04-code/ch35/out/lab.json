@@ -1,0 +1,101 @@
+{
+  "seed": 2035,
+  "digest": "4de7adcc9dea",
+  "simulated": true,
+  "fee_recontact": {
+    "proxy": "fee_explanation",
+    "signal": "re_contact",
+    "n": 40,
+    "r": -0.7539,
+    "predicts": true,
+    "direction": "negative",
+    "useful_direction": "higher_offline_lower_recontact"
+  },
+  "tone_recontact": {
+    "proxy": "tone",
+    "signal": "re_contact",
+    "n": 40,
+    "r": 0.2121,
+    "predicts": false,
+    "direction": "positive"
+  },
+  "tone_complaint": {
+    "proxy": "tone",
+    "signal": "complaint",
+    "n": 40,
+    "r": 0.1275,
+    "predicts": false,
+    "direction": "positive"
+  },
+  "surrogacy": {
+    "signature": 8,
+    "rows": [
+      {
+        "proxy": "fee_explanation",
+        "signal": "re_contact",
+        "n": 40,
+        "r": -0.7539,
+        "predicts": true,
+        "direction": "negative",
+        "useful_direction": "higher_offline_lower_recontact"
+      },
+      {
+        "proxy": "tone",
+        "signal": "re_contact",
+        "n": 40,
+        "r": 0.2121,
+        "predicts": false,
+        "direction": "positive"
+      },
+      {
+        "proxy": "tone",
+        "signal": "complaint",
+        "n": 40,
+        "r": 0.1275,
+        "predicts": false,
+        "direction": "positive"
+      }
+    ],
+    "usable_proxies": [
+      "fee_explanation"
+    ],
+    "failed_proxies": [
+      "tone",
+      "tone"
+    ]
+  },
+  "teaching": {
+    "fee_predicts_recontact": true,
+    "tone_predicts_nothing": true
+  },
+  "injection": {
+    "r": 0.935,
+    "anti_correlated_with_harm": true,
+    "label": "BAD_PROXY",
+    "lesson": "A proxy that tracks compliments while complaints rise must not gate releases."
+  },
+  "counterfactual": {
+    "trace_id": "t-350101",
+    "shown_arm": "fee_prompt_v3",
+    "logged_alt_arms": [
+      "fee_prompt_v2"
+    ],
+    "policy_hash": "pol-9c2a",
+    "complete": true
+  },
+  "online_rates": {
+    "resolution": 0.317,
+    "re_contact": 0.436,
+    "escalation": 0.348,
+    "complaint": 0.317,
+    "n_sessions": 1000
+  },
+  "signals": [
+    "resolution",
+    "re_contact",
+    "escalation",
+    "complaint"
+  ],
+  "study_window": "Mon 15 Jan 2029 \u2013 Mon 12 Mar 2029",
+  "scoreboard_date": "Mon 12 Mar 2029"
+}

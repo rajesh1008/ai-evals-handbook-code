@@ -1,0 +1,39 @@
+{
+  "foreign": {
+    "src_domain": "prior_authorization",
+    "dst_domain": "telecom_billing_support",
+    "src_labels": [
+      "wrong_deny",
+      "wrong_approve",
+      "missing_evidence",
+      "stale_guideline",
+      "phi_overshare"
+    ],
+    "foreign_labels": [
+      "wrong_deny",
+      "wrong_approve",
+      "missing_evidence",
+      "stale_guideline",
+      "phi_overshare"
+    ],
+    "coverage": 0.0,
+    "verdict": "HOLD_TAXONOMY_NONTRANSLATE",
+    "SIMULATED": true
+  },
+  "native_control": {
+    "src_domain": "prior_authorization",
+    "dst_domain": "telecom_billing_support",
+    "src_labels": [
+      "wrong_balance",
+      "plan_mismatch",
+      "handoff_late",
+      "tone_fail",
+      "BillingCycleEdge"
+    ],
+    "foreign_labels": [],
+    "coverage": 1.0,
+    "verdict": "TAXONOMY_OK",
+    "SIMULATED": true
+  },
+  "SIMULATED": true
+}

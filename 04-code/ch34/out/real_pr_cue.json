@@ -1,0 +1,154 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 24,
+  "correct": 18,
+  "accuracy": 0.75,
+  "rows": [
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Fast suite green; slow suite 12/80 judge fails on fee slice."
+    },
+    {
+      "gold": "promote",
+      "pred": "promote",
+      "ok": true,
+      "desc": "Deterministic+fast+slow green; flake rate 0.0; canary ready."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Schema check failed on candidate prompt render."
+    },
+    {
+      "gold": "block_flake",
+      "pred": "block",
+      "ok": false,
+      "desc": "Slow would pass; judge flip rate 0.40 on fee canary."
+    },
+    {
+      "gold": "promote",
+      "pred": "promote",
+      "ok": true,
+      "desc": "Only similarity 0.81 above floor 0.70; judges green."
+    },
+    {
+      "gold": "block",
+      "pred": "block_flake",
+      "ok": false,
+      "desc": "Fast suite pass_rate 0.90; one pattern check failed."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Prompt change passes fast, fails slow on hardship."
+    },
+    {
+      "gold": "promote",
+      "pred": "promote",
+      "ok": true,
+      "desc": "Cost $0.16 fast; slow deferred to nightly; PR smoke green."
+    },
+    {
+      "gold": "block_flake",
+      "pred": "block_flake",
+      "ok": true,
+      "desc": "Correct release; flaky judge quarantined? No \u2014 still in PR gate."
+    },
+    {
+      "gold": "promote",
+      "pred": "promote",
+      "ok": true,
+      "desc": "Flaky judge quarantined to nightly; PR gate green."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Median days still 11; gates not wired to Actions."
+    },
+    {
+      "gold": "promote",
+      "pred": "block",
+      "ok": false,
+      "desc": "Median PR-to-prod 2 days after Signature 9 ladder."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Judge called before schema; order wrong."
+    },
+    {
+      "gold": "promote",
+      "pred": "block",
+      "ok": false,
+      "desc": "Deterministic first; judge only in slow suite."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Vendor claim without Harbor digest in workflow record."
+    },
+    {
+      "gold": "promote",
+      "pred": "promote",
+      "ok": true,
+      "desc": "workflow_record includes digest and pr_id."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Nightly flake ignored; promoted on single green run."
+    },
+    {
+      "gold": "promote",
+      "pred": "block",
+      "ok": false,
+      "desc": "Two-run confirm after near-threshold delta."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Infrastructure timeout counted as product fail."
+    },
+    {
+      "gold": "promote",
+      "pred": "block",
+      "ok": false,
+      "desc": "Timeouts separated as could_not_run."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Aesthetic prompt punctuation skipped digest bump."
+    },
+    {
+      "gold": "promote",
+      "pred": "promote",
+      "ok": true,
+      "desc": "Digest updated; fast+slow green."
+    },
+    {
+      "gold": "block",
+      "pred": "block",
+      "ok": true,
+      "desc": "Slow suite skipped to save cost on ship-critical PR."
+    },
+    {
+      "gold": "promote",
+      "pred": "promote",
+      "ok": true,
+      "desc": "Ship-critical PR paid slow suite cost $1.36."
+    }
+  ],
+  "simulated_suite": true
+}

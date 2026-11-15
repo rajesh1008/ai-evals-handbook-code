@@ -1,0 +1,9 @@
+{
+  "named": "d-300042",
+  "original_snippet": "gross 2639.91 net 1686.49 deduction -114.98 employer Camelback Motors",
+  "mutated_snippet": "gross 2639.91 net 1686.49 deduction 114.98 employer Camelback Motors",
+  "deduction_gold": -114.98,
+  "sign_flipped": true,
+  "field_match_rate": 1.0,
+  "lesson": "Dropping negatives in transcription turns a recognition error into a wrong hardship income read."
+}

@@ -1,0 +1,10 @@
+Try It 1: change k from 5 to 1 and to 10
+  k=1: recall=0.740 hit=0.740 MRR=0.823
+  k=5: recall=0.910 hit=0.910 MRR=0.823
+  k=10: recall=0.940 hit=0.940 MRR=0.823
+Try It 2: raise groundedness overlap floor from 0.35 to 0.55
+  floor=0.35: 92/100 rate=0.920
+  floor=0.55: 92/100 rate=0.920
+Try It 3: synthetic filter without the unanswerable rule (keep short only)
+  full filter kept=2 reasons={'too_short': 1, 'unanswerable': 1, 'duplicate': 0}
+  weak corpus kept=3 reasons={'too_short': 1, 'unanswerable': 0, 'duplicate': 0}

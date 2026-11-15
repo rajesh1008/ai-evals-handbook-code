@@ -1,0 +1,18 @@
+[
+  {
+    "name": "tighten_target",
+    "loose_meets": false,
+    "tight_meets": false,
+    "wilson_hi": 0.011240992747195207
+  },
+  {
+    "name": "force_visible_segment",
+    "hidden": true,
+    "segment_delta": 0.019444444444444445
+  },
+  {
+    "name": "shorter_page",
+    "chars": 433,
+    "has_packet": true
+  }
+]

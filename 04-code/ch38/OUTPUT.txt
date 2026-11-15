@@ -1,0 +1,6 @@
+Chapter 38 OUTPUT
+digest e69f6d2d56a6
+overall 96.1% hardship 88.0%
+exit_met False decision HOLD
+inject_caught True tool send_offer_sms
+real REAL 6/6

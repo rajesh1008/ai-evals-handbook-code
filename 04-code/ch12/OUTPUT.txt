@@ -1,0 +1,183 @@
+### synth.py (cache summary)
+synthetic generation cached: 40 of 40 grid cells; model claude-haiku-4-5-20251001; 27,644 input / 70,383 output tokens
+
+### validate.py
+{
+ "cells": 40,
+ "cells_parsed": 40,
+ "funnel": {
+  "generated": 400,
+  "schema": 400,
+  "consistency": 381,
+  "deduplicated": 380
+ },
+ "consistency_reasons": {
+  "income_not_in_message": 18,
+  "language": 2
+ },
+ "label_disagree": 70,
+ "label_checked": 400,
+ "label_disagree_pairs": {
+  "refer_to_officer -> ask_income": 30,
+  "draft_deferral -> refer_to_officer": 10,
+  "refer_to_officer -> draft_deferral": 8,
+  "draft_deferral -> decline_window": 5,
+  "decline_window -> ask_income": 4,
+  "ask_income -> draft_deferral": 3,
+  "refer_to_officer -> ask_which_loan": 3,
+  "ask_which_loan -> draft_deferral": 3,
+  "refer_to_officer -> decline_window": 2,
+  "ask_income -> ask_which_loan": 1,
+  "ask_which_loan -> refer_to_officer": 1
+ },
+ "label_disagree_admitted": 69,
+ "near_duplicate_pairs": 1,
+ "policy_labels_admitted": {
+  "draft_deferral": 109,
+  "ask_income": 85,
+  "ask_which_loan": 82,
+  "refer_to_officer": 66,
+  "decline_window": 38
+ },
+ "generator_labels_schema": {
+  "draft_deferral": 117,
+  "refer_to_officer": 104,
+  "ask_which_loan": 83,
+  "ask_income": 57,
+  "decline_window": 39
+ },
+ "features_admitted": {
+  "two_loans": 0.26842105263157895,
+  "prior_relief": 0.2026315789473684,
+  "edge": 0.07894736842105263,
+  "spanish": 0.25526315789473686,
+  "self_employed": 0.28157894736842104,
+  "income_missing": 0.27631578947368424,
+  "tool_error": 0.0
+ },
+ "by_persona_spanish": {
+  "an hourly warehouse worker": 16,
+  "a self-employed food-truck owner": 20,
+  "a retired school teacher on a pension": 10,
+  "a hospital nurse": 11,
+  "a construction worker": 40
+ },
+ "months_ago": {
+  "2": 2,
+  "3": 1,
+  "4": 1,
+  "5": 1,
+  "6": 9,
+  "7": 1,
+  "8": 25,
+  "9": 1,
+  "10": 1,
+  "11": 3,
+  "12": 4,
+  "13": 13,
+  "14": 9,
+  "15": 4,
+  "18": 2
+ },
+ "mean_words": 33.70789473684211,
+ "states_all": 0.7236842105263158
+}
+
+### lab.py
+
+== 1. Golden set v1.0 (assembled Mon 7 June 2027) ==
+{"n": 1200, "digest": "a2f30ce163ab", "by_source": {"authored": 80, "incident": 153, "planted": 10, "production": 957}, "by_slice": {"common": 765, "uncommon": 141, "hard": 200, "adversarial": 59, "ood": 35}, "rate_eligible": 957}
+  account_question   common= 93 uncommon= 17 hard= 16 adversarial=  6 ood=  4 total=136
+  statement_request  common= 58 uncommon=  5 hard= 10 adversarial=  2 ood=  0 total=75
+  fee_explanation    common=215 uncommon= 42 hard= 60 adversarial= 11 ood=  7 total=335
+  payoff_letter      common=130 uncommon= 23 hard= 28 adversarial= 14 ood=  9 total=204
+  lien_release       common= 70 uncommon= 12 hard= 14 adversarial=  9 ood=  5 total=110
+  hardship           common=199 uncommon= 42 hard= 72 adversarial= 17 ood= 10 total=340
+
+== 2. Authored against production (hardship slice) ==
+  production n=262 two_loans=15.6% prior=22.1% edge=6.9% spanish=11.5% self_emp=11.8% no_income=62.2% tool_err=5.3% turns=13.3 simulated_pass=84.5%
+  authored   n= 26 two_loans=73.1% prior=42.3% edge=11.5% spanish=0.0% self_emp=3.8% no_income=19.2% tool_err=0.0% turns=5.6 simulated_pass=86.8%
+  synthetic  n=380 two_loans=26.8% prior=20.3% edge=7.9% spanish=25.5% self_emp=28.2% no_income=27.6% tool_err=0.0% turns=- simulated_pass=83.4%
+
+== 3. Synthetic cases: what validation removed (real run, see validate.py) ==
+{"funnel": {"generated": 400, "schema": 400, "consistency": 381, "deduplicated": 380}, "consistency_reasons": {"income_not_in_message": 18, "language": 2}, "label_disagree": 70, "label_checked": 400, "near_duplicate_pairs": 1}
+  generator label vs policy label, top pairs: {'refer_to_officer -> ask_income': 30, 'draft_deferral -> refer_to_officer': 10, 'refer_to_officer -> draft_deferral': 8}
+  prior relief months_ago among admitted: {'2': 2, '3': 1, '4': 1, '5': 1, '6': 9, '7': 1, '8': 25, '9': 1, '10': 1, '11': 3, '12': 4, '13': 13, '14': 9, '15': 4, '18': 2}
+
+== 4. Sensitivity by slice (rate-eligible cases only) ==
+  common      all= 765 rate-eligible= 759 smallest detectable drop=2.2% zero-failure bound=0.4%
+  uncommon    all= 141 rate-eligible=  99 smallest detectable drop=8.5% zero-failure bound=2.1%
+  hard        all= 200 rate-eligible=  82 smallest detectable drop=11.2% zero-failure bound=1.5%
+  adversarial all=  59 rate-eligible=  12 smallest detectable drop=21.4% zero-failure bound=5.0%
+  ood         all=  35 rate-eligible=   5 smallest detectable drop=23.9% zero-failure bound=8.2%
+  hardship rate-eligible: 262; one-sided 95% bound with 0/1 failures: 1.1% / 1.8%
+  needed for <0.5% with 0/1/2 failures: {0: 598, 1: 947, 2: 1258}; weeks at 25 a week: 27.4; at 60 a week: 11.4
+
+== 5. Slice-by-slice gate: production build against rc-0611-1 (SIMULATED verdicts) ==
+  production  aggregate=93.4% verdict=PASS
+     common       753/ 765 = 98.4%  Wilson [97.3%, 99.1%]  gate 95.0%  pass
+     uncommon     131/ 141 = 92.9%  Wilson [87.4%, 96.1%]  gate 85.0%  pass
+     hard         149/ 190 = 78.4%  Wilson [72.0%, 83.7%]  gate 70.0%  pass
+     adversarial   47/  59 = 79.7%  Wilson [67.7%, 88.0%]  gate 60.0%  pass
+     ood           31/  35 = 88.6%  Wilson [74.0%, 95.5%]  gate 70.0%  pass
+  rc-0611-1   aggregate=93.7% verdict=HOLD
+     common       753/ 765 = 98.4%  Wilson [97.3%, 99.1%]  gate 95.0%  pass
+     uncommon     128/ 141 = 90.8%  Wilson [84.9%, 94.5%]  gate 85.0%  FAIL
+     hard         165/ 190 = 86.8%  Wilson [81.3%, 90.9%]  gate 70.0%  pass
+     adversarial   37/  59 = 62.7%  Wilson [50.0%, 73.9%]  gate 60.0%  FAIL
+     ood           32/  35 = 91.4%  Wilson [77.6%, 97.0%]  gate 70.0%  pass
+
+== 6. Tuning against the dev split (SIMULATED selection, no model) ==
+  12 rounds x 6 prompt variants, chosen on a 300-case dev split: dev +10.5 pts, held-out +3.1 pts, simulator's true change +2.2 pts
+
+== 7. Version 1.0 to 1.1 (Mon 21 June 2027) ==
+  failed by all four builds: 7; on inspection: {'label from FS-2026-02': 2, 'stale reference figure': 1, 'stale label': 4}
+  hardship labels written before HP-2027-04 on cases with prior relief: 51; re-read: 16 change under the calendar-month window
+  re-opened duplicate conversations (same account and flow within two days): 6
+  v1.1: n=1200 digest 5bc03dbc075d (v1.0 a2f30ce163ab); added 6, removed 6, changed 19, relabelled 16
+  rate-eligible: v1.0 957 -> v1.1 951 (incident cases never enter a rate)
+
+== 8. Regression and progression sets over four June candidates (SIMULATED) ==
+  start: regression 1121, progression 79; regressions caught per candidate [2, 5, 5, 5]; graduated after three straight passes: 30
+
+== 9. Five properties of golden set v1.1 ==
+  validity      7 always-fail cases audited, 7 were label or reference faults; 16 stale labels re-read
+  reliability   aggregate pass rate across 20 reruns at a 3% per-case flip rate (assumed): sd 0.46 pts
+  sensitivity   smallest detectable drop: common 2.2%, adversarial 21.4%, hardship bound 1.1% with zero failures
+  actionability 70 of 75 failing cases carry a taxonomy v0.3 code (93.3%)
+  efficiency    938 of 1200 cases passed all four builds; leak scan found 40 leaked documents with 0 false flags
+
+Truss 0.15.0; seed 2026; wrote out/lab.json
+
+### inject.py
+model claude-haiku-4-5-20251001, 160 calls, 80 test cases, labels from policy.decide
+  the 40 leaked cases:     clean index 33/40 (82.5%) -> leaked index 37/40 (92.5%)
+  the 40 untouched cases:  clean index 27/40 (67.5%) -> leaked index 27/40 (67.5%)
+  whole test set:          60/80 (75.0%) -> 64/80 (80.0%): a gain no borrower would see
+  cases the leak turned from wrong to right: 4
+  clean run accuracy by action: {'ask_which_loan': '12/16', 'ask_income': '9/16', 'decline_window': '13/16', 'refer_to_officer': '16/16', 'draft_deferral': '10/16'}
+leak scan over 114 knowledge-base documents (8-word shingles, containment >= 0.3, canary HL-GOLDEN-7f3a):
+  leaked documents found 40 of 40; legitimate documents flagged 0; smallest containment on a true hit 1.0
+
+### try_its.py
+Try 1: move the near-duplicate threshold on the 381 consistent synthetic messages
+  Jaccard >= 0.2: 16 pairs, 12 cases dropped
+  Jaccard >= 0.3: 1 pairs, 1 cases dropped
+  Jaccard >= 0.4: 1 pairs, 1 cases dropped
+  Jaccard >= 0.5: 1 pairs, 1 cases dropped
+Try 2: score the clean leak run against the generator's labels instead of the policy's
+  policy labels: 60/80; generator labels: 59/80; test cases where the two labels differ: 16
+  on those 16: the model agrees with the policy on 8, with the generator's wrong label on 7
+Try 3: enrich the adversarial slice instead of sampling it in proportion
+  n= 12: smallest detectable drop from 78% = 47.4 pts; zero-failure bound 22.1%
+  n= 59: smallest detectable drop from 78% = 21.4 pts; zero-failure bound 5.0%
+  n=150: smallest detectable drop from 78% = 13.4 pts; zero-failure bound 2.0%
+  n=300: smallest detectable drop from 78% = 9.5 pts; zero-failure bound 1.0%
+  hardship at 25 a week from 262: 27.4 weeks to 947 (one failure)
+  hardship at 40 a week from 262: 17.1 weeks to 947 (one failure)
+  hardship at 60 a week from 262: 11.4 weeks to 947 (one failure)
+  (fact signatures among the 380 admitted: 135 distinct; the commonest covers 20 cases)
+
+### truss tests
+.....                                                                    [100%]
+77 passed in 0.78s

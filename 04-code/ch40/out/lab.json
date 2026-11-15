@@ -1,0 +1,332 @@
+{
+  "seed": 2040,
+  "digest": "826ca96a1c3c",
+  "simulated": true,
+  "label": "SIMULATED",
+  "n_weeks": 8,
+  "series": [
+    {
+      "week": "2029-04-09",
+      "overall": {
+        "failures": 3,
+        "n": 900,
+        "rate": 0.0033333333333333335
+      },
+      "segments": {
+        "hardship": {
+          "failures": 1,
+          "n": 180,
+          "rate": 0.005555555555555556
+        },
+        "fee": {
+          "failures": 2,
+          "n": 200,
+          "rate": 0.01
+        }
+      }
+    },
+    {
+      "week": "2029-04-16",
+      "overall": {
+        "failures": 3,
+        "n": 900,
+        "rate": 0.0033333333333333335
+      },
+      "segments": {
+        "hardship": {
+          "failures": 1,
+          "n": 180,
+          "rate": 0.005555555555555556
+        },
+        "fee": {
+          "failures": 2,
+          "n": 200,
+          "rate": 0.01
+        }
+      }
+    },
+    {
+      "week": "2029-04-23",
+      "overall": {
+        "failures": 4,
+        "n": 920,
+        "rate": 0.004347826086956522
+      },
+      "segments": {
+        "hardship": {
+          "failures": 1,
+          "n": 185,
+          "rate": 0.005405405405405406
+        },
+        "fee": {
+          "failures": 2,
+          "n": 205,
+          "rate": 0.00975609756097561
+        }
+      }
+    },
+    {
+      "week": "2029-04-30",
+      "overall": {
+        "failures": 3,
+        "n": 910,
+        "rate": 0.0032967032967032967
+      },
+      "segments": {
+        "hardship": {
+          "failures": 1,
+          "n": 182,
+          "rate": 0.005494505494505495
+        },
+        "fee": {
+          "failures": 1,
+          "n": 202,
+          "rate": 0.0049504950495049506
+        }
+      }
+    },
+    {
+      "week": "2029-05-07",
+      "overall": {
+        "failures": 4,
+        "n": 930,
+        "rate": 0.004301075268817204
+      },
+      "segments": {
+        "hardship": {
+          "failures": 2,
+          "n": 188,
+          "rate": 0.010638297872340425
+        },
+        "fee": {
+          "failures": 2,
+          "n": 208,
+          "rate": 0.009615384615384616
+        }
+      }
+    },
+    {
+      "week": "2029-05-14",
+      "overall": {
+        "failures": 3,
+        "n": 915,
+        "rate": 0.003278688524590164
+      },
+      "segments": {
+        "hardship": {
+          "failures": 2,
+          "n": 190,
+          "rate": 0.010526315789473684
+        },
+        "fee": {
+          "failures": 1,
+          "n": 204,
+          "rate": 0.004901960784313725
+        }
+      }
+    },
+    {
+      "week": "2029-05-21",
+      "overall": {
+        "failures": 4,
+        "n": 925,
+        "rate": 0.004324324324324324
+      },
+      "segments": {
+        "hardship": {
+          "failures": 3,
+          "n": 195,
+          "rate": 0.015384615384615385
+        },
+        "fee": {
+          "failures": 2,
+          "n": 210,
+          "rate": 0.009523809523809525
+        }
+      }
+    },
+    {
+      "week": "2029-05-28",
+      "overall": {
+        "failures": 3,
+        "n": 940,
+        "rate": 0.0031914893617021275
+      },
+      "segments": {
+        "hardship": {
+          "failures": 5,
+          "n": 200,
+          "rate": 0.025
+        },
+        "fee": {
+          "failures": 1,
+          "n": 212,
+          "rate": 0.0047169811320754715
+        }
+      }
+    }
+  ],
+  "hide": {
+    "segment": "hardship",
+    "overall_delta": -0.00014184397163120605,
+    "segment_delta": 0.019444444444444445,
+    "overall_looks_ok": true,
+    "segment_regressed": true,
+    "hidden": true
+  },
+  "overall_delta": -0.00014184397163120605,
+  "hardship_delta": 0.019444444444444445,
+  "fee_delta": -0.005283018867924529,
+  "hierarchy": {
+    "tiers": [
+      "decide",
+      "gate",
+      "monitor",
+      "inform"
+    ],
+    "by_tier": {
+      "decide": [
+        {
+          "name": "wrong_hardship_offer",
+          "tier": "decide",
+          "failures": 2,
+          "n": 420,
+          "rate": 0.004761904761904762,
+          "wilson_lo": 0.0013068314925680279,
+          "wilson_hi": 0.017194419918336423,
+          "owner": "Victor",
+          "action": "hold_widen_until_bound",
+          "target": 0.005,
+          "unit": "rate",
+          "meets_target": false
+        }
+      ],
+      "gate": [
+        {
+          "name": "wrong_fee_explanation",
+          "tier": "gate",
+          "failures": 4,
+          "n": 280,
+          "rate": 0.014285714285714285,
+          "wilson_lo": 0.005568997959385648,
+          "wilson_hi": 0.036150045338002756,
+          "owner": "Ryan",
+          "action": "replay_fee_set",
+          "target": 0.02,
+          "unit": "rate",
+          "meets_target": false
+        }
+      ],
+      "monitor": [
+        {
+          "name": "fee_slice_monitor",
+          "tier": "monitor",
+          "failures": 1,
+          "n": 212,
+          "rate": 0.0047169811320754715,
+          "wilson_lo": 0.0008331274072520492,
+          "wilson_hi": 0.026231164184359574,
+          "owner": "eval-lead",
+          "action": "read_if_flag",
+          "target": 0.03,
+          "unit": "rate",
+          "meets_target": true
+        },
+        {
+          "name": "hardship_slice_monitor",
+          "tier": "monitor",
+          "failures": 5,
+          "n": 200,
+          "rate": 0.025,
+          "wilson_lo": 0.010724561470787711,
+          "wilson_hi": 0.057179144151617144,
+          "owner": "eval-lead",
+          "action": "escalate_to_decide",
+          "target": 0.01,
+          "unit": "rate",
+          "meets_target": false
+        }
+      ],
+      "inform": []
+    },
+    "n_cards": 4
+  },
+  "slices": [
+    {
+      "slice": "hardship",
+      "failures": 2,
+      "n": 420,
+      "rate": 0.004761904761904762,
+      "wilson_hi": 0.017194419918336423,
+      "gate": 0.005,
+      "holds": false
+    },
+    {
+      "slice": "fee",
+      "failures": 4,
+      "n": 280,
+      "rate": 0.014285714285714285,
+      "wilson_hi": 0.036150045338002756,
+      "gate": 0.02,
+      "holds": false
+    },
+    {
+      "slice": "hardship_weekly_monitor",
+      "failures": 5,
+      "n": 200,
+      "rate": 0.025,
+      "wilson_hi": 0.057179144151617144,
+      "gate": 0.01,
+      "holds": false
+    }
+  ],
+  "decide_card": {
+    "name": "wrong_hardship_offer",
+    "tier": "decide",
+    "failures": 2,
+    "n": 420,
+    "rate": 0.004761904761904762,
+    "wilson_lo": 0.0013068314925680279,
+    "wilson_hi": 0.017194419918336423,
+    "owner": "Victor",
+    "action": "hold_widen_until_bound",
+    "target": 0.005,
+    "unit": "rate",
+    "meets_target": false
+  },
+  "gate_card": {
+    "name": "wrong_fee_explanation",
+    "tier": "gate",
+    "failures": 4,
+    "n": 280,
+    "rate": 0.014285714285714285,
+    "wilson_lo": 0.005568997959385648,
+    "wilson_hi": 0.036150045338002756,
+    "owner": "Ryan",
+    "action": "replay_fee_set",
+    "target": 0.02,
+    "unit": "rate",
+    "meets_target": false
+  },
+  "page_path": "out/weekly_page.txt",
+  "page_chars": 1376,
+  "packet": {
+    "median_tte_days": 4.0,
+    "tte_before_days": 19,
+    "n_incidents_closed_to_eval": 3,
+    "n_symptom_rejected": 1,
+    "complaints_this_month": 31,
+    "complaints_prev_month": 42,
+    "sidebar_cases": 41,
+    "inctoeval_digest": "810f8f17e55a"
+  },
+  "scoreboard_date": "2029-05-28",
+  "hardship_monitor_target": 0.01,
+  "teaching": {
+    "hidden_segment_regression": true,
+    "overall_flat_or_better": true,
+    "hardship_regressed": true,
+    "eight_weeks": true,
+    "page_rendered": true
+  }
+}

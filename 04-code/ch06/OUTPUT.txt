@@ -1,0 +1,117 @@
+### lab.py
+
+== A. samples
+frame 15993 traces t-068031..t-084023; early 7972, late 8021
+re-code sample 399 (43 failing) {'hardship': 57, 'payoff_letter': 30, 'account_question': 135, 'fee_explanation': 69, 'lien_release': 29, 'statement_request': 79}; frame sha 024373f01606
+holdout 210 (18 failing) {'statement_request': 32, 'account_question': 73, 'hardship': 29, 'payoff_letter': 16, 'lien_release': 11, 'fee_explanation': 49}
+
+== B. coding under v0.1 and the v0.1.1 patch
+v0.1 (no tests) digest 1818fcbe7853: {'failing': 43, 'coded': 36, 'fitted': 36, 'naive': 0.837, 'fitted_share': 0.837, 'fitted_ci': [0.7, 0.919], 'none_fit': 7, 'new_mode_per_100': 1.8, 'new_mode_ci': [0.9, 3.6]}
+v0.1.1 patch 0.1 -> 0.1.1 (13 rewordings) digest 0dd6b4140599
+v0.1.1: {'failing': 43, 'coded': 36, 'fitted': 26, 'naive': 0.837, 'fitted_share': 0.605, 'fitted_ci': [0.456, 0.736], 'none_fit': 17, 'new_mode_per_100': 4.3, 'new_mode_ci': [2.7, 6.7]}
+labels whose fit changed under a wording-only patch: 10 {'FM-13': 10}
+v0.1.1 labels per code: {'FM-01': 2, 'FM-02': 4, 'FM-03': 0, 'FM-04': 0, 'FM-05': 0, 'FM-06': 4, 'FM-07': 2, 'FM-08': 4, 'FM-09': 2, 'FM-10': 0, 'FM-11': 3, 'FM-12': 3, 'FM-13': 12, 'none': 7}
+discovery: new causes first seen at trace {'S_yearend': 40, 'H_refused': 102, 'L_address': 157}
+
+== C. drift against the pilot first pass
+FM-01  6/100 ->  2/57  p_up 0.8562 p_down 0.3929 
+FM-02  3/100 ->  4/57  p_up 0.2172 p_down 0.9396 
+FM-03  2/100 ->  0/57  p_up 1.0000 p_down 0.4042 
+FM-04  0/100 ->  0/57  p_up 1.0000 p_down 1.0000 
+FM-05  4/70  ->  0/69  p_up 1.0000 p_down 0.0616 
+FM-06  2/70  ->  4/69  p_up 0.3335 p_down 0.8990 
+FM-07  2/40  ->  2/135 p_up 0.9622 p_down 0.2246 
+FM-08  1/40  ->  4/135 p_up 0.6785 p_down 0.7315 
+FM-09  2/35  ->  2/30  p_up 0.6327 p_down 0.7496 
+FM-10  1/35  ->  0/30  p_up 1.0000 p_down 0.5385 
+FM-11  2/30  ->  3/29  p_up 0.4835 p_down 0.8340 
+FM-12  1/30  ->  3/29  p_up 0.2930 p_down 0.9478 
+FM-13  1/25  -> 12/79  p_up 0.1262 p_down 0.9784 
+
+== D. fit tests, note clusters, agreement
+FM-02: 4 notes -> clusters [2, 1, 1]
+    e.g. after hours, queue closed, no callback offered, conversation just ended
+    e.g. wanted to talk to a real person, assistant kept offering plan options instead
+    e.g. spanish request quiero hablar con alguien missed, stayed in hardship flow
+FM-13: 12 notes -> clusters [10, 2]
+    e.g. wanted 2026 interest paid statement for tax return, sent monthly statement
+    e.g. wrong month sent, november instead of december
+FM-09: 2 notes -> clusters [2]
+    e.g. payoff quote missing per diem interest
+FM-10: 0 notes -> clusters []
+None: 7 notes -> clusters [6, 1]
+    e.g. eligible per tool but refused, old extension counted as deferral, over twelve months
+    e.g. release letter mailed to old address borrower said had changed
+labels failing their mode's inclusion test: {'FM-13': 10}
+kappa on mode labels, v0.1.1: 0.736 over 43 failing traces; disagreements {'FM-13->None': 6, 'None->FM-04': 3, 'FM-09->FM-10': 1}
+payoff failures in re-code and holdout coded under v0.1.1 by both coders: agree 2 of 5
+
+== E. the v0.2 change set
+
+== G. incident: complaint 19 Jan 2027
+complaint 2027-01-19 about t-072609 at 2027-01-12T17:55: 'my husband passed away in december and he was on the loan'
+look-alike search over 550 hardship traces 4-19 Jan: 10 candidates, Grace confirms 3 ['t-074479', 't-075490', 't-077106']
+release 0.1.1 -> 0.2 digest 41041db69244
+    ('split', ['FM-02', 'FM-14', 'FM-15', 'FM-16'])
+    ('split', ['FM-13', 'FM-17', 'FM-18'])
+    ('merge', ['FM-09', 'FM-10', 'FM-19'])
+    ('add', ['FM-20'])
+    ('add', ['FM-21'])
+    ('retire', ['FM-05'])
+    ('promote', ['FM-21'])
+active 16: ['FM-01', 'FM-03', 'FM-04', 'FM-06', 'FM-07', 'FM-08', 'FM-11', 'FM-12', 'FM-14', 'FM-15', 'FM-16', 'FM-17', 'FM-18', 'FM-19', 'FM-20', 'FM-21']; status {'active': 16, 'closed': 4, 'retired': 1}
+crosswalk: {'FM-02': ['FM-14', 'FM-15', 'FM-16'], 'FM-09': ['FM-19'], 'FM-10': ['FM-19'], 'FM-13': ['FM-17', 'FM-18']}
+validate: clean
+pilot back-coding (splits need a re-read; merges map automatically):
+   t-019442 FM-02 -> FM-14  (14:08, queue open, request repeated)
+   t-020266 FM-02 -> FM-16  (17:29, request written in Spanish)
+   t-021059 FM-02 -> FM-15  (19:45, queue closed, no callback)
+   t-015937 FM-13 -> FM-17  (October asked for, September sent)
+
+== F. same traces under v0.2
+v0.2 on re-code sample: {'failing': 43, 'coded': 42, 'fitted': 42, 'naive': 0.977, 'fitted_share': 0.977, 'fitted_ci': [0.879, 0.996], 'none_fit': 1, 'new_mode_per_100': 0.3, 'new_mode_ci': [0.0, 1.4]}
+kappa on mode labels, v0.2: 0.974 (v0.1.1 0.736)
+note: coverage of v0.2 on the sample it was built from is circular; the holdout is the measure
+
+== H. holdout and check coverage
+v0.2 open codes on re-code sample (no mode fits): [('t-071074', 'L_address', 'release letter mailed to old address borrower said had changed')]
+v0.1.1 on holdout: {'failing': 18, 'coded': 16, 'fitted': 13, 'naive': 0.889, 'fitted_share': 0.722, 'fitted_ci': [0.491, 0.875], 'none_fit': 5, 'new_mode_per_100': 2.4, 'new_mode_ci': [1.0, 5.5]}
+v0.2 on holdout: {'failing': 18, 'coded': 18, 'fitted': 18, 'naive': 1.0, 'fitted_share': 1.0, 'fitted_ci': [0.824, 1.0], 'none_fit': 0, 'new_mode_per_100': 0.0, 'new_mode_ci': [0.0, 1.8]}; unfit causes {}
+check coverage v0.1.1: 7/13 = 54%, failure-weighted 65%; missing ['FM-03', 'FM-07', 'FM-09', 'FM-10', 'FM-12', 'FM-13']
+check coverage v0.2:   7/16 = 44%, failure-weighted 33%; missing ['FM-03', 'FM-07', 'FM-12', 'FM-15', 'FM-16', 'FM-17', 'FM-18', 'FM-19', 'FM-20']
+FM-05: 0 in 118 fee traces read since 16 Dec -> bound 2.5%; 0 in 20 -> 13.9%; clean traces for a 2% bound 149, 1% 299
+v0.2 labels per code (re-code): {'FM-19': 2, 'FM-14': 1, 'FM-17': 2, 'FM-18': 10, 'FM-06': 4, 'FM-08': 4, 'FM-12': 3, 'FM-11': 3, 'FM-07': 2, 'FM-20': 6, 'FM-15': 2, 'FM-01': 2, None: 1, 'FM-16': 1}
+v0.2 labels per code (holdout): {'FM-07': 4, 'FM-15': 1, 'FM-08': 3, 'FM-01': 1, 'FM-19': 3, 'FM-20': 2, 'FM-06': 1, 'FM-18': 3}
+reading cost ($60/h officers, 10 min a hardship trace; $85/h lead, 3 min otherwise): {'recode': {'hardship': 57, 'other': 342, 'officer_hours': 9.5, 'lead_hours': 17.1, 'dollars': 2024}, 'second_coding': {'hardship': 12, 'other': 31, 'officer_hours': 2.0, 'lead_hours': 1.6, 'dollars': 252}, 'holdout': {'hardship': 29, 'other': 181, 'officer_hours': 4.8, 'lead_hours': 9.1, 'dollars': 1059}, 'lookalike': {'traces': 10, 'dollars': 100}}
+
+wrote out/lab.json, out/taxonomy-v0.2.json, out/taxonomy-v0.2.md, manifests
+
+### inject.py
+######## INJECTION: payoff quoted for the borrower's other loan ########
+planted 3: ['t-078264', 't-082619', 't-082722']
+FM-19 labels now 6 (was 3)
+coverage without inclusion tests: naive 100.0%, 'fitted' 100.0% -> nothing flags
+coverage with the FM-19 inclusion test: fitted 18/21 = 85.7% (Wilson 65.4% to 95.0%)
+flagged for review (label fails its test): 3 ['t-078264', 't-082619', 't-082722']
+FM-19 note clusters: [6]
+rate test alone on FM-19: (2, 30) -> (6, 16), one-sided p 0.0147 rose
+
+### try_its.py
+== 1. re-code sample size
+n=100 drawn  92: failing  7, FM-13 labels failing test  1, FM-02 clusters 0, 'none fits' 2, fitted 57% (25% to 84%)
+n=200 drawn 183: failing 21, FM-13 labels failing test  4, FM-02 clusters 0, 'none fits' 3, fitted 67% (45% to 83%)
+n=400 drawn 399: failing 43, FM-13 labels failing test 10, FM-02 clusters 3, 'none fits' 7, fitted 60% (46% to 74%)
+n=800 drawn 800: failing 80, FM-13 labels failing test 25, FM-02 clusters 3, 'none fits' 10, fitted 56% (45% to 67%)
+
+== 2. keep FM-09 and FM-10 apart instead of merging
+166 payoff failures from the frame, two coders, v0.1.1 codes: agreement 44%, kappa -0.12
+merged into FM-19: agreement 100%, kappa undefined (one code); facet kept in a field, not a code
+   if coders confused them 10% of the time: kappa 0.82
+   if coders confused them 20% of the time: kappa 0.68
+   if coders confused them 30% of the time: kappa 0.52
+
+== 3. retirement bound
+upper bound 5%: 59 clean fee traces; at 20 a week of monitoring, 3 weeks
+upper bound 2%: 149 clean fee traces; at 20 a week of monitoring, 8 weeks
+upper bound 1%: 299 clean fee traces; at 20 a week of monitoring, 15 weeks
+zero in 20 bounds the rate at 13.9%; zero in 118 at 2.5%

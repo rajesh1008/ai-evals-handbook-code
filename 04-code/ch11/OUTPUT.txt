@@ -1,0 +1,192 @@
+### docs.py
+documents: 200 {'hardship_letter': 50, 'bank_statement': 60, 'pay_stub': 90}
+layouts: 30 languages: {'en': 168, 'es': 32} quality: {'clean': 158, 'photo': 42}
+traps: {'two_reasons': 17, 'two_loans': 15, 'page_break': 7, 'hourly_only': 10, 'two_periods': 6, 'date_at_end': 6, 'ytd_first': 6, 'total_deposits_line': 15, 'signed_amounts': 15, 'balance_adjacent': 7, 'net_stated': 13, 'abbreviated': 7, 'pending_after_period': 7, 'frequency_unlabelled': 7, 'gross_not_printed': 1}
+uploads: 2027-05-03 to 2027-05-28
+
+### extract.py (real model runs, cached)
+claude-haiku-4-5-20251001: 200 documents cached, prompt extract-prompt-v1, 168,039 input / 70,108 output tokens
+claude-sonnet-4-6: 200 documents cached, prompt extract-prompt-v1, 168,039 input / 69,684 output tokens
+
+### lab.py
+== layer one (schema), 200 replies each
+  check                haiku  sonnet
+  strict_json              0       0
+  after_fence_repair     200     199
+  unknown_keys             0        
+  absent_keys              0        
+  type_errors              0        
+  enum_errors              0        
+  required_missing         0        
+== per field, claude-haiku-4-5-20251001, 200 documents
+  field                   TP wrong miss inv  TN    prec  recall acc(all)
+  doc_type               200     0    0   0   0  100.0%  100.0%   100.0%
+  person_name            198     2    0   0   0   99.0%   99.0%    99.0%
+  employer               161     8    0   0  31   95.3%   95.3%    96.0%
+  period_end             197     3    0   0   0   98.5%   98.5%    98.5%
+  pay_frequency           85     5    0   0 110   94.4%   94.4%    97.5%
+  gross_pay               90     0    0   0 110  100.0%  100.0%   100.0%
+  net_pay                 90     0    0   0 110  100.0%  100.0%   100.0%
+  ytd_gross               90     0    0   0 110  100.0%  100.0%   100.0%
+  payroll_total           56     4    0   0 140   93.3%   93.3%    98.0%
+  stated_monthly_income   32     0    0   0 168  100.0%  100.0%   100.0%
+  loan_last4              49     1    0   0 150   98.0%   98.0%    99.5%
+  hardship_reason         50     0    0   0 150  100.0%  100.0%   100.0%
+  all slots: 2377/2400 right = 99.0%; where a value exists: 1298/1321 = 98.3%
+== from fields to documents to decisions
+  field slots right                 2377/2400 = 99.0%
+  documents with every field right  178/200
+  documents with every critical field right 187/200
+  documents whose decision matches gold     197/200
+    hardship_letter  n=50  all fields right  44 (88.0%)  decision right  47
+    bank_statement   n=60  all fields right  53 (88.3%)  decision right  60
+    pay_stub         n=90  all fields right  81 (90.0%)  decision right  90
+  flip hd-0096 letter-04  gold ('hardship_letter', 'fresh', 'income_needed', '6428', 'standard') -> extracted ('hardship_letter', 'stale', 'income_needed', '6428', 'standard')  [period_end]
+  flip hd-0106 letter-04  gold ('hardship_letter', 'fresh', 'income_needed', '9870', 'standard') -> extracted ('hardship_letter', 'stale', 'income_needed', '9870', 'standard')  [period_end]
+  flip hd-0151 letter-07  gold ('hardship_letter', 'fresh', 'review', '4881', 'standard') -> extracted ('hardship_letter', 'fresh', 'review', '481', 'standard')  [loan_last4]
+== Victor's threshold: error rate under 2% and one-sided 95% upper bound under 5%
+  doc_type                0/200   0.0%  upper   1.3%  PASS
+  period_end              3/200   1.5%  upper   3.7%  PASS
+  pay_frequency           5/90    5.6%  upper  11.0%  FAIL
+  gross_pay               0/90    0.0%  upper   2.9%  PASS
+  payroll_total           4/60    6.7%  upper  14.0%  FAIL
+  stated_monthly_income   0/32    0.0%  upper   7.8%  FAIL
+  loan_last4              1/50    2.0%  upper   8.5%  FAIL
+  hardship_reason         0/50    0.0%  upper   5.1%  FAIL
+== applicable fields right, by slice
+  lang    en      1133/1147 98.8%
+  lang    es       214/223  96.0%
+  quality clean   1069/1081 98.9%
+  quality photo    278/289  96.2%
+  weakest layouts: stub-06 92.9% (4 of 56 wrong), letter-04 92.9% (3 of 42 wrong), bank-06 94.3% (2 of 35 wrong), bank-01 95.0% (2 of 40 wrong), letter-07 95.2% (2 of 42 wrong), bank-08 97.1% (1 of 35 wrong)
+== the 23 field errors, classified by reading each one
+   10  copied from the page as printed
+    5  frequency word or inference
+    4  rows right, sum wrong
+    3  day and month swapped
+    1  space dropped by the photograph
+== payroll deposit table, 60 statements
+  gold rows 154; matched 154; extra 0; missed 0
+  statements with every row right 60/60; total right 56/60
+  every row right, total wrong: hd-0016, hd-0070, hd-0076, hd-0180
+    hd-0016 bank-06: stated 5,763.62, rows sum 6,763.62, gold 6,763.62
+    hd-0070 bank-04: stated 4,910.20, rows sum 5,010.20, gold 5,010.20
+    hd-0076 bank-08: stated 6,834.71, rows sum 8,394.74, gold 8,394.74
+    hd-0180 bank-06: stated 4,602.66, rows sum 4,603.66, gold 4,603.66
+  sum check (total equals its own rows) fires on 4, catches 4 wrong totals
+== stated confidence, 1370 applicable fields, 23 wrong
+  0.00-0.50   n=8     mean conf 0.119  accuracy 1.000
+  0.50-0.80   n=3     mean conf 0.717  accuracy 1.000
+  0.80-0.90   n=30    mean conf 0.851  accuracy 0.900
+  0.90-0.95   n=63    mean conf 0.916  accuracy 0.905
+  0.95-0.99   n=453   mean conf 0.964  accuracy 0.978
+  0.99-1.00   n=813   mean conf 0.990  accuracy 0.995
+  expected calibration error 0.015
+  confidence on the wrong fields: min 0.85, median 0.95, max 0.99
+  route to officer if confidence<0.9             flags   41 fields, catches 3/23 errors
+  route to officer if confidence<0.95            flags  104 fields, catches 9/23 errors
+  route to officer if confidence<0.99            flags  557 fields, catches 19/23 errors
+  route to officer if second reader disagrees    flags   16 fields, catches 12/23 errors
+== second reader, claude-sonnet-4-6, same prompt
+  field                  haiku errors sonnet errors
+  doc_type                          0             1
+  person_name                       2             1
+  employer                          8            16
+  period_end                        3             4
+  pay_frequency                     5             0
+  gross_pay                         0             0
+  net_pay                           0             0
+  ytd_gross                         0             0
+  payroll_total                     4             2
+  stated_monthly_income             0             0
+  loan_last4                        1             1
+  hardship_reason                   0             0
+  decisions changed: haiku 3, sonnet 4
+== where the definition decides the answer
+  stubs                                     90
+  current_vs_ytd_gap_over_5pct              21
+  band_changes_if_ytd_average                2
+  letters                                   50
+  net_stated                                13
+  hourly_only                               10
+  two_reasons                               17
+  two_loans                                 15
+  statements_with_non_payroll_deposits      60
+== errors the second reader agreed with (disagreement cannot flag them)
+  hd-0017 employer        copied from the page as printed        both said 'Tempe Home Health PA'
+  hd-0027 period_end      day and month swapped                  both said '2027-04-05'
+  hd-0075 employer        copied from the page as printed        both said 'Desert Ridge AutoCo.'
+  hd-0090 employer        space dropped by the photograph        both said 'Tempe HomeHealth'
+  hd-0096 period_end      day and month swapped                  both said '2027-10-05'
+  hd-0103 employer        copied from the page as printed        both said 'Pima Solar Installat P'
+  hd-0106 period_end      day and month swapped                  both said '2027-01-05'
+  hd-0143 employer        copied from the page as printed        both said 'TEMPE HOMEHEALTH LLC'
+  hd-0151 loan_last4      copied from the page as printed        both said '4B81'
+  hd-0166 employer        copied from the page as printed        both said 'Descrt Ridge Auto LLC'
+  hd-0170 employer        copied from the page as printed        both said 'Tempe Home Health Pa'
+  error list:
+  hd-0016 bank-06    en clean payroll_total   rows right, sum wrong                  got 5763.62 gold 6763.62 conf 0.99
+  hd-0017 bank-01    en clean employer        copied from the page as printed        got 'Tempe Home Health PA' gold 'Tempe Home Health' conf 0.95
+  hd-0018 stub-13    es clean pay_frequency   frequency word or inference            got 'biweekly' gold 'semimonthly' conf 0.99
+  hd-0019 stub-06    es photo pay_frequency   frequency word or inference            got 'biweekly' gold 'semimonthly' conf 0.99
+  hd-0022 letter-03  en photo employer        copied from the page as printed        got 'Vcrde Valley Plumbing' gold 'Verde Valley Plumbing' conf 0.85
+  hd-0027 letter-08  es clean period_end      day and month swapped                  got '2027-04-05' gold '2027-05-04' conf 0.9
+  hd-0047 stub-06    es clean pay_frequency   frequency word or inference            got 'biweekly' gold 'semimonthly' conf 0.98
+  hd-0070 bank-04    en photo payroll_total   rows right, sum wrong                  got 4910.2 gold 5010.2 conf 0.95
+  hd-0075 stub-06    es photo employer        copied from the page as printed        got 'Desert Ridge AutoCo.' gold 'Desert Ridge Auto' conf 0.95
+  hd-0076 bank-08    en photo payroll_total   rows right, sum wrong                  got 6834.71 gold 8394.74 conf 0.98
+  hd-0090 letter-04  es photo employer        space dropped by the photograph        got 'Tempe HomeHealth' gold 'Tempe Home Health' conf 0.92
+  hd-0096 letter-04  es clean period_end      day and month swapped                  got '2027-10-05' gold '2027-05-10' conf 0.95
+  hd-0103 bank-03    en clean employer        copied from the page as printed        got 'Pima Solar Installat P' gold 'Pima Solar Installations' conf 0.9
+  hd-0106 letter-04  es clean period_end      day and month swapped                  got '2027-01-05' gold '2027-05-01' conf 0.95
+  hd-0129 stub-02    en photo person_name     copied from the page as printed        got 'Amanda Ramircz' gold 'Amanda Ramirez' conf 0.85
+  hd-0143 stub-01    en photo employer        copied from the page as printed        got 'TEMPE HOMEHEALTH LLC' gold 'Tempe Home Health' conf 0.98
+  hd-0151 letter-07  en photo person_name     copied from the page as printed        got 'Jorge Mitchcll' gold 'Jorge Mitchell' conf 0.85
+  hd-0151 letter-07  en photo loan_last4      copied from the page as printed        got '4B81' gold '4881' conf 0.92
+  hd-0156 stub-03    en clean pay_frequency   frequency word or inference            got 'biweekly' gold 'semimonthly' conf 0.95
+  hd-0166 stub-08    en photo employer        copied from the page as printed        got 'Descrt Ridge Auto LLC' gold 'Desert Ridge Auto' conf 0.92
+  hd-0168 stub-06    es clean pay_frequency   frequency word or inference            got 'biweekly' gold 'semimonthly' conf 0.99
+  hd-0170 bank-01    en clean employer        copied from the page as printed        got 'Tempe Home Health Pa' gold 'Tempe Home Health' conf 0.92
+  hd-0180 bank-06    en clean payroll_total   rows right, sum wrong                  got 4602.66 gold 4603.66 conf 0.95
+== after the two fixes, Victor's threshold again
+  doc_type                0/200   0.0%  upper   1.3%  PASS
+  period_end              1/200   0.5%  upper   2.2%  PASS
+  pay_frequency           1/90    1.1%  upper   4.8%  PASS
+  gross_pay               0/90    0.0%  upper   2.9%  PASS
+  payroll_total           0/60    0.0%  upper   4.3%  PASS
+  stated_monthly_income   0/32    0.0%  upper   7.8%  FAIL
+  loan_last4              1/50    2.0%  upper   8.5%  FAIL
+  hardship_reason         0/50    0.0%  upper   5.1%  FAIL
+  documents with every field right 188/200; decisions changed 2 ['hd-0021', 'hd-0151']
+
+### inject.py
+== money fields where a value exists, Haiku extraction, before and after the rounding normaliser
+  comparison                    before     after
+  within $1.00                 359/362    359/362 
+  within 1%                    359/362    359/362 
+  to the cent                  358/362     42/362 
+  hardship decisions changed by rounding: 0 []
+  amounts that no longer reconcile to the cent: 320; largest drift $0.50; mean $0.24
+  annualised income misstatement across the 90 stubs: $515.34
+  identity test, format-only normaliser (Truss)   69/69 printed amounts returned unchanged
+  identity test, rounding normaliser              8/69 printed amounts returned unchanged
+
+### sql_lab.py (real model run, cached)
+questions 30; model claude-haiku-4-5-20251001
+string match         0/30
+execution, dev.db   29/30
+execution, probe.db 28/30
+pass on dev, fail on probe: [14]
+fail on dev: [11]
+
+### try_its.py (real model run, cached)
+== 1. payroll total from its own rows
+  payroll_total right: model's sum 56/60, sum of its rows 60/60
+== 2. Spanish documents with prompt v2
+  pay_frequency    errors on 32 Spanish documents: v1 4, v2 0
+  period_end       errors on 32 Spanish documents: v1 3, v2 1
+  employer         errors on 32 Spanish documents: v1 2, v2 2
+  person_name      errors on 32 Spanish documents: v1 0, v2 0
+  all fields: v1 9 errors, v2 3 errors
+== 3. documents needed for a zero-error field to pass (one-sided 95% upper bound under 5%)
+  zero errors in 52 documents; with one error: 87 documents; with two errors: 118 documents

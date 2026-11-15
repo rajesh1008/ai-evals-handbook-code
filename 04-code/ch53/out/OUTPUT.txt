@@ -1,0 +1,6 @@
+Ch53 lab SIMULATED seed=2053 digest=3d636670d406 record=36a17b53441c
+inject TRAJECTORY_CATCH_OUTCOME_MISS on T17 caught_by_trajectory=True missed_by_outcome=True
+baseline outcome_pass=0.9524 traj_pass=0.9524
+two_gen_newer outcome_pass=1.0 traj_pass=0.9524
+harbor last look OPEN hardship+fee CONDITIONAL_10pct MEETS_KINDS ceiling=6.291941
+live_provider_comparison=PENDING no_paid_calls=True

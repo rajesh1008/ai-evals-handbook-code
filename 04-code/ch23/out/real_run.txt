@@ -1,0 +1,49 @@
+  rq-001 supported=True SUPPORTED. The first passage explicitly states "A payment is
+  rq-002 supported=True SUPPORTED
+
+The first passage explicitly states "The late fee
+  rq-003 supported=True SUPPORTED. The first passage explicitly states that "One lat
+  rq-004 supported=True SUPPORTED, because the first passage explicitly states "A re
+  rq-005 supported=True SUPPORTED. The second passage explicitly states "A borrower 
+  rq-006 supported=True SUPPORTED. The first passage explicitly states that "Before 
+  rq-007 supported=True SUPPORTED. The first passage explicitly states that "Hardshi
+  rq-008 supported=True SUPPORTED
+
+The first passage directly states that "After pay
+  rq-009 supported=False UNSUPPORTED
+
+The passages are operational notes about staff 
+  rq-010 supported=True SUPPORTED
+
+The first passage explicitly states that "Borrowe
+  rq-011 supported=True SUPPORTED. The passages explicitly state "A payment is late 
+  rq-012 supported=True SUPPORTED. The second passage explicitly states "The late fe
+  rq-013 supported=True SUPPORTED. The passages explicitly state that "One late-fee 
+  rq-014 supported=True SUPPORTED. The first passage explicitly states that "A retur
+  rq-015 supported=True SUPPORTED. The third passage explicitly states "A borrower m
+  rq-016 supported=True SUPPORTED
+
+The third passage explicitly states that "Before 
+  rq-017 supported=True SUPPORTED
+
+The first passage explicitly states that "Hardshi
+  rq-018 supported=True SUPPORTED
+
+The first passage explicitly states that "After p
+  rq-019 supported=True SUPPORTED
+
+The first passage explicitly states that "A payof
+  rq-020 supported=True SUPPORTED
+
+The first passage explicitly states that "Borrowe
+  rq-021 supported=True SUPPORTED
+
+The first passage explicitly states "A payment is
+  rq-022 supported=True SUPPORTED. The first passage explicitly states "The late fee
+  rq-023 supported=False UNSUPPORTED
+
+The passages provided discuss returned-payment 
+  rq-024 supported=True SUPPORTED
+
+The first passage explicitly states that "A retur
+wrote /workspace/ai-evals-book/04-code/ch23/out/real_grounding.json; 22/24 supported; ~$0.010

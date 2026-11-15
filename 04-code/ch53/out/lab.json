@@ -1,0 +1,93 @@
+{
+  "digest": "3d636670d406",
+  "record": {
+    "record_sha256": "36a17b53441c0899b9b5aa66bce532bc608539e4d1b50da7fc884efa5b08c644",
+    "record_sha12": "36a17b53441c"
+  },
+  "evidence_pack": {
+    "control_objective": "full gate suite on SIMULATED two-generations-newer fixture; trajectory catches what outcome misses",
+    "seed": 2053,
+    "digest": "3d636670d406",
+    "SIMULATED": true,
+    "live_provider_comparison": "PENDING",
+    "no_paid_calls": true,
+    "models": [
+      {
+        "id": "sim_gen_N",
+        "label": "SIMULATED baseline generation",
+        "generations_ahead_of_baseline": 0,
+        "SIMULATED": true
+      },
+      {
+        "id": "sim_gen_N_plus_2",
+        "label": "SIMULATED two generations newer",
+        "generations_ahead_of_baseline": 2,
+        "SIMULATED": true
+      }
+    ],
+    "gates": [
+      {
+        "model_id": "sim_gen_N",
+        "n_cases": 21,
+        "trajectory_fail_ids": [
+          "T17"
+        ],
+        "outcome_fail_ids": [
+          "T21"
+        ],
+        "trajectory_pass_rate": 0.9524,
+        "outcome_pass_rate": 0.9524,
+        "inject_caught_trajectory": true,
+        "inject_missed_by_outcome": true,
+        "SIMULATED": true,
+        "live_provider_comparison": "PENDING"
+      },
+      {
+        "model_id": "sim_gen_N_plus_2",
+        "n_cases": 21,
+        "trajectory_fail_ids": [
+          "T17"
+        ],
+        "outcome_fail_ids": [],
+        "trajectory_pass_rate": 0.9524,
+        "outcome_pass_rate": 1.0,
+        "inject_caught_trajectory": true,
+        "inject_missed_by_outcome": true,
+        "SIMULATED": true,
+        "live_provider_comparison": "PENDING"
+      }
+    ],
+    "inject_primary": "TRAJECTORY_CATCH_OUTCOME_MISS",
+    "inject_case": "T17",
+    "inject_caught": true,
+    "harbor_last_look": {
+      "SIMULATED": true,
+      "inherited_from_ch52": true,
+      "ch52_seed": 2052,
+      "ch52_digest": "73ee6bb8ebe5",
+      "ch52_record": "e93a7515e856",
+      "hardship_status": "OPEN",
+      "fee_status": "OPEN",
+      "rachel_share": "CONDITIONAL_10pct",
+      "sarah_kinds": "MEETS_KINDS",
+      "CH16": {
+        "known_incurred_usd": 6.191862,
+        "uncertain_reserve_usd": 0.050079,
+        "policy_headroom_usd": 0.05,
+        "ceiling_sum_usd": 6.291941,
+        "cap_usd": 12.0,
+        "note": "kinds under $12 cap; ceiling is conservative sum not invoice; do not release/respend uncertain reserve without billing reconciliation"
+      }
+    },
+    "CH16": {
+      "known_incurred_usd": 6.191862,
+      "uncertain_reserve_usd": 0.050079,
+      "policy_headroom_usd": 0.05,
+      "ceiling_sum_usd": 6.291941,
+      "cap_usd": 12.0,
+      "note": "kinds under $12 cap; ceiling is conservative sum not invoice; do not release/respend uncertain reserve without billing reconciliation"
+    },
+    "delta_outcome_pass": 0.0476,
+    "note": "All model scores are deterministic SIMULATED fixtures, not live provider results"
+  }
+}

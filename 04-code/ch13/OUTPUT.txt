@@ -1,0 +1,149 @@
+
+== A. Fixture: 300 hardship traces (SIMULATED, seed 2026)
+Truss 0.16.0; 300 traces; sources {'harbor-golden v1.1': 262, 'July production': 38}; Spanish 51; two-loan 61
+  required action under HP-2027-04 with HB-2027-07 (hidden from everyone in the story): {'decline_window': 58, 'ask_income': 51, 'refer_to_officer': 43, 'ask_which_loan': 33, 'draft_deferral': 113, 'cannot_tell': 2}
+  traces where the written text and the bulletin differ (disaster forbearance inside 12 months): 7
+one trace as the screen shows it:
+t-059370 2027-02-26 [en]
+Account: two loans (does not say which loan); 0 payments behind; no prior relief on record
+Borrower: lost hours at work, employed, gives no income figure
+Compass: Which of your two loans is this about?
+
+== B. The labelling screen under streamlit.testing (AppTest)
+  grace saw t-059370, saved, next t-126740; ben's first trace t-059370; grace's reason or count visible on ben's screen: False; ben's count after his own save: Labels saved by you: 1
+  adjudicator screen: 1 disagreements under guideline r2; Reader A: decline_window (relief inside 12 months)  |  Reader B: draft_deferral (eligible)
+  stored rows: [('grace', 'decline_window', 'r2'), ('ben', 'draft_deferral', 'r2')]
+
+== C. Pilot: 40 traces under revision 1 (Wed 30 June and Thu 1 July 2027)
+  pilot, revision 1: n=40 percent agreement 62.5%; Cohen's kappa 0.50 (95% 0.30 to 0.69); Krippendorff's alpha 0.50; disagreements 15
+  disagreements by what a reread showed: {'take-home pay (G-05)': 9, 'loan reference': 1, 'other': 3, 'window start or end (G-06)': 2}
+  Grace's single sitting: 131 minutes; Ben's longest 74
+
+== D. Session one: 120 traces under revision 2 (Tue 6 to Fri 9 July 2027), through the store
+  session one, revision 2: n=120 percent agreement 80.0%; Cohen's kappa 0.72 (95% 0.63 to 0.82); Krippendorff's alpha 0.72; disagreements 24
+  per-label kappa: which 0.84, income 0.97, window 0.38, refer 0.71, draft 0.73, ct 1.00
+  per-label percent agreement: which 97.5%, income 99.2%, window 84.2%, refer 92.5%, draft 86.7%, ct 100.0%
+  largest off-diagonal cells (grace, ben): [('window', 'draft', 11), ('window', 'refer', 5), ('draft', 'income', 1)]
+  the 11 traces in that cell, by (relief kind, granted 12+ months ago, ended under 12 months ago): {('deferral', True, True): 9, ('extension', True, True): 2}
+  adjudicator queue from the store: 24 disagreements; first shown as A=decline_window, B=draft_deferral
+
+== E. Revision 3: the remaining 140 traces (Tue 13 to Fri 23 July 2027) and re-reads
+  remaining 140, revision 3: n=140 percent agreement 96.4%; Cohen's kappa 0.95 (95% 0.91 to 0.99); Krippendorff's alpha 0.95; disagreements 5
+  per-label kappa: which 0.94, income 0.95, window 0.97, refer 0.97, draft 0.95, ct 0.00
+  re-read of 65 earlier traces touched by G-05 or G-06: n=65 percent agreement 95.4%; Cohen's kappa 0.93 (95% 0.84 to 1.00); Krippendorff's alpha 0.93; disagreements 3
+  all revision 3 labels: n=205 percent agreement 96.1%; Cohen's kappa 0.95 (95% 0.91 to 0.98); Krippendorff's alpha 0.95; disagreements 8
+
+== F. Adjudication (Diane Porter) and the agreed-label audit
+  records 300; by kind {'agreed': 250, 'guideline': 27, 'slip': 15, 'fact': 3, 'policy': 5}; by status {'final': 294, 'pending': 5, 'cannot_tell': 1}
+  agreed labels the audit contested: 6
+  gold before Victor rules: refused (5 records wait for a policy ruling, e.g. ['t-087528', 't-128360', 't-028768'])
+  after HB-2027-07 (Thu 15 July 2027): 5 pending records re-derived without a re-read; labels {'draft_deferral': 4, 'refer_to_officer': 1}
+
+== G. The gold set
+  hardship-gold v1.0: 299 gold labels (cannot_tell removed: 1); record digest 306ab9435548; kinds {'agreed': 250, 'guideline': 27, 'slip': 15, 'fact': 3, 'policy': 5}
+  gold labels that differ from the simulation's hidden answer: 2 (a real team cannot compute this)
+  of 262 single-officer labels carried from harbor-golden v1.1, 19 changed under double reading: {'disaster forbearance': 7, 'loan reference': 4, 'single-reader slip': 8}
+
+== H. Expert hours and fatigue
+  decision labels and meetings: 38.2 hours ($2,290 at $60): grace 15.3, ben 15.9, diane 7.0
+  slips (disagreements no guideline reading explains) by minute in the sitting: 0-15: 4/63; 15-30: 5/122; 30-45: 6/152; 45-60: 0/3; 60-: 5/22
+  slip rulings by sitting minute: {'under 45': 12, 'over 45': 3}
+
+== I. Explanation gold: three claims on 60 replies, double read under revision 3 (week of 26 July 2027)
+  next_step: agreement 93.3%, kappa 0.63 (95% 0.20 to 0.92), alpha 0.63; share true 97%
+  reason: agreement 81.7%, kappa 0.16 (95% -0.13 to 0.47), alpha 0.17; share true 95%
+  approval_sentence: agreement 100.0%, kappa 1.00 (95% 1.00 to 1.00), alpha 1.00; share true 58%
+  explanation reading time: 4.2 hours for 60 replies (about 2.1 minutes per reply per reader, on top of the decision label)
+
+== J. Drift: 16 anchor traces with adjudicated gold, 8 re-read each week, blind and mixed into batches
+  ben 2027-07-12: 8/8 (100%); take-home anchors 4/4
+  ben 2027-07-19: 8/8 (100%); take-home anchors 4/4
+  ben 2027-07-26: 6/8 (75%); take-home anchors 2/4
+  ben 2027-08-02: 8/8 (100%); take-home anchors 4/4
+  grace 2027-07-12: 8/8 (100%); take-home anchors 4/4
+  grace 2027-07-19: 8/8 (100%); take-home anchors 4/4
+  grace 2027-07-26: 7/8 (88%); take-home anchors 4/4
+  grace 2027-08-02: 8/8 (100%); take-home anchors 4/4
+  Fri 30 July: fifteen-minute calibration with Ben on G-05; the 2 August read is after it
+
+== K. FM-07 validation read: is C-08 FM-07's instrument? (April fixture from Chapter 9)
+  account questions 3057; C-08 fails 158, of which the unsourced number is a date: 133
+  read 40 date flags: 40 are FM-07; read 60 passes: 0 are FM-07 (one-sided 95% bound on the miss rate among passes 4.9%)
+  whole fixture (no team sees this): date flags that are FM-07 133/133; FM-07 among passes 0/2779
+
+== L. What 300 expert labels buy against Victor's hardship target
+  299 gold labels: one-sided 95% bound with 0 / 1 failures 1.00% / 1.58%; target 0.5% needs 598 / 947 (Chapter 12)
+
+== M. Expert hours: the plan of Mon 28 June against what the build used (to Fri 30 July 2027)
+  kick-off                         plan  2.25  actual  2.25
+  pilot labels                     plan  4.00  actual  4.31
+  session one labels               plan  9.00  actual  9.22
+  remaining 140 labels             plan 10.50  actual 11.04
+  re-reads after a revision        plan  0.00  actual  3.76
+  explanation labels               plan  4.00  actual  4.20
+  anchor re-reads                  plan  1.50  actual  1.76
+  guideline revision meetings      plan  2.00  actual  2.83
+  adjudication and re-derivation   plan  3.50  actual  4.00
+  acceptance memo review           plan  0.75  actual  0.75
+  reserve                          plan  2.50  actual  0.00
+  total plan 40.00 h ($2,400); actual 44.12 h ($2,647) at $60 an hour
+== 1. Without the agreed-label audit
+  agreed labels the audit reopened: 6; kept as agreed, 1 would be wrong against the final policy, and every one of the 5 policy cases would carry a label nobody had ruled on
+== 2. One reader on everything, a second reader on a 20% sample
+  traces 300; second-read sample 60; single-read labels that differ from the adjudicated gold and were never second-read: 10; differences the sample found: 1
+  reading hours: double 22.5; single plus 20% 13.3
+  what the sample estimates: disagreement rate 1/60 = 1.7%, so about 4 wrong labels left in the unread 80%
+== 3. Sittings of up to 90 minutes
+  cap 45 minutes: 8 slipped labels in 240 (3.3%)
+  cap 90 minutes: 11 slipped labels in 240 (4.6%)
+documents: 160 {'pay_stub': 70, 'hardship_letter': 40, 'bank_statement': 50} hd-0201 to hd-0360
+languages: {'en': 134, 'es': 26} quality: {'clean': 114, 'photo': 46}
+traps: {'two_reasons': 10, 'signed_amounts': 13, 'balance_adjacent': 6, 'total_deposits_line': 12, 'two_periods': 5, 'ytd_first': 5, 'two_loans': 12, 'gross_not_printed': 2, 'frequency_unlabelled': 5, 'hourly_only': 6, 'net_stated': 14, 'abbreviated': 5, 'date_at_end': 5, 'pending_after_period': 6, 'page_break': 6}
+period ends: 2027-04-30 to 2027-06-30 ; uploads: 2027-06-01 to 2027-07-01
+== June set: 160 documents; 160 replies cached from claude-haiku-4-5-20251001 (137,640 input / 56,385 output tokens); prompts {'extract-prompt-v1': 134, 'extract-prompt-v2': 26}
+  replies that did not parse after fence repair: 0 []
+  Victor's rule, critical fields:
+    doc_type                0/160   0.0%  upper   1.7%  PASS
+    period_end              1/160   0.6%  upper   2.8%  PASS
+    pay_frequency           1/70    1.4%  upper   6.2%  FAIL
+    gross_pay               1/70    1.4%  upper   6.2%  FAIL
+    payroll_total           0/50    0.0%  upper   5.1%  FAIL
+    stated_monthly_income   0/29    0.0%  upper   8.5%  FAIL
+    loan_last4              1/40    2.5%  upper  10.5%  FAIL
+    hardship_reason         0/40    0.0%  upper   6.3%  FAIL
+    error hd-0214 en photo gross_pay              got 4045.0 gold 4044.92
+    error hd-0255 es clean period_end             got '2027-08-06' gold '2027-06-08'
+    error hd-0271 en photo pay_frequency          got 'biweekly' gold 'weekly'
+    error hd-0297 es photo loan_last4             got '7B23' gold '7823'
+  documents with every field right 147/160; hardship decisions changed 3 ['hd-0255', 'hd-0271', 'hd-0297']
+claude-haiku-4-5-20251001 r2 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07']
+    G-06 readings: ['A deferral or extension that ended exactly 12 calendar months ago counts as within the window and triggers decline_window', 'A deferral or extension that ended exactly 12 calendar months ago is outside the window (12+ months) and does not trigger decline_window']
+claude-haiku-4-5-20251001 r2 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ['Count only deferrals or extensions that explicitly ended or were formally closed within the last 12 months', 'Count deferrals or extensions that were active at any point within the last 12 months, even if they started earlier']
+claude-haiku-4-5-20251001 r2 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ['Relief that ended exactly 12 months ago counts as within the window', 'Relief that ended exactly 12 months ago counts as outside the window (12 or more months have passed)']
+claude-haiku-4-5-20251001 r3 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07']
+    G-06 readings: ['Count exactly 12 calendar months; relief ending exactly 12 months ago is still within the window', 'Relief ending 12 or more calendar months ago is outside the window; count from 12+ months as meeting the threshold']
+claude-haiku-4-5-20251001 r3 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ['Count from the exact date the relief ended; if fewer than 12 calendar months have passed, decline', 'Count calendar months completed; a relief that ended partway through a month may allow flexibility in when the 12-month window closes']
+claude-haiku-4-5-20251001 r3 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07']
+    G-06 readings: ['A previous relief that ended exactly 12 months ago is not inside the window (12+ months means eligible)', 'A previous relief that ended exactly 12 months ago is still inside the window (fewer than 12 months means from 0 to 11.99 months)']
+claude-sonnet-4-6 r2 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ["'In the last twelve months' means the relief ended fewer than 12 calendar months ago, consistent with policy 4.3", "'In the last twelve months' means the relief began (or was granted) within the last twelve months, which could include relief that started 11 months ago but ended more than 12 months ago"]
+claude-sonnet-4-6 r2 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-09']
+    G-06 readings: ["'In the last twelve months' means the relief ended fewer than 12 calendar months ago (strict per policy 4.3)", "'In the last twelve months' means the relief ended 12 or fewer calendar months ago (inclusive boundary)"]
+claude-sonnet-4-6 r2 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ["'In the last twelve months' means the prior relief ended fewer than 12 calendar months ago, consistent with policy 4.3", "'In the last twelve months' could be read as including relief that ended exactly 12 months ago (i.e., within the 12-month window), whereas policy 4.3 says 'fewer than 12 calendar months' so exactly 12 months ago does not count"]
+claude-sonnet-4-6 r3 run 0: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ["'Fewer than 12 calendar months' means the end date is within the 12-month period strictly before the conversation date, so exactly 12 months ago is outside the window (eligible)", "'Fewer than 12 calendar months' is ambiguous at the boundary: exactly 12 months ago could be read as still inside the window by one officer"]
+claude-sonnet-4-6 r3 run 1: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ['Label decline_window only when the relief ended fewer than 12 full calendar months before the conversation date', 'Label decline_window when the relief ended fewer than 12 calendar months before the conversation, counting inclusively or using a different boundary convention (e.g. exactly 12 months ago is still inside the window)']
+claude-sonnet-4-6 r3 run 2: flagged ['G-04', 'G-05', 'G-06', 'G-07', 'G-09']
+    G-06 readings: ["'Ended fewer than 12 calendar months before the conversation' means before the date of the conversation itself", "'Ended fewer than 12 calendar months before the conversation' means before the date of the first reply Compass sent"]
+
+summary (runs flagging each sentence, of 3):
+  claude-haiku-4-5-20251001 r2: G-04 3, G-05 3, G-06 3, G-07 3, G-09 2
+  claude-haiku-4-5-20251001 r3: G-04 3, G-05 3, G-06 3, G-07 3, G-09 1
+  claude-sonnet-4-6 r2: G-04 3, G-05 3, G-06 3, G-07 2, G-09 3
+  claude-sonnet-4-6 r3: G-04 3, G-05 3, G-06 3, G-07 3, G-09 3
+7 passed in 0.01s

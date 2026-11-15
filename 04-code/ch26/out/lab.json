@@ -1,0 +1,71 @@
+{
+  "seed": 2026,
+  "digest": "873a9ad87f66",
+  "levels": {
+    "clean": {
+      "mean_field_match": 0.9,
+      "e2e": 0.83,
+      "e2e_n": 83,
+      "wilson": [
+        0.7445181876635703,
+        0.8910652394022684
+      ]
+    },
+    "blur": {
+      "mean_field_match": 0.88,
+      "e2e": 0.77,
+      "e2e_n": 77,
+      "wilson": [
+        0.6784543514317231,
+        0.841568452531236
+      ]
+    },
+    "skew": {
+      "mean_field_match": 0.868,
+      "e2e": 0.75,
+      "e2e_n": 75,
+      "wilson": [
+        0.6569535362992417,
+        0.8245490599627573
+      ]
+    },
+    "glare": {
+      "mean_field_match": 0.746,
+      "e2e": 0.59,
+      "e2e_n": 59,
+      "wilson": [
+        0.4920125056109662,
+        0.6813284290433533
+      ]
+    },
+    "crop": {
+      "mean_field_match": 0.782,
+      "e2e": 0.58,
+      "e2e_n": 58,
+      "wilson": [
+        0.4820630799889527,
+        0.672017750814887
+      ]
+    },
+    "compression": {
+      "mean_field_match": 0.882,
+      "e2e": 0.78,
+      "e2e_n": 78,
+      "wilson": [
+        0.6892946528499969,
+        0.849988254963442
+      ]
+    }
+  },
+  "clean_e2e": 0.83,
+  "glare_e2e": 0.59,
+  "crop_e2e": 0.58,
+  "voice": {
+    "n": 40,
+    "mean_wer": 0.2071527777777778,
+    "task_success": 0.525,
+    "low_wer_task_fail": 8,
+    "high_wer_task_ok": 8
+  },
+  "touchpoint": "document extraction on scoreboard; voice pilot separate gold"
+}

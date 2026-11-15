@@ -1,0 +1,238 @@
+{
+  "seed": 2043,
+  "simulated": true,
+  "label": "offline_adapters_plus_SIM_inject",
+  "ceiling": 0.005,
+  "pinned_judge_version": "harbor-hardship-judge@2026-11-01",
+  "platforms": [
+    "langfuse",
+    "phoenix",
+    "braintrust",
+    "langsmith",
+    "promptfoo",
+    "deepeval"
+  ],
+  "receipts": {
+    "langfuse": {
+      "platform": "langfuse",
+      "n": 800,
+      "wrong_offers": 0,
+      "rate": 0.0,
+      "wilson_upper": 0.004779050997111869,
+      "ceiling": 0.005,
+      "admit": true,
+      "judge_version": "harbor-hardship-judge@2026-11-01",
+      "kind": "offline_adapter",
+      "notes": "langfuse offline adapter; scores pinned to judge_version=harbor-hardship-judge@2026-11-01"
+    },
+    "phoenix": {
+      "platform": "phoenix",
+      "n": 800,
+      "wrong_offers": 0,
+      "rate": 0.0,
+      "wilson_upper": 0.004779050997111869,
+      "ceiling": 0.005,
+      "admit": true,
+      "judge_version": "harbor-hardship-judge@2026-11-01",
+      "kind": "offline_adapter",
+      "notes": "phoenix offline adapter; scores pinned to judge_version=harbor-hardship-judge@2026-11-01"
+    },
+    "braintrust": {
+      "platform": "braintrust",
+      "n": 800,
+      "wrong_offers": 0,
+      "rate": 0.0,
+      "wilson_upper": 0.004779050997111869,
+      "ceiling": 0.005,
+      "admit": true,
+      "judge_version": "harbor-hardship-judge@2026-11-01",
+      "kind": "offline_adapter",
+      "notes": "braintrust offline adapter; scores pinned to judge_version=harbor-hardship-judge@2026-11-01"
+    },
+    "langsmith": {
+      "platform": "langsmith",
+      "n": 800,
+      "wrong_offers": 0,
+      "rate": 0.0,
+      "wilson_upper": 0.004779050997111869,
+      "ceiling": 0.005,
+      "admit": true,
+      "judge_version": "harbor-hardship-judge@2026-11-01",
+      "kind": "offline_adapter",
+      "notes": "langsmith offline adapter; scores pinned to judge_version=harbor-hardship-judge@2026-11-01"
+    },
+    "promptfoo": {
+      "platform": "promptfoo",
+      "n": 800,
+      "wrong_offers": 0,
+      "rate": 0.0,
+      "wilson_upper": 0.004779050997111869,
+      "ceiling": 0.005,
+      "admit": true,
+      "judge_version": "harbor-hardship-judge@2026-11-01",
+      "kind": "offline_adapter",
+      "notes": "promptfoo offline adapter; scores pinned to judge_version=harbor-hardship-judge@2026-11-01"
+    },
+    "deepeval": {
+      "platform": "deepeval",
+      "n": 800,
+      "wrong_offers": 0,
+      "rate": 0.0,
+      "wilson_upper": 0.004779050997111869,
+      "ceiling": 0.005,
+      "admit": true,
+      "judge_version": "harbor-hardship-judge@2026-11-01",
+      "kind": "offline_adapter",
+      "notes": "deepeval offline adapter; scores pinned to judge_version=harbor-hardship-judge@2026-11-01"
+    }
+  },
+  "all_pinned_admit": true,
+  "inject": {
+    "injection": "platform_default_rescores_different_judge_version",
+    "simulated": true,
+    "platform": "langsmith",
+    "pinned": {
+      "platform": "langsmith",
+      "n": 800,
+      "wrong_offers": 0,
+      "rate": 0.0,
+      "wilson_upper": 0.004779050997111869,
+      "ceiling": 0.005,
+      "admit": true,
+      "judge_version": "harbor-hardship-judge@2026-11-01",
+      "kind": "offline_adapter",
+      "notes": "langsmith offline adapter; scores pinned to judge_version=harbor-hardship-judge@2026-11-01"
+    },
+    "drifted": {
+      "platform": "langsmith",
+      "n": 800,
+      "wrong_offers": 20,
+      "rate": 0.025,
+      "wilson_upper": 0.03829921471936246,
+      "ceiling": 0.005,
+      "admit": false,
+      "judge_version": "platform-default-judge@unpinned",
+      "kind": "offline_adapter",
+      "notes": "langsmith offline adapter; scores pinned to judge_version=platform-default-judge@unpinned"
+    },
+    "extra_wrong_offers": 20,
+    "lesson": "A platform default that re-scores with a different judge version can move the hardship gate without a product change; pin judge_version in Truss.",
+    "detect": true,
+    "gate_changed": true
+  },
+  "capability_matrix": [
+    {
+      "platform": "langfuse",
+      "traces": "strong",
+      "datasets": "strong",
+      "judges": "strong",
+      "gates": "present",
+      "reports": "strong",
+      "residency": "self-host+cloud",
+      "otel": "present"
+    },
+    {
+      "platform": "phoenix",
+      "traces": "strong",
+      "datasets": "strong",
+      "judges": "strong",
+      "gates": "present",
+      "reports": "strong",
+      "residency": "self-host+cloud",
+      "otel": "strong"
+    },
+    {
+      "platform": "braintrust",
+      "traces": "strong",
+      "datasets": "strong",
+      "judges": "strong",
+      "gates": "present",
+      "reports": "strong",
+      "residency": "cloud-first",
+      "otel": "present"
+    },
+    {
+      "platform": "langsmith",
+      "traces": "strong",
+      "datasets": "strong",
+      "judges": "strong",
+      "gates": "present",
+      "reports": "strong",
+      "residency": "cloud+enterprise",
+      "otel": "present"
+    },
+    {
+      "platform": "promptfoo",
+      "traces": "thin",
+      "datasets": "present",
+      "judges": "present",
+      "gates": "strong",
+      "reports": "present",
+      "residency": "local+ci",
+      "otel": "thin"
+    },
+    {
+      "platform": "deepeval",
+      "traces": "thin",
+      "datasets": "present",
+      "judges": "strong",
+      "gates": "strong",
+      "reports": "present",
+      "residency": "local+optional-cloud",
+      "otel": "thin"
+    }
+  ],
+  "recommendations": [
+    {
+      "context": "Regulated bank; self-host preference; OTel already in stack",
+      "pick": "phoenix",
+      "also": "langfuse",
+      "avoid_as_sole": "cloud-only SaaS without residency controls",
+      "as_of": "2026-11-09"
+    },
+    {
+      "context": "Product team already on LangChain; needs annotation queues",
+      "pick": "langsmith",
+      "also": "braintrust",
+      "avoid_as_sole": "CI-only assert runner",
+      "as_of": "2026-11-09"
+    },
+    {
+      "context": "CI-first PR gates + red-team scans; thin ops team",
+      "pick": "promptfoo",
+      "also": "deepeval",
+      "avoid_as_sole": "hosted UI without export discipline",
+      "as_of": "2026-11-09"
+    },
+    {
+      "context": "Pytest-native metrics library; custom G-Eval rubrics",
+      "pick": "deepeval",
+      "also": "promptfoo",
+      "avoid_as_sole": "full observability replacement",
+      "as_of": "2026-11-09"
+    },
+    {
+      "context": "Online scoring on production logs + experiment UX",
+      "pick": "braintrust",
+      "also": "langsmith",
+      "avoid_as_sole": "local YAML-only workflow",
+      "as_of": "2026-11-09"
+    },
+    {
+      "context": "Open-source default; datasets from production traces",
+      "pick": "langfuse",
+      "also": "phoenix",
+      "avoid_as_sole": "vendor lock without OpenTelemetry export",
+      "as_of": "2026-11-09"
+    }
+  ],
+  "ch16_ceiling_immutable": {
+    "charged_usd": 6.191862,
+    "unknown_reserve_usd": 0.050079,
+    "headroom_usd": 0.05,
+    "safe_ceiling_usd": 6.291941,
+    "order_not_decide": true
+  },
+  "hosted_platform_runs": "PENDING \u2014 no paid API; adapters are offline contracts",
+  "digest": "0f6e150887374ca5"
+}

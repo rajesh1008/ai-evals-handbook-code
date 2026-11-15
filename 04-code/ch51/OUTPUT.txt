@@ -1,0 +1,8 @@
+Ch51 OUTPUT — SIMULATED four teaching cases + Toronto offline/online mismatch
+seed=2051 digest=731ae5d6148e record=443c07184ea1
+offline_pass=0.9567 sliced_by_cycle_day=False
+online_edge_complaints=5 root=offline_taxonomy_missing_BillingCycleEdge
+inject=HOLD_TAXONOMY_NONTRANSLATE foreign_n=5
+CH16_ceiling=6.291941 (kinds; not invoice)
+live_provider_sweeps=PENDING
+SIMULATED=True — teaching scenarios; not observed client history

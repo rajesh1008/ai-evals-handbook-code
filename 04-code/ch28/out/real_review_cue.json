@@ -1,0 +1,154 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 24,
+  "correct": 17,
+  "accuracy": 0.7083333333333334,
+  "rows": [
+    {
+      "gold": "stamp",
+      "pred": "stamp",
+      "ok": true,
+      "desc": "Officer approved 40 of 40 offers in 4 seconds median; override rate 0%"
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Officer overrode 7 of 40; median 32 seconds; cited policy twice."
+    },
+    {
+      "gold": "stamp",
+      "pred": "stamp",
+      "ok": true,
+      "desc": "Approvals in under 5 seconds on 38/40; no comments."
+    },
+    {
+      "gold": "ok",
+      "pred": "bias",
+      "ok": false,
+      "desc": "Median 45 seconds; override 15%; flagged two income gaps."
+    },
+    {
+      "gold": "stamp",
+      "pred": "ok",
+      "ok": false,
+      "desc": "99.5% approval rate matching model; mean 3.2 seconds."
+    },
+    {
+      "gold": "ok",
+      "pred": "bias",
+      "ok": false,
+      "desc": "Disagreed with model on 6 hardship edges; slow on those."
+    },
+    {
+      "gold": "bias",
+      "pred": "bias",
+      "ok": true,
+      "desc": "Changed correct independent call to match wrong AI on 3 of 10 plants."
+    },
+    {
+      "gold": "ok",
+      "pred": "bias",
+      "ok": false,
+      "desc": "Blind condition matched gold on planted wrong AI offers."
+    },
+    {
+      "gold": "stamp",
+      "pred": "stamp",
+      "ok": true,
+      "desc": "Same approval text pasted on 25 consecutive reviews."
+    },
+    {
+      "gold": "bias",
+      "pred": "bias",
+      "ok": true,
+      "desc": "Followed AI deferral that gold marks refuse; saw recommendation."
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Second reviewer agreed with first on 18/20; times 20\u201360s."
+    },
+    {
+      "gold": "stamp",
+      "pred": "ok",
+      "ok": false,
+      "desc": "Override rate 0.4% on 250 reviews; p90 time 8 seconds."
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Fatigue curve flat after break; late-bin agreement holds."
+    },
+    {
+      "gold": "bias",
+      "pred": "bias",
+      "ok": true,
+      "desc": "Under time pressure followed AI on 4 wrong plants."
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Requested more docs instead of approving borderline offer."
+    },
+    {
+      "gold": "stamp",
+      "pred": "bias",
+      "ok": false,
+      "desc": "Zero overrides all week; chat shows streaming click-through."
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Calibration session moved one officer closer to gold."
+    },
+    {
+      "gold": "bias",
+      "pred": "bias",
+      "ok": true,
+      "desc": "Anchored on AI fee waiver; gold says charge."
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Escalated to senior when AI and policy notes conflicted."
+    },
+    {
+      "gold": "stamp",
+      "pred": "stamp",
+      "ok": true,
+      "desc": "Approved while on phone; timestamps <2s apart for 15 items."
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Wrote reason codes on every override."
+    },
+    {
+      "gold": "bias",
+      "pred": "bias",
+      "ok": true,
+      "desc": "Took AI hardship months despite gold prior-deferral block."
+    },
+    {
+      "gold": "ok",
+      "pred": "ok",
+      "ok": true,
+      "desc": "Post-review error 2/100 after sampling second review."
+    },
+    {
+      "gold": "stamp",
+      "pred": "bias",
+      "ok": false,
+      "desc": "Dashboard shows 99.2% approval; leadership celebrates."
+    }
+  ],
+  "simulated_humans_in_lab": true
+}

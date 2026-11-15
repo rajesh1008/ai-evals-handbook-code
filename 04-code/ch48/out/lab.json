@@ -1,0 +1,70 @@
+{
+  "SIMULATED": true,
+  "evidence_pack": {
+    "control_objective": "hiring loop scores trace-review findings; vocabulary-reward rubrics must be caught as failure injections",
+    "digest": "9a9d842a198b",
+    "seed": 2048,
+    "n_traces": 8,
+    "rows": [
+      {
+        "review_key": "findings_first",
+        "candidate": "A",
+        "findings": {
+          "rubric": "findings",
+          "hits": 5,
+          "s1_hits": 2,
+          "false_alarms": 0,
+          "score": 32,
+          "rank_key": 32
+        },
+        "vocabulary": {
+          "rubric": "vocabulary_reward",
+          "vocab_count": 3,
+          "notes_count": 5,
+          "score": 14,
+          "rank_key": 14,
+          "FAILURE_INJECTION": true
+        }
+      },
+      {
+        "review_key": "vocabulary_heavy",
+        "candidate": "B",
+        "findings": {
+          "rubric": "findings",
+          "hits": 0,
+          "s1_hits": 0,
+          "false_alarms": 5,
+          "score": -10,
+          "rank_key": -10
+        },
+        "vocabulary": {
+          "rubric": "vocabulary_reward",
+          "vocab_count": 18,
+          "notes_count": 5,
+          "score": 59,
+          "rank_key": 59,
+          "FAILURE_INJECTION": true
+        }
+      }
+    ],
+    "rank_findings": [
+      "A",
+      "B"
+    ],
+    "rank_vocabulary": [
+      "B",
+      "A"
+    ],
+    "inversion": true,
+    "winner_findings": "A",
+    "winner_vocabulary": "B",
+    "SIMULATED": true,
+    "live_provider_eval_sweeps": "PENDING",
+    "paid_calls": false
+  },
+  "record": {
+    "record_sha12": "9f17e678e998",
+    "experiment_id": "ch48-hiring-trace-review"
+  },
+  "digest": "9a9d842a198b"
+}

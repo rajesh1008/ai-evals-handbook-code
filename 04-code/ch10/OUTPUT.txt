@@ -1,0 +1,106 @@
+### replies.py (real model run, cached)
+replies cached: 200 of 200; model claude-haiku-4-5-20251001; tokens in 33,024 out 27,427
+
+### restyle.py (real model run, cached)
+restyled 200; mean words 105 -> 148; tokens in 46,627 out 37,727
+
+### lab.py
+== 1. The 200 labelled traces (Chapter 8's March fee draw, MC-02 v1.1)
+traces 200: t-092063 to t-100085; verdicts {'pass': 162, 'deferred': 23, 'wrong': 15}
+wrong by mode: {'FM-22': 4, 'FM-06': 10, 'FM-24': 1}
+reply texts written by claude-haiku-4-5-20251001 from each trace's facts; mean 105 words
+
+== 2. Five reference metrics against per-trace references (fee-refs-2027-05)
+metric              AUC  95% interval  mean right mean wrong rho len  wrong in 40 lowest  right flagged to catch 15
+exact match       0.500  0.500-0.500        0.000      0.000     nan            1 of 15                 185 of 185
+BLEU              0.987  0.961-1.000        0.140      0.035   -0.63           14 of 15                  31 of 185
+ROUGE-L           0.983  0.965-0.996        0.324      0.154   -0.73           15 of 15                  13 of 185
+BERTScore         0.971  0.943-0.992        0.842      0.785   -0.68           14 of 15                  27 of 185
+embedding cosine  0.998  0.993-1.000        0.913      0.800   -0.18           15 of 15                   5 of 185
+reading 40 at random finds 3 of 15 on average
+Spearman with being right: BLEU 0.44; ROUGE-L 0.44; BERTScore 0.43; embedding cosine 0.45
+mean words: wrong replies 108, right replies 104
+
+== 3. Mean score by situation (cosine, BLEU)
+right_no        n=139  cosine 0.912  BLEU 0.143
+right_waive     n= 23  cosine 0.910  BLEU 0.073
+defer_review    n= 16  cosine 0.917  BLEU 0.177
+defer_tool      n=  6  cosine 0.933  BLEU 0.227
+defer_needless  n=  1  cosine 0.857  BLEU 0.196
+F_waive         n= 10  cosine 0.802  BLEU 0.038
+X_wrongloan     n=  4  cosine 0.780  BLEU 0.034
+X_invent        n=  1  cosine 0.858  BLEU 0.014
+
+== 4. Where no per-trace reference exists: one reference per question (the 'stands' answer for all)
+exact match       AUC 0.500 (0.500-0.500)
+BLEU              AUC 0.431 (0.292-0.569)
+ROUGE-L           AUC 0.446 (0.341-0.559)
+BERTScore         AUC 0.487 (0.373-0.595)
+embedding cosine  AUC 0.617 (0.522-0.706)
+
+== 5. The same replies in a candidate's longer style (restyle.py), cut-offs carried from section 2
+mean words 105 -> 148; decisions changed by the rewrite (model extraction): 0
+exact match       AUC 0.500  at cut 0.000: wrong caught 15 of 15, right flagged 185 -> 185 of 185; role none
+BLEU              AUC 0.990  at cut 0.086: wrong caught 15 of 15, right flagged 31 -> 83 of 185; role order
+ROUGE-L           AUC 0.943  at cut 0.214: wrong caught 15 of 15, right flagged 13 -> 57 of 185; role order
+BERTScore         AUC 0.963  at cut 0.812: wrong caught 15 of 15, right flagged 27 -> 46 of 185; role order
+embedding cosine  AUC 0.999  at cut 0.858: wrong caught 14 of 15, right flagged 5 -> 2 of 185; role order
+
+== 6. Partial credit by fact: pattern extraction against model extraction
+status read correctly: pattern 128 of 200, model 200 of 200 (model on the restyled replies: 200 of 200)
+pattern misreads: F_waive read as waived 9; X_wrongloan read as none 3; right_no read as none 58; right_no read as waived 2
+mean partial credit, pass    : 1.000 (n=162)
+mean partial credit, deferred: 1.000 (n=23)
+mean partial credit, wrong   : 0.644 (n=15)
+critical fact wrong: wrong replies 15 of 15; right replies 0 of 185
+failed critical facts by mode: FM-06 status: 10; FM-22 status: 4; FM-24 status: 1
+model extraction cost for 200 replies: 50,627 input and 5,445 output tokens
+
+== 7. Reading in score order: replies read, lowest first, until all 15 wrong are found
+per-trace reference  BLEU 46; ROUGE-L 28; BERTScore 42; embedding cosine 20
+longer style         BLEU 22; ROUGE-L 58; BERTScore 44; embedding cosine 17
+build-phase key      BLEU 122; ROUGE-L 196; BERTScore 195; embedding cosine 179
+reading at random finds all 15 after about 188 replies on average (expected maximum position of 15 in 200)
+per-trace reference: embedding cosine order, wrong replies among the first five read: 5
+longer style: embedding cosine order, wrong replies among the first five read: 5
+
+### inject.py
+== Staleness check before scoring (truss.reference.stale)
+fee-refs-2027-05 (fee-schedule-2026-03, digest 71ce177a5890): current
+compass-answer-key (fee-schedule-2024-01, digest 29ff1cb3c1b3): written from fee-schedule-2024-01, not a current source; no reference for officer_tool
+
+== The 200 against the stale key
+exact      AUC 0.500 (0.500-0.500) vs current 0.500; right flagged to catch 14 of 15: 185 of 185; wrong in 40 lowest 1; role none
+bleu       AUC 0.649 (0.542-0.750) vs current 0.987; right flagged to catch 14 of 15: 105 of 185; wrong in 40 lowest 4; role order
+rouge_l    AUC 0.668 (0.500-0.823) vs current 0.983; right flagged to catch 14 of 15: 166 of 185; wrong in 40 lowest 6; role order
+bertscore  AUC 0.531 (0.377-0.688) vs current 0.971; right flagged to catch 14 of 15: 150 of 185; wrong in 40 lowest 3; role none
+cosine     AUC 0.625 (0.476-0.767) vs current 0.998; right flagged to catch 14 of 15: 162 of 185; wrong in 40 lowest 6; role none
+right waiver replies, mean cosine: current key 0.910, stale key 0.874
+
+== Ten planted ten-day replies
+current bleu       mean change, planted minus original +0.0023; planted in the 40 lowest of 210: 0 of 10
+current rouge_l    mean change, planted minus original +0.0000; planted in the 40 lowest of 210: 3 of 10
+current bertscore  mean change, planted minus original -0.0009; planted in the 40 lowest of 210: 2 of 10
+current cosine     mean change, planted minus original -0.0022; planted in the 40 lowest of 210: 2 of 10
+stale   bleu       mean change, planted minus original +0.0018; planted in the 40 lowest of 210: 0 of 10
+stale   rouge_l    mean change, planted minus original +0.0000; planted in the 40 lowest of 210: 1 of 10
+stale   bertscore  mean change, planted minus original +0.0013; planted in the 40 lowest of 210: 0 of 10
+stale   cosine     mean change, planted minus original -0.0001; planted in the 40 lowest of 210: 1 of 10
+
+== The same ten against the fee tool's value (a reference value, not a reference text)
+grace period stated: ['ten']; tool returns 15; mismatches 10 of 10; originals mismatched 0 of 10
+
+### try_its.py
+== Try it 1: chrF as a sixth metric
+chrF AUC 0.996; cut 0.325 catches 15 and flags 3 right; on the longer replies it flags 23 right
+
+== Try it 2: a wrong amount, $25 changed to $35 in twenty right 'stands' replies
+bleu       mean change -0.0209; below the catch-15 cut-off: 3 of 20
+rouge_l    mean change -0.0086; below the catch-15 cut-off: 1 of 20
+bertscore  mean change -0.0011; below the catch-15 cut-off: 4 of 20
+cosine     mean change -0.0007; below the catch-15 cut-off: 0 of 20
+
+== Try it 3: a dropped negation in a contract clause (the Frankfurt cameo)
+drops 'not'      ROUGE-L 0.966  BLEU 0.820  BERTScore 0.990  cosine 0.885
+right, reworded  ROUGE-L 0.345  BLEU 0.104  BERTScore 0.905  cosine 0.902
+token F1, 'fifty years' against '50 years': 0.50

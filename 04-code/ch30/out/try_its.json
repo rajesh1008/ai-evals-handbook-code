@@ -1,0 +1,41 @@
+{
+  "try1_ignore_latency_decision": {
+    "decision": "SHIP",
+    "reason": "no_hold_regressions",
+    "regressions": []
+  },
+  "try2_notice_windows": {
+    "days90": {
+      "notice_days": 90,
+      "suite_ready": true,
+      "migration_hold": true,
+      "accept_cutover": false,
+      "status": "NOT_READY"
+    },
+    "days45": {
+      "notice_days": 45,
+      "suite_ready": true,
+      "migration_hold": false,
+      "accept_cutover": false,
+      "status": "NOT_READY"
+    }
+  },
+  "try3_if_latency_improved": {
+    "decision": "SHIP",
+    "reason": "no_hold_regressions",
+    "regressions": []
+  },
+  "baseline_hold": {
+    "decision": "HOLD",
+    "reason": "regression",
+    "regressions": [
+      {
+        "metric": "latency_ms",
+        "baseline": 812.0703333333333,
+        "candidate": 935.4146666666668,
+        "delta": -123.34433333333345
+      }
+    ]
+  },
+  "simulated": true
+}

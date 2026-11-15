@@ -1,0 +1,46 @@
+{
+  "seed": 2046,
+  "simulated": true,
+  "kind": "SIMULATED",
+  "ch45_digest_ref": "af63808723f1",
+  "ch45_record_ref": "3d4c15e44e50",
+  "n": 2400,
+  "target": 0.005,
+  "pre_overall": {
+    "k": 23,
+    "n": 2400
+  },
+  "post_overall": {
+    "k": 11,
+    "n": 2400
+  },
+  "hot_segment": {
+    "name": "phone\u00d7signature",
+    "pre_k": 14,
+    "post_k": 2,
+    "n": 400
+  },
+  "pack_metric": {
+    "metric_id": "wrong_hardship_offer_rate",
+    "definition": "binary wrong-offer under pinned gold on frozen hardship offers; Wilson 95% upper vs 0.5%",
+    "unit": "offer",
+    "denominator": "frozen hardship offers in digest population",
+    "gold_digest": "af63808723f1",
+    "version": "v1-pack"
+  },
+  "dashboard_metric_drift": {
+    "metric_id": "wrong_hardship_offer_rate",
+    "definition": "binary wrong-offer under pinned gold on frozen hardship conversations; Wilson 95% upper vs 0.5%",
+    "unit": "conversation",
+    "denominator": "hardship conversations in last 30 days (rolling)",
+    "gold_digest": "af63808723f1",
+    "version": "v1-dashboard-drift"
+  },
+  "owners": {
+    "ship": "Victor Lane",
+    "eval_lead": "evaluation lead",
+    "product": "product",
+    "counsel_challenge": "counsel"
+  },
+  "fixture_sha12": "01a0c8ad105a"
+}

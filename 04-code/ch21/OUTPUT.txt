@@ -1,0 +1,120 @@
+====================================================================================================
+Chapter 21 lab: hardship-judge-v1 on trial (Truss 0.24.0; SIMULATED verdicts, seed 2026)
+====================================================================================================
+Judge: hardship-judge-v1  card MC-01 per drafted offer  digest e10a0f5ab63a  inputs conversation, account_record, relief_history, draft_offer
+Development set 100 (rules written from these), held-out trial set 200
+Trial sources (traces, gold wrong offers): random 120 (2), targeted 40 (18), candidate 40 (28)
+
+----------------------------------------------------------------------------------------------------
+1. Development (100) and the held-out trial (200)
+----------------------------------------------------------------------------------------------------
+development  n=100  TP 24 FN  0 FP  1 TN  75 abstain 0+0  TPR 24/24 = 1.000 (0.862 to 1.000)  TNR 75/76 = 0.987 (0.929 to 0.998)  agreement 99/100 = 99.0%  kappa 0.973
+held-out     n=200  TP 29 FN 18 FP 11 TN 140 abstain 1+1  TPR 29/48 = 0.604 (0.463 to 0.730)  TNR 140/152 = 0.921 (0.867 to 0.954)  agreement 169/200 = 84.5%  kappa 0.559
+admit on development (not evidence, shown for contrast): True []
+admit on held-out, role order: False  role none  reasons ['TPR lower bound 0.46 < 0.80', 'TNR lower bound 0.87 < 0.90']
+
+Validation table by gold kind (held-out):
+  kind                      n gold wrong judge right abstain
+  window                   14         14           6       0
+  stated_work              12         12           6       1
+  income                    9          9           6       0
+  wrong_loan                6          6           6       0
+  referral                  7          7           5       0
+  ordinary                110          0         107       1
+  anniversary_outside      10          0           6       0
+  stated_correct           12          0           8       0
+  disaster_correct          8          0           7       0
+  two_loans_correct        12          0          12       0
+By language (held-out):
+  en: n=166  TPR 25/39 = 0.641  TNR 119/127 = 0.937
+  es: n=34  TPR 4/9 = 0.444  TNR 21/25 = 0.840
+
+----------------------------------------------------------------------------------------------------
+2. Why it failed: the 31 traces where judge and gold differ, by cause
+----------------------------------------------------------------------------------------------------
+  date_arithmetic     12   (misses 8, false alarms or abstentions 4)
+  stated_vs_record    10   (misses 6, false alarms or abstentions 4)
+  policy_rule          3   (misses 2, false alarms or abstentions 1)
+  income_arithmetic    3   (misses 3, false alarms or abstentions 0)
+  other                3   (misses 0, false alarms or abstentions 3)
+  mechanical (arithmetic code already does): 15/31 = 48.4%
+  the random production wrong offer the judge passed: t-212818 (window, relief ended inside twelve months)
+
+Surface check: a one-feature rule, 'fail if the conversation runs over 15 turns'
+  reproduces the judge on 183/200 = 91.5%; the gold on 168/200 = 84.0%; gap 7.5 points
+  wrong offers caught that were long: 26/29; wrong offers missed that were short: 16/19
+
+Construct-validity profile on 40 permitted offers the judge passed (edits planted)
+  invariance S = 38/40 = 0.950 (0.835 to 0.986)
+  sensitivity R = 15/40 = 0.375 (0.242 to 0.530)
+    arrears  changed 4/10
+    date     changed 2/10
+    loan     changed 8/10
+    stated   changed 1/10
+
+----------------------------------------------------------------------------------------------------
+3. Could any version of this trial let a judge gate the 0.5% target?
+----------------------------------------------------------------------------------------------------
+  wrong offers passed, all 200:      19/200 = 9.5%, one-sided 95% bound 13.6%, can gate False
+  wrong offers passed, random 120:   1/120 = 0.8%, one-sided 95% bound 3.9%, can gate False
+  a perfect judge on 200 offers:     0/200, bound 1.5%; offers needed at zero misses: 598
+  a candidate whose true rate is 0.8% read through TPR 0.604: 0.48%
+
+----------------------------------------------------------------------------------------------------
+4. Option one, fix: hardship-judge-v2 (C-03 result and a days calculator as inputs, two new rules)
+----------------------------------------------------------------------------------------------------
+  on the same 200: TPR 40/48 = 0.833 (0.704 to 0.913)  TNR 147/152 = 0.967 (0.925 to 0.986)  kappa 0.818
+  admit: False  reasons ['TPR lower bound 0.70 < 0.80']
+  guard: rule or example drawn from test traces: t-186943, t-189808
+
+wrote out/lab.json
+====================================================================================================
+Failure injection: the split. Part A reads, part B decides; code results go to part B as inputs
+====================================================================================================
+stated-change-judge-v1 (A)   TPR 32/33 = 0.970 (0.847 to 0.995)  TNR 164/167 = 0.982 (0.949 to 0.994)  kappa 0.929
+permission-judge-v1 (B)      TPR 36/48 = 0.750 (0.612 to 0.851)  TNR 146/152 = 0.961 (0.917 to 0.982)  kappa 0.742
+  admit stated-change-judge-v1: True  role order  reasons []
+  admit permission-judge-v1: False  role none  reasons ['TPR lower bound 0.61 < 0.80']
+split serves the MC-01 gate: False  failed parts ['permission-judge-v1']  admitted [('stated-change-judge-v1', 'order')]
+
+Where part B still misses (gold wrong offers it passed), by kind:
+  stated_work  5
+  income       4
+  referral     1
+  window       1
+  wrong_loan   1
+  misses on what the borrower said (stated_work + income): 9/12
+part B sensitivity on the same 40 minimal edits: R = 33/40 = 0.825  arrears 10/10  date 10/10  loan 10/10  stated 3/10
+
+Decision record, Friday 21 January 2028 (evidence as it stood that morning)
+  fix      supported today False  why not ['score is on traces the change was designed from', 'fails the admission floors']  clean evidence in about 10 weeks, about $2,780
+  split    supported today False  why not ['score is on traces the change was designed from', 'fails the admission floors']  clean evidence in about 10 weeks, about $2,780
+  abandon  supported today True   why not []  clean evidence in about 0 weeks, about $0
+====================================================================================================
+Try It 1: run the trial on the 120 random production offers only
+====================================================================================================
+  gold wrong offers 2; TPR 1/2 (0.095 to 0.905); TNR 106/118 = 0.898 (0.831 to 0.941); agreement 107/120 = 89.2%; kappa 0.109
+
+====================================================================================================
+Try It 2: give hardship-judge-v1 the C-03 v1.1 window result as an input, no new rules
+====================================================================================================
+  TPR 36/48 = 0.750 (0.612 to 0.851); TNR 144/152 = 0.947 (0.900 to 0.973); kappa 0.722
+    window               right 13/14  (v1 without the input: 6)
+    anniversary_outside  right 10/10  (v1 without the input: 6)
+    stated_work          right 6/12  (v1 without the input: 6)
+    stated_correct       right 8/12  (v1 without the input: 8)
+
+====================================================================================================
+Try It 3: a panel of three (v1 and two paraphrased prompts), majority vote
+====================================================================================================
+  panel pairwise agreement 0.910, 0.855, 0.805; each member against gold 169/200, 169/200, 164/200
+  majority: TPR 29/48 = 0.604 (0.463 to 0.730); TNR 140/152 = 0.921 (0.867 to 0.954); agreement 169/200; kappa 0.559
+====================================================================================================
+Pending live run: the hardship judges on the trial set
+====================================================================================================
+  command: cd 04-code/ch21 && python3 real_judge.py --live   (after a provider client is wired)
+  inputs:  100 development + 200 held-out hardship offers (IDs in out/lab.json)
+  judges:  hardship-judge-v1; stated-change-judge-v1; permission-judge-v1 (with C-02, C-03, C-09 results)
+  reports: validation tables, admission, disagreement causes, construct profile on the 80 edits
+  [RESULT PENDING: run `cd 04-code/ch21 && python3 real_judge.py --live` after a provider client is wired]
+7 passed in 0.74s

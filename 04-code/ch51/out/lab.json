@@ -1,0 +1,74 @@
+{
+  "digest": "731ae5d6148e",
+  "record": {
+    "record_sha256": "443c07184ea13fb04950f09ee9725de628e3647b26e6ab012cf0723fddb22d22",
+    "record_sha12": "443c07184ea1"
+  },
+  "evidence_pack": {
+    "control_objective": "replay Toronto offline/online mismatch; compare four teaching cases; preserve Ch16 kinds",
+    "seed": 2051,
+    "digest": "731ae5d6148e",
+    "offline": {
+      "n": 300,
+      "pass_rate": 0.9567,
+      "taxonomy_used": [
+        "wrong_balance",
+        "plan_mismatch",
+        "handoff_late",
+        "tone_fail"
+      ],
+      "sliced_by_cycle_day": false,
+      "BillingCycleEdge_card": false,
+      "SIMULATED": true
+    },
+    "online": {
+      "cycle_day_1_n": 10,
+      "cycle_day_1_midcycle_n": 5,
+      "complaints": 5,
+      "complaint_rate": 0.5,
+      "complaint_pp_vs_offline_expectation": 50.0,
+      "root_cause": "offline_taxonomy_missing_BillingCycleEdge",
+      "SIMULATED": true
+    },
+    "harbor_compare": {
+      "rows": [
+        {
+          "case": "hartford",
+          "decide_owner": "medical_director",
+          "decide_metric": "wrong_denial_rate",
+          "failed_practice": false
+        },
+        {
+          "case": "manchester",
+          "decide_owner": "fraud_desk",
+          "decide_metric": "refund_accuracy",
+          "failed_practice": false
+        },
+        {
+          "case": "toronto",
+          "decide_owner": "billing_sme",
+          "decide_metric": "cycle_day_complaint_rate",
+          "failed_practice": true
+        },
+        {
+          "case": "frankfurt",
+          "decide_owner": "counsel",
+          "decide_metric": "false_accept_rate",
+          "failed_practice": false
+        }
+      ],
+      "borrow_count": 4,
+      "SIMULATED": true
+    },
+    "CH16": {
+      "usage_incurred_usd": 6.191862,
+      "uncertain_reserve_usd": 0.050079,
+      "policy_headroom_usd": 0.05,
+      "ceiling_usd": 6.291941,
+      "note": "kinds under $12 cap; not invoice; not historical cache recovery"
+    },
+    "SIMULATED": true,
+    "live_provider_sweeps": "PENDING",
+    "teaching_scenarios": true
+  }
+}

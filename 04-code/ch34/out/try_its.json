@@ -1,0 +1,29 @@
+{
+  "try1_schema_fail": {
+    "pass": false,
+    "fails": [
+      "schema"
+    ]
+  },
+  "try2_cost": {
+    "n_cases": 40,
+    "repeats": 3,
+    "deterministic_usd": 0.6,
+    "judge_usd": 0.6,
+    "total_usd": 1.2
+  },
+  "try3_ladder": {
+    "signature": 9,
+    "ladder": [
+      "deterministic",
+      "fast_suite",
+      "slow_suite",
+      "canary",
+      "full_traffic"
+    ],
+    "failed_at": "deterministic",
+    "next_step": "deterministic",
+    "decision": "BLOCK"
+  },
+  "simulated": true
+}

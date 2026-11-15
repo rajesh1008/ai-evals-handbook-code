@@ -1,0 +1,166 @@
+{
+  "seed": 2026,
+  "digest": "0f412c619cf4",
+  "sim": {
+    "n": 300,
+    "goal_completion": 0.8366666666666667,
+    "n_completed": 251,
+    "abandonment": 0.016666666666666666,
+    "n_abandoned": 5,
+    "mean_turns_to_resolution": 7.031872509960159,
+    "mean_pushback_rate": 0.23822222222222222,
+    "wilson": [
+      0.7906259121631731,
+      0.8741941783050182
+    ]
+  },
+  "real": {
+    "n": 100,
+    "goal_completion": 0.79,
+    "n_completed": 79,
+    "abandonment": 0.11,
+    "mean_turns_to_resolution": 7.215189873417722,
+    "mean_pushback_rate": 0.30766666666666664,
+    "wilson": [
+      0.7001985069803768,
+      0.8583445046835422
+    ]
+  },
+  "gap_goal_completion": 0.046666666666666634,
+  "persona_table": {
+    "detail_checker": {
+      "n": 60,
+      "goal_completion": 0.9666666666666667,
+      "n_completed": 58,
+      "abandonment": 0.0,
+      "n_abandoned": 0,
+      "mean_turns_to_resolution": 7.103448275862069,
+      "mean_pushback_rate": 0.36777777777777776
+    },
+    "polite_deferrer": {
+      "n": 54,
+      "goal_completion": 0.9259259259259259,
+      "n_completed": 50,
+      "abandonment": 0.0,
+      "n_abandoned": 0,
+      "mean_turns_to_resolution": 7.38,
+      "mean_pushback_rate": 0.0
+    },
+    "returning_caller": {
+      "n": 45,
+      "goal_completion": 0.9555555555555556,
+      "n_completed": 43,
+      "abandonment": 0.0,
+      "n_abandoned": 0,
+      "mean_turns_to_resolution": 6.534883720930233,
+      "mean_pushback_rate": 0.22518518518518518
+    },
+    "sceptical_auditor": {
+      "n": 39,
+      "goal_completion": 0.15384615384615385,
+      "n_completed": 6,
+      "abandonment": 0.10256410256410256,
+      "n_abandoned": 4,
+      "mean_turns_to_resolution": 9.0,
+      "mean_pushback_rate": 0.41367521367521365
+    },
+    "spanish_first": {
+      "n": 36,
+      "goal_completion": 0.8611111111111112,
+      "n_completed": 31,
+      "abandonment": 0.027777777777777776,
+      "n_abandoned": 1,
+      "mean_turns_to_resolution": 6.612903225806452,
+      "mean_pushback_rate": 0.23287037037037037
+    },
+    "urgent_parent": {
+      "n": 66,
+      "goal_completion": 0.9545454545454546,
+      "n_completed": 63,
+      "abandonment": 0.0,
+      "n_abandoned": 0,
+      "mean_turns_to_resolution": 7.0476190476190474,
+      "mean_pushback_rate": 0.22348484848484848
+    }
+  },
+  "fidelity": {
+    "rows": [
+      {
+        "key": "abandonment",
+        "sim": 0.016666666666666666,
+        "real": 0.11,
+        "gap": -0.09333333333333334
+      },
+      {
+        "key": "goal_completion",
+        "sim": 0.8366666666666667,
+        "real": 0.79,
+        "gap": 0.046666666666666634
+      },
+      {
+        "key": "mean_pushback",
+        "sim": 0.23822222222222222,
+        "real": 0.30766666666666664,
+        "gap": -0.06944444444444442
+      },
+      {
+        "key": "mean_turns",
+        "sim": 7.031872509960159,
+        "real": 7.215189873417722,
+        "gap": -0.18331736345756244
+      }
+    ]
+  },
+  "perturbation": {
+    "n": 60,
+    "survive_rate_among_before_ok": 0.7450980392156863,
+    "rows_sample": [
+      {
+        "trace_id": "t-280106",
+        "persona": "polite_deferrer",
+        "before_ok": true,
+        "after_ok": true,
+        "survived": true,
+        "regressed": false
+      },
+      {
+        "trace_id": "t-280222",
+        "persona": "returning_caller",
+        "before_ok": true,
+        "after_ok": false,
+        "survived": false,
+        "regressed": true
+      },
+      {
+        "trace_id": "t-280277",
+        "persona": "sceptical_auditor",
+        "before_ok": false,
+        "after_ok": false,
+        "survived": false,
+        "regressed": false
+      },
+      {
+        "trace_id": "t-280234",
+        "persona": "returning_caller",
+        "before_ok": true,
+        "after_ok": false,
+        "survived": false,
+        "regressed": true
+      },
+      {
+        "trace_id": "t-280174",
+        "persona": "detail_checker",
+        "before_ok": true,
+        "after_ok": true,
+        "survived": true,
+        "regressed": false
+      }
+    ]
+  },
+  "touchpoint": {
+    "sim": 0.84,
+    "real": 0.79,
+    "measured_sim": 0.8366666666666667,
+    "measured_real": 0.79
+  }
+}

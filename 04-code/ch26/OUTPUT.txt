@@ -1,0 +1,34 @@
+=== Chapter 26 OUTPUT ===
+date: 2026-11-08T11:33:07+00:00
+truss 0.29.0
+--- fixture ---
+{'seed': 2026, 'n_docs': 100, 'n_voice': 40, 'digest': '873a9ad87f66', 'named_car_photo': 'd-300017', 'named_neg_drop': 'd-300042'}
+--- lab ---
+clean 0.83 glare 0.59 crop 0.58
+voice {'n': 40, 'mean_wer': 0.2071527777777778, 'task_success': 0.525, 'low_wer_task_fail': 8, 'high_wer_task_ok': 8}
+--- inject ---
+{
+  "named": "d-300042",
+  "original_snippet": "gross 2639.91 net 1686.49 deduction -114.98 employer Camelback Motors",
+  "mutated_snippet": "gross 2639.91 net 1686.49 deduction 114.98 employer Camelback Motors",
+  "deduction_gold": -114.98,
+  "sign_flipped": true,
+  "field_match_rate": 1.0,
+  "lesson": "Dropping negatives in transcription turns a recognition error into a wrong hardship income read."
+}--- try_its ---
+{
+  "try1_channel_mix": {
+    "pdf": 37,
+    "photo": 63
+  },
+  "try2_clean_vs_glare": {
+    "clean_e2e": 0.83,
+    "glare_e2e": 0.59,
+    "drop": 0.24
+  },
+  "try3_wer_gate": {
+    "n_wer_lt_0_1": 16,
+    "task_fails_inside_gate": 8
+  }
+}--- real_vision ---
+{'status': 'ok', 'model': 'claude-haiku-4-5-20251001', 'n': 24, 'minus_preserved_n': 4}

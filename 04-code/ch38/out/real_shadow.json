@@ -1,0 +1,41 @@
+{
+  "kind": "REAL",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 6,
+  "n_ok": 6,
+  "rate": 1.0,
+  "rows": [
+    {
+      "i": 0,
+      "ok": true,
+      "n": 38
+    },
+    {
+      "i": 1,
+      "ok": true,
+      "n": 24
+    },
+    {
+      "i": 2,
+      "ok": true,
+      "n": 29
+    },
+    {
+      "i": 3,
+      "ok": true,
+      "n": 25
+    },
+    {
+      "i": 4,
+      "ok": true,
+      "n": 14
+    },
+    {
+      "i": 5,
+      "ok": true,
+      "n": 22
+    }
+  ],
+  "error_type": null,
+  "note": "monitor-only"
+}

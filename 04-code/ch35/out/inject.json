@@ -1,0 +1,13 @@
+{
+  "simulated": true,
+  "injection": {
+    "r": 0.935,
+    "anti_correlated_with_harm": true,
+    "label": "BAD_PROXY",
+    "lesson": "A proxy that tracks compliments while complaints rise must not gate releases."
+  },
+  "would_gate_on_delight": true,
+  "correct_action": "refuse_gate",
+  "lesson": "A proxy that tracks compliments while complaints rise must not gate releases.",
+  "contrast_fee_r": -0.7539
+}

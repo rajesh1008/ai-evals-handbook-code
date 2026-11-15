@@ -1,0 +1,83 @@
+{
+  "live_rep": {
+    "n": 100,
+    "k": 5,
+    "recall_at_k": 0.91,
+    "mrr": 0.8226572871572871,
+    "ndcg_at_k": 0.8395800985009203,
+    "hit_at_k": 0.91,
+    "hit_wilson": [
+      0.8377362530335634,
+      0.9519280048361152
+    ],
+    "hit_count": 91
+  },
+  "stale_rep": {
+    "n": 100,
+    "k": 5,
+    "recall_at_k": 0.83,
+    "mrr": 0.6775430431778048,
+    "ndcg_at_k": 0.7045264102005276,
+    "hit_at_k": 0.83,
+    "hit_wilson": [
+      0.7445181876635703,
+      0.8910652394022684
+    ],
+    "hit_count": 83
+  },
+  "g_live": {
+    "supported": 92,
+    "n": 100,
+    "rate": 0.92,
+    "wilson": [
+      0.8500173312059693,
+      0.9589070305141891
+    ]
+  },
+  "g_stale": {
+    "supported": 87,
+    "n": 100,
+    "rate": 0.87,
+    "wilson": [
+      0.7901947810519012,
+      0.9224290614158573
+    ]
+  },
+  "filt_reasons": {
+    "too_short": 1,
+    "unanswerable": 2,
+    "duplicate": 40
+  },
+  "hits_embed": {
+    "A": 81,
+    "B": 48,
+    "n": 100
+  },
+  "spearman": 0.5684928430911352,
+  "cases": [
+    {
+      "trace_id": "t-262418",
+      "date": "2028-03-22",
+      "query": "how many days before a late fee",
+      "retrieved": [
+        "fee-schedule-2024-01::grace",
+        "fee-schedule-2026-03::grace"
+      ],
+      "reply_claim": "You have a ten-day grace period before a late fee.",
+      "root_cause": "retrieval",
+      "note": "stale chunk ranked first; generator faithfully quoted it"
+    },
+    {
+      "trace_id": "t-263055",
+      "date": "2028-03-24",
+      "query": "what is the late fee",
+      "retrieved": [
+        "fee-schedule-2024-01::amount",
+        "fee-schedule-2026-03::waiver"
+      ],
+      "reply_claim": "The late fee is thirty dollars.",
+      "root_cause": "retrieval",
+      "note": "retired amount chunk; current amount chunk not in top 2"
+    }
+  ]
+}

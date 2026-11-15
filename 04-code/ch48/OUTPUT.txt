@@ -1,0 +1,7 @@
+digest=9a9d842a198b seed=2048 SIMULATED n_traces=8
+winner_findings=A winner_vocabulary=B inversion=True
+inject_caught=True failure=rubric_rewards_vocabulary_over_findings
+record_sha12=9f17e678e998
+live_provider_eval_sweeps=PENDING paid_calls=False
+candidate_A_findings=32_vocab=14
+candidate_B_findings=-10_vocab=59

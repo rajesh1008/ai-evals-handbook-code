@@ -1,0 +1,17 @@
+{
+  "n_planted_hidden_wrong": 20,
+  "planted_ids": [
+    "t-280067",
+    "t-280068",
+    "t-280069",
+    "t-280070",
+    "t-280071"
+  ],
+  "named": "t-280067",
+  "outcome_goal_completion": 0.8366666666666667,
+  "process_aware_completion": 0.77,
+  "gap_hidden": 0.06666666666666665,
+  "polite_mean_pushback": 0.0,
+  "polite_masks": true,
+  "lesson": "A simulator that never pushes back scores outcome success on wrong offers."
+}

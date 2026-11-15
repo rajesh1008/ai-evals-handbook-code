@@ -1,0 +1,1 @@
+{"trace_id": "t-270133", "text": "VERDICT: fail\nREASON: Missing check_eligibility call before draft_offer; the process skipped eligibility verification with loan_id and reason.", "usage": {"in": 223, "out": 36}, "planted_process_ok": false, "fixture_kind": "missing_elig"}

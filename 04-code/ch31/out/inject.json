@@ -1,0 +1,18 @@
+{
+  "kind": "SIMULATED_INJECTION",
+  "name": "unpaired_gain_erased_by_paired",
+  "unpaired_best_diff": 0.040000000000000036,
+  "unpaired_best": {
+    "n_base": 400,
+    "n_cand": 400,
+    "baseline_rate": 0.7525,
+    "candidate_rate": 0.7925,
+    "diff": 0.040000000000000036,
+    "method": "unpaired_mean_diff"
+  },
+  "paired_diff": -0.01,
+  "paired_lo": -0.0425,
+  "paired_hi": 0.02,
+  "paired_includes_zero": true,
+  "erased": true
+}

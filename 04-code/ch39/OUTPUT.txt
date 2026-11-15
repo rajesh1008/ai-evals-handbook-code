@@ -1,0 +1,8 @@
+Ch39 OUTPUT — Incident to Eval: The Post-Mortem Loop
+digest=810f8f17e55a seed=2039 SIMULATED
+median_tte_days=4 before=19
+cases=3 sidebar_cases=41
+weekly={'median_tte_days': 4.0, 'n_incidents_closed_to_eval': 3, 'n_symptom_rejected': 1, 'complaints_this_month': 31, 'complaints_prev_month': 42, 'complaints_falling': True}
+symptom_injection_caught=True
+REAL cues 12/12 status=ok
+teaching={'three_incidents_to_cases': True, 'tte_19_to_4': True, 'complaints_falling': True, 'all_fm_cases': True}

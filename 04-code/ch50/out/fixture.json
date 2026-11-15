@@ -1,0 +1,74 @@
+{
+  "seed": 2050,
+  "digest": "b261d8b6093e",
+  "n_configs": 3,
+  "configs": {
+    "harbor_compass_v3": {
+      "name": "harbor_compass_v3",
+      "suite_digest": "a1b2c3d4e5f6",
+      "population": "hardship_offers_10pct_arm",
+      "metric": "wrong_offer_rate",
+      "bound": 0.005,
+      "judge": {
+        "id": "fee_span_judge_v2",
+        "validated": true,
+        "gold_n": 120,
+        "agreement_beyond_chance": true,
+        "bias_probe": true
+      },
+      "gate": {
+        "kind": "release",
+        "fail_closed": true,
+        "requires_validated_judge": true
+      },
+      "owner": "eval_lead",
+      "SIMULATED": true
+    },
+    "linter_pass_unvalidated_judge": {
+      "name": "linter_pass_unvalidated_judge",
+      "suite_digest": "f6e5d4c3b2a1",
+      "population": "account_question_flows",
+      "metric": "faithfulness_proxy",
+      "bound": 0.02,
+      "judge": {
+        "id": "vendor_score_judge_v0",
+        "validated": false,
+        "gold_n": 0,
+        "agreement_beyond_chance": false,
+        "bias_probe": false
+      },
+      "gate": {
+        "kind": "release",
+        "fail_closed": true,
+        "requires_validated_judge": true
+      },
+      "owner": "eval_lead",
+      "SIMULATED": true,
+      "FAILURE_INJECTION": true
+    },
+    "missing_population": {
+      "name": "missing_population",
+      "suite_digest": "112233445566",
+      "population": "",
+      "metric": "accuracy",
+      "bound": 0.01,
+      "judge": {
+        "id": "ok_judge",
+        "validated": true,
+        "gold_n": 80,
+        "agreement_beyond_chance": true,
+        "bias_probe": true
+      },
+      "gate": {
+        "kind": "release",
+        "fail_closed": true,
+        "requires_validated_judge": true
+      },
+      "owner": "eval_lead",
+      "SIMULATED": true
+    }
+  },
+  "SIMULATED": true,
+  "live_provider_eval_sweeps": "PENDING",
+  "paid_calls": false
+}

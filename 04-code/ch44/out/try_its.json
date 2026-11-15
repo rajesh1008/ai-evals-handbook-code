@@ -1,0 +1,21 @@
+{
+  "try_its": [
+    {
+      "name": "wilson_helper",
+      "ok": true
+    },
+    {
+      "name": "ceiling_constant",
+      "ok": true
+    },
+    {
+      "name": "n_cases",
+      "ok": true
+    },
+    {
+      "name": "decline_when_not_admit",
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}

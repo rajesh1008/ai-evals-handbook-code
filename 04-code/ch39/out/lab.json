@@ -1,0 +1,197 @@
+{
+  "seed": 2039,
+  "digest": "810f8f17e55a",
+  "simulated": true,
+  "ttes": [
+    4,
+    4,
+    4
+  ],
+  "median_tte_days": 4,
+  "tte_before_days": 19,
+  "tte_improved": true,
+  "cases": [
+    {
+      "case_id": "case-inc-3901",
+      "incident_id": "inc-3901",
+      "failure_mode": "FM-fee-sycophancy",
+      "against": "failure_mode",
+      "owner": "eval-lead",
+      "neighbour_ids": [
+        "t-390101-n01",
+        "t-390101-n02",
+        "t-390101-n03",
+        "t-390101-n04",
+        "t-390101-n05",
+        "t-390101-n06",
+        "t-390101-n07",
+        "t-390101-n08",
+        "t-390101-n09",
+        "t-390101-n10",
+        "t-390101-n11",
+        "t-390101-n12",
+        "t-390101-n13"
+      ],
+      "is_symptom_test": false
+    },
+    {
+      "case_id": "case-inc-3902",
+      "incident_id": "inc-3902",
+      "failure_mode": "FM-hardship-silent-fail",
+      "against": "failure_mode",
+      "owner": "compass-eng",
+      "neighbour_ids": [
+        "t-390201-n01",
+        "t-390201-n02",
+        "t-390201-n03",
+        "t-390201-n04",
+        "t-390201-n05",
+        "t-390201-n06",
+        "t-390201-n07",
+        "t-390201-n08",
+        "t-390201-n09",
+        "t-390201-n10",
+        "t-390201-n11",
+        "t-390201-n12",
+        "t-390201-n13"
+      ],
+      "is_symptom_test": false
+    },
+    {
+      "case_id": "case-inc-3903",
+      "incident_id": "inc-3903",
+      "failure_mode": "FM-compaction-fabricate",
+      "against": "failure_mode",
+      "owner": "platform",
+      "neighbour_ids": [
+        "t-390301-n01",
+        "t-390301-n02",
+        "t-390301-n03",
+        "t-390301-n04",
+        "t-390301-n05",
+        "t-390301-n06",
+        "t-390301-n07",
+        "t-390301-n08",
+        "t-390301-n09",
+        "t-390301-n10",
+        "t-390301-n11",
+        "t-390301-n12",
+        "t-390301-n13"
+      ],
+      "is_symptom_test": false
+    }
+  ],
+  "replays": [
+    {
+      "case_id": "case-inc-3901",
+      "against": "failure_mode",
+      "n_releases": 5,
+      "n_fail": 3,
+      "rows": [
+        {
+          "release": "r-2029-03",
+          "fails": true
+        },
+        {
+          "release": "r-2029-03b",
+          "fails": true
+        },
+        {
+          "release": "r-2029-04",
+          "fails": true
+        },
+        {
+          "release": "r-2029-04b",
+          "fails": false
+        },
+        {
+          "release": "r-2029-05",
+          "fails": false
+        }
+      ],
+      "caught_on_latest": false
+    },
+    {
+      "case_id": "case-inc-3902",
+      "against": "failure_mode",
+      "n_releases": 5,
+      "n_fail": 4,
+      "rows": [
+        {
+          "release": "r-2029-03",
+          "fails": true
+        },
+        {
+          "release": "r-2029-03b",
+          "fails": true
+        },
+        {
+          "release": "r-2029-04",
+          "fails": true
+        },
+        {
+          "release": "r-2029-04b",
+          "fails": true
+        },
+        {
+          "release": "r-2029-05",
+          "fails": false
+        }
+      ],
+      "caught_on_latest": false
+    },
+    {
+      "case_id": "case-inc-3903",
+      "against": "failure_mode",
+      "n_releases": 5,
+      "n_fail": 2,
+      "rows": [
+        {
+          "release": "r-2029-03",
+          "fails": true
+        },
+        {
+          "release": "r-2029-03b",
+          "fails": true
+        },
+        {
+          "release": "r-2029-04",
+          "fails": false
+        },
+        {
+          "release": "r-2029-04b",
+          "fails": false
+        },
+        {
+          "release": "r-2029-05",
+          "fails": false
+        }
+      ],
+      "caught_on_latest": false
+    }
+  ],
+  "neighbour_total": 39,
+  "sidebar_cases": 41,
+  "weekly": {
+    "median_tte_days": 4.0,
+    "n_incidents_closed_to_eval": 3,
+    "n_symptom_rejected": 1,
+    "complaints_this_month": 31,
+    "complaints_prev_month": 42,
+    "complaints_falling": true
+  },
+  "taxonomy_change": {
+    "review_id": "rev-3901",
+    "new_failure_mode": "FM-fee-sycophancy",
+    "action": "add",
+    "produces_fix": true
+  },
+  "teaching": {
+    "three_incidents_to_cases": true,
+    "tte_19_to_4": true,
+    "complaints_falling": true,
+    "all_fm_cases": true
+  },
+  "study_window": "Mon 23 Apr 2029 \u2013 Mon 21 May 2029",
+  "scoreboard_date": "Mon 21 May 2029"
+}

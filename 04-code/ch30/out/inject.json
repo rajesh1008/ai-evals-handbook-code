@@ -1,0 +1,24 @@
+{
+  "lesson": "A gateway default that upgrades the model mid-run invalidates the paired migration table.",
+  "clean": {
+    "n_models": 1,
+    "models": [
+      "compass-llm-2028-06"
+    ],
+    "midrun_upgrade": false,
+    "first": "compass-llm-2028-06",
+    "last": "compass-llm-2028-06"
+  },
+  "injected": {
+    "n_models": 2,
+    "models": [
+      "compass-llm-2028-06",
+      "compass-llm-2028-09"
+    ],
+    "midrun_upgrade": true,
+    "first": "compass-llm-2028-06",
+    "last": "compass-llm-2028-09"
+  },
+  "named": "midrun-gateway-default",
+  "simulated": true
+}

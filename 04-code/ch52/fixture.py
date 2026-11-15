@@ -1,0 +1,182 @@
+"""Ch52 fixtures: hardening checklist configs + Harbor final scoreboard (SIMULATED)."""
+from __future__ import annotations
+import hashlib, json
+from pathlib import Path
+
+OUT = Path(__file__).parent / "out"
+SEED = 2052
+
+CH16 = {
+    "known_incurred_usd": 6.191862,
+    "uncertain_reserve_usd": 0.050079,
+    "policy_headroom_usd": 0.05,
+    "ceiling_sum_usd": 6.291941,
+    "cap_usd": 12.0,
+    "note": "kinds under $12 cap; ceiling is conservative sum not invoice",
+}
+
+
+def _digest(obj) -> str:
+    blob = json.dumps(obj, sort_keys=True, separators=(",", ":")).encode()
+    return hashlib.sha256(blob).hexdigest()
+
+
+def build():
+    configs = [
+        {
+            "name": "compass_fee_v3_pinned",
+            "suite_digest": "a1b2c3d4e5f67890",
+            "population": "fee_explanation_decide_traces",
+            "metric": "wrong_fee_explanation_rate",
+            "bound": 0.02,
+            "judge": {
+                "id": "fee-judge-v1",
+                "version": "fee-judge-v1@2027-11-12",
+                "validated": True,
+                "gold_n": 300,
+            },
+            "gate": {"kind": "release", "requires_validated_judge": True},
+            "owner": "EvalLead",
+            "cost_kinds": CH16,
+            "runbook_owner": "Ryan",
+            "edge_backlog_ranked": True,
+            "FAILURE_INJECTION": False,
+        },
+        {
+            "name": "compass_hardship_unpinned_judge",
+            "suite_digest": "f0e1d2c3b4a59687",
+            "population": "hardship_decide_traces",
+            "metric": "wrong_hardship_offer_rate",
+            "bound": 0.005,
+            "judge": {
+                "id": "hardship-offer-judge",
+                "version": None,  # pinned nowhere — the inject
+                "validated": True,
+                "gold_n": 240,
+            },
+            "gate": {"kind": "release", "requires_validated_judge": True},
+            "owner": "EvalLead",
+            "cost_kinds": CH16,
+            "runbook_owner": "Ryan",
+            "edge_backlog_ranked": True,
+            "FAILURE_INJECTION": True,
+            "inject_label": "JUDGE_VERSION_PINNED_NOWHERE",
+        },
+        {
+            "name": "compass_monitor_only_ok",
+            "suite_digest": "1122334455667788",
+            "population": "fee_explanation_monitor_sample",
+            "metric": "wrong_fee_explanation_rate",
+            "bound": 0.02,
+            "judge": {
+                "id": "fee-judge-v1",
+                "version": "fee-judge-v1@2027-11-12",
+                "validated": True,
+                "gold_n": 300,
+            },
+            "gate": {"kind": "monitor", "requires_validated_judge": True},
+            "owner": "EvalLead",
+            "cost_kinds": CH16,
+            "runbook_owner": "Grace",
+            "edge_backlog_ranked": True,
+            "FAILURE_INJECTION": False,
+        },
+    ]
+
+    # Final scoreboard vs Rachel / Victor / Sarah targets (SIMULATED teaching)
+    scoreboard = {
+        "SIMULATED": True,
+        "as_of": "teaching-close-Year1",
+        "rows": [
+            {
+                "owner": "Victor",
+                "target": "wrong_hardship_offer_rate < 0.5% at 95% one-sided upper bound",
+                "observed": {
+                    "n": 2400,
+                    "fails": 10,
+                    "rate": 0.004167,
+                    "clopper_pearson_upper": 0.0071,
+                    "clopper_pearson_upper_full": 0.007057,
+                    "wilson_two_sided_hi": 0.007653,
+                    "method": "Clopper-Pearson one-sided upper 95% (truss.rates.upper_bound); display 0.71% legacy rounding",
+                },
+                "status": "OPEN",
+                "note": "point under 0.5% but upper bound above; traffic widen refused",
+            },
+            {
+                "owner": "Rachel",
+                "target": "Compass decide-share with residual-risk packet complete",
+                "observed": {
+                    "decide_share": 0.10,
+                    "residual_risk_packet": True,
+                    "pending_live_audits": 2,
+                },
+                "status": "CONDITIONAL",
+                "note": "share held at 10% arm until Victor bound closes; PENDING audits visible",
+            },
+            {
+                "owner": "Sarah",
+                "target": "cost kinds honesty under $12 cap; ceiling sum not invoice",
+                "observed": CH16,
+                "status": "MEETS_KINDS",
+                "note": "four quantities reported; ceiling 6.291941 is kinds sum not bank charge",
+            },
+            {
+                "owner": "Victor",
+                "target": "wrong_fee_explanation_rate < 2%",
+                "observed": {
+                    "n": 200,
+                    "fails": 15,
+                    "rate": 0.075,
+                    "wilson_interval": [0.046, 0.120],
+                    "deferred": 23,
+                    "note": "v1.1 deferral=pass lineage; target under 2% still open",
+                },
+                "status": "OPEN",
+            },
+        ],
+    }
+
+    edge_backlog = [
+        {"id": "E01", "title": "exactly-twelve-months hardship window", "severity": 1, "labels_needed": 80, "owner": "Diane"},
+        {"id": "E02", "title": "disaster-as-second-cause flag", "severity": 2, "labels_needed": 60, "owner": "Victor"},
+        {"id": "E03", "title": "take-home income stated vs gross", "severity": 3, "labels_needed": 100, "owner": "Grace"},
+        {"id": "E04", "title": "officer_tool fee situation", "priority": 4, "labels_needed": 40, "owner": "Ben"},
+        {"id": "E05", "title": "planted ten-day-grace fee replies", "priority": 5, "labels_needed": 20, "owner": "Sarah", "planted": True},
+        {"id": "E06", "title": "name-swap live battery", "priority": 6, "labels_needed": 50, "owner": "Ryan", "PENDING_live": True},
+        {"id": "E07", "title": "billing-cycle day-1 midcycle join", "priority": 7, "labels_needed": 70, "owner": "EvalLead"},
+        {"id": "E08", "title": "dual-pin judge+system under provider bump", "priority": 8, "labels_needed": 30, "owner": "Ryan"},
+    ]
+
+    fix = {
+        "seed": SEED,
+        "chapter": 52,
+        "SIMULATED": True,
+        "live_provider_sweeps": "PENDING",
+        "configs": configs,
+        "scoreboard": scoreboard,
+        "edge_backlog": edge_backlog,
+        "CH16": CH16,
+        "hardening_checklist_items": [
+            "judge_id_present",
+            "judge_version_pin",
+            "gold_n_gt_0",
+            "suite_digest_pin",
+            "population_named",
+            "cost_kinds_present",
+            "runbook_owner",
+            "edge_backlog_ranked",
+            "validated_flag_honest",
+            "inject_label_if_failure",
+        ],
+    }
+    digest = _digest({k: fix[k] for k in ("seed", "configs", "edge_backlog", "CH16")})
+    fix["digest"] = digest[:12]
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "fixture.json").write_text(json.dumps(fix, indent=2) + "\n")
+    print("fixture digest", fix["digest"], "seed", SEED)
+    return fix
+
+
+if __name__ == "__main__":
+    build()

@@ -1,0 +1,2399 @@
+{
+  "seed": 2026,
+  "n_docs": 100,
+  "n_voice": 40,
+  "fields": [
+    "gross",
+    "net",
+    "period_end",
+    "employer",
+    "ytd_gross"
+  ],
+  "levels": [
+    "clean",
+    "blur",
+    "skew",
+    "glare",
+    "crop",
+    "compression"
+  ],
+  "documents": [
+    {
+      "doc_id": "d-300001",
+      "channel": "photo",
+      "gold": {
+        "gross": 1205.01,
+        "net": 1906.54,
+        "period_end": "2028-06-17",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 40364.79,
+        "deduction": -163.17
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300002",
+      "channel": "photo",
+      "gold": {
+        "gross": 2746.73,
+        "net": 2790.24,
+        "period_end": "2028-06-25",
+        "employer": "Valley Medical",
+        "ytd_gross": 35041.04,
+        "deduction": -113.84
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300003",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1176.5,
+        "net": 2723.58,
+        "period_end": "2028-06-15",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 37590.51,
+        "deduction": -129.63
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300004",
+      "channel": "photo",
+      "gold": {
+        "gross": 1655.14,
+        "net": 3147.77,
+        "period_end": "2028-06-12",
+        "employer": "Valley Medical",
+        "ytd_gross": 44986.24,
+        "deduction": -102.17
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300005",
+      "channel": "photo",
+      "gold": {
+        "gross": 2695.33,
+        "net": 1359.52,
+        "period_end": "2028-06-15",
+        "employer": "Camelback Motors",
+        "ytd_gross": 40058.99,
+        "deduction": -132.64
+      },
+      "capture_ok": false
+    },
+    {
+      "doc_id": "d-300006",
+      "channel": "photo",
+      "gold": {
+        "gross": 3216.93,
+        "net": 1545.21,
+        "period_end": "2028-06-14",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 20950.93,
+        "deduction": -113.71
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300007",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2521.62,
+        "net": 2550.38,
+        "period_end": "2028-06-20",
+        "employer": "Valley Medical",
+        "ytd_gross": 20925.94,
+        "deduction": -103.94
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300008",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 4139.7,
+        "net": 1933.67,
+        "period_end": "2028-06-26",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 28020.65,
+        "deduction": -142.53
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300009",
+      "channel": "photo",
+      "gold": {
+        "gross": 2578.94,
+        "net": 2343.26,
+        "period_end": "2028-06-23",
+        "employer": "Valley Medical",
+        "ytd_gross": 23801.61,
+        "deduction": -97.14
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300010",
+      "channel": "photo",
+      "gold": {
+        "gross": 2930.68,
+        "net": 1787.67,
+        "period_end": "2028-06-16",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 27391.84,
+        "deduction": -127.16
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300011",
+      "channel": "photo",
+      "gold": {
+        "gross": 2506.46,
+        "net": 1845.12,
+        "period_end": "2028-06-13",
+        "employer": "Valley Medical",
+        "ytd_gross": 13101.25,
+        "deduction": -153.09
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300012",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3798.94,
+        "net": 3097.75,
+        "period_end": "2028-06-26",
+        "employer": "Valley Medical",
+        "ytd_gross": 19397.43,
+        "deduction": -51.97
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300013",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3406.79,
+        "net": 1892.61,
+        "period_end": "2028-06-14",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 38256.12,
+        "deduction": -70.67
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300014",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3143.73,
+        "net": 2641.22,
+        "period_end": "2028-06-17",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 23116.83,
+        "deduction": -174.44
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300015",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2429.1,
+        "net": 767.17,
+        "period_end": "2028-06-09",
+        "employer": "Valley Medical",
+        "ytd_gross": 19805.15,
+        "deduction": -51.13
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300016",
+      "channel": "photo",
+      "gold": {
+        "gross": 3916.03,
+        "net": 839.64,
+        "period_end": "2028-06-15",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 29405.35,
+        "deduction": -51.81
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300017",
+      "channel": "photo",
+      "gold": {
+        "gross": 2657.93,
+        "net": 1298.19,
+        "period_end": "2028-06-25",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 11190.44,
+        "deduction": -70.15
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300018",
+      "channel": "photo",
+      "gold": {
+        "gross": 4029.78,
+        "net": 1879.17,
+        "period_end": "2028-06-24",
+        "employer": "Camelback Motors",
+        "ytd_gross": 26832.14,
+        "deduction": -95.68
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300019",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3154.66,
+        "net": 1355.77,
+        "period_end": "2028-06-14",
+        "employer": "Camelback Motors",
+        "ytd_gross": 42402.24,
+        "deduction": -145.35
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300020",
+      "channel": "photo",
+      "gold": {
+        "gross": 2200.93,
+        "net": 2700.79,
+        "period_end": "2028-06-17",
+        "employer": "Camelback Motors",
+        "ytd_gross": 20040.25,
+        "deduction": -173.41
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300021",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3634.92,
+        "net": 2280.31,
+        "period_end": "2028-06-25",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 6023.29,
+        "deduction": -96.16
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300022",
+      "channel": "photo",
+      "gold": {
+        "gross": 3907.45,
+        "net": 1893.68,
+        "period_end": "2028-06-15",
+        "employer": "Camelback Motors",
+        "ytd_gross": 11155.62,
+        "deduction": -103.14
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300023",
+      "channel": "photo",
+      "gold": {
+        "gross": 2833.95,
+        "net": 2364.1,
+        "period_end": "2028-06-03",
+        "employer": "Valley Medical",
+        "ytd_gross": 6366.11,
+        "deduction": -123.56
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300024",
+      "channel": "photo",
+      "gold": {
+        "gross": 3965.25,
+        "net": 725.29,
+        "period_end": "2028-06-28",
+        "employer": "Camelback Motors",
+        "ytd_gross": 24353.63,
+        "deduction": -128.58
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300025",
+      "channel": "photo",
+      "gold": {
+        "gross": 1543.66,
+        "net": 2894.93,
+        "period_end": "2028-06-05",
+        "employer": "Camelback Motors",
+        "ytd_gross": 31448.92,
+        "deduction": -49.76
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300026",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3751.36,
+        "net": 1596.28,
+        "period_end": "2028-06-06",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 11987.8,
+        "deduction": -94.23
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300027",
+      "channel": "photo",
+      "gold": {
+        "gross": 1778.08,
+        "net": 1060.1,
+        "period_end": "2028-06-17",
+        "employer": "Valley Medical",
+        "ytd_gross": 22783.32,
+        "deduction": -104.36
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300028",
+      "channel": "photo",
+      "gold": {
+        "gross": 1121.52,
+        "net": 1157.26,
+        "period_end": "2028-06-01",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 40144.83,
+        "deduction": -123.31
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300029",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3688.28,
+        "net": 2343.04,
+        "period_end": "2028-06-01",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 38861.61,
+        "deduction": -76.27
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300030",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1536.24,
+        "net": 2214.04,
+        "period_end": "2028-06-09",
+        "employer": "Camelback Motors",
+        "ytd_gross": 27793.4,
+        "deduction": -110.05
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300031",
+      "channel": "photo",
+      "gold": {
+        "gross": 3457.24,
+        "net": 850.72,
+        "period_end": "2028-06-14",
+        "employer": "Camelback Motors",
+        "ytd_gross": 9241.43,
+        "deduction": -29.67
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300032",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2996.21,
+        "net": 876.43,
+        "period_end": "2028-06-11",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 28524.34,
+        "deduction": -30.23
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300033",
+      "channel": "photo",
+      "gold": {
+        "gross": 1670.82,
+        "net": 636.06,
+        "period_end": "2028-06-28",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 21581.13,
+        "deduction": -22.47
+      },
+      "capture_ok": false
+    },
+    {
+      "doc_id": "d-300034",
+      "channel": "photo",
+      "gold": {
+        "gross": 1218.27,
+        "net": 2383.15,
+        "period_end": "2028-06-19",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 17598.98,
+        "deduction": -92.97
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300035",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 929.24,
+        "net": 1650.9,
+        "period_end": "2028-06-20",
+        "employer": "Camelback Motors",
+        "ytd_gross": 28762.3,
+        "deduction": -88.18
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300036",
+      "channel": "photo",
+      "gold": {
+        "gross": 2072.1,
+        "net": 1903.28,
+        "period_end": "2028-06-09",
+        "employer": "Valley Medical",
+        "ytd_gross": 16675.26,
+        "deduction": -150.69
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300037",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3786.62,
+        "net": 1331.72,
+        "period_end": "2028-06-11",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 34085.07,
+        "deduction": -143.06
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300038",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2216.56,
+        "net": 2122.58,
+        "period_end": "2028-06-01",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 12897.93,
+        "deduction": -28.98
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300039",
+      "channel": "photo",
+      "gold": {
+        "gross": 1217.13,
+        "net": 697.03,
+        "period_end": "2028-06-17",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 28878.1,
+        "deduction": -175.73
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300040",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1229.41,
+        "net": 1679.78,
+        "period_end": "2028-06-13",
+        "employer": "Camelback Motors",
+        "ytd_gross": 36063.98,
+        "deduction": -126.01
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300041",
+      "channel": "photo",
+      "gold": {
+        "gross": 896.62,
+        "net": 2464.89,
+        "period_end": "2028-06-18",
+        "employer": "Valley Medical",
+        "ytd_gross": 40565.84,
+        "deduction": -145.86
+      },
+      "capture_ok": false
+    },
+    {
+      "doc_id": "d-300042",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2639.91,
+        "net": 1686.49,
+        "period_end": "2028-06-11",
+        "employer": "Camelback Motors",
+        "ytd_gross": 42769.11,
+        "deduction": -114.98
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300043",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3010.72,
+        "net": 3099.39,
+        "period_end": "2028-06-17",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 18628.52,
+        "deduction": -103.27
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300044",
+      "channel": "photo",
+      "gold": {
+        "gross": 3658.22,
+        "net": 2232.43,
+        "period_end": "2028-06-08",
+        "employer": "Valley Medical",
+        "ytd_gross": 7331.88,
+        "deduction": -55.49
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300045",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3333.66,
+        "net": 2866.49,
+        "period_end": "2028-06-23",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 43040.0,
+        "deduction": -57.2
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300046",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1483.33,
+        "net": 1533.68,
+        "period_end": "2028-06-21",
+        "employer": "Valley Medical",
+        "ytd_gross": 26951.82,
+        "deduction": -95.85
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300047",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1438.87,
+        "net": 2232.84,
+        "period_end": "2028-06-05",
+        "employer": "Valley Medical",
+        "ytd_gross": 40751.91,
+        "deduction": -172.07
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300048",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3187.99,
+        "net": 2667.95,
+        "period_end": "2028-06-21",
+        "employer": "Camelback Motors",
+        "ytd_gross": 8368.29,
+        "deduction": -79.65
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300049",
+      "channel": "photo",
+      "gold": {
+        "gross": 3314.37,
+        "net": 3196.91,
+        "period_end": "2028-06-01",
+        "employer": "Camelback Motors",
+        "ytd_gross": 38992.46,
+        "deduction": -131.3
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300050",
+      "channel": "photo",
+      "gold": {
+        "gross": 2137.14,
+        "net": 2001.35,
+        "period_end": "2028-06-17",
+        "employer": "Camelback Motors",
+        "ytd_gross": 43606.43,
+        "deduction": -36.79
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300051",
+      "channel": "photo",
+      "gold": {
+        "gross": 2661.47,
+        "net": 1407.09,
+        "period_end": "2028-06-24",
+        "employer": "Camelback Motors",
+        "ytd_gross": 11488.43,
+        "deduction": -66.87
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300052",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 4107.36,
+        "net": 1090.61,
+        "period_end": "2028-06-24",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 38892.36,
+        "deduction": -123.65
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300053",
+      "channel": "photo",
+      "gold": {
+        "gross": 3426.06,
+        "net": 2618.84,
+        "period_end": "2028-06-18",
+        "employer": "Camelback Motors",
+        "ytd_gross": 33879.21,
+        "deduction": -24.72
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300054",
+      "channel": "photo",
+      "gold": {
+        "gross": 896.62,
+        "net": 903.41,
+        "period_end": "2028-06-22",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 38676.52,
+        "deduction": -30.18
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300055",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2838.29,
+        "net": 1245.2,
+        "period_end": "2028-06-04",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 24382.59,
+        "deduction": -159.84
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300056",
+      "channel": "photo",
+      "gold": {
+        "gross": 2897.65,
+        "net": 2283.62,
+        "period_end": "2028-06-12",
+        "employer": "Valley Medical",
+        "ytd_gross": 41379.98,
+        "deduction": -39.35
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300057",
+      "channel": "photo",
+      "gold": {
+        "gross": 3124.02,
+        "net": 1785.43,
+        "period_end": "2028-06-19",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 8301.98,
+        "deduction": -144.65
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300058",
+      "channel": "photo",
+      "gold": {
+        "gross": 1860.89,
+        "net": 2558.56,
+        "period_end": "2028-06-08",
+        "employer": "Camelback Motors",
+        "ytd_gross": 18000.08,
+        "deduction": -101.0
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300059",
+      "channel": "photo",
+      "gold": {
+        "gross": 3261.09,
+        "net": 2828.85,
+        "period_end": "2028-06-13",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 12069.73,
+        "deduction": -149.02
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300060",
+      "channel": "photo",
+      "gold": {
+        "gross": 1985.06,
+        "net": 2646.68,
+        "period_end": "2028-06-14",
+        "employer": "Valley Medical",
+        "ytd_gross": 13515.02,
+        "deduction": -90.67
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300061",
+      "channel": "photo",
+      "gold": {
+        "gross": 2266.41,
+        "net": 1455.33,
+        "period_end": "2028-06-04",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 15658.23,
+        "deduction": -158.69
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300062",
+      "channel": "photo",
+      "gold": {
+        "gross": 1711.8,
+        "net": 1462.61,
+        "period_end": "2028-06-05",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 15716.4,
+        "deduction": -111.9
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300063",
+      "channel": "photo",
+      "gold": {
+        "gross": 2669.1,
+        "net": 1455.84,
+        "period_end": "2028-06-14",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 8800.24,
+        "deduction": -142.74
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300064",
+      "channel": "photo",
+      "gold": {
+        "gross": 2952.15,
+        "net": 2786.67,
+        "period_end": "2028-06-25",
+        "employer": "Camelback Motors",
+        "ytd_gross": 21977.45,
+        "deduction": -123.72
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300065",
+      "channel": "photo",
+      "gold": {
+        "gross": 1388.1,
+        "net": 1294.34,
+        "period_end": "2028-06-23",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 10223.97,
+        "deduction": -112.63
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300066",
+      "channel": "photo",
+      "gold": {
+        "gross": 3527.11,
+        "net": 2813.46,
+        "period_end": "2028-06-16",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 5470.16,
+        "deduction": -141.16
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300067",
+      "channel": "photo",
+      "gold": {
+        "gross": 4002.79,
+        "net": 1449.2,
+        "period_end": "2028-06-25",
+        "employer": "Camelback Motors",
+        "ytd_gross": 36629.79,
+        "deduction": -102.39
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300068",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2689.6,
+        "net": 1087.9,
+        "period_end": "2028-06-25",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 44303.46,
+        "deduction": -44.93
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300069",
+      "channel": "photo",
+      "gold": {
+        "gross": 1501.66,
+        "net": 2350.17,
+        "period_end": "2028-06-23",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 8371.29,
+        "deduction": -86.73
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300070",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1253.06,
+        "net": 673.59,
+        "period_end": "2028-06-14",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 12410.33,
+        "deduction": -137.48
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300071",
+      "channel": "photo",
+      "gold": {
+        "gross": 3895.57,
+        "net": 2310.5,
+        "period_end": "2028-06-11",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 18896.5,
+        "deduction": -117.06
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300072",
+      "channel": "photo",
+      "gold": {
+        "gross": 3652.47,
+        "net": 695.46,
+        "period_end": "2028-06-16",
+        "employer": "Camelback Motors",
+        "ytd_gross": 5870.97,
+        "deduction": -149.43
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300073",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1475.7,
+        "net": 1311.45,
+        "period_end": "2028-06-27",
+        "employer": "Valley Medical",
+        "ytd_gross": 17162.7,
+        "deduction": -113.08
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300074",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3268.03,
+        "net": 2278.18,
+        "period_end": "2028-06-17",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 44241.29,
+        "deduction": -118.63
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300075",
+      "channel": "photo",
+      "gold": {
+        "gross": 2825.82,
+        "net": 1872.01,
+        "period_end": "2028-06-22",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 19403.17,
+        "deduction": -32.49
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300076",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3381.7,
+        "net": 3106.28,
+        "period_end": "2028-06-28",
+        "employer": "Valley Medical",
+        "ytd_gross": 30221.65,
+        "deduction": -168.08
+      },
+      "capture_ok": false
+    },
+    {
+      "doc_id": "d-300077",
+      "channel": "photo",
+      "gold": {
+        "gross": 1619.04,
+        "net": 1715.37,
+        "period_end": "2028-06-28",
+        "employer": "Camelback Motors",
+        "ytd_gross": 25547.26,
+        "deduction": -146.67
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300078",
+      "channel": "photo",
+      "gold": {
+        "gross": 2461.18,
+        "net": 2053.11,
+        "period_end": "2028-06-27",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 19549.83,
+        "deduction": -124.14
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300079",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 1442.78,
+        "net": 2177.61,
+        "period_end": "2028-06-23",
+        "employer": "Camelback Motors",
+        "ytd_gross": 34149.68,
+        "deduction": -41.0
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300080",
+      "channel": "photo",
+      "gold": {
+        "gross": 1007.66,
+        "net": 2333.27,
+        "period_end": "2028-06-02",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 36580.45,
+        "deduction": -170.56
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300081",
+      "channel": "photo",
+      "gold": {
+        "gross": 2637.09,
+        "net": 1527.29,
+        "period_end": "2028-06-15",
+        "employer": "Camelback Motors",
+        "ytd_gross": 12462.88,
+        "deduction": -28.58
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300082",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2980.17,
+        "net": 1873.33,
+        "period_end": "2028-06-18",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 17025.93,
+        "deduction": -102.33
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300083",
+      "channel": "photo",
+      "gold": {
+        "gross": 3113.34,
+        "net": 1657.67,
+        "period_end": "2028-06-11",
+        "employer": "Camelback Motors",
+        "ytd_gross": 33592.68,
+        "deduction": -26.44
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300084",
+      "channel": "photo",
+      "gold": {
+        "gross": 2792.43,
+        "net": 2432.07,
+        "period_end": "2028-06-27",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 18150.87,
+        "deduction": -24.49
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300085",
+      "channel": "photo",
+      "gold": {
+        "gross": 1106.18,
+        "net": 2324.84,
+        "period_end": "2028-06-07",
+        "employer": "Camelback Motors",
+        "ytd_gross": 14644.83,
+        "deduction": -125.86
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300086",
+      "channel": "photo",
+      "gold": {
+        "gross": 2621.93,
+        "net": 2863.03,
+        "period_end": "2028-06-24",
+        "employer": "Valley Medical",
+        "ytd_gross": 23375.47,
+        "deduction": -78.11
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300087",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 3310.59,
+        "net": 3031.32,
+        "period_end": "2028-06-18",
+        "employer": "Valley Medical",
+        "ytd_gross": 8670.54,
+        "deduction": -163.51
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300088",
+      "channel": "photo",
+      "gold": {
+        "gross": 1067.98,
+        "net": 2458.5,
+        "period_end": "2028-06-20",
+        "employer": "Camelback Motors",
+        "ytd_gross": 9605.88,
+        "deduction": -52.57
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300089",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 4083.76,
+        "net": 1712.53,
+        "period_end": "2028-06-18",
+        "employer": "Camelback Motors",
+        "ytd_gross": 30927.71,
+        "deduction": -166.19
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300090",
+      "channel": "photo",
+      "gold": {
+        "gross": 2041.77,
+        "net": 624.76,
+        "period_end": "2028-06-17",
+        "employer": "Valley Medical",
+        "ytd_gross": 40469.47,
+        "deduction": -154.48
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300091",
+      "channel": "photo",
+      "gold": {
+        "gross": 3497.33,
+        "net": 2055.08,
+        "period_end": "2028-06-12",
+        "employer": "Valley Medical",
+        "ytd_gross": 20096.09,
+        "deduction": -121.29
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300092",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 2704.66,
+        "net": 2562.76,
+        "period_end": "2028-06-22",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 23439.53,
+        "deduction": -75.35
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300093",
+      "channel": "photo",
+      "gold": {
+        "gross": 2603.06,
+        "net": 855.61,
+        "period_end": "2028-06-09",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 6489.21,
+        "deduction": -114.43
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300094",
+      "channel": "photo",
+      "gold": {
+        "gross": 2718.89,
+        "net": 1604.21,
+        "period_end": "2028-06-21",
+        "employer": "Valley Medical",
+        "ytd_gross": 29533.74,
+        "deduction": -106.53
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300095",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 890.38,
+        "net": 1618.78,
+        "period_end": "2028-06-06",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 5729.42,
+        "deduction": -27.39
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300096",
+      "channel": "photo",
+      "gold": {
+        "gross": 2570.76,
+        "net": 2504.34,
+        "period_end": "2028-06-28",
+        "employer": "Saguaro Coffee",
+        "ytd_gross": 33689.47,
+        "deduction": -69.13
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300097",
+      "channel": "photo",
+      "gold": {
+        "gross": 3848.62,
+        "net": 2395.18,
+        "period_end": "2028-06-13",
+        "employer": "Camelback Motors",
+        "ytd_gross": 25563.5,
+        "deduction": -155.75
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300098",
+      "channel": "photo",
+      "gold": {
+        "gross": 2825.34,
+        "net": 1740.16,
+        "period_end": "2028-06-25",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 28534.93,
+        "deduction": -114.49
+      },
+      "capture_ok": false
+    },
+    {
+      "doc_id": "d-300099",
+      "channel": "pdf_upload",
+      "gold": {
+        "gross": 4014.49,
+        "net": 1600.27,
+        "period_end": "2028-06-02",
+        "employer": "Valley Medical",
+        "ytd_gross": 36384.09,
+        "deduction": -67.15
+      },
+      "capture_ok": true
+    },
+    {
+      "doc_id": "d-300100",
+      "channel": "photo",
+      "gold": {
+        "gross": 3407.75,
+        "net": 2845.44,
+        "period_end": "2028-06-19",
+        "employer": "Desert Ridge Auto",
+        "ytd_gross": 19138.79,
+        "deduction": -159.12
+      },
+      "capture_ok": true
+    }
+  ],
+  "voice": [
+    {
+      "voice_id": "v-301001",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot",
+      "plant": "low_wer_task_fail"
+    },
+    {
+      "voice_id": "v-301002",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot",
+      "plant": "low_wer_task_fail"
+    },
+    {
+      "voice_id": "v-301003",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot",
+      "plant": "low_wer_task_fail"
+    },
+    {
+      "voice_id": "v-301004",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot",
+      "plant": "low_wer_task_fail"
+    },
+    {
+      "voice_id": "v-301005",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot",
+      "plant": "low_wer_task_fail"
+    },
+    {
+      "voice_id": "v-301006",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot",
+      "plant": "high_wer_task_ok"
+    },
+    {
+      "voice_id": "v-301007",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot",
+      "plant": "high_wer_task_ok"
+    },
+    {
+      "voice_id": "v-301008",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot",
+      "plant": "high_wer_task_ok"
+    },
+    {
+      "voice_id": "v-301009",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot",
+      "plant": "high_wer_task_ok"
+    },
+    {
+      "voice_id": "v-301010",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um",
+        "um"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot",
+      "plant": "high_wer_task_ok"
+    },
+    {
+      "voice_id": "v-301011",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "fee",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301012",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "fee",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301013",
+      "ref": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "hyp": [
+        "the",
+        "grace",
+        "ten",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301014",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301015",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "uh",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301016",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "late",
+        "fee",
+        "uh",
+        "twenty",
+        "five",
+        "fee",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301017",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "thirty",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "uh"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301018",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "fee",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "fee",
+        "ten"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301019",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301020",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301021",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301022",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301023",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "fee",
+        "fee",
+        "is",
+        "twenty",
+        "ten",
+        "dollars",
+        "after",
+        "fifteen",
+        "uh"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301024",
+      "ref": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "hyp": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301025",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301026",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "uh",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301027",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "late",
+        "fee",
+        "thirty",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301028",
+      "ref": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "hyp": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301029",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301030",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "fee",
+        "were",
+        "cut"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301031",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "ten",
+        "thirty",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301032",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301033",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "need",
+        "ten",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301034",
+      "ref": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "hyp": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "uh",
+        "days",
+        "not",
+        "ten"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301035",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "ten",
+        "on",
+        "my",
+        "stub"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301036",
+      "ref": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "on",
+        "my",
+        "stub"
+      ],
+      "hyp": [
+        "please",
+        "check",
+        "the",
+        "negative",
+        "deduction",
+        "thirty",
+        "my",
+        "stub"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301037",
+      "ref": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "hyp": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "fee",
+        "ten",
+        "ten"
+      ],
+      "task_ok": false,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301038",
+      "ref": [
+        "the",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "hyp": [
+        "uh",
+        "grace",
+        "period",
+        "is",
+        "fifteen",
+        "days",
+        "not",
+        "ten"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301039",
+      "ref": [
+        "I",
+        "need",
+        "a",
+        "deferral",
+        "because",
+        "my",
+        "hours",
+        "were",
+        "cut"
+      ],
+      "hyp": [
+        "I",
+        "need",
+        "ten",
+        "deferral",
+        "because",
+        "my",
+        "ten",
+        "were",
+        "fee"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    },
+    {
+      "voice_id": "v-301040",
+      "ref": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "hyp": [
+        "the",
+        "late",
+        "fee",
+        "is",
+        "twenty",
+        "five",
+        "dollars",
+        "after",
+        "fifteen",
+        "days"
+      ],
+      "task_ok": true,
+      "channel": "ivr_pilot"
+    }
+  ],
+  "study_open": "2028-06-19",
+  "scoreboard": "2028-07-10",
+  "named_car_photo": "d-300017",
+  "named_neg_drop": "d-300042",
+  "digest": "873a9ad87f66"
+}

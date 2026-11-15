@@ -1,0 +1,9 @@
+digest=b261d8b6093e seed=2050 SIMULATED n_configs=3
+inject_config=linter_pass_unvalidated_judge lint_pass=True gate=HOLD reason=unvalidated_judge
+inject_caught=True failure=config_lints_clean_but_unvalidated_judge_gates_release
+record_sha12=3f7a1b60bfc0
+live_provider_eval_sweeps=PENDING paid_calls=False
+ch16_ceiling_sum=6.291941 kinds_unchanged=True
+config_harbor_compass_v3_lint=True_gate=PASS
+config_linter_pass_unvalidated_judge_lint=True_gate=HOLD
+config_missing_population_lint=False_gate=HOLD

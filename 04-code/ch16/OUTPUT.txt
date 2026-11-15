@@ -1,0 +1,185 @@
+=== CACHE STATUS 2026-11-08 Asia/Calcutta ===
+Anthropic out/*.jsonl caches NOT FOUND on disk or Drive evidence search.
+Numbers below are historical lab printout pending re-cache verification.
+SIMULATED fixture section remains authoritative for planted counts.
+See out/MISSING_CACHES.md and 00-plan/pending-model-runs.md.
+
+===== fixture =====
+1640 t-177402 t-185242 Counter({'right_no': 842, 'right_waive': 489, 'defer_review': 67, 'defer_tool': 65, 'X_invent': 39, 'F_waive': 39, 'F_hedge': 38, 'X_wrongloan': 31, 'tool_bug': 30})
+v1.1 fail rate 0.08963414634146341 truth 0.10792682926829268
+dev 100 Counter({'right_no': 40, 'right_waive': 24, 'F_hedge': 9, 'X_invent': 7, 'F_waive': 6, 'X_wrongloan': 5, 'defer_review': 5, 'defer_tool': 3, 'tool_bug': 1})
+test 200 Counter({'right_no': 81, 'right_waive': 47, 'F_hedge': 16, 'X_invent': 15, 'F_waive': 12, 'defer_review': 11, 'X_wrongloan': 9, 'defer_tool': 6, 'tool_bug': 3})
+strata Counter({'random': 150, 'targeted': 150}) Counter({('random', 'pass'): 143, ('targeted', 'pass'): 78, ('targeted', 'fail'): 72, ('random', 'fail'): 7})
+tones Counter({('warm', 'pass'): 77, ('curt', 'pass'): 71, ('warm', 'fail'): 30, ('curt', 'fail'): 22})
+agent 20 40 Counter({'right_no': 18, 'right_waive': 8, 'F_hedge': 5, 'F_waive': 4, 'X_wrongloan': 2, 'X_invent': 2, 'defer_review': 1})
+{'loan': '5582', 'autopay': True, 'events': [{'date': '2026-03-26', 'event': 'autopay_enrolled'}, {'date': '2026-09-25', 'event': 'courtesy_waiver_applied', 'amount': 25}, {'date': '2027-09-21', 'event': 'payment_due', 'amount': 506.38}, {'date': '2027-10-11', 'event': 'payment_posted', 'days_after_due': 20}, {'date': '2027-10-11', 'event': 'late_fee_assessed', 'amount': 25}], 'days_late': 20, 'reason': 'waiver_12_13', 'last_waiver': '2026-09-25'} fee_lookup(loan="5582") -> {"late_fee": 25, "grace_days": 15, "days_late": 20, "courtesy_waiver": "not_eligible", "tool_version": "3.4"}
+
+===== lab =====
+
+====================================================================================================
+1. Fixture (SIMULATED): the October fortnight and fee-judge-v1
+====================================================================================================
+fee conversations Mon 4 to Sun 17 Oct 2027: 1640 (t-177402 to t-185242)
+kinds: {'right_no': 842, 'right_waive': 489, 'defer_review': 67, 'defer_tool': 65, 'X_invent': 39, 'F_waive': 39, 'F_hedge': 38, 'X_wrongloan': 31, 'tool_bug': 30}
+MC-02 v1.1 fail: 147 (9.0%); wrong for the borrower incl. fee-tool 3.4 bug: 177 (10.8%)
+tool_bug traces by day: {'2027-10-11': 2, '2027-10-12': 6, '2027-10-13': 5, '2027-10-14': 8, '2027-10-15': 5, '2027-10-16': 2, '2027-10-17': 2}
+dev: 100  v1.1 fail 27  strata {'random': 52, 'targeted': 48}  kinds {'right_no': 40, 'right_waive': 24, 'F_hedge': 9, 'X_invent': 7, 'F_waive': 6, 'X_wrongloan': 5, 'defer_review': 5, 'defer_tool': 3, 'tool_bug': 1}
+test: 200  v1.1 fail 52  strata {'random': 98, 'targeted': 102}  kinds {'right_no': 81, 'right_waive': 47, 'F_hedge': 16, 'X_invent': 15, 'F_waive': 12, 'defer_review': 11, 'X_wrongloan': 9, 'defer_tool': 6, 'tool_bug': 3}
+reply words on test (REAL, written by the small model): median 91, range 41 to 164
+
+====================================================================================================
+2. Reply-only reading (J0): the judge without the span
+====================================================================================================
+dev_j0                       n=100  TPR 0/27 = 0.000 (0.000 to 0.125)  TNR 3/73 = 0.041 (0.014 to 0.114)  kappa 0.008  abstain 97
+   verdicts: {'cannot_tell': 97, 'pass': 3}
+test_j0                      n=200  TPR 0/52 = 0.000 (0.000 to 0.069)  TNR 4/148 = 0.027 (0.011 to 0.067)  kappa 0.005  abstain 196
+   verdicts: {'cannot_tell': 196, 'pass': 4}
+
+====================================================================================================
+3. Dev iteration: the card question as written (v0) and with rules (v1), 100 dev traces
+====================================================================================================
+dev_v0                       n=100  TPR 16/27 = 0.593 (0.407 to 0.755)  TNR 51/73 = 0.699 (0.586 to 0.792)  kappa 0.344  abstain 8
+     F_hedge       {'right': 8, 'wrong': 1}
+     F_waive       {'wrong': 1, 'right': 5}
+     X_invent      {'wrong': 7}
+     X_wrongloan   {'wrong': 2, 'right': 3}
+     defer_review  {'right': 5}
+     defer_tool    {'right': 3}
+     right_no      {'right': 22, 'wrong': 18}
+     right_waive   {'right': 20, 'wrong': 4}
+     tool_bug      {'right': 1}
+dev_v1                       n=100  TPR 27/27 = 1.000 (0.875 to 1.000)  TNR 73/73 = 1.000 (0.950 to 1.000)  kappa 1.000  abstain 0
+     F_hedge       {'right': 9}
+     F_waive       {'right': 6}
+     X_invent      {'right': 7}
+     X_wrongloan   {'right': 5}
+     defer_review  {'right': 5}
+     defer_tool    {'right': 3}
+     right_no      {'right': 40}
+     right_waive   {'right': 24}
+     tool_bug      {'right': 1}
+v0 false alarms on right_no: 18, by the reason the reply gave: {'no_autopay': 13, 'waiver_inside': 5}
+v0 on tool errors (X_invent): {'cannot_tell': 7}
+v0 replies that put the verdict before any reasoning: 100 of 100
+
+====================================================================================================
+4. Held-out test, 200 traces, judge v1 (small model, run 1 of 3)
+====================================================================================================
+test_v1_small_r0             n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+   precision of a fail verdict: 1.000; confusion {'tp': 52, 'fn': 0, 'fp': 0, 'tn': 148, 'abstain_pos': 0, 'abstain_neg': 0}
+     F_hedge       {'right': 16}
+     F_waive       {'right': 12}
+     X_invent      {'right': 15}
+     X_wrongloan   {'right': 9}
+     defer_review  {'right': 11}
+     defer_tool    {'right': 6}
+     right_no      {'right': 81}
+     right_waive   {'right': 47}
+     tool_bug      {'right': 3}
+   disagreements with the v1.1 label: []
+test_v0 (for contrast)       n=200  TPR 37/52 = 0.712 (0.577 to 0.817)  TNR 109/148 = 0.736 (0.660 to 0.801)  kappa 0.458  abstain 15
+   test traces carrying the fee-tool 3.4 error: 3; judge v1 verdicts {'pass': 3} (v1.1 label pass, borrower label fail)
+
+====================================================================================================
+5. Model choice on the same 200 test traces
+====================================================================================================
+small                        n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+     tokens in/out per call 728/140  cost per call $0.00143  total $0.286  latency p50 1.93 s p95 2.26 s
+     disagreements: []
+large                        n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 147/148 = 0.993 (0.963 to 0.999)  kappa 0.987  abstain 0
+     tokens in/out per call 728/123  cost per call $0.00402  total $0.805  latency p50 3.77 s p95 4.61 s
+     disagreements: [('t-178811', 'defer_review', 'fail')]
+small + extended thinking    n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+     tokens in/out per call 757/530  cost per call $0.00341  total $0.681  latency p50 5.47 s p95 6.22 s
+     disagreements: []
+
+====================================================================================================
+6. Repeats: three runs of the small judge on the same 200 traces
+====================================================================================================
+items whose verdict changed across three runs: 0 of 200 (0.0%)
+   flipped: []
+run 1                        n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+run 2                        n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+run 3                        n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+majority of three            n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+
+====================================================================================================
+7. Pairwise against absolute, 80 test traces with a second reply (REAL)
+====================================================================================================
+contrast pairs (one right, one wrong reply), 40: {'right reply preferred': 35, 'position': 4, 'wrong reply preferred': 1}
+equal pairs (both right, one about twice as long), 40: {'longer preferred': 19, 'shorter preferred': 4, 'position': 17}
+   equal pairs: median words 90 against 181
+   raw (original-first, original-second) answers on equal pairs: {('B', 'A'): 19, ('A', 'B'): 4, ('B', 'B'): 3, ('A', 'A'): 14}
+absolute v1 judge gets both replies right: contrast 40 of 40, equal 40 of 40
+pairwise cost: 160 calls $0.214 (two orders per pair); latency p50 2.39 s
+
+====================================================================================================
+8. The fee-tool 3.4 error: span-only judges against the agent judge (MC-02 v1.2)
+====================================================================================================
+bugs_v1_small: on 20 tool_bug traces {'pass': 20}
+bugs_v1_large: on 20 tool_bug traces {'pass': 20}
+agent small: tool_bug caught 12/20; other 40: n= 40  TPR 13/13 = 1.000 (0.772 to 1.000)  TNR 25/27 = 0.926 (0.766 to 0.979)  kappa 0.890  abstain 0
+     tool calls per trace {2: 60} by name {'get_account_history': 60, 'get_fee_schedule': 60}; cost per trace $0.0049; tokens in/out per trace 2617/459; latency p50 5.1 s p95 6.7 s
+     wrong on the other 40: [('t-182392', 'right_no', 'fail'), ('t-183536', 'right_waive', 'fail')]
+agent large: tool_bug caught 20/20; other 40: n= 40  TPR 13/13 = 1.000 (0.772 to 1.000)  TNR 25/27 = 0.926 (0.766 to 0.979)  kappa 0.890  abstain 0
+     tool calls per trace {2: 60} by name {'get_account_history': 60, 'get_fee_schedule': 60}; cost per trace $0.0158; tokens in/out per trace 2619/529; latency p50 11.6 s p95 13.7 s
+     wrong on the other 40: [('t-179620', 'defer_review', 'fail'), ('t-184291', 'right_no', 'fail')]
+agent small + days_between: tool_bug caught 20/20; other 40: n= 40  TPR 13/13 = 1.000 (0.772 to 1.000)  TNR 24/27 = 0.889 (0.719 to 0.961)  kappa 0.839  abstain 0
+     tool calls per trace {2: 10, 3: 50} by name {'get_account_history': 60, 'get_fee_schedule': 60, 'days_between': 50}; cost per trace $0.0066; tokens in/out per trace 4182/480; latency p50 5.7 s p95 7.3 s
+     wrong on the other 40: [('t-182392', 'right_no', 'fail'), ('t-183353', 'right_no', 'fail'), ('t-184291', 'right_no', 'fail')]
+
+====================================================================================================
+9. A month of judging every fee conversation, against reading them
+====================================================================================================
+fee conversations per 30 days at the fortnight's pace: 3514; v1.1 fail rate 9.0%
+small judge  judge $5.03  ordered reads 315 costing $630  together $635  reading everything $7028
+large judge  judge $14.14  ordered reads 315 costing $630  together $644  reading everything $7028
+agent large  judge $55.50  ordered reads 315 costing $630  together $685  reading everything $7028
+
+====================================================================================================
+10. Entry to the monitoring tier (truss.judge.admit)
+====================================================================================================
+order {'admit': True, 'role': 'order', 'card': 'MC-02 v1.1', 'reasons': []}
+decide {'admit': False, 'role': 'none', 'card': 'MC-02 v1.1', 'reasons': ['role decide needs a Judge Report Card']}
+
+all judge calls in this lab: 2480 calls, 1,456,977 tokens in, 393,419 out, about $4.02 at the assumed prices
+
+===== inject =====
+Failure injection: the tone rubric ('clear, polite, empathetic and helpful')
+judge v1 (facts)             n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+tone rubric                  n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 80/148 = 0.541 (0.460 to 0.619)  kappa 0.380  abstain 0
+
+fail verdicts by the reply's tone (tone was assigned at random, independent of correctness):
+  warm replies, v1.1 label pass: n= 77  tone rubric fail  39  facts judge fail   0
+  warm replies, v1.1 label fail: n= 30  tone rubric fail  30  facts judge fail  30
+  curt replies, v1.1 label pass: n= 71  tone rubric fail  29  facts judge fail   0
+  curt replies, v1.1 label fail: n= 22  tone rubric fail  22  facts judge fail  22
+
+warm and wrong replies the tone rubric passed: 0 of 30
+curt and right replies the tone rubric failed: 29 of 71
+by kind: {'F_hedge': {'right': 16}, 'F_waive': {'right': 12}, 'X_invent': {'right': 15}, 'X_wrongloan': {'right': 9}, 'defer_review': {'wrong': 3, 'right': 8}, 'defer_tool': {'right': 6}, 'right_no': {'wrong': 37, 'right': 44}, 'right_waive': {'right': 19, 'wrong': 28}, 'tool_bug': {'right': 3}}
+warm and right replies the tone rubric failed: 39 of 77
+
+example t-177443 (right_no, warm, v1.1 pass): tone rubric critique, last 400 characters:
+ection," which misrepresents the data—the borrower isn't eligible for a waiver at all, not just ineligible because they lack autopay. This could mislead the borrower into thinking autopay enrollment would unlock a waiver when it won't. The proactive suggestion about autopay is helpful, but the inaccurate explanation of waiver eligibility undermines the quality of the response.
+
+{"verdict": "fail"}
+
+cost of the injected run: 200 calls $0.221
+
+===== try_its =====
+Try it 1: drop the critique and ask for the verdict alone (same rules, same 200 test traces)
+critique first               n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 148/148 = 1.000 (0.975 to 1.000)  kappa 1.000  abstain 0
+verdict only                 n=200  TPR 52/52 = 1.000 (0.931 to 1.000)  TNR 142/148 = 0.959 (0.914 to 0.981)  kappa 0.925  abstain 0
+  tokens out per call 140 against 22; cost per call $0.00143 against $0.00080; latency p50 1.93 s against 0.64 s
+  verdict-only disagreements: [('t-178476', 'right_waive', 'fail'), ('t-178668', 'right_no', 'fail'), ('t-179354', 'right_no', 'fail'), ('t-180518', 'right_no', 'fail'), ('t-181953', 'tool_bug', 'fail'), ('t-183762', 'right_no', 'fail')]
+
+Try it 2: the same judge on Spanish replies (100 test traces translated by the small model; prompt in English)
+English replies, same 100    n=100  TPR 29/29 = 1.000 (0.883 to 1.000)  TNR 71/71 = 1.000 (0.949 to 1.000)  kappa 1.000  abstain 0
+Spanish replies              n=100  TPR 29/29 = 1.000 (0.883 to 1.000)  TNR 71/71 = 1.000 (0.949 to 1.000)  kappa 1.000  abstain 0
+  Spanish disagreements: []
+  English disagreements on the same 100: []
+
+Try it 3: give the agent judge a date calculator (days_between) and rerun the small agent
+  agent small                  bug traces caught 12/20; wrong on other 40: 2 [('t-182392', 'right_no'), ('t-183536', 'right_waive')]; traces that used days_between 0; cost per trace $0.0049
+  agent small + days_between   bug traces caught 20/20; wrong on other 40: 3 [('t-182392', 'right_no'), ('t-183353', 'right_no'), ('t-184291', 'right_no')]; traces that used days_between 50; cost per trace $0.0066

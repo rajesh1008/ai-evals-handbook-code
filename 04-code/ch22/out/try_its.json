@@ -1,0 +1,60 @@
+{
+ "v2_dev": {
+  "tp": 37,
+  "P": 37,
+  "tn": 49,
+  "N": 63,
+  "kappa": 0.7214484679665739,
+  "errors": 14
+ },
+ "v2_test": {
+  "tp": 69,
+  "P": 72,
+  "tn": 106,
+  "N": 128,
+  "kappa": 0.7435371358227328,
+  "errors": 25
+ },
+ "vonly_dev": {
+  "tp": 27,
+  "P": 37,
+  "tn": 41,
+  "N": 63,
+  "kappa": 0.3566546039404906,
+  "errors": 32
+ },
+ "vonly_test": {
+  "tp": 69,
+  "P": 72,
+  "tn": 90,
+  "N": 128,
+  "kappa": 0.5978815221655551,
+  "errors": 41
+ },
+ "proof": {
+  "tp": 59,
+  "P": 72,
+  "tn": 113,
+  "N": 128,
+  "kappa": 0.6980155306298533,
+  "errors": 28,
+  "miss_kinds": {
+   "F_stand_elig": 13
+  }
+ },
+ "t3_two draws disagree": {
+  "caught": 5,
+  "errors": 9,
+  "flagged": 13
+ },
+ "t3_window claim wrong": {
+  "caught": 7,
+  "errors": 9,
+  "flagged": 15
+ },
+ "t3_either": {
+  "caught": 9,
+  "errors": 9,
+  "flagged": 24
+ }
+}

@@ -1,0 +1,7 @@
+Chapter 31 OUTPUT
+digest f4eb1860dd14
+board 10/2400 rate 0.0042 Wilson [0.0023,0.0077] upper 0.0071
+n0_for_0.5pct 598 n_margin 5256 victor_n 2400
+paired_diff -0.0100 CI [-0.0425,0.0200] includes0 True
+inject unpaired_diff 0.0400 erased True
+real REAL 4/6

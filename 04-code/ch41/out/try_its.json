@@ -1,0 +1,21 @@
+{
+  "try_its": [
+    {
+      "name": "waterfall_savings",
+      "saved_usd": 1260.0,
+      "ok": true
+    },
+    {
+      "name": "cascade_calls_only",
+      "total_usd": 4.682904000000001,
+      "ok": true
+    },
+    {
+      "name": "amortise_and_per_decision",
+      "amortised": 1.0319770000000001,
+      "usd_per_decision": 16.0,
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}

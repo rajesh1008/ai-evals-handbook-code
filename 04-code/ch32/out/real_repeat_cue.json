@@ -1,0 +1,154 @@
+{
+  "status": "ok",
+  "model": "claude-haiku-4-5-20251001",
+  "n": 24,
+  "correct": 14,
+  "accuracy": 0.5833333333333334,
+  "rows": [
+    {
+      "gold": "noise",
+      "pred": "improvement",
+      "ok": false,
+      "desc": "Hardship mean 88.2; candidate 87.5; published floor 1.4; margin 0.5."
+    },
+    {
+      "gold": "regression",
+      "pred": "improvement",
+      "ok": false,
+      "desc": "Hardship mean 88.2; candidate 85.0; floor 1.4; margin 0.5."
+    },
+    {
+      "gold": "noise",
+      "pred": "improvement",
+      "ok": false,
+      "desc": "Fee 91.0 to 90.3; floor 1.4; margin 0.5."
+    },
+    {
+      "gold": "regression",
+      "pred": "improvement",
+      "ok": false,
+      "desc": "Fee 91.0 to 88.0; floor 1.4; margin 0.5."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Two runs differ by 0.9 pts; floor 1.4."
+    },
+    {
+      "gold": "improvement",
+      "pred": "regression",
+      "ok": false,
+      "desc": "Hardship 88.2 to 91.0; floor 1.4; margin 0.5."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "pass@3 0.80 but pass^3 0.20 on same trials \u2014 report both, not a ship c"
+    },
+    {
+      "gold": "regression",
+      "pred": "noise",
+      "ok": false,
+      "desc": "Five-run mean drop 2.6 pts vs baseline; floor 1.4; margin 0.5."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Temperature 0 still flipped 2 of 24 canaries; treat as floor, not prod"
+    },
+    {
+      "gold": "regression",
+      "pred": "noise",
+      "ok": false,
+      "desc": "Silent prompt date change; hardship -3.1 pts; floor 1.4."
+    },
+    {
+      "gold": "noise",
+      "pred": "regression",
+      "ok": false,
+      "desc": "Inside-floor injection drop 0.8 pts; naive gate alarmed."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Run scores 87.1, 88.4, 87.9, 88.8, 87.6; half-range under 1.4."
+    },
+    {
+      "gold": "regression",
+      "pred": "noise",
+      "ok": false,
+      "desc": "Candidate tool schema change; fee -2.4 pts; floor 1.4; margin 0.5."
+    },
+    {
+      "gold": "improvement",
+      "pred": "regression",
+      "ok": false,
+      "desc": "After pin fix; hardship +2.2 pts above floor+margin."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Judge flip rate matches production rerun floor."
+    },
+    {
+      "gold": "regression",
+      "pred": "regression",
+      "ok": true,
+      "desc": "Gateway mid-run upgrade; hardship -2.8 pts."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Seed unset but |delta| 0.4 pts."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Retry with contaminated context; do not inflate pass@k."
+    },
+    {
+      "gold": "regression",
+      "pred": "regression",
+      "ok": true,
+      "desc": "Published floor ignored; product ship on -2.1 pts."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Report mean of five runs; single-run leaderboard refused."
+    },
+    {
+      "gold": "improvement",
+      "pred": "improvement",
+      "ok": true,
+      "desc": "Margin cleared; +2.0 pts after eval ticket."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Formatting-only prompt tweak; score jitter 0.6 pts."
+    },
+    {
+      "gold": "regression",
+      "pred": "regression",
+      "ok": true,
+      "desc": "Batching change moved hardship -3.5 pts."
+    },
+    {
+      "gold": "noise",
+      "pred": "noise",
+      "ok": true,
+      "desc": "Which of two runs is right? Neither alone \u2014 publish floor."
+    }
+  ],
+  "simulated_suite": true
+}

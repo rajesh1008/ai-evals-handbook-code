@@ -1,0 +1,175 @@
+=== Chapter 24 OUTPUT ===
+date: 2026-11-08T16:27:26.965294+05:30
+truss 0.27.0
+--- fixture ---
+{
+  "seed": 2026,
+  "n": 500,
+  "digest": "7741c7f6dae0",
+  "kind_counts": {
+    "abandon": 10,
+    "clean": 250,
+    "loop": 115,
+    "lucky": 30,
+    "missing_elig": 10,
+    "recover": 40,
+    "refer": 20,
+    "wrong_offer": 25
+  },
+  "looped": 115,
+  "named_lucky": "t-270087"
+}
+--- lab ---
+{
+  "seed": 2026,
+  "n": 500,
+  "digest": "7741c7f6dae0",
+  "loops": {
+    "n_looped": 115,
+    "share": 0.23,
+    "detect_loops_n": 165,
+    "detect_loops_share": 0.33,
+    "blueprint_touchpoint": 0.23,
+    "mean_steps": 5.44,
+    "wilson95": [
+      0.19525432702175258,
+      0.2688629669849352
+    ]
+  },
+  "lucky": {
+    "counts": {
+      "true_success": 425,
+      "true_failure": 35,
+      "lucky_pass": 40
+    },
+    "fixture_kinds": {
+      "loop": 115,
+      "refer": 20,
+      "clean": 250,
+      "wrong_offer": 25,
+      "missing_elig": 10,
+      "recover": 40,
+      "abandon": 10,
+      "lucky": 30
+    },
+    "n_lucky_pass": 40,
+    "share_of_outcome_ok": 0.08602150537634409,
+    "named": "t-270087",
+    "named_detail": {
+      "outcome_ok": true,
+      "process_ok": false,
+      "kind": "lucky_pass",
+      "is_lucky_pass": true,
+      "trace_id": "t-270087",
+      "fixture_kind": "lucky",
+      "partial": 0.5
+    }
+  },
+  "partial": {
+    "mean_partial": 0.95,
+    "binary_outcome_ok": 0.93,
+    "gap": -0.019999999999999907
+  },
+  "transitions": {
+    "n_traj": 500,
+    "top_failures": [
+      {
+        "from": "lookup_policy",
+        "to": "check_eligibility",
+        "fails": 115,
+        "n": 450,
+        "rate": 0.25555555555555554
+      },
+      {
+        "from": "get_borrower",
+        "to": "lookup_policy",
+        "fails": 40,
+        "n": 460,
+        "rate": 0.08695652173913043
+      },
+      {
+        "from": "get_borrower",
+        "to": "compute_plan",
+        "fails": 30,
+        "n": 30,
+        "rate": 1.0
+      },
+      {
+        "from": "check_eligibility",
+        "to": "draft_offer",
+        "fails": 25,
+        "n": 430,
+        "rate": 0.05813953488372093
+      }
+    ]
+  },
+  "recovery": {
+    "n_errors": 155,
+    "n_recovered": 155,
+    "rate": 1.0
+  },
+  "passk": {
+    "n_tasks": 50,
+    "k": 5,
+    "pass_hat_k": 0.3,
+    "pass_at_k": 1.0,
+    "n_pass_hat_k": 15,
+    "n_pass_at_k": 50,
+    "mean_unbiased_pass_hat_5": 0.3
+  },
+  "compaction": {
+    "n": 500,
+    "survived": 349,
+    "rate": 0.698,
+    "dropped_flag_agree": 1.0
+  },
+  "reference": {
+    "eligible": 470,
+    "exact": 250,
+    "rate": 0.5319148936170213
+  }
+}
+--- inject ---
+{
+  "n": 30,
+  "outcome_pass": 30,
+  "process_pass": 0,
+  "named": "t-270087",
+  "named_tools": [
+    "get_loan",
+    "get_borrower",
+    "compute_plan",
+    "draft_offer"
+  ]
+}
+--- try_its ---
+{
+  "try1_lost_plan_match": 65,
+  "try1_n": 470,
+  "try2_pass_hat_3": 0.48,
+  "try2_pass_hat_5": 0.3,
+  "try3_stated_work_n": 33,
+  "try3_surv": 24
+}
+--- judge ---
+{
+  "model": "claude-haiku-4-5-20251001",
+  "n": 40,
+  "tp": 15,
+  "tn": 20,
+  "fp": 5,
+  "fn": 0,
+  "unclear": 0,
+  "tpr": 1.0,
+  "tnr": 0.8,
+  "tokens_in": 9949,
+  "tokens_out": 1469,
+  "cost_usd_assumed": 0.017294
+}
+--- judge by kind ---
+{
+  "('lucky', 'fail', False)": 15,
+  "('missing_elig', 'fail', False)": 5,
+  "('wrong_offer', 'pass', False)": 5,
+  "('clean', 'pass', True)": 15
+}

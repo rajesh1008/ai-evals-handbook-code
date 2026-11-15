@@ -1,0 +1,293 @@
+{
+  "seed": 2049,
+  "digest": "9aa91eeb5d57",
+  "SIMULATED": true,
+  "live_provider_sweeps": "PENDING",
+  "months": [
+    {
+      "month": 1,
+      "label": "Y1-M01",
+      "wrong_offer_wilson_hi": 0.0143,
+      "fee_wilson_hi": 0.028,
+      "annotator_kappa": 0.61,
+      "new_annotator_share": 0.4,
+      "incident_count": 2,
+      "ship_verb": "HOLD",
+      "system_pin": "sys-m1",
+      "judge_pin": "judge-v1",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 2,
+      "label": "Y1-M02",
+      "wrong_offer_wilson_hi": 0.0128,
+      "fee_wilson_hi": 0.026,
+      "annotator_kappa": 0.63,
+      "new_annotator_share": 0.35,
+      "incident_count": 1,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m1",
+      "judge_pin": "judge-v1",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 3,
+      "label": "Y1-M03",
+      "wrong_offer_wilson_hi": 0.0111,
+      "fee_wilson_hi": 0.024,
+      "annotator_kappa": 0.64,
+      "new_annotator_share": 0.3,
+      "incident_count": 1,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m1",
+      "judge_pin": "judge-v1",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 4,
+      "label": "Y1-M04",
+      "wrong_offer_wilson_hi": 0.0098,
+      "fee_wilson_hi": 0.022,
+      "annotator_kappa": 0.66,
+      "new_annotator_share": 0.25,
+      "incident_count": 0,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m2",
+      "judge_pin": "judge-v1",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 5,
+      "label": "Y1-M05",
+      "wrong_offer_wilson_hi": 0.0091,
+      "fee_wilson_hi": 0.021,
+      "annotator_kappa": 0.67,
+      "new_annotator_share": 0.2,
+      "incident_count": 1,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m2",
+      "judge_pin": "judge-v2",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 6,
+      "label": "Y1-M06",
+      "wrong_offer_wilson_hi": 0.0086,
+      "fee_wilson_hi": 0.02,
+      "annotator_kappa": 0.68,
+      "new_annotator_share": 0.18,
+      "incident_count": 0,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m2",
+      "judge_pin": "judge-v2",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 7,
+      "label": "Y1-M07",
+      "wrong_offer_wilson_hi": 0.0084,
+      "fee_wilson_hi": 0.019,
+      "annotator_kappa": 0.62,
+      "new_annotator_share": 0.45,
+      "incident_count": 3,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m2",
+      "judge_pin": "judge-v2",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 8,
+      "label": "Y1-M08",
+      "wrong_offer_wilson_hi": 0.0081,
+      "fee_wilson_hi": 0.0185,
+      "annotator_kappa": 0.64,
+      "new_annotator_share": 0.38,
+      "incident_count": 1,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m3",
+      "judge_pin": "judge-v3",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 9,
+      "label": "Y1-M09",
+      "wrong_offer_wilson_hi": 0.0079,
+      "fee_wilson_hi": 0.018,
+      "annotator_kappa": 0.66,
+      "new_annotator_share": 0.3,
+      "incident_count": 1,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m3",
+      "judge_pin": "judge-v3",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 10,
+      "label": "Y1-M10",
+      "wrong_offer_wilson_hi": 0.0088,
+      "fee_wilson_hi": 0.0195,
+      "annotator_kappa": 0.65,
+      "new_annotator_share": 0.28,
+      "incident_count": 2,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m3",
+      "judge_pin": "judge-v3",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 11,
+      "label": "Y1-M11",
+      "wrong_offer_wilson_hi": 0.0119,
+      "fee_wilson_hi": 0.023,
+      "annotator_kappa": 0.58,
+      "new_annotator_share": 0.25,
+      "incident_count": 4,
+      "ship_verb": "ROLLBACK",
+      "system_pin": "sys-m3-depr",
+      "judge_pin": "judge-v3-broken",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    },
+    {
+      "month": 12,
+      "label": "Y1-M12",
+      "wrong_offer_wilson_hi": 0.0082,
+      "fee_wilson_hi": 0.0182,
+      "annotator_kappa": 0.63,
+      "new_annotator_share": 0.22,
+      "incident_count": 1,
+      "ship_verb": "SHIP",
+      "system_pin": "sys-m4",
+      "judge_pin": "judge-v4",
+      "kind": "SIMULATED",
+      "note": "illustrative Harbor Year-1 teaching freeze; not observed client history"
+    }
+  ],
+  "calendar": [
+    {
+      "month": 1,
+      "artifact": "Year plan + registry freeze",
+      "owner": "EvalLead",
+      "trigger": "calendar_start"
+    },
+    {
+      "month": 2,
+      "artifact": "First quarterly baseline draft",
+      "owner": "EvalLead",
+      "trigger": "Q1_slot"
+    },
+    {
+      "month": 3,
+      "artifact": "Q1 re-baseline signed",
+      "owner": "Victor",
+      "trigger": "quarter_close"
+    },
+    {
+      "month": 4,
+      "artifact": "Model upgrade ticket M2\u2192M3",
+      "owner": "Ryan",
+      "trigger": "provider_bump"
+    },
+    {
+      "month": 5,
+      "artifact": "Judge revalidation slot",
+      "owner": "Grace",
+      "trigger": "quarterly_judge"
+    },
+    {
+      "month": 6,
+      "artifact": "Q2 re-baseline signed",
+      "owner": "Victor",
+      "trigger": "quarter_close"
+    },
+    {
+      "month": 7,
+      "artifact": "Annotator onboarding wave",
+      "owner": "EvalLead",
+      "trigger": "turnover"
+    },
+    {
+      "month": 8,
+      "artifact": "Policy v5 + judge rubric retune",
+      "owner": "Victor+Grace",
+      "trigger": "policy_change"
+    },
+    {
+      "month": 9,
+      "artifact": "Q3 re-baseline + mix-shock review",
+      "owner": "EvalLead",
+      "trigger": "quarter_close"
+    },
+    {
+      "month": 10,
+      "artifact": "Shadow hours before M3\u2192M4",
+      "owner": "Ryan",
+      "trigger": "provider_bump"
+    },
+    {
+      "month": 11,
+      "artifact": "RC-49-11 ship then rollback",
+      "owner": "EvalLead+Victor",
+      "trigger": "incident"
+    },
+    {
+      "month": 12,
+      "artifact": "Q4 re-baseline + Year-1 packet",
+      "owner": "Victor",
+      "trigger": "quarter_close"
+    }
+  ],
+  "events": {
+    "annotator_turnover_m7": {
+      "departed": "GraceHolloway_primary",
+      "new": 2,
+      "kappa_pre": 0.68,
+      "kappa_post": 0.62
+    },
+    "policy_change_m8": {
+      "from": "hardship-policy-v4",
+      "to": "hardship-policy-v5",
+      "judge_retune_required": true
+    },
+    "provider_deprecation_m11": {
+      "system_pin_before": "sys-m3",
+      "system_pin_after": "sys-m3-depr",
+      "judge_pin_before": "judge-v3",
+      "judge_pin_after": "judge-v3-broken",
+      "both_changed": true,
+      "caught_by": "pin_diff_gate"
+    },
+    "rollback_rc_49_11": {
+      "candidate": "RC-49-11",
+      "gates_green": true,
+      "online_complaint_spike": true,
+      "action": "ROLLBACK_WITHIN_72H",
+      "lesson": "gate_green_not_trial_level_surrogacy"
+    },
+    "sidebar_q2_judge_skipped": {
+      "quarter": "Q2",
+      "judge_revalidation_scheduled": true,
+      "executed": false,
+      "consequence": "M8 policy change hit stale rubric"
+    }
+  },
+  "CH16": {
+    "usage_incurred_usd": 6.191862,
+    "uncertain_reserve_usd": 0.050079,
+    "policy_headroom_usd": 0.05,
+    "ceiling_usd": 6.291941,
+    "note": "kinds under $12 cap; not invoice; not historical cache recovery"
+  },
+  "n_months": 12,
+  "label": "Harbor Year-1 illustrative SIMULATED scoreboard"
+}

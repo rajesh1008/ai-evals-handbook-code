@@ -1,0 +1,1 @@
+{"trace_id": "t-270033", "text": "VERDICT: fail\nREASON: Process skipped check_eligibility; jumped directly to compute_plan/draft_offer without verifying hardship policy and eligibility criteria.", "usage": {"in": 246, "out": 40}, "planted_process_ok": false, "fixture_kind": "lucky"}

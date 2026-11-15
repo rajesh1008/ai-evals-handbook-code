@@ -1,0 +1,325 @@
+### lab.py
+
+== A. The April fixture (Thu 1 to Wed 14 April 2027), release rc-0326-2
+Truss 0.12.0; 8,096 conversations, t-100099 to t-108194; seed 2028; flows {'payoff_letter': 801, 'lien_release': 540, 'account_question': 3057, 'fee_explanation': 1614, 'statement_request': 1575, 'hardship': 509}
+spans 17,302; tool spans in error 389; Spanish hardship conversations 46; two-loan accounts 794
+planted truth (what no team sees): {'FM-07': 133, 'cite:stale': 122, 'tool:sunday': 109, 'FM-19': 88, 'FM-22': 86, 'FM-24': 38, 'cite:section': 30, 'FM-20': 26, 'FM-03': 15, 'FM-06': 6, 'FM-15': 4, 'FM-04': 1}
+one trace: {"trace_id": "t-100140", "started_at": "2027-04-01T12:06", "flow": "payoff_letter", "message": "Can I get a payoff quote?", "reply": "Your payoff amount for the loan ending 1876 is $12,458.42, good through April 12, 2027. If you pay after that date, add $5.07 for each extra day."}
+  payoff span: {"tool": "get_payoff_quote", "args": {"loan_id": "4139661876", "quote_date": "2027-04-01"}, "status": "ok", "result": {"loan_id": "4139661876", "quote_date": "2027-04-01", "principal": 12258.26, "apr": 0.149, "day_count": "actual/365", "interest_from": "2027-03-02", "per_diem": 5.0, "good_through": "2027-04-12", "fees_due": 0.0, "payoff_amount": 12458.42}}
+
+== B. C-01 tool_returns: every tool call's arguments and return, and the reply after a failure
+tool                          calls  invalid  replies flagged
+get_account                    8096        0                0
+get_account_balance            3057      145               25
+get_fee_schedule               1614       63                8
+send_statement                 1575       81                0
+get_payoff_quote                801       44                5
+get_title_status                540       33                0
+get_account_history             509       23                0
+check_hardship_eligibility      486        0                0
+request_handoff                 346        0                0
+draft_offer                     278        0                0
+conversations with an invalid return 389: reply states a figure or done action 38 (FM-24), states none 351; truth FM-24 38
+by flow: {'account_question': 25, 'fee_explanation': 8, 'payoff_letter': 5}
+example t-100296: get_account_balance returned no valid result; reply states a figure or a done action | reply: The balance on your loan is $16,236.79.
+schema-valid nonsense: per diem set to 0.00 in 100 correct quotes -> C-01 passes 100, C-07 fails 100
+
+== C1. C-03 deferral_window on April hardship conversations
+hardship 509; outcomes by kind {('refusal', 'pass'): 59, ('offer', 'pass'): 277, ('-', 'not_applicable'): 146, ('refusal', 'fail'): 26, ('offer', 'fail'): 1}
+  t-100451 refusal, but the latest relief ended 2025-07-24, outside 12 months of 2027-04-01
+  t-100549 refusal, but the latest relief ended 2025-06-03, outside 12 months of 2027-04-01
+  t-100623 refusal, but the latest relief ended 2025-08-19, outside 12 months of 2027-04-01
+refusals failing (FM-20) 26; offers failing (FM-04) 1 ['t-104353']
+
+== C2. Boundary cases for the twelve-month window: the check (calendar months, Grace's ruling) vs the eligibility tool (days <= 365)
+  relief ended 364 days before                          364 days  check inside   tool inside   agree
+  ended 365 days before (same calendar date)            365 days  check inside   tool inside   agree
+  ended 366 days before                                 366 days  check outside  tool outside  agree
+  same calendar date across 29 Feb 2028 (366 days)      366 days  check inside   tool outside  DISAGREE
+  ended 29 Feb 2028, asked 28 Feb 2029                  365 days  check inside   tool inside   agree
+  ended 31 Mar 2027, asked 30 Mar 2028                  365 days  check inside   tool inside   agree
+  ended on the day of the conversation                    0 days  check inside   tool inside   agree
+  ends after the conversation (still running)           -26 days  check outside  tool outside  agree
+  (the fixture's April 2027 dates never cross 29 February, so check and tool agree on every April trace)
+
+== C3. C-04 approval_sentence: v1.0 (one exact sentence) vs v2.0 (Victor's allow-list) on April offers
+offers drafted 278; wording on the offer: {'canonical': 192, 'es-canonical': 24, 'para-A': 26, 'missing': 5, 'para-B': 18, 'para-C': 10, 'es-para': 3}
+v1.0 flags 86: {'es-canonical': 24, 'para-A': 26, 'missing': 5, 'para-B': 18, 'para-C': 10, 'es-para': 3}
+v2.0 flags 15: {'missing': 5, 'para-C': 10}
+v1.0 precision against sentence missing (before Victor's ruling): 5/86; after the ruling (para-C is a failure): 15/86
+v2.0 precision 15/15
+
+== C4. C-05 callback_hours
+hand-offs 346; queue closed 46 (Spanish 1); C-05 fails 4: ['t-100753', 't-101196', 't-105640', 't-107005']
+  t-100753 2027-04-02T19:39 queue closed; reply offers no callback
+  t-101196 2027-04-02T20:55 queue closed; reply offers no callback
+
+== C5. C-02 named_loan
+conversations naming a loan by digits 174; C-02 fails 76; FM-22 by nickname missed 10
+C-02 fails by flow: {'payoff_letter': 7, 'account_question': 43, 'fee_explanation': 21, 'hardship': 5}
+
+== D1. C-07 payoff_arithmetic: the quote recomputed from the loan record, and the reply against the quote
+payoff conversations 801; C-07 {'fail': 188, 'not_applicable': 39, 'cannot_tell': 12, 'pass': 562}; failures by side {'tool': 108, 'reply': 80}
+tool-side: 108 quotes short; shortfall mean $5.65, max $16.45, total $610.01; good-through weekday {'Mon': 108}
+  example t-100099: tool payoff 7663.64 vs recomputed 7667.19 (actual/365, interest to 2027-04-12)
+reply-side facets: {'per diem missing from the reply': 23, 'reply per diem # vs quote #': 24, 'reply good#through # vs quote #': 33}
+payoff quotes returned 757; Sunday share 14.3%
+
+== D2. C-06 fee_figures on April fee conversations; v1.0 as first written vs v1.1
+v1.0: outcomes {'pass': 1419, 'cannot_tell': 29, 'not_applicable': 55, 'fail': 111}; precision 3/111; FM-06 in frame 6, caught 3
+v1.1: outcomes {'pass': 1527, 'cannot_tell': 29, 'not_applicable': 55, 'fail': 3}; precision 3/3; FM-06 in frame 6, caught 3
+  v1.0 false flag example t-100319: waiver under review; reply states a status | There's an open waiver request on this fee. A loan officer will confirm whether it is waived within two busine
+FM-06 phrasings in April: {'defend': 3, 'negated-waived': 3}
+
+== E. C-08 citations and number provenance
+replies with a citation 1427; C-08 fails 388: {'superseded document': 122, 'section off topic': 30, 'number with no source': 236}
+C-08 fails by planted truth: {('FM-07',): 133, ('cite:stale',): 102, ('FM-19',): 57, ('FM-24',): 33, ('cite:section',): 28, ('FM-20', 'cite:stale'): 10, ('tool:sunday',): 8, ('FM-03', 'cite:stale'): 7}
+hardship replies citing HP-2026-09 after 1 April: 122 of 363 hardship citations
+FM-24 replies 38; provenance catches 33; misses 5 (every number is in the cited fee schedule) e.g. ['t-100432', 't-103547']
+FM-07 (wrong balance date, a layer-two mode) caught as a side effect: 133 of 133
+payoff replies with a worked 'if you pay on' figure 39: C-08 without C-07's verified numbers fails 39; with them 8
+
+== F. Composition: order, cannot-tell, trace verdicts, overlap, run time
+run order: C-01 tool_returns -> C-02 named_loan -> C-03 deferral_window -> C-04 approval_sentence -> C-05 callback_hours -> C-06 fee_figures -> C-07 payoff_arithmetic -> C-08 citations ; C-06 and C-07 need C-01 and C-02
+  C-01 tool_returns       {'pass': 8058, 'fail': 38, 'cannot_tell': 0, 'not_applicable': 0}
+  C-02 named_loan         {'pass': 98, 'fail': 76, 'cannot_tell': 0, 'not_applicable': 7922}
+  C-03 deferral_window    {'pass': 336, 'fail': 27, 'cannot_tell': 0, 'not_applicable': 7733}
+  C-04 approval_sentence  {'pass': 263, 'fail': 15, 'cannot_tell': 0, 'not_applicable': 7818}
+  C-05 callback_hours     {'pass': 42, 'fail': 4, 'cannot_tell': 0, 'not_applicable': 8050}
+  C-06 fee_figures        {'pass': 1527, 'fail': 3, 'cannot_tell': 29, 'not_applicable': 6537}
+  C-07 payoff_arithmetic  {'pass': 562, 'fail': 188, 'cannot_tell': 12, 'not_applicable': 7334}
+  C-08 citations          {'pass': 7114, 'fail': 388, 'cannot_tell': 0, 'not_applicable': 594}
+trace verdicts {'fail': 613, 'pass': 7483}; cannot-tell share 0.00%; cannot-tell reasons {'upstream C-02 fail': 28, 'upstream C-01 fail': 13}
+co-flag matrix (diagonal = flagged):
+       C-01  C-02  C-03  C-04  C-05  C-06  C-07  C-08
+ C-01    38     0     0     0     0     0     0    33
+ C-02     0    76     1     0     0     0     0     4
+ C-03     0     1    27     0     0     0     0    10
+ C-04     0     0     0    15     0     0     0     8
+ C-05     0     0     0     0     4     0     0     0
+ C-06     0     0     0     0     0     3     0     0
+ C-07     0     0     0     0     0     0   188    70
+ C-08    33     4    10     8     0     0    70   388
+traces failing at least one check 613 (7.6%); failing two or more 126
+run time: 8,096 traces in 0.72 s (0.09 s per 1,000); rendering took 0.39 s
+
+== G1. Fee replay set (fee-replay-2027-03): which checks catch the 18 wrong-fee cases in production
+production: wrong fee 18 of 270; code checks alone fail 14 (78%); other cases failing a check 0 []
+    truth FM-06                  caught by C-06             8
+    truth FM-22                  caught by C-02             5
+    truth FM-06                  caught by nothing          4
+    truth FM-24                  caught by C-01             1
+rc-0322-1: wrong fee 14 of 270; code checks alone fail 13 (93%); other cases failing a check 0 []
+    truth recite                 caught by C-06             5
+    truth FM-22                  caught by C-02             5
+    truth FM-06                  caught by C-06             2
+    truth FM-06                  caught by nothing          1
+    truth FM-24                  caught by C-01             1
+    rc-0322-1 recited fees 5: C-08 fails 0, C-06 fails 5; ids ['t-009856', 't-019474', 't-092510', 't-093315', 't-098041']
+rc-0326-2: wrong fee 9 of 270; code checks alone fail 8 (89%); other cases failing a check 0 []
+    truth FM-22                  caught by C-02             5
+    truth FM-06                  caught by C-06             2
+    truth FM-06                  caught by nothing          1
+    truth FM-24                  caught by C-01             1
+  missed in production: [('t-005848', 'negated-waived'), ('t-094796', 'negated-waived'), ('t-095682', 'negated-waived'), ('t-096898', 'negated-waived')]
+  with the negation rule (C-06 +negation): caught 18 of 18; other cases failing 0
+
+== G2. The gate: 300 frozen + 270 fee replay + 80 new permanent cases (40 tool failure, 40 two-loan by digits)
+pools: tool-error conversations 275, two-loan named by digits 169; drawn 40 + 40, seed 2026
+  tool-failure cases by flow {'fee_explanation': 8, 'account_question': 24, 'payoff_letter': 7, 'hardship': 1}; two-loan cases by flow {'fee_explanation': 9, 'account_question': 21, 'payoff_letter': 7, 'hardship': 3}
+gate cases 650; code-check run 0.07 s
+Spanish offers in the gate set 3
+
+rc-0412-1 vs production (rc-0326-2):
+  C-01 tool_returns          5 ->    0   newly failing   0 []  fixed 5
+  C-02 named_loan           29 ->    0   newly failing   0 []  fixed 29
+  C-03 deferral_window       0 ->    0   newly failing   0 []  fixed 0
+  C-04 approval_sentence     1 ->    4   newly failing   3 ['t-012715', 't-019279', 't-019751']  fixed 0
+  C-05 callback_hours        0 ->    0   newly failing   0 []  fixed 0
+  C-06 fee_figures           2 ->    2   newly failing   0 []  fixed 0
+  C-07 payoff_arithmetic    10 ->   10   newly failing   0 []  fixed 0
+  C-08 citations             6 ->    2   newly failing   0 []  fixed 4
+  decision: HOLD
+
+rc-0414-2 vs production (rc-0326-2):
+  C-01 tool_returns          5 ->    0   newly failing   0 []  fixed 5
+  C-02 named_loan           29 ->    0   newly failing   0 []  fixed 29
+  C-03 deferral_window       0 ->    0   newly failing   0 []  fixed 0
+  C-04 approval_sentence     1 ->    1   newly failing   0 []  fixed 0
+  C-05 callback_hours        0 ->    0   newly failing   0 []  fixed 0
+  C-06 fee_figures           2 ->    2   newly failing   0 []  fixed 0
+  C-07 payoff_arithmetic    10 ->   10   newly failing   0 []  fixed 0
+  C-08 citations             6 ->    2   newly failing   0 []  fixed 4
+  decision: SHIP
+rc-0326-2: on the 80 new cases, C-02 fails 23 of 40, C-01 fails 4 of 40
+rc-0412-1: on the 80 new cases, C-02 fails 0 of 40, C-01 fails 0 of 40
+
+April Spanish offers 29 in two weeks (14.5 a week); 19 Apr to 30 Jun is 10.3 weeks -> about 149 offers without the disclosure at 10% traffic, 1491 at full traffic
+
+== H1. Census rates, 1 to 14 April (every conversation)
+  MC-04 offer without approval sentence (C-04)               15 in 278 (5.4%, Wilson 3.3% to 8.7%)  weekly alert at 15 or more
+  MC-05 offer inside the window (C-03, offers)               1 in 278 (0.4%, Wilson 0.1% to 2.0%)   weekly alert at 4 or more
+  MC-12 closed queue, no callback time (C-05)                4 in 46 (8.7%, Wilson 3.4% to 20.3%)   weekly alert at 7 or more
+  MC-16 payoff reply differs from quote (C-07 reply side)    80 in 757 (10.6%, Wilson 8.6% to 13.0%) weekly alert at 55 or more
+  MC-17 eligible borrower refused (C-03, refusals)           26 in 509 (5.1%, Wilson 3.5% to 7.4%)  weekly alert at 23 or more
+  MC-19 tool on a loan other than the one named (C-02)       76 in 5981 (1.3%, Wilson 1.0% to 1.6%) weekly alert at 54 or more
+  MC-21 figure stated after a failed tool (C-01)             38 in 8096 (0.5%, Wilson 0.3% to 0.6%) weekly alert at 31 or more
+  payoff tool short by a day of interest (C-07 tool side)    108 in 757 (14.3%, Wilson 12.0% to 16.9%) weekly alert at 71 or more
+  citation to a superseded document (C-08)                   122 in 1427 (8.5%, Wilson 7.2% to 10.1%) weekly alert at 80 or more
+
+== H2. MC-01 wrong hardship offer: the census over every stored conversation since 1 February
+  1-14 Feb: offer log 285 drafts, of which 17 discarded after a failed tool call (never shown to the borrower)
+  1-14 Feb: hardship 506, offers 268, on the wrong loan 5, wrong offers (C-03) 2 ['t-084169', 't-089546']
+  1-14 Mar: offer log 274 drafts, of which 14 discarded after a failed tool call (never shown to the borrower)
+  1-14 Mar: hardship 502, offers 260, on the wrong loan 3, wrong offers (C-03) 1 ['t-097427']
+  1-14 Apr: offer log 289 drafts, of which 11 discarded after a failed tool call (never shown to the borrower)
+  1-14 Apr: hardship 509, offers 278, on the wrong loan 5, wrong offers (C-03) 1 ['t-104353']
+census: 4 in 806 (0.5%, Wilson 0.2% to 1.3%); one-sided 95% bound 1.13%; pilot estimate was one in 196 (bound 2.4%)
+offers per week 134; offers needed for a 0.5% bound with 4 failures: 1829
+
+== H3. April fee draw (Thu 15 Apr): 200 fee conversations from 1-14 April, seed 2026, MC-02 v1.1
+fee frame 1523 (abandoned 91 excluded); wrong 3 in 200 (1.5%, Wilson 0.5% to 4.3%); one-sided bound 3.8%; deferred 21 (10.5%)
+  wrong by mode: {('FM-24',): 1, ('FM-22',): 1, ('FM-06',): 1} ['t-105761', 't-104945', 't-106662']
+  code checks flag 2 of the 3 wrong; the reading still decides all 200
+  fixture truth over the April fee frame: 31 in 1523 (2.0%, Wilson 1.4% to 2.9%)
+
+== I1. Validation: precision from reading every flag, recall from a read sample of 300 (50 per flow, seed 2026)
+  C-01 tool_returns       precision 38/38  recall in sample 1/1  fixture recall 38/38
+  C-02 named_loan         precision 76/76  recall in sample 1/2  fixture recall 76/86
+  C-03 deferral_window    precision 27/27  recall in sample 4/4  fixture recall 27/27
+  C-04 approval_sentence  precision 15/15  recall in sample 1/1  fixture recall 15/15
+  C-05 callback_hours     precision 4/4  recall in sample 0/0  fixture recall 4/4
+  C-06 fee_figures        precision 3/3  recall in sample 1/1  fixture recall 3/6
+  C-07 payoff_arithmetic  precision 188/188  recall in sample 9/9  fixture recall 188/189
+  C-08 citations          precision 380/388  recall in sample 23/23  fixture recall 380/380
+flags to read (distinct traces) 613; sample 300
+
+== I2. Mutation testing: plant a known failure in passing traces; does the check kill it?
+  C-01 field dropped from return        applied  777  killed  777  survivors 0 []
+  C-01 tool error, reply unchanged      applied  777  killed  777  survivors 0 []
+  C-02 tools called on the other loan   applied   30  killed   30  survivors 0 []
+  C-03 deferral 180 days before         applied   58  killed   58  survivors 0 []
+  C-03 four-month offer                 applied   58  killed   58  survivors 0 []
+  C-04 approval sentence deleted        applied   58  killed   58  survivors 0 []
+  C-04 'has approved' claim             applied   58  killed   58  survivors 0 []
+  C-05 callback sentence deleted        applied   12  killed   12  survivors 0 []
+  C-05 callback at 7 a.m.               applied   12  killed   12  survivors 0 []
+  C-06 tool says waive, reply defends   applied  467  killed  340  survivors 127 ['t-100124', 't-100125']
+  C-06 10-day grace quoted              applied  467  killed  467  survivors 0 []
+  C-06 invented charge (fee replies)    applied  550  killed  550  survivors 0 []
+  C-07 per diem +1 cent                 applied  227  killed  227  survivors 0 []
+  C-07 good-through a day early         applied  227  killed  227  survivors 0 []
+  C-07 tool payoff one day short        applied  227  killed  227  survivors 0 []
+  C-08 superseded citation              applied   68  killed   68  survivors 0 []
+  C-08 invented charge                  applied 1950  killed 1950  survivors 0 []
+  C-06 survivors share one phrasing: {True: 127} (True = reply says the fee can't be waived)
+  C-06 with the negation rule: applied 467 killed 467
+
+== J. Hours and dollars
+reading every April conversation instead: 509 hardship at 10 min ($60/h) + 7,587 others at 3 min ($85/h) = $37,335 a fortnight
+  Ryan: C-01, C-02, C-05, C-07, schemas (Mon 5 - Fri 9 Apr)                       22.0 h  $  1,870
+  you: C-06, C-08, suite, composition, validation code                            18.0 h  $  1,530
+  Grace: C-03 and C-04 rules, boundary cases (two sessions)                        3.0 h  $    180
+  Victor: approval wordings and the window ruling (Tue 6 Apr)                      1.0 h  $     85
+  validation reading: sample 300 (50 hardship at 10 min, rest at 3 min)           20.8 h  $  1,562
+  validation reading: 613 flags at 2 min (178 hardship by Grace's team)           20.4 h  $  1,588
+  total 85.3 h, $6,816; running the eight checks over a fortnight: 0.7 s of one laptop core
+
+== K. Check coverage, taxonomy v0.3
+end of Chapter 8: 9/19 = 47%; missing ['FM-03', 'FM-07', 'FM-12', 'FM-15', 'FM-16', 'FM-17', 'FM-18', 'FM-19', 'FM-20', 'FM-23']
+end of Chapter 9: 13/19 = 68%; missing ['FM-07', 'FM-12', 'FM-16', 'FM-17', 'FM-18', 'FM-23']
+  C-01 tool_returns       modes ('FM-24',) cards ('MC-21',) owner Ryan Mitchell
+  C-02 named_loan         modes ('FM-22',) cards ('MC-19',) owner Ryan Mitchell
+  C-03 deferral_window    modes ('FM-04', 'FM-20') cards ('MC-05', 'MC-17', 'MC-01') owner Grace Holloway
+  C-04 approval_sentence  modes ('FM-03',) cards ('MC-04',) owner Grace Holloway
+  C-05 callback_hours     modes ('FM-15',) cards ('MC-12',) owner Ryan Mitchell
+  C-06 fee_figures        modes ('FM-06',) cards ('MC-02', 'MC-06') owner evaluation lead
+  C-07 payoff_arithmetic  modes ('FM-19',) cards ('MC-16',) owner Ryan Mitchell
+  C-08 citations          modes () cards () owner evaluation lead
+written out/lab.json
+
+### inject.py
+April payoff conversations 801; products {'personal': 107, 'auto': 634, 'small_business': 60}; Saguaro Coffee Roasters LLC conversations ['t-101406', 't-103463', 't-105510']
+
+as shipped (loan record): C-07 fails 188 (23.5%); true 188; false 0 by product {}; real failures missed 1
+   Saguaro t-101406: pass         quote recomputes; reply matches it
+   Saguaro t-103463: fail         reply good-through 2027-04-15 vs quote 2027-04-16
+   Saguaro t-105510: fail         per diem missing from the reply
+
+30/360 hard-coded: C-07 fails 737 (92.0%); true 184; false 553 by product {'auto': 448, 'personal': 72, 'small_business': 33}; real failures missed 5
+   Saguaro t-101406: fail         tool payoff 54233.13 vs recomputed 54220.44 (30/360, interest to 2027-04-13)
+   Saguaro t-103463: fail         tool payoff 18373.1 vs recomputed 18367.50 (30/360, interest to 2027-04-16)
+   Saguaro t-105510: fail         tool payoff 36359.78 vs recomputed 36346.39 (30/360, interest to 2027-04-20)
+   false flags: per diem gap mean $-0.06, all one sign: False
+
+actual/365 hard-coded: C-07 fails 230 (28.7%); true 188; false 42 by product {'small_business': 42}; real failures missed 1
+   Saguaro t-101406: fail         tool per diem 12.69 vs recomputed 12.51 (actual/365)
+   Saguaro t-103463: fail         tool per diem 5.6 vs recomputed 5.52 (actual/365)
+   Saguaro t-105510: fail         tool per diem 13.39 vs recomputed 13.21 (actual/365)
+   false flags: per diem gap mean $+0.16, all one sign: True
+
+small-business payoff conversations 60 of 801 (7.5%)
+as shipped, their C-07 outcomes: {'fail': 15, 'not_applicable': 3, 'pass': 42}
+the gate rule 'every check flag is a real failure' is broken by the hard-coded convention; the census rate for MC-16 reads 28.7% against 23.5%
+
+### try_its.py
+== 1. C-02 with nicknames
+  nicknames=False: applies to 174; fails 76; true 76 of 86; false 0
+  nicknames=True: applies to 308; fails 86; true 86 of 86; false 0
+  nicknames on file: {'my personal loan': 1258, 'the CR-V': 754, 'the Model 3': 727, 'the Silverado': 719, 'the Tundra': 718, 'the Tacoma': 717, 'the Camry': 714, 'the RAV4': 713}
+
+== 2. C-06 with the negation rule
+  negation=False April fee conversations: fails 3, FM-06 caught 3 of 6, false 0
+  negation=False fee replay set, production: fails 8, FM-06 caught 8 of 12, false 0
+  negation=True April fee conversations: fails 6, FM-06 caught 6 of 6, false 0
+  negation=True fee replay set, production: fails 12, FM-06 caught 12 of 12, false 0
+  sentences the rule reads:
+    waived True  negated False | Good news: the $25.00 late fee has been waived.
+    waived True  negated True  | Your $25.00 late fee can't be waived this time.
+    waived True  negated False | We haven't waived it yet, but the $25.00 fee has now been waived after review.
+    waived True  negated False | Nobody said it couldn't be waived: it has been waived.
+
+== 3. Twelve calendar months vs 365 days, every (end, asked) pair, asked in 2027-2029, gap 360-370 days
+  pairs compared 1096 days x 11 gaps; disagreements 366
+    relief ended 2027-02-28, asked 2028-02-29, 366 days: calendar inside, tool outside
+    relief ended 2027-03-01, asked 2028-03-01, 366 days: calendar inside, tool outside
+    relief ended 2027-03-02, asked 2028-03-02, 366 days: calendar inside, tool outside
+    relief ended 2027-03-03, asked 2028-03-03, 366 days: calendar inside, tool outside
+    relief ended 2027-03-04, asked 2028-03-04, 366 days: calendar inside, tool outside
+    relief ended 2027-03-05, asked 2028-03-05, 366 days: calendar inside, tool outside
+  disagreements by month asked: {'2028-02': 1, '2028-03': 31, '2028-04': 30, '2028-05': 31, '2028-06': 30, '2028-07': 31, '2028-08': 31, '2028-09': 30, '2028-10': 31, '2028-11': 30, '2028-12': 31, '2029-01': 31, '2029-02': 28}
+
+### judge_vs_code.py (real model run, 1 November 2026; analyses the cached calls)
+model claude-haiku-4-5-20251001; calls 220 (2 to write the paraphrases); input tokens 58,731; output tokens 13,809; median latency 0.98 s
+
+== approval: 39 items, each judged twice
+  judge agrees with truth 32/39; code check agrees 39/39
+    canonical              judge pass  code pass  10
+    es-canonical           judge pass  code pass  3
+    es-para                judge fail  code pass  1
+    es-para                judge pass  code pass  2
+    missing                judge fail  code fail  5
+    para-A                 judge fail  code pass  1
+    para-A                 judge pass  code pass  5
+    para-B                 judge fail  code pass  2
+    para-B                 judge pass  code pass  4
+    para-C                 judge fail  code fail  3
+    para-C                 judge pass  code fail  3
+  judge flips between the two runs: 1 of 39
+
+== payoff: 40 items, each judged twice
+  judge agrees with truth 20/40; code check agrees 40/40
+    correct                judge fail  code pass  20
+    reply differs          judge fail  code fail  10
+    tool short (Sunday)    judge fail  code fail  10
+  judge flips between the two runs: 2 of 40
+
+== waiver: 30 items, each judged twice
+  judge              agrees with intent 28/30
+  regex v1.1         agrees with intent 26/30
+  regex + negation   agrees with intent 26/30
+    intent waived     judge waived     regex+neg not waived | Your loan ending 4821 no longer reflects the $25.00 late charge.
+    intent waived     judge not waived regex+neg not waived | The $25.00 late fee will not appear on your next statement for loan 4821.
+    intent waived     judge not waived regex+neg not waived | The $25.00 fee is no longer being charged on your loan ending 4821.
+    intent waived     judge waived     regex+neg not waived | Your account for loan 4821 has been adjusted; the $25.00 charge is gone.
+  judge flips between the two runs: 1 of 30

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "drop_worst_prompt_display",
+    "ranking": [
+      "prompt_v2",
+      "small_fee_model",
+      "prompt_v1"
+    ],
+    "note": "display may omit v3; declared all-pairs family among 4 remains 6 tests",
+    "family_tests_if_honest": 6,
+    "per_comparison_alpha_honest": 0.008333333333333333,
+    "wrong_if_shrink_to_three_systems_all_pairs": 0.016666666666666666
+  },
+  {
+    "name": "five_systems_multiplicity",
+    "all_pairs_n": 10,
+    "all_pairs_alpha": 0.005,
+    "vs_control_n": 4,
+    "vs_control_alpha": 0.0125,
+    "wrong_alpha_if_divide_by_five_systems": 0.01
+  },
+  {
+    "name": "prompts_only",
+    "ranking": [
+      "prompt_v2",
+      "prompt_v1",
+      "prompt_v3"
+    ]
+  }
+]

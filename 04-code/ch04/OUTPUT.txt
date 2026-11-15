@@ -1,0 +1,139 @@
+### lab.py
+== A. Every check, tagged ==
+layer 1  unit checks on deterministic code: 12 checks
+   router wrapper parses labels                               code tests       commit,pull_request,release   Ryan (engineering)
+   tool requests carry a loan token                           code tests       commit,pull_request,release   Ryan (engineering)
+   replies fit three SMS parts                                code tests       commit,pull_request,release   Ryan (engineering)
+   fee rule at the grace boundary                             code tests       commit,pull_request,release   Victor (compliance) rules, Ryan code
+   second deferral within twelve months refused               code tests       commit,pull_request,release   Victor (compliance) rules, Ryan code
+   no retired document in the policy index                    code tests       commit,pull_request,release   Victor (compliance) rules, Ryan code
+   redaction keeps the evidence a reader needs                code tests       commit,pull_request,release   privacy team + evaluation lead
+   replayed traces are complete                               code tests       release                       evaluation lead
+   replayed traces meet the v0.5 contract                     code tests       release                       evaluation lead
+   sample manifest matches its frame                          code tests       release                       evaluation lead
+   candidate runs share one temperature                       code tests       release                       evaluation lead
+   traces that retrieved a retired document                   code tests       weekly                        evaluation lead
+layer 2  component evals on labelled fixtures: 2 checks
+   router recall on 600 labelled first messages               component evals  pull_request,release          Ryan + data science
+   retrieval returns the current version                      component evals  pull_request,release          Ryan + loan officers (labels)
+layer 3  judge-scored task evals on sampled traces: 3 checks
+   hardship traces read by loan officers                      human review     release                       Grace (loan officers)
+   other flows read by the evaluation lead                    human review     release                       evaluation lead
+   Gate v0 decision                                           statistics       release                       Sarah (override)
+layer 4  trajectory and end-to-end evals with simulated users: 2 checks
+   simulated hardship borrowers resolve                       judge evals      release                       evaluation lead + Ryan
+   staging latency at pilot peak                              code tests       release                       Sarah (platform)
+layer 5  shadow and online measurement: 3 checks
+   shadow week at full volume                                 online           shadow                        Sarah (platform) + evaluation lead
+   weekly monitoring sample                                   human review     weekly                        evaluation lead
+   complaints linked to traces                                online           weekly                        Rachel (reads outcomes)
+checks per layer before this chapter: {1: 3, 2: 0, 3: 3, 4: 0, 5: 2}
+checks per layer now:                {1: 12, 2: 2, 3: 3, 4: 2, 5: 3}
+placement problems: none
+
+== B. First run, pilot state (2024 fee schedule still in the policy folder) ==
+commit        ran  7 checks in  0.00 s; HOLD at layer 1: no retired document in the policy index (retired but indexed: ['fee-schedule-2024-01'])
+pull_request  ran  7 checks in  0.00 s; HOLD at layer 1: no retired document in the policy index (retired but indexed: ['fee-schedule-2024-01'])
+release       ran 11 checks in  0.02 s; HOLD at layer 1: no retired document in the policy index (retired but indexed: ['fee-schedule-2024-01'])
+weekly        traces that retrieved a retired document                    336 of  6579 
+weekly        weekly monitoring sample                                      0 of    70 
+weekly        complaints linked to traces                                   0 of    14 14 complaints in the pilot
+
+== C. The three fee complaints: which layer would have caught them ==
+  t-004683  mode: ten-day grace period quoted (policy is 15)   retrieved a retired document: True
+  t-013486  mode: ten-day grace period quoted (policy is 15)   retrieved a retired document: True
+  t-020832  mode: ten-day grace period quoted (policy is 15)   retrieved a retired document: True
+  pilot fee traces that retrieved fee-schedule-2024-01: 336 of 5151 (6.5%)
+  first such trace: 2026-09-07
+  layer 1 index check: 6 documents, cost $0.00; fails on 'fee-schedule-2024-01'
+  layer 3 reading (Chapter 2): found the ten-day grace in 4 of 70 fee traces, inside an $1,850 reading
+  layer 5 complaints: arrived 8 to 11 days after the conversation
+  after the policy team removes the 2024 schedule: commit stage pass (7 checks)
+
+== D. Cost per release, by layer (stated prices; illustrative) ==
+layer 1: 11 checks,   631 items,   0.02 s wall,     $0.00
+layer 2:  2 checks,   720 items,   0.01 s wall,     $0.50
+layer 3:  3 checks,   301 items,   0.00 s wall,    $1,866
+layer 4:  2 checks,   181 items,   0.00 s wall,    $30.41
+release total $1,897; of which people reading $1,850 (97.5%) and replay tokens $16.49
+layer 5: shadow week at full volume $1,212 (39,900 conversations at $0.03 each); weekly monitoring $440
+a month at {'commit': 120, 'pull_request': 35, 'release': 2, 'shadow': 0.5, 'weekly': 4.33} runs:
+  layer 1:     $0.05
+  layer 2:    $18.65
+  layer 3:    $3,733
+  layer 4:    $60.82
+  layer 5:    $2,511
+  total $6,324
+
+== E. One defect per layer: where is it caught first? ==
+grace_off_by_one      fee rule charges at exactly 15 days                  first caught at layer 1; also -
+                      by: fee rule at the grace boundary (wrong at days late [15])
+                      spent to reach that layer: $0.00
+router_extension_fee  router prompt sends 'extension' and 'skip' to fees   first caught at layer 2; also [3]
+                      by: router recall on 600 labelled first messages (recall account_question 0.99, fee_explanation 0.95, statement_request 0.98, payoff_letter 0.98, lien_release 0.95, hardship 0.50)
+                      spent to reach that layer: $0.50
+offer_before_income   prompt drafts offers before income is confirmed      first caught at layer 3; also -
+                      by: hardship traces read by loan officers (20 newly fail)
+                      spent to reach that layer: $1,867
+reask_on_range        Compass re-asks when income is given as a range      first caught at layer 4; also -
+                      by: simulated hardship borrowers resolve (45 of 180 hit the 30-turn cap)
+                      spent to reach that layer: $1,897
+reranker_slow         new reranker adds 1.8 s to retrieval turns           first caught at layer 5; also -
+                      by: shadow week at full volume (peak p95 6.9 s)
+                      spent to reach that layer: $3,109
+grace_off_by_one at layer 3 instead: sampled fee traces exactly 15 days late: 3 of 70
+
+== F. Which layer can catch each failure mode (lowest layer that sees it) ==
+  L2  wrong balance date                                          531  extract the date the reply states, compare with the tool's
+  L1  ten-day grace period quoted (policy is 15)                  293  index check: retired document still retrievable
+  L3  missed borrower's second loan                               233  whether the reply should have raised it is a reading
+  L1  per diem interest omitted                                   143  payoff arithmetic on the quote the letter used
+  L3  fee not waived when policy says waive                       141  which waiver applies is a reading of policy and history
+  L2  wrong statement period                                      140  extract the period requested, compare with send_statement
+  L3  release promised before title office date                    90  the promise is a reading; the real lag is a layer-five outcome
+  L3  no hand-off when borrower asked for a person                 76  the request is phrased a hundred ways; L4 for long conversations
+  L2  wrong title state                                            60  extract the state the reply names, compare with get_title_status
+  L3  offer drafted before income confirmed                        53  whether income was confirmed is a reading
+  L1  wrong good-through date                                      51  date arithmetic on the quote
+  L1  offer sent without saying a loan officer must approve it     18  fixed disclosure sentence present when draft_offer ran
+  L1  second deferral within 12 months offered                      1  rule on the account history the tool returned
+planted failing traces with a named mode: 1830; by lowest layer: L1 506 (28%), L2 731 (40%), L3 593 (32%)
+modes by lowest layer: L1 5, L2 3, L3 5
+
+### inject.py
+== The change: the stand-in judge added to the commit hook ==
+judge reads 3,522 tokens and writes 400 per trace; 300 traces per commit
+lint(suite):
+   judge on the 300 gate traces: layer 3 check runs at 'commit' (ceiling is layer 1)
+   judge on the 300 gate traces: 'judge evals' verdicts vary run to run but block every commit
+
+== The bill ==
+layer-one checks per commit: 7, cost $0.0000
+judge per commit: replay $16.49 + judging $4.97 = $21.46
+at 120 commits a month: $2,575 a month; $30,901 a year
+against two release-stage judge runs a month: $43
+wall time per commit at three model slots: replay 22.8 min + judging 6.7 min = 29 min (layer one: under a second)
+
+== Forty commits, no change to Compass ==
+commits held: 38 of 40 (95%); reasons by flow: {'account_question': 1, 'hardship': 38, 'fee_explanation': 3}
+chance a commit passes the hardship rule alone, 92 passing hardship traces each flipping 3% of the time: 0.061
+(simulation took 0.01 s)
+
+== The fix: the judge moves back to the release stage ==
+lint(suite): none
+
+### try_its.py
+== Try 1: add a check of your own and place it ==
+added at layer 1; lint: none
+the same failure checked by reading, placed at commit; lint:
+   payoff letters read for per diem: layer 3 check runs at 'commit' (ceiling is layer 1)
+   payoff letters read for per diem: 'human review' verdicts vary run to run but block every commit
+
+== Try 2: change how often each stage runs ==
+today                                L1   $0.045  L2   $18.65  L3   $3,733  L4   $60.82  L5   $2,511   total $6,324
+weekly releases                      L1   $0.047  L2   $19.82  L3   $8,082  L4     $132  L5   $2,511   total $10,744
+weekly releases, twice the commits   L1   $0.052  L2   $19.82  L3   $8,082  L4     $132  L5   $2,511   total $10,744
+
+== Try 3: delete layer two and inject the router defect ==
+layer 2 kept   : caught at layer 2 by 'router recall on 600 labelled first messages' (recall account_question 0.99, fee_explanation 0.95, statement_request 0.98, payoff_letter 0.98, lien_release 0.95, hardship 0.50); spent $0.505 with fail-fast
+layer 2 deleted: caught at layer 3 by 'hardship traces read by loan officers' (62 newly fail); spent $1,866 with fail-fast

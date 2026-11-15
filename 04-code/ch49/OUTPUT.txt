@@ -1,0 +1,8 @@
+Ch49 OUTPUT — SIMULATED Harbor Year-1 twelve-month ops
+seed=2049 digest=9aa91eeb5d57 record=7fe834b5e830
+rollback_months=[11]
+pin_verdict=HOLD_DUAL_PIN dual=True
+inject_single=HOLD_SINGLE_PIN inject_dual=HOLD_DUAL_PIN
+CH16_ceiling=6.291941 (kinds; not invoice)
+live_provider_sweeps=PENDING
+SIMULATED=True — illustrative; not observed client history

@@ -1,0 +1,8 @@
+Injection: stale index with retired fee-schedule-2024-01 chunks
+{'n_chunks': 52, 'n_retired_live': 2, 'retired_live': ['fee-schedule-2024-01::amount', 'fee-schedule-2024-01::grace'], 'stale': True, 'index_digest': '8b426d7f5134'}
+metrics under injection: recall@5=0.830 MRR=0.678 hit@5=0.830
+fee subset n=40: recall@5=0.900 hit@5=36/40
+fee queries where retired chunk outranks current: 17/40
+production cases under the same failure mode:
+  t-262418: stale chunk ranked first; generator faithfully quoted it
+  t-263055: retired amount chunk; current amount chunk not in top 2

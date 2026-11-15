@@ -1,0 +1,9 @@
+{
+  "caught": true,
+  "failure": "config_lints_clean_but_unvalidated_judge_gates_release",
+  "inject_config": "linter_pass_unvalidated_judge",
+  "lint_pass": true,
+  "gate": "HOLD",
+  "reason": "unvalidated_judge",
+  "SIMULATED": true
+}

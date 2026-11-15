@@ -1,0 +1,82 @@
+{
+  "kind": "SIMULATED",
+  "digest": "e69f6d2d56a6",
+  "seed": 2038,
+  "report": {
+    "n": 2000,
+    "n_agree": 1922,
+    "n_disagree": 78,
+    "overall": 0.961,
+    "by_slice": {
+      "hardship": {
+        "n": 250,
+        "n_agree": 220,
+        "rate": 0.88
+      },
+      "fee": {
+        "n": 350,
+        "n_agree": 341,
+        "rate": 0.9742857142857143
+      },
+      "account": {
+        "n": 350,
+        "n_agree": 341,
+        "rate": 0.9742857142857143
+      },
+      "payoff": {
+        "n": 350,
+        "n_agree": 340,
+        "rate": 0.9714285714285714
+      },
+      "lien": {
+        "n": 350,
+        "n_agree": 340,
+        "rate": 0.9714285714285714
+      },
+      "statement": {
+        "n": 350,
+        "n_agree": 340,
+        "rate": 0.9714285714285714
+      }
+    }
+  },
+  "exit": {
+    "met": false,
+    "checks": {
+      "overall": false,
+      "hardship": false
+    },
+    "floors": {
+      "overall": 0.98,
+      "hardship": 0.95
+    },
+    "decision": "HOLD"
+  },
+  "disagreement_sample_n": 15,
+  "safe_tool": {
+    "ok": true,
+    "side_effect": false,
+    "blocked": false,
+    "tool": "draft_offer_preview",
+    "mode": "dry_run"
+  },
+  "record": {
+    "run_id": "shadow-2028-12-09",
+    "candidate_pin": "compass-hardship-2028-12-c",
+    "n": 2000,
+    "dry_run_allowlist": [
+      "get_balance",
+      "get_fee_schedule",
+      "lookup_hardship_policy",
+      "draft_offer_preview"
+    ],
+    "exit_floors": {
+      "overall": 0.98,
+      "hardship": 0.95
+    },
+    "customer_visible": false
+  },
+  "overall_pct": 96.1,
+  "hardship_pct": 88.0,
+  "study_window": "2028-12-09 to 2028-12-11"
+}

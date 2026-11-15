@@ -1,0 +1,328 @@
+{
+  "seed": 2042,
+  "digest": "71e446918c27",
+  "simulated": true,
+  "label": "SIMULATED",
+  "n_paired": 600,
+  "paired": {
+    "n": 600,
+    "rows": [
+      {
+        "system": "prompt_v2",
+        "failures": 6,
+        "n": 600,
+        "error_rate": 0.01,
+        "wilson_lo": 0.004590859523391852,
+        "wilson_hi": 0.021643835138254512,
+        "rank": 1,
+        "cost_usd_per_1k": 0.9,
+        "meets_fee_gate": false
+      },
+      {
+        "system": "small_fee_model",
+        "failures": 8,
+        "n": 600,
+        "error_rate": 0.013333333333333334,
+        "wilson_lo": 0.006771272744898206,
+        "wilson_hi": 0.026087675694560088,
+        "rank": 2,
+        "cost_usd_per_1k": 0.3,
+        "meets_fee_gate": false
+      },
+      {
+        "system": "prompt_v1",
+        "failures": 12,
+        "n": 600,
+        "error_rate": 0.02,
+        "wilson_lo": 0.011477064060296744,
+        "wilson_hi": 0.03463039193478542,
+        "rank": 3,
+        "cost_usd_per_1k": 0.9,
+        "meets_fee_gate": false
+      },
+      {
+        "system": "prompt_v3",
+        "failures": 24,
+        "n": 600,
+        "error_rate": 0.04,
+        "wilson_lo": 0.027024835970159082,
+        "wilson_hi": 0.058828142691794656,
+        "rank": 4,
+        "cost_usd_per_1k": 0.9,
+        "meets_fee_gate": false
+      }
+    ],
+    "ranking": [
+      "prompt_v2",
+      "small_fee_model",
+      "prompt_v1",
+      "prompt_v3"
+    ]
+  },
+  "unpaired_injection": {
+    "n": 250,
+    "rows": [
+      {
+        "system": "prompt_v1",
+        "failures": 3,
+        "n": 250,
+        "error_rate": 0.012,
+        "wilson_lo": 0.004089245839774543,
+        "wilson_hi": 0.03468138907585788,
+        "rank": 1
+      },
+      {
+        "system": "prompt_v2",
+        "failures": 3,
+        "n": 250,
+        "error_rate": 0.012,
+        "wilson_lo": 0.004089245839774543,
+        "wilson_hi": 0.03468138907585788,
+        "rank": 2
+      },
+      {
+        "system": "small_fee_model",
+        "failures": 5,
+        "n": 250,
+        "error_rate": 0.02,
+        "wilson_lo": 0.008572197944651562,
+        "wilson_hi": 0.045956295414986886,
+        "rank": 3
+      },
+      {
+        "system": "prompt_v3",
+        "failures": 8,
+        "n": 250,
+        "error_rate": 0.032,
+        "wilson_lo": 0.016302169731072406,
+        "wilson_hi": 0.061863111294575085,
+        "rank": 4
+      }
+    ],
+    "ranking": [
+      "prompt_v1",
+      "prompt_v2",
+      "small_fee_model",
+      "prompt_v3"
+    ],
+    "mode": "unpaired_subsample",
+    "take": 250
+  },
+  "ranking_reversed": true,
+  "multiple_comparison": {
+    "n_comparisons": 6,
+    "discarded_hypotheses": 0,
+    "family_tests": 6,
+    "n_systems": 4,
+    "structure": "all_pairs",
+    "family_alpha": 0.05,
+    "per_comparison_alpha": 0.008333333333333333,
+    "rule": "bonferroni_split",
+    "controls": "family_wise_error_rate",
+    "note_holm": "Holm also controls FWER (step-down); not interchangeable with BH",
+    "note_bh": "Benjamini\u2013Hochberg controls false-discovery rate (FDR), not FWER"
+  },
+  "multiple_comparison_vs_control": {
+    "n_comparisons": 3,
+    "discarded_hypotheses": 0,
+    "family_tests": 3,
+    "n_systems": 4,
+    "structure": "vs_control",
+    "family_alpha": 0.05,
+    "per_comparison_alpha": 0.016666666666666666,
+    "rule": "bonferroni_split",
+    "controls": "family_wise_error_rate",
+    "note_holm": "Holm also controls FWER (step-down); not interchangeable with BH",
+    "note_bh": "Benjamini\u2013Hochberg controls false-discovery rate (FDR), not FWER"
+  },
+  "wrong_mapping_regressions": {
+    "four_systems_divided_by_systems_not_tests": {
+      "n_systems": 4,
+      "incorrect_alpha_if_divide_by_systems": 0.0125
+    },
+    "five_systems_example": {
+      "n_systems": 5,
+      "incorrect_alpha_if_divide_by_systems": 0.01,
+      "correct_all_pairs": 0.005,
+      "correct_vs_control": 0.0125
+    }
+  },
+  "declared_comparisons": [
+    {
+      "a": "prompt_v1",
+      "b": "prompt_v2",
+      "kind": "pairwise_error_rate"
+    },
+    {
+      "a": "prompt_v1",
+      "b": "prompt_v3",
+      "kind": "pairwise_error_rate"
+    },
+    {
+      "a": "prompt_v1",
+      "b": "small_fee_model",
+      "kind": "pairwise_error_rate"
+    },
+    {
+      "a": "prompt_v2",
+      "b": "prompt_v3",
+      "kind": "pairwise_error_rate"
+    },
+    {
+      "a": "prompt_v2",
+      "b": "small_fee_model",
+      "kind": "pairwise_error_rate"
+    },
+    {
+      "a": "prompt_v3",
+      "b": "small_fee_model",
+      "kind": "pairwise_error_rate"
+    }
+  ],
+  "paired_contrasts": {
+    "prompt_v2_vs_small_fee_model": {
+      "system_a": "prompt_v2",
+      "system_b": "small_fee_model",
+      "failures_a": 6,
+      "failures_b": 8,
+      "error_rate_a": 0.01,
+      "error_rate_b": 0.013333333333333334,
+      "wilson_a": {
+        "lo": 0.004590859523391852,
+        "hi": 0.021643835138254512,
+        "p": 0.01
+      },
+      "wilson_b": {
+        "lo": 0.006771272744898206,
+        "hi": 0.026087675694560088,
+        "p": 0.013333333333333334
+      },
+      "table": {
+        "n11": 6,
+        "n10": 0,
+        "n01": 2,
+        "n00": 592,
+        "n": 600,
+        "discordant": 2
+      },
+      "mcnemar": {
+        "n10": 0,
+        "n01": 2,
+        "n_discordant": 2,
+        "p_value_exact": 0.5,
+        "method": "mcnemar_exact_binomial",
+        "null": "equal_marginal_failure_prob"
+      },
+      "wilson_intervals_overlap": true,
+      "teaching": "Overlapping marginal Wilson intervals are not a paired test and do not establish equivalence or significance of the difference."
+    },
+    "prompt_v2_vs_prompt_v1": {
+      "system_a": "prompt_v2",
+      "system_b": "prompt_v1",
+      "failures_a": 6,
+      "failures_b": 12,
+      "error_rate_a": 0.01,
+      "error_rate_b": 0.02,
+      "wilson_a": {
+        "lo": 0.004590859523391852,
+        "hi": 0.021643835138254512,
+        "p": 0.01
+      },
+      "wilson_b": {
+        "lo": 0.011477064060296744,
+        "hi": 0.03463039193478542,
+        "p": 0.02
+      },
+      "table": {
+        "n11": 6,
+        "n10": 0,
+        "n01": 6,
+        "n00": 588,
+        "n": 600,
+        "discordant": 6
+      },
+      "mcnemar": {
+        "n10": 0,
+        "n01": 6,
+        "n_discordant": 6,
+        "p_value_exact": 0.03125,
+        "method": "mcnemar_exact_binomial",
+        "null": "equal_marginal_failure_prob"
+      },
+      "wilson_intervals_overlap": true,
+      "teaching": "Overlapping marginal Wilson intervals are not a paired test and do not establish equivalence or significance of the difference."
+    }
+  },
+  "router": {
+    "component": "router",
+    "route_accuracy": 0.71,
+    "oracle_accuracy": 0.89,
+    "gap_to_oracle": 0.18000000000000005,
+    "cost_per_query_usd": 0.0012,
+    "n": 2000,
+    "owner": "Ryan",
+    "plateau_flag": true
+  },
+  "frontier": [
+    {
+      "system": "small_fee_model",
+      "error_rate": 0.013333333333333334,
+      "cost_usd_per_1k": 0.3,
+      "on_frontier": true
+    },
+    {
+      "system": "prompt_v2",
+      "error_rate": 0.01,
+      "cost_usd_per_1k": 0.9,
+      "on_frontier": true
+    },
+    {
+      "system": "prompt_v1",
+      "error_rate": 0.02,
+      "cost_usd_per_1k": 0.9,
+      "on_frontier": false
+    },
+    {
+      "system": "prompt_v3",
+      "error_rate": 0.04,
+      "cost_usd_per_1k": 0.9,
+      "on_frontier": false
+    }
+  ],
+  "experiment_record": {
+    "experiment_id": "harbor-fee-compare-2029-06",
+    "systems": [
+      "prompt_v1",
+      "prompt_v2",
+      "prompt_v3",
+      "small_fee_model"
+    ],
+    "n_paired": 600,
+    "digest": "71e446918c27",
+    "hypothesis": "all_pairs among 4 fee systems (C(4,2)=6); prompt_v2 beats v1/v3 on paired error; SLM near v2 at 1/3 SIM cost; hardship stays frontier; no non-inferiority margin pre-registered",
+    "owner": "eval-lead",
+    "schema": "truss.experiment.v1",
+    "record_sha12": "be5f9dff605f"
+  },
+  "policy": {
+    "hardship_route": "frontier_only",
+    "fee_small_model_candidate": true,
+    "wrong_fee_target": 0.02,
+    "wrong_hardship_target": 0.005
+  },
+  "costs_usd_per_1k": {
+    "prompt_v1": 0.9,
+    "prompt_v2": 0.9,
+    "prompt_v3": 0.9,
+    "small_fee_model": 0.3,
+    "frontier_hardship": 2.4
+  },
+  "teaching": {
+    "paired_winner": "prompt_v2",
+    "unpaired_winner": "prompt_v1",
+    "slm_cost_ratio_vs_prompt": 0.3333333333333333,
+    "hardship_on_frontier": true,
+    "family_structure": "all_pairs",
+    "n_comparisons": 6
+  }
+}

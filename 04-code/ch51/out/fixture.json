@@ -1,0 +1,2506 @@
+{
+  "seed": 2051,
+  "cases": {
+    "hartford": {
+      "domain": "prior_authorization",
+      "decide_owner": "medical_director",
+      "decide_metric": "wrong_denial_rate",
+      "taxonomy": [
+        "wrong_deny",
+        "wrong_approve",
+        "missing_evidence",
+        "stale_guideline",
+        "phi_overshare"
+      ],
+      "offline_n": 800,
+      "wrong_denial": 3,
+      "guideline_pin": "guide-v4.2",
+      "kind": "SIMULATED"
+    },
+    "manchester": {
+      "domain": "returns_agent",
+      "decide_owner": "fraud_desk",
+      "decide_metric": "refund_accuracy",
+      "taxonomy": [
+        "wrong_refund",
+        "missed_fraud",
+        "window_misread",
+        "sku_mismatch",
+        "tone_only_pass"
+      ],
+      "offline_n": 1200,
+      "wrong_refund": 11,
+      "fraud_catch_rate": 0.91,
+      "kind": "SIMULATED"
+    },
+    "toronto": {
+      "domain": "telecom_billing_support",
+      "decide_owner": "billing_sme",
+      "decide_metric": "cycle_day_complaint_rate",
+      "taxonomy_offline": [
+        "wrong_balance",
+        "plan_mismatch",
+        "handoff_late",
+        "tone_fail"
+      ],
+      "taxonomy_missing_class": "BillingCycleEdge",
+      "offline_pass_rate": 0.9567,
+      "online_cycle_day_complaint_pp": null,
+      "offline_saw_edge": false,
+      "kind": "SIMULATED",
+      "failed_practice": true
+    },
+    "frankfurt": {
+      "domain": "contract_review",
+      "decide_owner": "counsel",
+      "decide_metric": "false_accept_rate",
+      "taxonomy": [
+        "missed_indemnity",
+        "wrong_party",
+        "jurisdiction_skip",
+        "hallucinated_cite",
+        "redline_overreach"
+      ],
+      "clause_recall": 0.88,
+      "counsel_override_rate": 0.14,
+      "jurisdiction_pin": "de-gov-law-pack-v3",
+      "kind": "SIMULATED"
+    }
+  },
+  "harbor_borrow": [
+    {
+      "from_case": "hartford",
+      "borrowed": "oversample_costly_flow",
+      "harbor_artefact": "hardship_quota_100_of_300"
+    },
+    {
+      "from_case": "manchester",
+      "borrowed": "adversarial_fraud_slice",
+      "harbor_artefact": "adversarial_stratum_gate"
+    },
+    {
+      "from_case": "toronto",
+      "borrowed": "force_include_calendar_edge",
+      "harbor_artefact": "incident_to_card_join"
+    },
+    {
+      "from_case": "frankfurt",
+      "borrowed": "decide_owner_outside_eng",
+      "harbor_artefact": "victor_decide_cells"
+    }
+  ],
+  "telecom_traces": [
+    {
+      "id": "tt-0001",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0002",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0003",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0004",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0005",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0006",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0007",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0008",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0009",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0010",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0011",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0012",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0013",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0014",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0015",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0016",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0017",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0018",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0019",
+      "day_in_cycle": 20,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0020",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0021",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0022",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0023",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0024",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0025",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0026",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0027",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0028",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0029",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0030",
+      "day_in_cycle": 1,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0031",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0032",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0033",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0034",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0035",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0036",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0037",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0038",
+      "day_in_cycle": 9,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0039",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0040",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0041",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0042",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0043",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0044",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0045",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0046",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0047",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0048",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0049",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0050",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0051",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0052",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0053",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0054",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0055",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0056",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0057",
+      "day_in_cycle": 28,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0058",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0059",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0060",
+      "day_in_cycle": 1,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": true
+    },
+    {
+      "id": "tt-0061",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0062",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0063",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0064",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0065",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0066",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0067",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0068",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0069",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0070",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0071",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0072",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0073",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0074",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0075",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0076",
+      "day_in_cycle": 17,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0077",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0078",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0079",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0080",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0081",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0082",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0083",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0084",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0085",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0086",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0087",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0088",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0089",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0090",
+      "day_in_cycle": 1,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0091",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0092",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0093",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0094",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0095",
+      "day_in_cycle": 6,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0096",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0097",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0098",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0099",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0100",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0101",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0102",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0103",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0104",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0105",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0106",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0107",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0108",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0109",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0110",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0111",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0112",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0113",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0114",
+      "day_in_cycle": 25,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0115",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0116",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0117",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0118",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0119",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0120",
+      "day_in_cycle": 1,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": true
+    },
+    {
+      "id": "tt-0121",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0122",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0123",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0124",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0125",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0126",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0127",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0128",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0129",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0130",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0131",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0132",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0133",
+      "day_in_cycle": 14,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0134",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0135",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0136",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0137",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0138",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0139",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0140",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0141",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0142",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0143",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0144",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0145",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0146",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0147",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0148",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0149",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0150",
+      "day_in_cycle": 1,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0151",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0152",
+      "day_in_cycle": 3,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0153",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0154",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0155",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0156",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0157",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0158",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0159",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0160",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0161",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0162",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0163",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0164",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0165",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0166",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0167",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0168",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0169",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0170",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0171",
+      "day_in_cycle": 22,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0172",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0173",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0174",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0175",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0176",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0177",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0178",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0179",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0180",
+      "day_in_cycle": 1,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": true
+    },
+    {
+      "id": "tt-0181",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0182",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0183",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0184",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0185",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0186",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0187",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0188",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0189",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0190",
+      "day_in_cycle": 11,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0191",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0192",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0193",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0194",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0195",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0196",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0197",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0198",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0199",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0200",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0201",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0202",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0203",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0204",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0205",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0206",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0207",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0208",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0209",
+      "day_in_cycle": 30,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0210",
+      "day_in_cycle": 1,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0211",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0212",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0213",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0214",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0215",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0216",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0217",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0218",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0219",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0220",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0221",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0222",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0223",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0224",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0225",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0226",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0227",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0228",
+      "day_in_cycle": 19,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0229",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0230",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0231",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0232",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0233",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0234",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0235",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0236",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0237",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0238",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0239",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0240",
+      "day_in_cycle": 1,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": true
+    },
+    {
+      "id": "tt-0241",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0242",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0243",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0244",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0245",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0246",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0247",
+      "day_in_cycle": 8,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0248",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0249",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0250",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0251",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0252",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0253",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0254",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0255",
+      "day_in_cycle": 16,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0256",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0257",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0258",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0259",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0260",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0261",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0262",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0263",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0264",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0265",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0266",
+      "day_in_cycle": 27,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0267",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0268",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0269",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0270",
+      "day_in_cycle": 1,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0271",
+      "day_in_cycle": 2,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0272",
+      "day_in_cycle": 3,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0273",
+      "day_in_cycle": 4,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0274",
+      "day_in_cycle": 5,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0275",
+      "day_in_cycle": 6,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0276",
+      "day_in_cycle": 7,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0277",
+      "day_in_cycle": 8,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0278",
+      "day_in_cycle": 9,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0279",
+      "day_in_cycle": 10,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0280",
+      "day_in_cycle": 11,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0281",
+      "day_in_cycle": 12,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0282",
+      "day_in_cycle": 13,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0283",
+      "day_in_cycle": 14,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0284",
+      "day_in_cycle": 15,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0285",
+      "day_in_cycle": 16,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0286",
+      "day_in_cycle": 17,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0287",
+      "day_in_cycle": 18,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0288",
+      "day_in_cycle": 19,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0289",
+      "day_in_cycle": 20,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0290",
+      "day_in_cycle": 21,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0291",
+      "day_in_cycle": 22,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0292",
+      "day_in_cycle": 23,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0293",
+      "day_in_cycle": 24,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0294",
+      "day_in_cycle": 25,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0295",
+      "day_in_cycle": 26,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0296",
+      "day_in_cycle": 27,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0297",
+      "day_in_cycle": 28,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0298",
+      "day_in_cycle": 29,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "pass",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0299",
+      "day_in_cycle": 30,
+      "midcycle_change": false,
+      "prorate_needed": false,
+      "offline_label": "fail",
+      "online_complaint": false
+    },
+    {
+      "id": "tt-0300",
+      "day_in_cycle": 1,
+      "midcycle_change": true,
+      "prorate_needed": true,
+      "offline_label": "pass",
+      "online_complaint": true
+    }
+  ],
+  "CH16": {
+    "usage_incurred_usd": 6.191862,
+    "uncertain_reserve_usd": 0.050079,
+    "policy_headroom_usd": 0.05,
+    "ceiling_usd": 6.291941,
+    "note": "kinds under $12 cap; not invoice; not historical cache recovery"
+  },
+  "SIMULATED": true,
+  "live_provider_sweeps": "PENDING",
+  "teaching_note": "cameo cities are teaching scenarios; not observed client history",
+  "digest": "731ae5d6148e",
+  "trace_fp": "fd52dc39e70f"
+}

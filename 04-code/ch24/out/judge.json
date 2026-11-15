@@ -1,0 +1,256 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "n": 40,
+  "tp": 15,
+  "tn": 20,
+  "fp": 5,
+  "fn": 0,
+  "unclear": 0,
+  "tpr": 1.0,
+  "tnr": 0.8,
+  "tokens_in": 9949,
+  "tokens_out": 1469,
+  "cost_usd_assumed": 0.017294,
+  "rows": [
+    {
+      "trace_id": "t-270187",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270124",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270098",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270041",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270451",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270091",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270340",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270399",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270466",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270087",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270171",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270040",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270151",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270033",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270405",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "lucky"
+    },
+    {
+      "trace_id": "t-270008",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "missing_elig"
+    },
+    {
+      "trace_id": "t-270050",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "missing_elig"
+    },
+    {
+      "trace_id": "t-270069",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "missing_elig"
+    },
+    {
+      "trace_id": "t-270133",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "missing_elig"
+    },
+    {
+      "trace_id": "t-270137",
+      "verdict": "fail",
+      "gold_pass": false,
+      "kind": "missing_elig"
+    },
+    {
+      "trace_id": "t-270004",
+      "verdict": "pass",
+      "gold_pass": false,
+      "kind": "wrong_offer"
+    },
+    {
+      "trace_id": "t-270019",
+      "verdict": "pass",
+      "gold_pass": false,
+      "kind": "wrong_offer"
+    },
+    {
+      "trace_id": "t-270078",
+      "verdict": "pass",
+      "gold_pass": false,
+      "kind": "wrong_offer"
+    },
+    {
+      "trace_id": "t-270088",
+      "verdict": "pass",
+      "gold_pass": false,
+      "kind": "wrong_offer"
+    },
+    {
+      "trace_id": "t-270089",
+      "verdict": "pass",
+      "gold_pass": false,
+      "kind": "wrong_offer"
+    },
+    {
+      "trace_id": "t-270271",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270188",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270199",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270120",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270007",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270437",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270465",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270160",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270376",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270499",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270293",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270290",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270193",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270132",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    },
+    {
+      "trace_id": "t-270392",
+      "verdict": "pass",
+      "gold_pass": true,
+      "kind": "clean"
+    }
+  ]
+}

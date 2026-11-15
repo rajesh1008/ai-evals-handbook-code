@@ -1,0 +1,1 @@
+{"trace_id": "t-270305", "text": "VERDICT: fail\nREASON: Process skipped check_eligibility and hardship policy lookup before computing and drafting the offer.", "usage": {"in": 248, "out": 31}, "planted_process_ok": false, "fixture_kind": "lucky"}

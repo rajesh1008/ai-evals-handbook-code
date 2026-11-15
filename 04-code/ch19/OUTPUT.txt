@@ -1,0 +1,181 @@
+
+====================================================================================================
+1. Fixture (SIMULATED): six weekly canaries of 100, seed 2026
+====================================================================================================
+frozen t-184901 to t-184940 (40)
+fresh 60 a week; weeks w1, w2, w3, w4, w5, w6
+policy change HB-2027-12 effective 2027-12-06
+fixture digest 9aac221d4661
+
+====================================================================================================
+2. Weekly two-track reports
+====================================================================================================
+
+w1 starting 2027-11-15  policy HP-2027-04  judge fee-judge-v1
+  frozen: n=40  agree 38/40 = 95.0%  kappa 0.8437 (rounded 0.84)  TPR 7/8 = 87.5% (Wilson 52.9% to 97.8%)  TNR 31/32 = 96.9% (Wilson 84.3% to 99.4%)
+           confusion tp=7 fn=1 fp=1 tn=31
+  fresh : n=60  agree 56/60 = 93.3%  kappa 0.7917 (rounded 0.79)  TPR 10/12 = 83.3% (Wilson 55.2% to 95.3%)  TNR 46/48 = 95.8% (Wilson 86.0% to 98.8%)
+           confusion tp=10 fn=2 fp=2 tn=46
+  pooled: n=100  agree 94/100 = 94.0%  kappa 0.8125 (rounded 0.81)  TPR 17/20 = 85.0% (Wilson 64.0% to 94.8%)  TNR 77/80 = 96.2% (Wilson 89.5% to 98.7%)
+           confusion tp=17 fn=3 fp=3 tn=77
+  track gap (frozen minus fresh) 0.0521
+
+w2 starting 2027-11-22  policy HP-2027-04  judge fee-judge-v1
+  frozen: n=40  agree 38/40 = 95.0%  kappa 0.8437 (rounded 0.84)  TPR 7/8 = 87.5% (Wilson 52.9% to 97.8%)  TNR 31/32 = 96.9% (Wilson 84.3% to 99.4%)
+           confusion tp=7 fn=1 fp=1 tn=31
+  fresh : n=60  agree 55/60 = 91.7%  kappa 0.7611 (rounded 0.76)  TPR 11/13 = 84.6% (Wilson 57.8% to 95.7%)  TNR 44/47 = 93.6% (Wilson 82.8% to 97.8%)
+           confusion tp=11 fn=2 fp=3 tn=44
+  pooled: n=100  agree 93/100 = 93.0%  kappa 0.7927 (rounded 0.79)  TPR 18/21 = 85.7% (Wilson 65.4% to 95.0%)  TNR 75/79 = 94.9% (Wilson 87.7% to 98.0%)
+           confusion tp=18 fn=3 fp=4 tn=75
+  track gap (frozen minus fresh) 0.0826
+
+w3 starting 2027-11-29  policy HP-2027-04  judge fee-judge-v1
+  frozen: n=40  agree 38/40 = 95.0%  kappa 0.8437 (rounded 0.84)  TPR 7/8 = 87.5% (Wilson 52.9% to 97.8%)  TNR 31/32 = 96.9% (Wilson 84.3% to 99.4%)
+           confusion tp=7 fn=1 fp=1 tn=31
+  fresh : n=60  agree 57/60 = 95.0%  kappa 0.8387 (rounded 0.84)  TPR 10/11 = 90.9% (Wilson 62.3% to 98.4%)  TNR 47/49 = 95.9% (Wilson 86.3% to 98.9%)
+           confusion tp=10 fn=1 fp=2 tn=47
+  pooled: n=100  agree 95/100 = 95.0%  kappa 0.8408 (rounded 0.84)  TPR 17/19 = 89.5% (Wilson 68.6% to 97.1%)  TNR 78/81 = 96.3% (Wilson 89.7% to 98.7%)
+           confusion tp=17 fn=2 fp=3 tn=78
+  track gap (frozen minus fresh) 0.0050
+
+w4 starting 2027-12-06  policy HB-2027-12  judge fee-judge-v1
+  frozen: n=40  agree 38/40 = 95.0%  kappa 0.8437 (rounded 0.84)  TPR 7/8 = 87.5% (Wilson 52.9% to 97.8%)  TNR 31/32 = 96.9% (Wilson 84.3% to 99.4%)
+           confusion tp=7 fn=1 fp=1 tn=31
+  fresh : n=60  agree 46/60 = 76.7%  kappa 0.5000 (rounded 0.50)  TPR 15/20 = 75.0% (Wilson 53.1% to 88.8%)  TNR 31/40 = 77.5% (Wilson 62.5% to 87.7%)
+           confusion tp=15 fn=5 fp=9 tn=31
+  pooled: n=100  agree 84/100 = 84.0%  kappa 0.6198 (rounded 0.62)  TPR 22/28 = 78.6% (Wilson 60.5% to 89.8%)  TNR 62/72 = 86.1% (Wilson 76.3% to 92.3%)
+           confusion tp=22 fn=6 fp=10 tn=62
+  track gap (frozen minus fresh) 0.3437
+
+w5 starting 2027-12-13  policy HB-2027-12  judge fee-judge-v1
+  frozen: n=40  agree 38/40 = 95.0%  kappa 0.8437 (rounded 0.84)  TPR 7/8 = 87.5% (Wilson 52.9% to 97.8%)  TNR 31/32 = 96.9% (Wilson 84.3% to 99.4%)
+           confusion tp=7 fn=1 fp=1 tn=31
+  fresh : n=60  agree 46/60 = 76.7%  kappa 0.4878 (rounded 0.49)  TPR 14/20 = 70.0% (Wilson 48.1% to 85.5%)  TNR 32/40 = 80.0% (Wilson 65.2% to 89.5%)
+           confusion tp=14 fn=6 fp=8 tn=32
+  pooled: n=100  agree 84/100 = 84.0%  kappa 0.6117 (rounded 0.61)  TPR 21/28 = 75.0% (Wilson 56.6% to 87.3%)  TNR 63/72 = 87.5% (Wilson 77.9% to 93.3%)
+           confusion tp=21 fn=7 fp=9 tn=63
+  track gap (frozen minus fresh) 0.3559
+
+w6 starting 2027-12-20  policy HB-2027-12  judge fee-judge-v2
+  frozen: n=40  agree 38/40 = 95.0%  kappa 0.8566 (rounded 0.86)  TPR 8/9 = 88.9% (Wilson 56.5% to 98.0%)  TNR 30/31 = 96.8% (Wilson 83.8% to 99.4%)
+           confusion tp=8 fn=1 fp=1 tn=30
+  fresh : n=60  agree 59/60 = 98.3%  kappa 0.9609 (rounded 0.96)  TPR 18/18 = 100.0% (Wilson 82.4% to 100.0%)  TNR 41/42 = 97.6% (Wilson 87.7% to 99.6%)
+           confusion tp=18 fn=0 fp=1 tn=41
+  pooled: n=100  agree 97/100 = 97.0%  kappa 0.9248 (rounded 0.92)  TPR 26/27 = 96.3% (Wilson 81.7% to 99.3%)  TNR 71/73 = 97.3% (Wilson 90.5% to 99.2%)
+           confusion tp=26 fn=1 fp=2 tn=71
+  track gap (frozen minus fresh) -0.1043
+
+====================================================================================================
+3. Alerts against the rolling median of prior weeks
+====================================================================================================
+  w1: verdict pass  diagnostic none          kappa 0.8125  baseline nan  drop nan  frozen_drop nan  fresh_drop nan  gap 0.0521
+  w2: verdict pass  diagnostic none          kappa 0.7927  baseline 0.8124999999999998  drop 0.019845971563980713  frozen_drop 0.0  fresh_drop 0.030520169851380063  gap 0.0826
+  w3: verdict pass  diagnostic none          kappa 0.8408  baseline 0.8025770142180094  drop -0.038187316992181475  frozen_drop 0.0  fresh_drop -0.062303095678378106  gap 0.0050
+  w4: verdict fail  diagnostic world_moved   kappa 0.6198  baseline 0.8124999999999998  drop 0.1927281368821292  frozen_drop 0.0  fresh_drop 0.2916666666666665  gap 0.3437
+  w5: verdict fail  diagnostic world_moved   kappa 0.6117  baseline 0.8025770142180094  drop 0.19092652878111627  frozen_drop 0.0  fresh_drop 0.288601703692196  gap 0.3559
+  w6: verdict pass  diagnostic none          kappa 0.9248  baseline 0.7926540284360191  drop -0.13212029453288765  frozen_drop -0.012880824372759836  fresh_drop -0.19979100318471332  gap -0.1043
+
+====================================================================================================
+4. Week-4 disagreements by slice (fresh track only)
+====================================================================================================
+  plan_fee: n=20  disagree 14/20 = 70.0%  agree 6
+  other: n=40  disagree 0/40 = 0.0%  agree 40
+  pooled (frozen+fresh):
+    plan_fee: n=28  disagree 15/28 = 53.6%
+    other: n=72  disagree 1/72 = 1.4%
+
+====================================================================================================
+5. Judge versions (content-addressed)
+====================================================================================================
+  fee-judge-v1 digest 1902893a2c17  admitted 2027-11-15
+  fee-judge-v2 digest a038df41146a  admitted 2027-12-17
+  same content, later date, same digest: True
+  v1 and v2 differ: True
+
+====================================================================================================
+6. Change-control gate on the rubric
+====================================================================================================
+  unapproved rewrite of waive_or_charge: hold  unapproved ['waive_or_charge']
+  rewrite citing HB-2027-12: pass  approved ['waive_or_charge']  rulings {'waive_or_charge': 'HB-2027-12'}
+  same rewrite plus a deleted window check: hold  deleted_frozen ['window']
+
+====================================================================================================
+7. Re-validation of fee-judge-v2 on 200 freshly labelled traces
+====================================================================================================
+  revalidation: n=200  agree 190/200 = 95.0%  kappa 0.8684 (rounded 0.87)  TPR 46/50 = 92.0% (Wilson 81.2% to 96.8%)  TNR 144/150 = 96.0% (Wilson 91.5% to 98.2%)
+           confusion tp=46 fn=4 fp=6 tn=144
+  admit? admit  reasons none
+  TPR Wilson lower bound 0.8116 (floor 0.80)
+  TNR Wilson lower bound 0.9155 (floor 0.90)
+  kappa 0.8684 (floor 0.75)
+  week-1 pooled n=100 as a 'revalidation': refuse  reasons ['tpr_bound', 'tnr_bound']
+
+====================================================================================================
+8. Cost sketch (illustrative rates stated as such)
+====================================================================================================
+  weekly fresh labels 60 x $13.90 = $834.00
+  weekly frozen re-judge 40 x $0.00143 = $0.0572
+  one-off revalidation 200 x $13.90 = $2780.00
+  one-off frozen re-derivation 40 x $13.90 = $556.00
+  recovery package (revalidation + re-derive) = $3336.00
+
+wrote out/lab.json
+
+====================================================================================================
+Injection: HB-2027-12 effective Monday 6 December 2027, judge still v1
+====================================================================================================
+  pooled kappa 0.6198 (rounded 0.62)
+  alert fail  diagnostic world_moved
+  drop vs rolling median 0.1927  (fail at 0.15)
+  frozen kappa 0.8437  fresh kappa 0.5000
+  track gap 0.3437
+  fresh plan_fee disagreements 14/20
+  fresh other disagreements 0/40
+
+====================================================================================================
+Counterfactual: same week, judge updated on Monday morning (fresh track)
+====================================================================================================
+  fresh kappa 1.0000  agree 60/60
+  confusion tp=20 fn=0 fp=0 tn=40
+  frozen canary would need re-derivation before watching v2 (old gold vs new rule is a planned disagreement, not a fault)
+
+wrote out/inject.json
+
+====================================================================================================
+Try It 1: watch only the frozen canary
+====================================================================================================
+  week-4 frozen kappa 0.8437  agree 38/40
+  week-4 pooled kappa 0.6198  (the number they missed)
+  frozen-only alert: verdict pass  diagnostic none  drop 0.0
+  The policy change is invisible if the gold never moves.
+
+====================================================================================================
+Try It 2: a silent model swap the frozen canary does catch
+====================================================================================================
+  planted flips: frozen 6  fresh 8  (true fails the lenient model now misses)
+  frozen kappa 0.1304  fresh kappa 0.1872  pooled kappa 0.1637
+  alert verdict fail  diagnostic both
+  frozen drop 0.7133  fresh drop 0.6045
+  Both tracks moved: the judge moved, not the policy.
+
+====================================================================================================
+Try It 3: a rubric wording change moves the pass rate as far as the swap
+====================================================================================================
+  week-3 judge fail rate before either change: 0.200 (20/100)
+  after model swap: 0.060 (6/100)
+  after a generosity-line rubric edit of the same 14 verdicts: 0.060 (6/100)
+  kappa after swap 0.1637; after rubric edit 0.1637
+  digest before 1902893a2c17; after the extra line ed6b61fdbd71
+  change-control on the extra line (addition only): pass  added ['generous']
+  Additions pass the freeze; they still need a labelled revalidation before anyone serves them.
+
+wrote out/try_its.json
+====================================================================================================
+Pending live run: frozen canary x3 at temperature 0
+====================================================================================================
+  command: cd 04-code/ch19 && python3 real_judge.py
+  input:   forty pinned traces t-184901 to t-184940, fee-judge-v1 prompt
+  repeats: 3, temperature 0, same model pin
+  reports: per-trace verdicts, flip count, flip rate, majority table
+  [RESULT PENDING: run `cd 04-code/ch19 && python3 real_judge.py` after a provider client is wired]
+7 passed in 0.01s

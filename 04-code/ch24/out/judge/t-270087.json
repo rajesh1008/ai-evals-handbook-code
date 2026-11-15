@@ -1,0 +1,1 @@
+{"trace_id": "t-270087", "text": "VERDICT: fail\nREASON: Missing required check_eligibility call before drafting offer; jumped directly from compute_plan to draft_offer without verifying hardship policy and borrower eligibility.", "usage": {"in": 246, "out": 45}, "planted_process_ok": false, "fixture_kind": "lucky"}

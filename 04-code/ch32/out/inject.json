@@ -1,0 +1,15 @@
+{
+  "simulated": true,
+  "injected_drop_pts": 0.8,
+  "naive_calls_regression": true,
+  "floor_aware": {
+    "delta_pts": -0.8,
+    "noise_floor_pts": 1.4,
+    "margin_pts": 0.5,
+    "threshold_pts": 1.9,
+    "label": "NOISE",
+    "call_regression": false
+  },
+  "correct_call_is_noise": true,
+  "lesson": "Inside-floor drop must not trip a REGRESSION gate; publish floor+margin first."
+}

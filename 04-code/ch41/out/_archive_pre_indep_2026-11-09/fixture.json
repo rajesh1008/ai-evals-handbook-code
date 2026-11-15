@@ -1,0 +1,113 @@
+{
+  "seed": 2041,
+  "ch16": {
+    "run_id": "ch16-full-new-2026-11-08-2131",
+    "cap_usd": 12.0,
+    "charged_usd": 6.191862,
+    "unreconciled_usd": 0.050079,
+    "unreconciled_n": 8,
+    "headroom_usd": 0.05,
+    "safe_ceiling_usd": 6.291941,
+    "jsonl_rows": 3154,
+    "request_ids": 3391,
+    "ledger_commits": 3396,
+    "orphans": 5,
+    "agent_turns": 417,
+    "prices_usd_per_mtok_as_of": "2026-11-08",
+    "prices_usd_per_mtok": {
+      "haiku": [
+        1.0,
+        5.0
+      ],
+      "sonnet": [
+        3.0,
+        15.0
+      ]
+    },
+    "prices_kind": "list_price_assumption_at_study_date",
+    "small_judge_per_call_usd": 0.001441445,
+    "large_judge_per_call_usd": 0.00403281,
+    "thinking_per_call_usd": 0.003397395,
+    "month_small_judge_plus_reads_usd": 635.0,
+    "month_read_everything_usd": 7028.0,
+    "order_not_decide": true
+  },
+  "waterfall": [
+    {
+      "name": "baseline_release_eval",
+      "total_usd": 1900.0,
+      "kind": "simulated_forecast"
+    },
+    {
+      "name": "drop_unused_suites",
+      "total_usd": 1520.0,
+      "kind": "simulated_forecast"
+    },
+    {
+      "name": "sample_by_risk",
+      "total_usd": 1180.0,
+      "kind": "simulated_forecast"
+    },
+    {
+      "name": "cheap_first_cascade",
+      "total_usd": 890.0,
+      "kind": "simulated_forecast"
+    },
+    {
+      "name": "cache_and_reuse",
+      "total_usd": 740.0,
+      "kind": "simulated_forecast"
+    },
+    {
+      "name": "stop_when_settled",
+      "total_usd": 640.0,
+      "kind": "simulated_forecast"
+    }
+  ],
+  "inject": {
+    "label": "cheaper_judge_fails_bias_battery",
+    "simulated": true,
+    "cheap_tpr": 0.92,
+    "cheap_tnr": 0.91,
+    "position_flip_rate": 0.18,
+    "baseline_flip_rate": 0.02
+  },
+  "simulated_release_window": "SIMULATED Harbor weekly release eval bill, 2027-Q4 teaching window",
+  "strata": [
+    {
+      "name": "hardship",
+      "traffic_share": 0.059,
+      "risk_weight": 40,
+      "unit_cost_usd": 2.4
+    },
+    {
+      "name": "fee",
+      "traffic_share": 0.215,
+      "risk_weight": 25,
+      "unit_cost_usd": 0.9
+    },
+    {
+      "name": "payoff_lien",
+      "traffic_share": 0.168,
+      "risk_weight": 20,
+      "unit_cost_usd": 1.2
+    },
+    {
+      "name": "account_statement",
+      "traffic_share": 0.558,
+      "risk_weight": 15,
+      "unit_cost_usd": 0.35
+    }
+  ],
+  "cascade_volumes": {
+    "n_traces": 3514,
+    "n_after_deterministic": 3200,
+    "n_ordered_reads": 315
+  },
+  "cascade_unit_costs": {
+    "deterministic": 2e-05,
+    "small_judge": 0.001441445,
+    "human_read": 2.0
+  },
+  "digest": "1d3a6204f7f450c1"
+}

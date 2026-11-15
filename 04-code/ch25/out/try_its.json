@@ -1,0 +1,31 @@
+{
+  "try1_drop_polite": {
+    "n": 246,
+    "goal_completion": 0.8170731707317073,
+    "gap_vs_real": 0.02707317073170723
+  },
+  "try2_min_pushback": {
+    "n": 166,
+    "goal_completion": 0.7891566265060241
+  },
+  "try3_length_strata": {
+    "short": {
+      "n": 106,
+      "goal_completion": 0.8301886792452831,
+      "n_completed": 88,
+      "abandonment": 0.009433962264150943,
+      "n_abandoned": 1,
+      "mean_turns_to_resolution": 4.011363636363637,
+      "mean_pushback_rate": 0.24371069182389937
+    },
+    "long": {
+      "n": 194,
+      "goal_completion": 0.8402061855670103,
+      "n_completed": 163,
+      "abandonment": 0.020618556701030927,
+      "n_abandoned": 4,
+      "mean_turns_to_resolution": 8.662576687116564,
+      "mean_pushback_rate": 0.2352233676975945
+    }
+  }
+}

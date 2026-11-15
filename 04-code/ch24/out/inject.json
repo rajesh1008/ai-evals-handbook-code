@@ -1,0 +1,12 @@
+{
+  "n": 30,
+  "outcome_pass": 30,
+  "process_pass": 0,
+  "named": "t-270087",
+  "named_tools": [
+    "get_loan",
+    "get_borrower",
+    "compute_plan",
+    "draft_offer"
+  ]
+}
