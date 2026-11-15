@@ -34,6 +34,8 @@ def one():
 def two():
     """Mixed selection with 15 or 30 targeted reads out of 60 (REAL pre-labels)."""
     import random
+    if not P.available():
+        P.LB.skip("Try it 2", "out/prelabel.jsonl", "./run_all.sh run"); return
     pre = P.load()
     W = F.build(); frame = {t["trace_id"]: t for t in W[0] + W[1]}; ids = sorted(frame)
     fail = {t: int(frame[t]["required"] != "cannot_tell" and frame[t]["compass"] != frame[t]["required"]) for t in ids}
@@ -55,12 +57,25 @@ def three():
     """REAL: the pre-labeller under ops-1.0 (without the two sentences) on the anniversary and stated-work traces,
     one sample each, against sample 0 of the main run under ops-1.1."""
     import guideline as G
-    cache = HERE / "out/try3_ops10.jsonl"
+    cache = P.LB.pick(HERE, HERE / "out/try3_ops10.jsonl", "try3_ops10-local.jsonl")
+    if not P.available():
+        P.LB.skip("Try it 3", "out/prelabel.jsonl and out/try3_ops10.jsonl", "./run_all.sh run"); return
     frame = P.frame()
     cases = [t for t in frame if F.is_anniversary(t["facts"]) or F.is_stated_work(t["facts"])]
     done = {json.loads(l)["trace_id"] for l in cache.open()} if cache.exists() else set()
     todo = [t for t in cases if t["trace_id"] not in done]
-    if todo:
+    if todo and not (P.LOCAL or P.LB.live_requested(sys.argv)):
+        # No automatic paid fallback: uncached answers are reported, not fetched.
+        P.LB.skip("Try it 3", "out/try3_ops10.jsonl", "./run_all.sh run"); return
+    if todo and P.LOCAL:
+        def call(t):
+            p = P.prompt(t).replace(G.text("ops-1.1"), G.text("ops-1.0"))
+            r = P.LB.chat(p, system=P.SYSTEM, max_tokens=40, temperature=0.7)
+            return {"trace_id": t["trace_id"], "raw": r["text"].strip(), "model": r["model"], "label": P.LB.LABEL}
+        with cache.open("a") as fh, cf.ThreadPoolExecutor(4) as ex:
+            for r in ex.map(call, todo):
+                fh.write(json.dumps(r) + "\n")
+    elif todo:
         import anthropic
         def call(t):
             p = P.prompt(t).replace(G.text("ops-1.1"), G.text("ops-1.0"))
@@ -76,10 +91,10 @@ def three():
         xs = [t for t in cases if fn(t["facts"])]
         a = sum(got[t["trace_id"]] == t["required"] for t in xs)
         b = sum(main[t["trace_id"]][0][0] == t["required"] for t in xs)
-        print(f"  REAL {P.MODEL}, {name} traces (n {len(xs)}): right under ops-1.0 {a}, under ops-1.1 {b} (sample 0 of the main run)")
+        print(f"  {P.LB.LABEL if P.LOCAL else 'REAL'} {P.MODEL}, {name} traces (n {len(xs)}): right under ops-1.0 {a}, under ops-1.1 {b} (sample 0 of the main run)")
 
 
 if __name__ == "__main__":
-    which = sys.argv[1:] or ["1", "2", "3"]
+    which = [a for a in sys.argv[1:] if a not in ("run", "--live")] or ["1", "2", "3"]
     for w in which:
         print(f"== Try it {w}"); {"1": one, "2": two, "3": three}[w]()

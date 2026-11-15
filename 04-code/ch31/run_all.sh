@@ -5,7 +5,7 @@ python3 fixture.py
 python3 lab.py
 python3 inject.py
 python3 try_its.py
-python3 real_stats.py
+python3 real_stats.py ${1:-}
 python3 - <<'PY'
 import json
 from pathlib import Path

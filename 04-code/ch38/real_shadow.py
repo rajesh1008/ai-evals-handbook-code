@@ -20,6 +20,17 @@ def call(prompt):
         data=json.loads(resp.read().decode())
     return '\n'.join(b.get('text','') for b in data.get('content',[]) if b.get('type')=='text').strip()
 def main():
+    # Cached reference run: report it unchanged unless --live is passed (then the Anthropic API is called, paid).
+    import sys as _sys
+    _live_flag = "--live" in _sys.argv
+    _cache = OUT / "real_shadow.json"
+    if not _live_flag and _cache.exists():
+        out = json.loads(_cache.read_text())
+        print({k:out[k] for k in ('kind','n','n_ok','rate','error_type','note')})
+        return
+    if not _live_flag:
+        print("no cached run at out/real_shadow.json and --live not given; not calling the API (see OUTPUT.txt)")
+        return
     rows=[]; n_ok=0; err=None
     try:
         for i,p in enumerate(PROMPTS):

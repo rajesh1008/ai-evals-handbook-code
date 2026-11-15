@@ -242,26 +242,31 @@ for r, why in dt["dropped"]:
     print(f"  drop         {r.metric:18s} {why}")
 R["E_table"] = {"kept": [r.__dict__ for r in dt["kept"]], "dropped": [(r.__dict__, w) for r, w in dt["dropped"]]}
 
-C = PR.cached()
-cs = {c["id"]: c for c in PR.cases()}
-required = {i: c["required"] for i, c in cs.items()}
-runs = {pv: [{i: PR.action(C[(i, pv, rep)]["raw"]) for i in cs} for rep in (1, 2)] for pv in PR.PROMPTS}
-R["E_gate"] = {}
-print(f"  REAL probe ({PR.MODEL}, 160 authored cases, two runs each; {len(C)} calls cached)")
-for pv in ("rc-0913-1", "rc-0915-2", "rc-0917-3"):
-    g = FS.two_way_gate(required, runs["hardship-prompt-p7"], runs[pv])
-    R["E_gate"][pv] = g
-    print(f"  {pv}: accuracy {g['accuracy']['base']} -> {g['accuracy']['cand']} of 160; "
-          f"wrong offers {g['offer']['base']} -> {g['offer']['cand']}, stable new {len(g['offer']['new'])}, one run only {len(g['offer']['single_run'])}; "
-          f"refusals {g['refusal']['base']} -> {g['refusal']['cand']} of {g['refusal']['n']}, stable new {len(g['refusal']['new'])}; "
-          f"verdict {g['verdict'].upper()} {g['holds_on']}")
-    if g["offer"]["single_run"]:
-        print(f"    one-run-only new wrong offers {g['offer']['single_run']}; production's own flips between runs "
-              f"{len(g['offer']['production_flips'])} {g['offer']['production_flips']}")
-acc_only = {pv: ("ship" if sum(R['E_gate'][pv]['accuracy']['cand']) > sum(R['E_gate'][pv]['accuracy']['base']) else "hold")
-            for pv in R["E_gate"]}
-print(f"  an accuracy-only gate (ship if correct first actions rise over both runs): {acc_only}")
-R["E_acc_only"] = acc_only
+if PR.LOCAL:
+    PR.LB.banner("section E's two-way gate uses local-model probe replies")
+if not PR.complete():
+    PR.LB.skip("the two-way gate on the REAL probe", "out/probe.jsonl", "./run_all.sh run")
+else:
+    C = PR.cached()
+    cs = {c["id"]: c for c in PR.cases()}
+    required = {i: c["required"] for i, c in cs.items()}
+    runs = {pv: [{i: PR.action(C[(i, pv, rep)]["raw"]) for i in cs} for rep in (1, 2)] for pv in PR.PROMPTS}
+    R["E_gate"] = {}
+    print(f"  {PR.LB.LABEL if PR.LOCAL else 'REAL'} probe ({PR.MODEL}, 160 authored cases, two runs each; {len(C)} calls cached)")
+    for pv in ("rc-0913-1", "rc-0915-2", "rc-0917-3"):
+        g = FS.two_way_gate(required, runs["hardship-prompt-p7"], runs[pv])
+        R["E_gate"][pv] = g
+        print(f"  {pv}: accuracy {g['accuracy']['base']} -> {g['accuracy']['cand']} of 160; "
+              f"wrong offers {g['offer']['base']} -> {g['offer']['cand']}, stable new {len(g['offer']['new'])}, one run only {len(g['offer']['single_run'])}; "
+              f"refusals {g['refusal']['base']} -> {g['refusal']['cand']} of {g['refusal']['n']}, stable new {len(g['refusal']['new'])}; "
+              f"verdict {g['verdict'].upper()} {g['holds_on']}")
+        if g["offer"]["single_run"]:
+            print(f"    one-run-only new wrong offers {g['offer']['single_run']}; production's own flips between runs "
+                  f"{len(g['offer']['production_flips'])} {g['offer']['production_flips']}")
+    acc_only = {pv: ("ship" if sum(R['E_gate'][pv]['accuracy']['cand']) > sum(R['E_gate'][pv]['accuracy']['base']) else "hold")
+                for pv in R["E_gate"]}
+    print(f"  an accuracy-only gate (ship if correct first actions rise over both runs): {acc_only}")
+    R["E_acc_only"] = acc_only
 
 # ---- F
 head("F. What Victor asked: is the wrong-offer rate under 0.5%?")
@@ -288,5 +293,5 @@ R["F"] = {"rc": rc, "needed": [traces_needed(0.005, k) for k in range(4)], "need
           "p_zero": p0, "gold_wk": gold_wk, "census_wk": census_wk, "drafted": len(drafted)}
 
 OUT.mkdir(exist_ok=True)
-(OUT / "lab.json").write_text(json.dumps(R, indent=1, default=str))
+PR.LB.pick(HERE, OUT / "lab.json").write_text(json.dumps(R, indent=1, default=str))
 print("\nwrote out/lab.json")

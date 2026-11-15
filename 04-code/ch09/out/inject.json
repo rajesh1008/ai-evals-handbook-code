@@ -1,0 +1,85 @@
+{
+ "saguaro": [
+  "t-101406",
+  "t-103463",
+  "t-105510"
+ ],
+ "n": 801,
+ "products": {
+  "personal": 107,
+  "auto": 634,
+  "small_business": 60
+ },
+ "small_business": 60,
+ "runs": {
+  "as shipped (loan record)": {
+   "fails": 188,
+   "true": 188,
+   "false": 0,
+   "by_product": {},
+   "missed": 1,
+   "saguaro": {
+    "t-101406": [
+     "pass",
+     "quote recomputes; reply matches it"
+    ],
+    "t-103463": [
+     "fail",
+     "reply good-through 2027-04-15 vs quote 2027-04-16"
+    ],
+    "t-105510": [
+     "fail",
+     "per diem missing from the reply"
+    ]
+   }
+  },
+  "30/360 hard-coded": {
+   "fails": 737,
+   "true": 184,
+   "false": 553,
+   "by_product": {
+    "auto": 448,
+    "personal": 72,
+    "small_business": 33
+   },
+   "missed": 5,
+   "saguaro": {
+    "t-101406": [
+     "fail",
+     "tool payoff 54233.13 vs recomputed 54220.44 (30/360, interest to 2027-04-13)"
+    ],
+    "t-103463": [
+     "fail",
+     "tool payoff 18373.1 vs recomputed 18367.50 (30/360, interest to 2027-04-16)"
+    ],
+    "t-105510": [
+     "fail",
+     "tool payoff 36359.78 vs recomputed 36346.39 (30/360, interest to 2027-04-20)"
+    ]
+   }
+  },
+  "actual/365 hard-coded": {
+   "fails": 230,
+   "true": 188,
+   "false": 42,
+   "by_product": {
+    "small_business": 42
+   },
+   "missed": 1,
+   "saguaro": {
+    "t-101406": [
+     "fail",
+     "tool per diem 12.69 vs recomputed 12.51 (actual/365)"
+    ],
+    "t-103463": [
+     "fail",
+     "tool per diem 5.6 vs recomputed 5.52 (actual/365)"
+    ],
+    "t-105510": [
+     "fail",
+     "tool per diem 13.39 vs recomputed 13.21 (actual/365)"
+    ]
+   }
+  }
+ }
+}

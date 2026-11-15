@@ -1,0 +1,46 @@
+{
+ "confirm": [
+  "Good news! The $25.00 late fee on your loan ending in 4821 has been waived.",
+  "We've removed the $25.00 late fee from your account for loan 4821.",
+  "The late fee has been reversed, and your account is now updated.",
+  "We sincerely apologize for the inconvenience and have credited your account with the $25.00 fee removal.",
+  "Your loan ending 4821 no longer reflects the $25.00 late charge.",
+  "The $25.00 late fee will not appear on your next statement for loan 4821.",
+  "We've taken care of this for you—the late fee on loan 4821 has been removed.",
+  "As a courtesy, we have refunded the $25.00 late fee to your account.",
+  "The $25.00 fee is no longer being charged on your loan ending 4821.",
+  "Thank you for your patience; the late fee has been waived from your loan 4821.",
+  "We did not keep the $25.00 late fee—it has been credited back to loan ending 4821.",
+  "Your account for loan 4821 has been adjusted; the $25.00 charge is gone.",
+  "The late fee on loan 4821 has been reversed at no cost to you.",
+  "We apologize and have removed the $25.00 late fee from your loan ending 4821 effective immediately.",
+  "The $25.00 fee cannot be applied—it has been waived for loan 4821."
+ ],
+ "confirm_usage": [
+  132,
+  375,
+  4.142013358999975
+ ],
+ "refuse": [
+  "Thank you for contacting us about loan 4821. Unfortunately, we are unable to waive the late fee at this time.",
+  "We understand your concern regarding the late charge on your account ending 4821, but the fee must remain in place.",
+  "The late fee on loan 4821 will not be removed from your account.",
+  "We cannot reverse the late fee that was assessed to loan 4821.",
+  "I apologize for any inconvenience, but we're unable to credit your account for the late charge on loan 4821.",
+  "Unfortunately, we will not be refunding the late fee applied to loan 4821.",
+  "The fee stands on your account ending 4821, and we cannot make an exception at this time.",
+  "I understand this is frustrating, but the late fee on loan 4821 is final and will not be adjusted.",
+  "We are unable to remove the late charge from loan 4821 as it was properly assessed.",
+  "The late fee on your loan ending 4821 cannot be waived under our current policy.",
+  "I apologize for the situation, but we do not have the ability to reverse this charge on loan 4821.",
+  "The late fee assessed to loan 4821 will remain on your account as it was correctly applied.",
+  "Unfortunately, we cannot credit back the late fee on loan 4821.",
+  "The charge on loan 4821 is valid and will not be refunded or adjusted.",
+  "We regret that we're unable to waive the late fee on your loan ending 4821; it must stay on your account."
+ ],
+ "refuse_usage": [
+  129,
+  377,
+  4.4386221270033275
+ ]
+}

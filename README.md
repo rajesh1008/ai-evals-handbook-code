@@ -4,7 +4,7 @@ Companion code for **The AI Evals in Practice Handbook: Measuring Agents Before 
 
 Repository: <https://github.com/rajesh1008/ai-evals-handbook-code>
 
-Every chapter of the book has a lab here. The labs rebuild the numbers the chapters print from pinned fixtures and cached model replies, on a laptop, offline, without an API key. Every chapter folder also keeps its reference output, so you can compare a run with what the book prints. See [Reproduction status](#reproduction-status) for the chapters that do not yet rerun cleanly from a fresh clone.
+Every chapter of the book has a lab here. The labs rebuild the numbers the chapters print from pinned fixtures and cached model replies, on a laptop, offline, without an API key. Every chapter folder also keeps its reference output, so you can compare a run with what the book prints. See [Reproduction status](#reproduction-status) for what reruns exactly and for the three chapters whose model step can only be replayed from its recorded output.
 
 ## Layout
 
@@ -56,16 +56,31 @@ python3 -m pytest -q
 
 Expect `261 passed, 5 skipped`: the five skipped modules check the book manuscript itself, which is not part of this repository.
 
-Offline runs use fixtures, cached replies and clearly labelled SIMULATED stand-ins. A few scripts fall back to a live call when a cache is missing and a key is set, so leave `ANTHROPIC_API_KEY` unset unless you mean to make paid calls.
+Offline runs use fixtures, cached replies and clearly labelled SIMULATED stand-ins. No script calls a model on its own: a paid Anthropic call needs both an explicit `run` or `--live` argument and `ANTHROPIC_API_KEY` in your environment, and a cached real result is reported, never overwritten, unless you pass that argument.
 
 ## Reproduction status
 
-Checked on 15 November 2026 by running every chapter's `run_all.sh` in order from a fresh copy, with no API key set:
+Checked on 15 November 2026 by running every chapter's `run_all.sh` in order (Chapters 1 to 53) from a fresh clone, with no API key set. Every `run_all.sh` exits 0.
 
-- **Matches `OUTPUT.txt` exactly:** Chapters 1, 2, 4, 6, 18 to 22, 32, 34, 35 and 40 to 53. Chapter 16 reproduces through the commands in `04-code/ch16/README.md` (its `run_all.sh` is a legacy harness).
-- **Matches apart from run stamps** (date, timing, or the `truss` version line): Chapters 3, 7, 25 to 28 and 30.
-- **Offline numbers match; the live-run line does not:** Chapters 23, 29, 31, 33 and 36 to 39. Without a key, their `real_*.py` script reports a SIMULATED or failed run and overwrites the cached real result under `out/`. Use `git checkout -- .` to restore the cached result the book prints.
-- **Does not complete offline yet:** Chapters 5, 8 to 15, 17 and 24. Most of these need cached model replies or `out/` files that are not in this repository yet, and Chapter 24's `run_all.sh` stops at its `truss` version line. The `OUTPUT.txt` in each of these folders is the reference the book prints.
+- **Matches the reference output exactly:** Chapters 1, 5, 6, 10, 11, 23, 29, 31, 32 and 34 to 51. Chapter 53 has no `OUTPUT.txt`; its `run_all.sh` completes. Chapter 16's `run_all.sh` replays the cached run `ch16-full-new-2026-11-08-2131` and its `lab.py` output matches `new_run/ch16-full-new-2026-11-08-2131/reports/lab_NEW_stdout.txt` exactly; the folder's `OUTPUT.txt` is the legacy harness output and is not rewritten.
+- **Matches apart from run stamps** (a date or timestamp, a timing, the absolute path of the folder, the `truss` version line, the test count of the full `truss` suite, or the printing order of a dictionary): Chapters 2, 3, 4, 7, 8, 9, 12, 17 to 22, 24 to 28, 30 and 33. Chapters 13 and 15 to 22 print to the terminal instead of rewriting `OUTPUT.txt`; compare with `diff`. In Chapter 3 the count of span writes refused under two concurrent writers in rollback mode also varies from run to run, since it depends on timing; the WAL line it is compared with does not.
+- **Same values, different layout:** Chapter 52 prints the fixture digest, record digest, injection result and open targets that its `OUTPUT.txt` summarises, in a different layout.
+- **Model step replayed from the recorded output only:** Chapters 13, 14 and 15. Their REAL model replies (Chapter 13's June extraction run and guideline probe, Chapter 14's pre-labeller and Try It 3 answers, Chapter 15's decision-step probe) could not be recovered and are not in this repository. Every SIMULATED part of these labs reruns and matches; each REAL step prints a `SKIP` line that points to the chapter's `OUTPUT.txt`, which holds the recorded run the book quotes. Chapter 14 writes such a run to `out/OUTPUT.offline.txt` and leaves `OUTPUT.txt` as it is. Chapter 13's `OUTPUT.txt` also predates the listing script (`listings.py`), whose output is printed but not recorded there. To rerun the model steps yourself, see [Running the model steps on a local model](04-code/LOCAL_MODEL.md) or pass `run` with your own key; neither will reproduce the book's numbers exactly.
+
+The labs chain: run them in order, since later chapters read stores and files that earlier ones write (for example, Chapter 5 reads Chapter 3's trace store, Chapters 8 and 9 read Chapter 7's taxonomy, and Chapter 15 reads Chapter 13's gold records).
+
+## Running a model step on a local model
+
+The model steps of Chapters 5, 13, 14 and 15 can call any OpenAI-compatible server instead of the Anthropic API (Ollama, llama.cpp's `llama-server`, vLLM, LM Studio):
+
+```bash
+export LLM_BACKEND=local
+export LOCAL_LLM_BASE_URL=http://localhost:11434/v1   # Ollama
+export LOCAL_LLM_MODEL=qwen2.5:0.5b
+cd 04-code/ch15 && ./run_all.sh run
+```
+
+Such runs are labelled `LOCAL-MODEL`, write only under the chapter's `out/local/` folder (ignored by git), and never touch the cached reference replies or `OUTPUT.txt`. A local model's numbers will differ from the book's. Details, and a mock-server test of the plumbing, are in [`04-code/LOCAL_MODEL.md`](04-code/LOCAL_MODEL.md).
 
 ## Live runs and PENDING results
 

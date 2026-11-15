@@ -31,8 +31,12 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parents[0] / "ch12"))
 from policy import POLICY_TEXT, ACTIONS  # noqa: E402
 
-MODEL = "claude-haiku-4-5-20251001"
-RAW = HERE / "out" / "probe.jsonl"
+sys.path.insert(0, str(HERE.parents[0]))
+import llm_backend as LB  # noqa: E402
+
+LOCAL = LB.is_local()
+MODEL = LB.model() if LOCAL else "claude-haiku-4-5-20251001"
+RAW = LB.pick(HERE, HERE / "out" / "probe.jsonl", "probe-local.jsonl")
 SEED = 2026
 CONV_DAY = date(2027, 9, 14)
 
@@ -138,8 +142,12 @@ def render(c, window=False):
 
 
 def call(job):
-    import anthropic
     pv, c, rep = job
+    if LOCAL:
+        r = LB.chat(render(c, pv in WINDOW_FIELD), system=PROMPTS[pv], max_tokens=60, temperature=0.7)
+        return {"id": c["id"], "prompt": pv, "rep": rep, "raw": r["text"], "in_tok": r["in_tok"],
+                "out_tok": r["out_tok"], "model": r["model"], "label": LB.LABEL}
+    import anthropic
     msg = anthropic.Anthropic().messages.create(model=MODEL, max_tokens=60, system=PROMPTS[pv],
                                                 messages=[{"role": "user", "content": render(c, pv in WINDOW_FIELD)}])
     return {"id": c["id"], "prompt": pv, "rep": rep, "raw": msg.content[0].text, "in_tok": msg.usage.input_tokens,
@@ -148,6 +156,12 @@ def call(job):
 
 def cached():
     return {(j["id"], j["prompt"], j.get("rep", 1)): j for j in map(json.loads, RAW.read_text().splitlines())} if RAW.exists() else {}
+
+
+def complete(C=None):
+    """True when every case, prompt and rep has a cached reply (the book's run, or a finished local run)."""
+    C = cached() if C is None else C
+    return bool(C) and all((c["id"], pv, rep) in C for c in cases() for pv in PROMPTS for rep in (1, 2))
 
 
 def action(raw):
@@ -177,7 +191,7 @@ def results(rep=1):
 
 def report():
     C = cached()
-    print(f"== Decision-step probe (REAL, {MODEL}, default sampling; this SDK takes no temperature argument): "
+    print(f"== Decision-step probe ({LB.LABEL if LOCAL else 'REAL'}, {MODEL}, default sampling; this SDK takes no temperature argument): "
           f"{len(C)} calls cached, {sum(c['in_tok'] for c in C.values()):,} input / "
           f"{sum(c['out_tok'] for c in C.values()):,} output tokens")
     cs = {c["id"]: c for c in cases()}
@@ -213,12 +227,17 @@ def report():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "run":
+    if LOCAL:
+        LB.require_local(); LB.banner("decision-step probe")
+    if LB.live_requested(sys.argv) or LOCAL:
         done = cached()
         jobs = [(pv, c, rep) for rep in (1, 2) for c in cases() for pv in PROMPTS if (c["id"], pv, rep) not in done]
         RAW.parent.mkdir(exist_ok=True)
         with cf.ThreadPoolExecutor(6) as ex, RAW.open("a") as fh:
             for r in ex.map(call, jobs):
                 fh.write(json.dumps(r) + "\n"); fh.flush()
+    if not complete():
+        LB.skip("probe.py (REAL decision-step probe)", "out/probe.jsonl", "./run_all.sh run")
+        sys.exit(0)
     summary = report()
-    (HERE / "out" / "probe.json").write_text(json.dumps(summary, indent=1))
+    LB.pick(HERE, HERE / "out" / "probe.json").write_text(json.dumps(summary, indent=1))

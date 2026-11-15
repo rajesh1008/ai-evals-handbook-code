@@ -1,0 +1,1846 @@
+{
+ "layer_one": {
+  "strict_json": 0,
+  "after_fence_repair": 200,
+  "unknown_keys": 0,
+  "absent_keys": 0,
+  "type_errors": 0,
+  "enum_errors": 0,
+  "required_missing": 0
+ },
+ "layer_one_sonnet": {
+  "strict_json": 0,
+  "after_fence_repair": 199
+ },
+ "fields": {
+  "doc_type": {
+   "tp": 200,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 0,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 200
+  },
+  "person_name": {
+   "tp": 198,
+   "wrong": 2,
+   "miss": 0,
+   "invented": 0,
+   "tn": 0,
+   "n": 200,
+   "precision": 0.99,
+   "recall": 0.99,
+   "accuracy": 0.99,
+   "errors_where_present": 2,
+   "present": 200
+  },
+  "employer": {
+   "tp": 161,
+   "wrong": 8,
+   "miss": 0,
+   "invented": 0,
+   "tn": 31,
+   "n": 200,
+   "precision": 0.9526627218934911,
+   "recall": 0.9526627218934911,
+   "accuracy": 0.96,
+   "errors_where_present": 8,
+   "present": 169
+  },
+  "period_end": {
+   "tp": 197,
+   "wrong": 3,
+   "miss": 0,
+   "invented": 0,
+   "tn": 0,
+   "n": 200,
+   "precision": 0.985,
+   "recall": 0.985,
+   "accuracy": 0.985,
+   "errors_where_present": 3,
+   "present": 200
+  },
+  "pay_frequency": {
+   "tp": 85,
+   "wrong": 5,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 0.9444444444444444,
+   "recall": 0.9444444444444444,
+   "accuracy": 0.975,
+   "errors_where_present": 5,
+   "present": 90
+  },
+  "gross_pay": {
+   "tp": 90,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 90
+  },
+  "net_pay": {
+   "tp": 90,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 90
+  },
+  "ytd_gross": {
+   "tp": 90,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 90
+  },
+  "payroll_total": {
+   "tp": 56,
+   "wrong": 4,
+   "miss": 0,
+   "invented": 0,
+   "tn": 140,
+   "n": 200,
+   "precision": 0.9333333333333333,
+   "recall": 0.9333333333333333,
+   "accuracy": 0.98,
+   "errors_where_present": 4,
+   "present": 60
+  },
+  "stated_monthly_income": {
+   "tp": 32,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 168,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 32
+  },
+  "loan_last4": {
+   "tp": 49,
+   "wrong": 1,
+   "miss": 0,
+   "invented": 0,
+   "tn": 150,
+   "n": 200,
+   "precision": 0.98,
+   "recall": 0.98,
+   "accuracy": 0.995,
+   "errors_where_present": 1,
+   "present": 50
+  },
+  "hardship_reason": {
+   "tp": 50,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 150,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 50
+  }
+ },
+ "documents": {
+  "all_fields": 178,
+  "required": 178,
+  "critical": 187,
+  "decision_same": 197,
+  "flips": [
+   "hd-0096",
+   "hd-0106",
+   "hd-0151"
+  ],
+  "share_hist": {
+   "1.0": 178,
+   "0.917": 21,
+   "0.833": 1
+  }
+ },
+ "by_type": {
+  "hardship_letter": [
+   50,
+   44,
+   47
+  ],
+  "bank_statement": [
+   60,
+   53,
+   60
+  ],
+  "pay_stub": [
+   90,
+   81,
+   90
+  ]
+ },
+ "victor": [
+  {
+   "field": "doc_type",
+   "n": 200,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.013349504534954005,
+   "pass": true
+  },
+  {
+   "field": "period_end",
+   "n": 200,
+   "errors": 3,
+   "rate": 0.015,
+   "upper": 0.03693925041348513,
+   "pass": true
+  },
+  {
+   "field": "pay_frequency",
+   "n": 90,
+   "errors": 5,
+   "rate": 0.05555555555555555,
+   "upper": 0.10975766658044217,
+   "pass": false
+  },
+  {
+   "field": "gross_pay",
+   "n": 90,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.029189311050711108,
+   "pass": true
+  },
+  {
+   "field": "payroll_total",
+   "n": 60,
+   "errors": 4,
+   "rate": 0.06666666666666667,
+   "upper": 0.14045619491217165,
+   "pass": false
+  },
+  {
+   "field": "stated_monthly_income",
+   "n": 32,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.07796989139493792,
+   "pass": false
+  },
+  {
+   "field": "loan_last4",
+   "n": 50,
+   "errors": 1,
+   "rate": 0.02,
+   "upper": 0.08481412157991183,
+   "pass": false
+  },
+  {
+   "field": "hardship_reason",
+   "n": 50,
+   "errors": 0,
+   "rate": 0.0,
+   "upper": 0.05134185323214945,
+   "pass": false
+  }
+ ],
+ "slices": {
+  "lang": {
+   "en": [
+    1133,
+    1147
+   ],
+   "es": [
+    214,
+    223
+   ]
+  },
+  "quality": {
+   "clean": [
+    1069,
+    1081
+   ],
+   "photo": [
+    278,
+    289
+   ]
+  },
+  "layout": {
+   "letter-01": [
+    49,
+    49
+   ],
+   "bank-05": [
+    35,
+    35
+   ],
+   "stub-12": [
+    48,
+    48
+   ],
+   "stub-01": [
+    55,
+    56
+   ],
+   "letter-02": [
+    49,
+    49
+   ],
+   "stub-11": [
+    48,
+    48
+   ],
+   "stub-10": [
+    48,
+    48
+   ],
+   "letter-06": [
+    42,
+    42
+   ],
+   "stub-06": [
+    52,
+    56
+   ],
+   "stub-07": [
+    48,
+    48
+   ],
+   "bank-04": [
+    39,
+    40
+   ],
+   "bank-07": [
+    35,
+    35
+   ],
+   "letter-03": [
+    41,
+    42
+   ],
+   "bank-06": [
+    33,
+    35
+   ],
+   "bank-01": [
+    38,
+    40
+   ],
+   "stub-13": [
+    47,
+    48
+   ],
+   "stub-08": [
+    47,
+    48
+   ],
+   "letter-08": [
+    41,
+    42
+   ],
+   "letter-07": [
+    40,
+    42
+   ],
+   "bank-02": [
+    40,
+    40
+   ],
+   "letter-05": [
+    42,
+    42
+   ],
+   "stub-14": [
+    48,
+    48
+   ],
+   "bank-03": [
+    39,
+    40
+   ],
+   "stub-02": [
+    55,
+    56
+   ],
+   "letter-04": [
+    39,
+    42
+   ],
+   "stub-05": [
+    56,
+    56
+   ],
+   "stub-04": [
+    56,
+    56
+   ],
+   "bank-08": [
+    34,
+    35
+   ],
+   "stub-09": [
+    48,
+    48
+   ],
+   "stub-03": [
+    55,
+    56
+   ]
+  }
+ },
+ "heat": {
+  "doc_type": {
+   "letter-01": [
+    7,
+    7
+   ],
+   "bank-05": [
+    7,
+    7
+   ],
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    7,
+    7
+   ],
+   "letter-02": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "letter-06": [
+    6,
+    6
+   ],
+   "stub-06": [
+    7,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "bank-04": [
+    8,
+    8
+   ],
+   "bank-07": [
+    7,
+    7
+   ],
+   "letter-03": [
+    6,
+    6
+   ],
+   "bank-06": [
+    7,
+    7
+   ],
+   "bank-01": [
+    8,
+    8
+   ],
+   "stub-13": [
+    6,
+    6
+   ],
+   "stub-08": [
+    6,
+    6
+   ],
+   "letter-08": [
+    6,
+    6
+   ],
+   "letter-07": [
+    6,
+    6
+   ],
+   "bank-02": [
+    8,
+    8
+   ],
+   "letter-05": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "bank-03": [
+    8,
+    8
+   ],
+   "stub-02": [
+    7,
+    7
+   ],
+   "letter-04": [
+    6,
+    6
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "bank-08": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    7,
+    7
+   ]
+  },
+  "person_name": {
+   "letter-01": [
+    7,
+    7
+   ],
+   "bank-05": [
+    7,
+    7
+   ],
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    7,
+    7
+   ],
+   "letter-02": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "letter-06": [
+    6,
+    6
+   ],
+   "stub-06": [
+    7,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "bank-04": [
+    8,
+    8
+   ],
+   "bank-07": [
+    7,
+    7
+   ],
+   "letter-03": [
+    6,
+    6
+   ],
+   "bank-06": [
+    7,
+    7
+   ],
+   "bank-01": [
+    8,
+    8
+   ],
+   "stub-13": [
+    6,
+    6
+   ],
+   "stub-08": [
+    6,
+    6
+   ],
+   "letter-08": [
+    6,
+    6
+   ],
+   "letter-07": [
+    5,
+    6
+   ],
+   "bank-02": [
+    8,
+    8
+   ],
+   "letter-05": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "bank-03": [
+    8,
+    8
+   ],
+   "stub-02": [
+    6,
+    7
+   ],
+   "letter-04": [
+    6,
+    6
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "bank-08": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    7,
+    7
+   ]
+  },
+  "employer": {
+   "letter-01": [
+    7,
+    7
+   ],
+   "bank-05": [
+    7,
+    7
+   ],
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    6,
+    7
+   ],
+   "letter-02": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "letter-06": [
+    6,
+    6
+   ],
+   "stub-06": [
+    6,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "bank-04": [
+    8,
+    8
+   ],
+   "bank-07": [
+    7,
+    7
+   ],
+   "letter-03": [
+    5,
+    6
+   ],
+   "bank-06": [
+    7,
+    7
+   ],
+   "bank-01": [
+    6,
+    8
+   ],
+   "stub-13": [
+    6,
+    6
+   ],
+   "stub-08": [
+    5,
+    6
+   ],
+   "letter-08": [
+    6,
+    6
+   ],
+   "letter-07": [
+    6,
+    6
+   ],
+   "bank-02": [
+    8,
+    8
+   ],
+   "letter-05": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "bank-03": [
+    7,
+    8
+   ],
+   "stub-02": [
+    7,
+    7
+   ],
+   "letter-04": [
+    5,
+    6
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "bank-08": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    7,
+    7
+   ]
+  },
+  "period_end": {
+   "letter-01": [
+    7,
+    7
+   ],
+   "bank-05": [
+    7,
+    7
+   ],
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    7,
+    7
+   ],
+   "letter-02": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "letter-06": [
+    6,
+    6
+   ],
+   "stub-06": [
+    7,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "bank-04": [
+    8,
+    8
+   ],
+   "bank-07": [
+    7,
+    7
+   ],
+   "letter-03": [
+    6,
+    6
+   ],
+   "bank-06": [
+    7,
+    7
+   ],
+   "bank-01": [
+    8,
+    8
+   ],
+   "stub-13": [
+    6,
+    6
+   ],
+   "stub-08": [
+    6,
+    6
+   ],
+   "letter-08": [
+    5,
+    6
+   ],
+   "letter-07": [
+    6,
+    6
+   ],
+   "bank-02": [
+    8,
+    8
+   ],
+   "letter-05": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "bank-03": [
+    8,
+    8
+   ],
+   "stub-02": [
+    7,
+    7
+   ],
+   "letter-04": [
+    4,
+    6
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "bank-08": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    7,
+    7
+   ]
+  },
+  "stated_monthly_income": {
+   "letter-01": [
+    7,
+    7
+   ],
+   "letter-02": [
+    7,
+    7
+   ],
+   "letter-06": [
+    6,
+    6
+   ],
+   "letter-03": [
+    6,
+    6
+   ],
+   "letter-08": [
+    6,
+    6
+   ],
+   "letter-07": [
+    6,
+    6
+   ],
+   "letter-05": [
+    6,
+    6
+   ],
+   "letter-04": [
+    6,
+    6
+   ]
+  },
+  "loan_last4": {
+   "letter-01": [
+    7,
+    7
+   ],
+   "letter-02": [
+    7,
+    7
+   ],
+   "letter-06": [
+    6,
+    6
+   ],
+   "letter-03": [
+    6,
+    6
+   ],
+   "letter-08": [
+    6,
+    6
+   ],
+   "letter-07": [
+    5,
+    6
+   ],
+   "letter-05": [
+    6,
+    6
+   ],
+   "letter-04": [
+    6,
+    6
+   ]
+  },
+  "hardship_reason": {
+   "letter-01": [
+    7,
+    7
+   ],
+   "letter-02": [
+    7,
+    7
+   ],
+   "letter-06": [
+    6,
+    6
+   ],
+   "letter-03": [
+    6,
+    6
+   ],
+   "letter-08": [
+    6,
+    6
+   ],
+   "letter-07": [
+    6,
+    6
+   ],
+   "letter-05": [
+    6,
+    6
+   ],
+   "letter-04": [
+    6,
+    6
+   ]
+  },
+  "payroll_total": {
+   "bank-05": [
+    7,
+    7
+   ],
+   "bank-04": [
+    7,
+    8
+   ],
+   "bank-07": [
+    7,
+    7
+   ],
+   "bank-06": [
+    5,
+    7
+   ],
+   "bank-01": [
+    8,
+    8
+   ],
+   "bank-02": [
+    8,
+    8
+   ],
+   "bank-03": [
+    8,
+    8
+   ],
+   "bank-08": [
+    6,
+    7
+   ]
+  },
+  "pay_frequency": {
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "stub-06": [
+    4,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "stub-13": [
+    5,
+    6
+   ],
+   "stub-08": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "stub-02": [
+    7,
+    7
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    6,
+    7
+   ]
+  },
+  "gross_pay": {
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "stub-06": [
+    7,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "stub-13": [
+    6,
+    6
+   ],
+   "stub-08": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "stub-02": [
+    7,
+    7
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    7,
+    7
+   ]
+  },
+  "net_pay": {
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "stub-06": [
+    7,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "stub-13": [
+    6,
+    6
+   ],
+   "stub-08": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "stub-02": [
+    7,
+    7
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    7,
+    7
+   ]
+  },
+  "ytd_gross": {
+   "stub-12": [
+    6,
+    6
+   ],
+   "stub-01": [
+    7,
+    7
+   ],
+   "stub-11": [
+    6,
+    6
+   ],
+   "stub-10": [
+    6,
+    6
+   ],
+   "stub-06": [
+    7,
+    7
+   ],
+   "stub-07": [
+    6,
+    6
+   ],
+   "stub-13": [
+    6,
+    6
+   ],
+   "stub-08": [
+    6,
+    6
+   ],
+   "stub-14": [
+    6,
+    6
+   ],
+   "stub-02": [
+    7,
+    7
+   ],
+   "stub-05": [
+    7,
+    7
+   ],
+   "stub-04": [
+    7,
+    7
+   ],
+   "stub-09": [
+    6,
+    6
+   ],
+   "stub-03": [
+    7,
+    7
+   ]
+  }
+ },
+ "errors": [
+  {
+   "id": "hd-0016",
+   "field": "payroll_total",
+   "class": "rows right, sum wrong",
+   "got": 5763.62,
+   "gold": 6763.62,
+   "layout": "bank-06",
+   "lang": "en",
+   "quality": "clean",
+   "conf": 0.99
+  },
+  {
+   "id": "hd-0017",
+   "field": "employer",
+   "class": "copied from the page as printed",
+   "got": "Tempe Home Health PA",
+   "gold": "Tempe Home Health",
+   "layout": "bank-01",
+   "lang": "en",
+   "quality": "clean",
+   "conf": 0.95
+  },
+  {
+   "id": "hd-0018",
+   "field": "pay_frequency",
+   "class": "frequency word or inference",
+   "got": "biweekly",
+   "gold": "semimonthly",
+   "layout": "stub-13",
+   "lang": "es",
+   "quality": "clean",
+   "conf": 0.99
+  },
+  {
+   "id": "hd-0019",
+   "field": "pay_frequency",
+   "class": "frequency word or inference",
+   "got": "biweekly",
+   "gold": "semimonthly",
+   "layout": "stub-06",
+   "lang": "es",
+   "quality": "photo",
+   "conf": 0.99
+  },
+  {
+   "id": "hd-0022",
+   "field": "employer",
+   "class": "copied from the page as printed",
+   "got": "Vcrde Valley Plumbing",
+   "gold": "Verde Valley Plumbing",
+   "layout": "letter-03",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.85
+  },
+  {
+   "id": "hd-0027",
+   "field": "period_end",
+   "class": "day and month swapped",
+   "got": "2027-04-05",
+   "gold": "2027-05-04",
+   "layout": "letter-08",
+   "lang": "es",
+   "quality": "clean",
+   "conf": 0.9
+  },
+  {
+   "id": "hd-0047",
+   "field": "pay_frequency",
+   "class": "frequency word or inference",
+   "got": "biweekly",
+   "gold": "semimonthly",
+   "layout": "stub-06",
+   "lang": "es",
+   "quality": "clean",
+   "conf": 0.98
+  },
+  {
+   "id": "hd-0070",
+   "field": "payroll_total",
+   "class": "rows right, sum wrong",
+   "got": 4910.2,
+   "gold": 5010.2,
+   "layout": "bank-04",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.95
+  },
+  {
+   "id": "hd-0075",
+   "field": "employer",
+   "class": "copied from the page as printed",
+   "got": "Desert Ridge AutoCo.",
+   "gold": "Desert Ridge Auto",
+   "layout": "stub-06",
+   "lang": "es",
+   "quality": "photo",
+   "conf": 0.95
+  },
+  {
+   "id": "hd-0076",
+   "field": "payroll_total",
+   "class": "rows right, sum wrong",
+   "got": 6834.71,
+   "gold": 8394.74,
+   "layout": "bank-08",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.98
+  },
+  {
+   "id": "hd-0090",
+   "field": "employer",
+   "class": "space dropped by the photograph",
+   "got": "Tempe HomeHealth",
+   "gold": "Tempe Home Health",
+   "layout": "letter-04",
+   "lang": "es",
+   "quality": "photo",
+   "conf": 0.92
+  },
+  {
+   "id": "hd-0096",
+   "field": "period_end",
+   "class": "day and month swapped",
+   "got": "2027-10-05",
+   "gold": "2027-05-10",
+   "layout": "letter-04",
+   "lang": "es",
+   "quality": "clean",
+   "conf": 0.95
+  },
+  {
+   "id": "hd-0103",
+   "field": "employer",
+   "class": "copied from the page as printed",
+   "got": "Pima Solar Installat P",
+   "gold": "Pima Solar Installations",
+   "layout": "bank-03",
+   "lang": "en",
+   "quality": "clean",
+   "conf": 0.9
+  },
+  {
+   "id": "hd-0106",
+   "field": "period_end",
+   "class": "day and month swapped",
+   "got": "2027-01-05",
+   "gold": "2027-05-01",
+   "layout": "letter-04",
+   "lang": "es",
+   "quality": "clean",
+   "conf": 0.95
+  },
+  {
+   "id": "hd-0129",
+   "field": "person_name",
+   "class": "copied from the page as printed",
+   "got": "Amanda Ramircz",
+   "gold": "Amanda Ramirez",
+   "layout": "stub-02",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.85
+  },
+  {
+   "id": "hd-0143",
+   "field": "employer",
+   "class": "copied from the page as printed",
+   "got": "TEMPE HOMEHEALTH LLC",
+   "gold": "Tempe Home Health",
+   "layout": "stub-01",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.98
+  },
+  {
+   "id": "hd-0151",
+   "field": "person_name",
+   "class": "copied from the page as printed",
+   "got": "Jorge Mitchcll",
+   "gold": "Jorge Mitchell",
+   "layout": "letter-07",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.85
+  },
+  {
+   "id": "hd-0151",
+   "field": "loan_last4",
+   "class": "copied from the page as printed",
+   "got": "4B81",
+   "gold": "4881",
+   "layout": "letter-07",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.92
+  },
+  {
+   "id": "hd-0156",
+   "field": "pay_frequency",
+   "class": "frequency word or inference",
+   "got": "biweekly",
+   "gold": "semimonthly",
+   "layout": "stub-03",
+   "lang": "en",
+   "quality": "clean",
+   "conf": 0.95
+  },
+  {
+   "id": "hd-0166",
+   "field": "employer",
+   "class": "copied from the page as printed",
+   "got": "Descrt Ridge Auto LLC",
+   "gold": "Desert Ridge Auto",
+   "layout": "stub-08",
+   "lang": "en",
+   "quality": "photo",
+   "conf": 0.92
+  },
+  {
+   "id": "hd-0168",
+   "field": "pay_frequency",
+   "class": "frequency word or inference",
+   "got": "biweekly",
+   "gold": "semimonthly",
+   "layout": "stub-06",
+   "lang": "es",
+   "quality": "clean",
+   "conf": 0.99
+  },
+  {
+   "id": "hd-0170",
+   "field": "employer",
+   "class": "copied from the page as printed",
+   "got": "Tempe Home Health Pa",
+   "gold": "Tempe Home Health",
+   "layout": "bank-01",
+   "lang": "en",
+   "quality": "clean",
+   "conf": 0.92
+  },
+  {
+   "id": "hd-0180",
+   "field": "payroll_total",
+   "class": "rows right, sum wrong",
+   "got": 4602.66,
+   "gold": 4603.66,
+   "layout": "bank-06",
+   "lang": "en",
+   "quality": "clean",
+   "conf": 0.95
+  }
+ ],
+ "table": {
+  "docs": 60,
+  "rows_gold": 154,
+  "tp": 154,
+  "extra": 0,
+  "missed": 0,
+  "all_rows_right": 60,
+  "total_right": 56,
+  "rows_right_total_wrong": [
+   "hd-0016",
+   "hd-0070",
+   "hd-0076",
+   "hd-0180"
+  ],
+  "sum_check_fails": 4,
+  "sum_check_catches": 4
+ },
+ "calibration": {
+  "rows": [
+   {
+    "bin": "0.00-0.50",
+    "n": 8,
+    "mean_conf": 0.11875,
+    "accuracy": 1.0
+   },
+   {
+    "bin": "0.50-0.80",
+    "n": 3,
+    "mean_conf": 0.7166666666666667,
+    "accuracy": 1.0
+   },
+   {
+    "bin": "0.80-0.90",
+    "n": 30,
+    "mean_conf": 0.8510000000000001,
+    "accuracy": 0.9
+   },
+   {
+    "bin": "0.90-0.95",
+    "n": 63,
+    "mean_conf": 0.9160317460317461,
+    "accuracy": 0.9047619047619048
+   },
+   {
+    "bin": "0.95-0.99",
+    "n": 453,
+    "mean_conf": 0.9644150110375276,
+    "accuracy": 0.977924944812362
+   },
+   {
+    "bin": "0.99-1.00",
+    "n": 813,
+    "mean_conf": 0.9900369003690037,
+    "accuracy": 0.995079950799508
+   }
+  ],
+  "ece": 0.014817518248175145,
+  "n": 1370
+ },
+ "review_policies": {
+  "confidence<0.9": [
+   41,
+   3
+  ],
+  "confidence<0.95": [
+   104,
+   9
+  ],
+  "confidence<0.99": [
+   557,
+   19
+  ],
+  "second reader disagrees": [
+   16,
+   12
+  ]
+ },
+ "sonnet_fields": {
+  "doc_type": {
+   "tp": 199,
+   "wrong": 0,
+   "miss": 1,
+   "invented": 0,
+   "tn": 0,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 0.995,
+   "accuracy": 0.995,
+   "errors_where_present": 1,
+   "present": 200
+  },
+  "person_name": {
+   "tp": 199,
+   "wrong": 0,
+   "miss": 1,
+   "invented": 0,
+   "tn": 0,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 0.995,
+   "accuracy": 0.995,
+   "errors_where_present": 1,
+   "present": 200
+  },
+  "employer": {
+   "tp": 153,
+   "wrong": 15,
+   "miss": 1,
+   "invented": 0,
+   "tn": 31,
+   "n": 200,
+   "precision": 0.9107142857142857,
+   "recall": 0.9053254437869822,
+   "accuracy": 0.92,
+   "errors_where_present": 16,
+   "present": 169
+  },
+  "period_end": {
+   "tp": 196,
+   "wrong": 3,
+   "miss": 1,
+   "invented": 0,
+   "tn": 0,
+   "n": 200,
+   "precision": 0.9849246231155779,
+   "recall": 0.98,
+   "accuracy": 0.98,
+   "errors_where_present": 4,
+   "present": 200
+  },
+  "pay_frequency": {
+   "tp": 90,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 90
+  },
+  "gross_pay": {
+   "tp": 90,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 90
+  },
+  "net_pay": {
+   "tp": 90,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 90
+  },
+  "ytd_gross": {
+   "tp": 90,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 110,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 90
+  },
+  "payroll_total": {
+   "tp": 58,
+   "wrong": 1,
+   "miss": 1,
+   "invented": 0,
+   "tn": 140,
+   "n": 200,
+   "precision": 0.9830508474576272,
+   "recall": 0.9666666666666667,
+   "accuracy": 0.99,
+   "errors_where_present": 2,
+   "present": 60
+  },
+  "stated_monthly_income": {
+   "tp": 32,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 168,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 32
+  },
+  "loan_last4": {
+   "tp": 49,
+   "wrong": 1,
+   "miss": 0,
+   "invented": 0,
+   "tn": 150,
+   "n": 200,
+   "precision": 0.98,
+   "recall": 0.98,
+   "accuracy": 0.995,
+   "errors_where_present": 1,
+   "present": 50
+  },
+  "hardship_reason": {
+   "tp": 50,
+   "wrong": 0,
+   "miss": 0,
+   "invented": 0,
+   "tn": 150,
+   "n": 200,
+   "precision": 1.0,
+   "recall": 1.0,
+   "accuracy": 1.0,
+   "errors_where_present": 0,
+   "present": 50
+  }
+ },
+ "sonnet_flips": [
+  "hd-0046",
+  "hd-0096",
+  "hd-0106",
+  "hd-0151"
+ ],
+ "definitions": {
+  "stubs": 90,
+  "current_vs_ytd_gap_over_5pct": 21,
+  "band_changes_if_ytd_average": 2,
+  "letters": 50,
+  "net_stated": 13,
+  "hourly_only": 10,
+  "two_reasons": 17,
+  "two_loans": 15,
+  "statements_with_non_payroll_deposits": 60
+ },
+ "after": {
+  "victor": [
+   {
+    "field": "doc_type",
+    "n": 200,
+    "errors": 0,
+    "upper": 0.013349504534954005,
+    "pass": true
+   },
+   {
+    "field": "period_end",
+    "n": 200,
+    "errors": 1,
+    "upper": 0.022099883116606066,
+    "pass": true
+   },
+   {
+    "field": "pay_frequency",
+    "n": 90,
+    "errors": 1,
+    "upper": 0.048280444727625674,
+    "pass": true
+   },
+   {
+    "field": "gross_pay",
+    "n": 90,
+    "errors": 0,
+    "upper": 0.029189311050711108,
+    "pass": true
+   },
+   {
+    "field": "payroll_total",
+    "n": 60,
+    "errors": 0,
+    "upper": 0.043154146670913995,
+    "pass": true
+   },
+   {
+    "field": "stated_monthly_income",
+    "n": 32,
+    "errors": 0,
+    "upper": 0.07796989139493792,
+    "pass": false
+   },
+   {
+    "field": "loan_last4",
+    "n": 50,
+    "errors": 1,
+    "upper": 0.08481412157991183,
+    "pass": false
+   },
+   {
+    "field": "hardship_reason",
+    "n": 50,
+    "errors": 0,
+    "upper": 0.05134185323214945,
+    "pass": false
+   }
+  ],
+  "all_right": 188,
+  "flips": [
+   "hd-0021",
+   "hd-0151"
+  ]
+ }
+}

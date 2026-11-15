@@ -3,6 +3,7 @@
 # pending live run and does not call a model.
 set -euo pipefail
 cd "$(dirname "$0")"
+mkdir -p out
 python3 lab.py
 python3 inject.py
 python3 try_its.py

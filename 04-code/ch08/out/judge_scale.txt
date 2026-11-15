@@ -1,0 +1,16 @@
+model claude-haiku-4-5-20251001; calls 320; unparsed 6; tokens in 93824, out 67241
+binary: agreement with planted truth 94.9% of 158; kappa 0.92
+  short: agreement 96.2%; FAIL verdicts 29 of 80 (truth 30)
+  long: agreement 93.6%; FAIL verdicts 34 of 78 (truth 29)
+  unparsed: [('binary', 'right_waive', 'long', 'Despite this omission, the reply does not state an'), ('likert', 'deferred', 'short', 'While the response provides helpful information ab'), ('binary', 'X_wrongloan', 'long', 'Since the question asks specifically if the reply '), ('likert', 'X_wrongloan', 'long', 'The core answer about why the fee was charged is c'), ('likert', 'X_wrongloan', 'short', 'The reply is accurate, relevant, and provides a cl'), ('likert', 'X_invent', 'long', 'The reply appears confident but is built on a fail')]
+  same reply asked twice, verdict changed: 8 of 78; short vs long of same case changed (run 1): 5 of 40
+  disagreements (truth, model): [('deferred', 'fail', 3), ('deferred', 'pass', 2), ('fail', 'pass', 1), ('pass', 'fail', 2)]
+1-to-5 pass: mean short 3.37, long 2.90
+1-to-5 deferred: mean short 2.95, long 2.80
+1-to-5 fail: mean short 2.17, long 2.18
+  right replies, run 1: long scored higher 1, lower 6, same 8 of 15
+  same reply asked twice (76 pairs both parsed): exact 55.3%, weighted kappa 0.69
+  run 1, scored 1 or less: 2 of 79, of which wrong 2 (truth fail 29)
+  run 1, scored 2 or less: 41 of 79, of which wrong 24 (truth fail 29)
+  run 1, scored 3 or less: 65 of 79, of which wrong 28 (truth fail 29)
+  wrong replies' scores (both runs): 1:6, 2:38, 3:10, 4:3, 5:0

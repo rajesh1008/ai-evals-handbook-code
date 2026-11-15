@@ -18,8 +18,12 @@ import score as S  # noqa: E402
 from specs import CRITICAL, APPLIES  # noqa: E402
 from truss import fields as F  # noqa: E402
 import june_docs as JD  # noqa: E402
+sys.path.insert(0, str(HERE.parents[0]))
+import llm_backend as LB  # noqa: E402
 
-RAW = HERE / "out" / "june-haiku.jsonl"
+LOCAL = LB.is_local()
+RAW = LB.pick(HERE, HERE / "out" / "june-haiku.jsonl", "june-local.jsonl")
+MODEL = LB.model() if LOCAL else EX.MODELS["haiku"]
 GLOSS = ("\n\nSpanish documents: 'Quincenal' means semimonthly (twice a month), 'Catorcenal' means biweekly "
          "(every two weeks), 'Mensual' means monthly, 'Semanal' means weekly. Dates written as 05/06/2027 in a Spanish "
          "document are day first (5 June 2027).")
@@ -32,8 +36,12 @@ def prompt(d):
 
 
 def call(d):
-    import anthropic
     pv, p = prompt(d)
+    if LOCAL:
+        r = LB.chat(p, max_tokens=1500)
+        return {"id": d["id"], "model": r["model"], "prompt": pv, "raw": r["text"], "in_tok": r["in_tok"],
+                "out_tok": r["out_tok"], "label": LB.LABEL}
+    import anthropic
     msg = anthropic.Anthropic().messages.create(model=EX.MODELS["haiku"], max_tokens=1500, messages=[{"role": "user", "content": p}])
     return {"id": d["id"], "model": EX.MODELS["haiku"], "prompt": pv, "raw": msg.content[0].text,
             "in_tok": msg.usage.input_tokens, "out_tok": msg.usage.output_tokens}
@@ -45,18 +53,23 @@ def cached():
 
 if __name__ == "__main__":
     docs = JD.load()
-    if len(sys.argv) > 1 and sys.argv[1] == "run":
+    if LOCAL:
+        LB.require_local(); LB.banner("June document set, extraction")
+    if LB.live_requested(sys.argv) or LOCAL:
         done = cached(); todo = [d for d in docs if d["id"] not in done]
         with cf.ThreadPoolExecutor(6) as ex, RAW.open("a") as fh:
             for r in ex.map(call, todo):
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n"); fh.flush()
     C = cached()
-    print(f"== June set: {len(docs)} documents; {len(C)} replies cached from {EX.MODELS['haiku']} "
+    if not LOCAL and any(d["id"] not in C for d in docs):
+        LB.skip("june_run.py (June set scored against Victor's rule)", "out/june-haiku.jsonl", "./run_all.sh run")
+        sys.exit(0)
+    print(f"== June set: {len(docs)} documents; {len(C)} replies cached from {MODEL} "
           f"({sum(c['in_tok'] for c in C.values()):,} input / {s1 if (s1 := sum(c['out_tok'] for c in C.values())) else 0:,} output tokens); "
           f"prompts {dict((p, sum(c['prompt'] == p for c in C.values())) for p in ('extract-prompt-v1', 'extract-prompt-v2'))}")
     fixed, unparsed = {}, []
     for d in docs:
-        obj, _ = F.parse_json(C[d["id"]]["raw"])
+        obj, _ = F.parse_json(C.get(d["id"], {}).get("raw", ""))
         if obj is None:
             unparsed.append(d["id"]); obj = {}
         o = dict(obj)
@@ -82,4 +95,4 @@ if __name__ == "__main__":
     print(f"  documents with every field right {allr}/{len(docs)}; hardship decisions changed {len(flips)} {flips}")
     json.dump({"n": len(docs), "victor": res, "errors": errs, "flips": flips, "all_right": allr, "unparsed": unparsed,
                "tokens": [sum(c['in_tok'] for c in C.values()), sum(c['out_tok'] for c in C.values())]},
-              open(HERE / "out" / "june.json", "w"), indent=1, default=str)
+              open(LB.pick(HERE, HERE / "out" / "june.json"), "w"), indent=1, default=str)

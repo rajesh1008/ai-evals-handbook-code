@@ -14,9 +14,12 @@ sys.path.insert(0, str(HERE.parents[0] / "ch12")); sys.path.insert(0, str(HERE.p
 from policy import POLICY_TEXT  # noqa: E402
 from truss.fields import parse_json  # noqa: E402
 from guideline import REVISIONS  # noqa: E402
+sys.path.insert(0, str(HERE.parents[0]))
+import llm_backend as LB  # noqa: E402
 
-MODELS = {"haiku": "claude-haiku-4-5-20251001", "sonnet": "claude-sonnet-4-6"}
-RAW = HERE / "out" / "probe.jsonl"
+LOCAL = LB.is_local()
+MODELS = {"local": LB.model()} if LOCAL else {"haiku": "claude-haiku-4-5-20251001", "sonnet": "claude-sonnet-4-6"}
+RAW = LB.pick(HERE, HERE / "out" / "probe.jsonl", "probe-local.jsonl")
 PROMPT = """Two experienced loan officers will label the same hardship conversations independently, using the labelling guideline below, and their labels will be compared. Find the guideline sentences that two careful officers could apply differently to the same conversation.
 
 The policy the guideline implements:
@@ -29,9 +32,13 @@ For each sentence ID, decide whether two careful officers who both follow it cou
 
 
 def call(job):
-    import anthropic
     m, rev, rep = job
     g = "\n".join(f"{k} {v}" for k, v in REVISIONS[rev].items())
+    if LOCAL:
+        r = LB.chat(PROMPT.format(policy=POLICY_TEXT, guideline=g), max_tokens=4000)
+        return {"model": MODELS[m], "revision": rev, "rep": rep, "raw": r["text"], "in_tok": r["in_tok"],
+                "out_tok": r["out_tok"], "label": LB.LABEL}
+    import anthropic
     msg = anthropic.Anthropic().messages.create(model=MODELS[m], max_tokens=4000, messages=[
         {"role": "user", "content": PROMPT.format(policy=POLICY_TEXT, guideline=g)}])
     return {"model": MODELS[m], "revision": rev, "rep": rep, "raw": msg.content[0].text,
@@ -43,12 +50,17 @@ def cached():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "run":
+    if LOCAL:
+        LB.require_local(); LB.banner("guideline ambiguity probe")
+    if LB.live_requested(sys.argv) or LOCAL:
         done = {(c["model"], c["revision"], c["rep"]) for c in cached()}
         jobs = [(m, r, k) for m in MODELS for r in ("r2", "r3") for k in range(3) if (MODELS[m], r, k) not in done]
         with cf.ThreadPoolExecutor(4) as ex, RAW.open("a") as fh:
             for r in ex.map(call, jobs):
                 fh.write(json.dumps(r) + "\n"); fh.flush()
+    if not cached():
+        LB.skip("probe.py (guideline ambiguity probe)", "out/probe.jsonl", "./run_all.sh run")
+        sys.exit(0)
     out = {}
     for c in sorted(cached(), key=lambda c: (c["model"], c["revision"], c["rep"])):
         obj, _ = parse_json(c["raw"])
@@ -63,4 +75,4 @@ if __name__ == "__main__":
     for key, runs in out.items():
         cnt = Counter(f for r in runs for f in r["flags"])
         print(f"  {key}: " + ", ".join(f"{k} {v}" for k, v in sorted(cnt.items())))
-    json.dump(out, open(HERE / "out" / "probe.json", "w"), indent=1)
+    json.dump(out, open(LB.pick(HERE, HERE / "out" / "probe.json"), "w"), indent=1)

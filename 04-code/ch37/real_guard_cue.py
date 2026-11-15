@@ -70,6 +70,14 @@ def classify_anthropic(desc: str) -> str:
 
 
 def main(live: bool = False):
+    # Cached reference run: report it unchanged unless --live is passed (then the Anthropic API is called, paid).
+    import sys as _sys
+    _live_flag = "--live" in _sys.argv
+    _cache = OUT / "real_guard_cue.json"
+    if not _live_flag and _cache.exists():
+        out = json.loads(_cache.read_text())
+        print(json.dumps({k: out[k] for k in ("status", "model", "n", "correct", "accuracy")}, indent=2))
+        return
     rows = []
     model = "local-heuristic"
     status = "simulated_fallback"

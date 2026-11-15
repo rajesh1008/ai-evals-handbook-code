@@ -1,0 +1,160 @@
+{"sid": "s-081", "cond": "clean", "leaked": true, "examples": ["s-317", "s-094"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-081", "cond": "leaked_index", "leaked": true, "examples": ["s-081", "s-094"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-197", "cond": "clean", "leaked": true, "examples": ["s-327", "s-158"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-197", "cond": "leaked_index", "leaked": true, "examples": ["s-197", "s-158"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-320", "cond": "clean", "leaked": true, "examples": ["s-083", "s-308"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-320", "cond": "leaked_index", "leaked": true, "examples": ["s-320", "s-308"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-323", "cond": "clean", "leaked": true, "examples": ["s-317", "s-375"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-323", "cond": "leaked_index", "leaked": true, "examples": ["s-323", "s-375"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-076", "cond": "clean", "leaked": true, "examples": ["s-173", "s-383"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-076", "cond": "leaked_index", "leaked": true, "examples": ["s-076", "s-383"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-137", "cond": "clean", "leaked": true, "examples": ["s-271", "s-207"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-137", "cond": "leaked_index", "leaked": true, "examples": ["s-137", "s-207"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-356", "cond": "clean", "leaked": true, "examples": ["s-377", "s-338"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-356", "cond": "leaked_index", "leaked": true, "examples": ["s-356", "s-338"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-257", "cond": "clean", "leaked": true, "examples": ["s-326", "s-271"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-257", "cond": "leaked_index", "leaked": true, "examples": ["s-257", "s-271"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-362", "cond": "clean", "leaked": false, "examples": ["s-294", "s-134"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-362", "cond": "leaked_index", "leaked": false, "examples": ["s-294", "s-134"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-349", "cond": "clean", "leaked": false, "examples": ["s-198", "s-184"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-349", "cond": "leaked_index", "leaked": false, "examples": ["s-198", "s-184"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-310", "cond": "clean", "leaked": false, "examples": ["s-008", "s-023"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-310", "cond": "leaked_index", "leaked": false, "examples": ["s-008", "s-023"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-279", "cond": "clean", "leaked": false, "examples": ["s-098", "s-311"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-279", "cond": "leaked_index", "leaked": false, "examples": ["s-098", "s-311"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-149", "cond": "clean", "leaked": false, "examples": ["s-357", "s-331"], "answer": "refer_to_officer\n\nThe borrower is self-employed (food truck owner), which triggers", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-149", "cond": "leaked_index", "leaked": false, "examples": ["s-357", "s-331"], "answer": "refer_to_officer\n\nThe borrower is self-employed (policy 4.5),", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-002", "cond": "clean", "leaked": false, "examples": ["s-241", "s-133"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-002", "cond": "leaked_index", "leaked": false, "examples": ["s-241", "s-133"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-062", "cond": "clean", "leaked": false, "examples": ["s-179", "s-329"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-062", "cond": "leaked_index", "leaked": false, "examples": ["s-179", "s-329"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-078", "cond": "clean", "leaked": false, "examples": ["s-315", "s-347"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-078", "cond": "leaked_index", "leaked": false, "examples": ["s-315", "s-347"], "answer": "ask_which_loan", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-181", "cond": "clean", "leaked": true, "examples": ["s-336", "s-295"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-181", "cond": "leaked_index", "leaked": true, "examples": ["s-181", "s-295"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-066", "cond": "clean", "leaked": true, "examples": ["s-382", "s-024"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-066", "cond": "leaked_index", "leaked": true, "examples": ["s-066", "s-024"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-281", "cond": "clean", "leaked": true, "examples": ["s-195", "s-212"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-281", "cond": "leaked_index", "leaked": true, "examples": ["s-281", "s-212"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-005", "cond": "clean", "leaked": true, "examples": ["s-311", "s-067"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-005", "cond": "leaked_index", "leaked": true, "examples": ["s-005", "s-067"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-301", "cond": "clean", "leaked": true, "examples": ["s-298", "s-350"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-301", "cond": "leaked_index", "leaked": true, "examples": ["s-301", "s-350"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-204", "cond": "clean", "leaked": true, "examples": ["s-178", "s-306"], "answer": "decline_window\n\nThe borrower had a payment extension on this same loan that ended 8", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-204", "cond": "leaked_index", "leaked": true, "examples": ["s-204", "s-306"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-131", "cond": "clean", "leaked": true, "examples": ["s-119", "s-288"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-131", "cond": "leaked_index", "leaked": true, "examples": ["s-131", "s-288"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-259", "cond": "clean", "leaked": true, "examples": ["s-326", "s-042"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-259", "cond": "leaked_index", "leaked": true, "examples": ["s-259", "s-042"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-164", "cond": "clean", "leaked": false, "examples": ["s-183", "s-337"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-164", "cond": "leaked_index", "leaked": false, "examples": ["s-183", "s-337"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-221", "cond": "clean", "leaked": false, "examples": ["s-247", "s-065"], "answer": "refer_to_officer\n\nThe borrower has indicated they are self-employed (part-time", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-221", "cond": "leaked_index", "leaked": false, "examples": ["s-247", "s-065"], "answer": "refer_to_officer\n\nThe borrower has indicated they are self-employed (part-time", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-229", "cond": "clean", "leaked": false, "examples": ["s-127", "s-276"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-229", "cond": "leaked_index", "leaked": false, "examples": ["s-127", "s-276"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-250", "cond": "clean", "leaked": false, "examples": ["s-096", "s-305"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-250", "cond": "leaked_index", "leaked": false, "examples": ["s-096", "s-305"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-319", "cond": "clean", "leaked": false, "examples": ["s-013", "s-060"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-319", "cond": "leaked_index", "leaked": false, "examples": ["s-013", "s-060"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-050", "cond": "clean", "leaked": false, "examples": ["s-001", "s-306"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-050", "cond": "leaked_index", "leaked": false, "examples": ["s-001", "s-306"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-219", "cond": "clean", "leaked": false, "examples": ["s-398", "s-375"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-219", "cond": "leaked_index", "leaked": false, "examples": ["s-398", "s-375"], "answer": "ask_income", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-056", "cond": "clean", "leaked": false, "examples": ["s-054", "s-129"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-056", "cond": "leaked_index", "leaked": false, "examples": ["s-054", "s-129"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-358", "cond": "clean", "leaked": true, "examples": ["s-170", "s-082"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-358", "cond": "leaked_index", "leaked": true, "examples": ["s-358", "s-082"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-346", "cond": "clean", "leaked": true, "examples": ["s-029", "s-375"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-346", "cond": "leaked_index", "leaked": true, "examples": ["s-346", "s-375"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-169", "cond": "clean", "leaked": true, "examples": ["s-184", "s-239"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-169", "cond": "leaked_index", "leaked": true, "examples": ["s-169", "s-239"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-397", "cond": "clean", "leaked": true, "examples": ["s-101", "s-006"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-397", "cond": "leaked_index", "leaked": true, "examples": ["s-397", "s-006"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-297", "cond": "clean", "leaked": true, "examples": ["s-210", "s-399"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-297", "cond": "leaked_index", "leaked": true, "examples": ["s-297", "s-399"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-088", "cond": "clean", "leaked": true, "examples": ["s-394", "s-332"], "answer": "decline_window\n\nThe borrower's prior deferral ended 9 calendar months ago,", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-088", "cond": "leaked_index", "leaked": true, "examples": ["s-088", "s-332"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-174", "cond": "clean", "leaked": true, "examples": ["s-091", "s-375"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-174", "cond": "leaked_index", "leaked": true, "examples": ["s-174", "s-375"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-004", "cond": "clean", "leaked": true, "examples": ["s-155", "s-321"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-004", "cond": "leaked_index", "leaked": true, "examples": ["s-004", "s-321"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-258", "cond": "clean", "leaked": false, "examples": ["s-089", "s-341"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-258", "cond": "leaked_index", "leaked": false, "examples": ["s-089", "s-341"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-199", "cond": "clean", "leaked": false, "examples": ["s-195", "s-055"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-199", "cond": "leaked_index", "leaked": false, "examples": ["s-195", "s-055"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-104", "cond": "clean", "leaked": false, "examples": ["s-282", "s-103"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-104", "cond": "leaked_index", "leaked": false, "examples": ["s-282", "s-103"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-335", "cond": "clean", "leaked": false, "examples": ["s-091", "s-206"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-335", "cond": "leaked_index", "leaked": false, "examples": ["s-091", "s-206"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-138", "cond": "clean", "leaked": false, "examples": ["s-343", "s-276"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-138", "cond": "leaked_index", "leaked": false, "examples": ["s-343", "s-276"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-135", "cond": "clean", "leaked": false, "examples": ["s-262", "s-098"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-135", "cond": "leaked_index", "leaked": false, "examples": ["s-262", "s-098"], "answer": "refer_to_officer\n\nThe borrower is self-employed (policy 4.5),", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-030", "cond": "clean", "leaked": false, "examples": ["s-355", "s-128"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-030", "cond": "leaked_index", "leaked": false, "examples": ["s-355", "s-128"], "answer": "decline_window", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-115", "cond": "clean", "leaked": false, "examples": ["s-251", "s-013"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-115", "cond": "leaked_index", "leaked": false, "examples": ["s-251", "s-013"], "answer": "refer_to_officer\n\n**Reasoning:**\nFollowing the order of checks in 4.", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-344", "cond": "clean", "leaked": true, "examples": ["s-071", "s-262"], "answer": "refer_to_officer\n\nThe borrower is self-employed (policy 4.5),", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-344", "cond": "leaked_index", "leaked": true, "examples": ["s-344", "s-262"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-105", "cond": "clean", "leaked": true, "examples": ["s-047", "s-034"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-105", "cond": "leaked_index", "leaked": true, "examples": ["s-105", "s-034"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-280", "cond": "clean", "leaked": true, "examples": ["s-232", "s-236"], "answer": "refer_to_officer\n\nThe borrower is 4 payments behind, which is 3", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-280", "cond": "leaked_index", "leaked": true, "examples": ["s-280", "s-236"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-146", "cond": "clean", "leaked": true, "examples": ["s-019", "s-347"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-146", "cond": "leaked_index", "leaked": true, "examples": ["s-146", "s-347"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-245", "cond": "clean", "leaked": true, "examples": ["s-322", "s-217"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-245", "cond": "leaked_index", "leaked": true, "examples": ["s-245", "s-217"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-227", "cond": "clean", "leaked": true, "examples": ["s-205", "s-305"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-227", "cond": "leaked_index", "leaked": true, "examples": ["s-227", "s-305"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-285", "cond": "clean", "leaked": true, "examples": ["s-216", "s-083"], "answer": "refer_to_officer\n\nThe borrower is 3 payments behind, which triggers section", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-285", "cond": "leaked_index", "leaked": true, "examples": ["s-285", "s-083"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-159", "cond": "clean", "leaked": true, "examples": ["s-336", "s-315"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-159", "cond": "leaked_index", "leaked": true, "examples": ["s-159", "s-315"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-287", "cond": "clean", "leaked": false, "examples": ["s-392", "s-112"], "answer": "refer_to_officer\n\nThe borrower has stated self-employed status (freelance medical writing", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-287", "cond": "leaked_index", "leaked": false, "examples": ["s-392", "s-112"], "answer": "refer_to_officer\n\n**Reasoning:** Following the order of checks in policy HP-2", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-145", "cond": "clean", "leaked": false, "examples": ["s-100", "s-355"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-145", "cond": "leaked_index", "leaked": false, "examples": ["s-100", "s-355"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-130", "cond": "clean", "leaked": false, "examples": ["s-139", "s-295"], "answer": "refer_to_officer\n\nThe borrower is self-employed (per account records and the mention", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-130", "cond": "leaked_index", "leaked": false, "examples": ["s-139", "s-295"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-147", "cond": "clean", "leaked": false, "examples": ["s-225", "s-311"], "answer": "refer_to_officer\n\nThe borrower is self-employed (per policy 4.5", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-147", "cond": "leaked_index", "leaked": false, "examples": ["s-225", "s-311"], "answer": "refer_to_officer\n\nThe borrower is self-employed (policy 4.5),", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-109", "cond": "clean", "leaked": false, "examples": ["s-161", "s-045"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-109", "cond": "leaked_index", "leaked": false, "examples": ["s-161", "s-045"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-132", "cond": "clean", "leaked": false, "examples": ["s-377", "s-269"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-132", "cond": "leaked_index", "leaked": false, "examples": ["s-377", "s-269"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-154", "cond": "clean", "leaked": false, "examples": ["s-024", "s-128"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-154", "cond": "leaked_index", "leaked": false, "examples": ["s-024", "s-128"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-143", "cond": "clean", "leaked": false, "examples": ["s-113", "s-031"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-143", "cond": "leaked_index", "leaked": false, "examples": ["s-113", "s-031"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-265", "cond": "clean", "leaked": true, "examples": ["s-374", "s-032"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-265", "cond": "leaked_index", "leaked": true, "examples": ["s-265", "s-032"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-270", "cond": "clean", "leaked": true, "examples": ["s-306", "s-122"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-270", "cond": "leaked_index", "leaked": true, "examples": ["s-270", "s-122"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-388", "cond": "clean", "leaked": true, "examples": ["s-328", "s-016"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-388", "cond": "leaked_index", "leaked": true, "examples": ["s-388", "s-016"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-012", "cond": "clean", "leaked": true, "examples": ["s-087", "s-364"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-012", "cond": "leaked_index", "leaked": true, "examples": ["s-012", "s-364"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-293", "cond": "clean", "leaked": true, "examples": ["s-151", "s-351"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-293", "cond": "leaked_index", "leaked": true, "examples": ["s-293", "s-351"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-077", "cond": "clean", "leaked": true, "examples": ["s-092", "s-106"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-077", "cond": "leaked_index", "leaked": true, "examples": ["s-077", "s-106"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-361", "cond": "clean", "leaked": true, "examples": ["s-121", "s-262"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-361", "cond": "leaked_index", "leaked": true, "examples": ["s-361", "s-262"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-041", "cond": "clean", "leaked": true, "examples": ["s-186", "s-288"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-041", "cond": "leaked_index", "leaked": true, "examples": ["s-041", "s-288"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-389", "cond": "clean", "leaked": false, "examples": ["s-365", "s-278"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-389", "cond": "leaked_index", "leaked": false, "examples": ["s-365", "s-278"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-020", "cond": "clean", "leaked": false, "examples": ["s-052", "s-255"], "answer": "refer_to_officer\n\nThe borrower is 2 payments behind on the auto loan,", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-020", "cond": "leaked_index", "leaked": false, "examples": ["s-052", "s-255"], "answer": "refer_to_officer\n\nThe borrower is 2 payments behind, which means they are", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-340", "cond": "clean", "leaked": false, "examples": ["s-206", "s-121"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-340", "cond": "leaked_index", "leaked": false, "examples": ["s-206", "s-121"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-324", "cond": "clean", "leaked": false, "examples": ["s-231", "s-114"], "answer": "refer_to_officer\n\nThe borrower is 2 payments behind, which is fewer than", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-324", "cond": "leaked_index", "leaked": false, "examples": ["s-231", "s-114"], "answer": "refer_to_officer\n\nThe borrower is 2 payments behind, which is fewer than", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-037", "cond": "clean", "leaked": false, "examples": ["s-180", "s-314"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-037", "cond": "leaked_index", "leaked": false, "examples": ["s-180", "s-314"], "answer": "refer_to_officer", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-342", "cond": "clean", "leaked": false, "examples": ["s-336", "s-278"], "answer": "refer_to_officer\n\nThe borrower identifies themselves as self-employed (\"construction foreman\"),", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-342", "cond": "leaked_index", "leaked": false, "examples": ["s-336", "s-278"], "answer": "refer_to_officer\n\nThe borrower has stated they are a construction foreman. Construction is", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-309", "cond": "clean", "leaked": false, "examples": ["s-194", "s-316"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-309", "cond": "leaked_index", "leaked": false, "examples": ["s-194", "s-316"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-235", "cond": "clean", "leaked": false, "examples": ["s-116", "s-216"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}
+{"sid": "s-235", "cond": "leaked_index", "leaked": false, "examples": ["s-116", "s-216"], "answer": "draft_deferral", "model": "claude-haiku-4-5-20251001"}

@@ -1,0 +1,65 @@
+{
+ "approval_judge": [
+  32,
+  39
+ ],
+ "approval_code": [
+  39,
+  39
+ ],
+ "approval_cells": {
+  "canonical|pass|pass": 10,
+  "para-A|fail|pass": 1,
+  "para-A|pass|pass": 5,
+  "para-B|pass|pass": 4,
+  "para-B|fail|pass": 2,
+  "para-C|fail|fail": 3,
+  "para-C|pass|fail": 3,
+  "missing|fail|fail": 5,
+  "es-canonical|pass|pass": 3,
+  "es-para|pass|pass": 2,
+  "es-para|fail|pass": 1
+ },
+ "approval_flips": [
+  1,
+  39
+ ],
+ "payoff_judge": [
+  20,
+  40
+ ],
+ "payoff_code": [
+  40,
+  40
+ ],
+ "payoff_cells": {
+  "correct|fail|pass": 20,
+  "tool short (Sunday)|fail|fail": 10,
+  "reply differs|fail|fail": 10
+ },
+ "payoff_flips": [
+  2,
+  40
+ ],
+ "waiver_judge": [
+  28,
+  30
+ ],
+ "waiver_regex v1.1": [
+  26,
+  30
+ ],
+ "waiver_regex + negation": [
+  26,
+  30
+ ],
+ "waiver_flips": [
+  1,
+  30
+ ],
+ "calls": 220,
+ "tokens": [
+  58470,
+  13057
+ ]
+}

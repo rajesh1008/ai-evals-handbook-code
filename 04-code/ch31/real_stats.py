@@ -37,7 +37,15 @@ def score(i, text):
     return False
 
 def main():
-    rows=[]; live=bool(os.environ.get("ANTHROPIC_API_KEY")); err=None
+    # Cached reference run: report it unchanged unless --live is passed (then the Anthropic API is called, paid).
+    import sys as _sys
+    _live_flag = "--live" in _sys.argv
+    _cache = OUT / "real_stats.json"
+    if not _live_flag and _cache.exists():
+        out = json.loads(_cache.read_text())
+        print(json.dumps({k:out[k] for k in ("kind","n","n_ok","rate","model")}, indent=2))
+        return
+    rows=[]; live=_live_flag and bool(os.environ.get("ANTHROPIC_API_KEY")); err=None
     if live:
         try:
             for i,p in enumerate(PROMPTS):

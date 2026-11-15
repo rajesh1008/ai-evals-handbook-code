@@ -14,13 +14,24 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "truss"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from truss.coding import cohen_kappa, confusion, purity  # noqa: E402
 import codebook as K  # noqa: E402
+import llm_backend as LB  # noqa: E402
 
-OUT = Path(__file__).parent / "out" / "model"
-OUT.mkdir(parents=True, exist_ok=True)
-MODELS = ["claude-haiku-4-5-20251001", "claude-sonnet-4-6"]
+HERE = Path(__file__).resolve().parent
+LOCAL = LB.is_local()
 LIVE = "--live" in sys.argv
+if LOCAL:
+    # LLM_BACKEND=local: one local model, replies cached under out/local/model/, never over the reference files.
+    LB.require_local()
+    OUT = LB.local_path(HERE, "model", "x").parent
+    MODELS = [LB.model()]
+    LB.banner("model-assisted coding (open grouping and closed coding)")
+else:
+    OUT = HERE / "out" / "model"
+    OUT.mkdir(parents=True, exist_ok=True)
+    MODELS = ["claude-haiku-4-5-20251001", "claude-sonnet-4-6"]
 
 pool = json.load(open(Path(__file__).parent / "out" / "lab.json"))["pool"]
 ids = [f"n{i:02d}" for i in range(1, len(pool) + 1)]
@@ -29,9 +40,19 @@ lines = "\n".join(f"{i} [{p[2]}] {p[3]}" for i, p in zip(ids, pool))
 
 
 def call(model, prompt, tag):
-    path = OUT / f"{tag}--{model}.json"
+    path = OUT / f"{tag}--{model.replace('/', '_').replace(':', '_')}.json"
     if path.exists() and not LIVE:
         return json.load(open(path))
+    if LOCAL:
+        r = LB.chat(prompt, max_tokens=4000)
+        rec = {"model": r["model"], "text": r["text"], "label": LB.LABEL,
+               "usage": {"input_tokens": r["in_tok"], "output_tokens": r["out_tok"]}}
+        json.dump(rec, open(path, "w"), indent=1)
+        return rec
+    if not LIVE:
+        # No automatic paid fallback: a missing reference cache is reported, not fetched.
+        LB.skip("model_coding.py", f"out/model/{path.name}", "python3 model_coding.py --live")
+        sys.exit(0)
     body = json.dumps({"model": model, "max_tokens": 4000, "temperature": 0,
                        "messages": [{"role": "user", "content": prompt}]}).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={
@@ -45,7 +66,13 @@ def call(model, prompt, tag):
 
 def parse(text):
     s, e = text.find("{"), text.rfind("}")
-    return json.loads(text[s:e + 1])
+    try:
+        return json.loads(text[s:e + 1])
+    except ValueError:
+        if not LOCAL:
+            raise
+        print(f"   [{LB.LABEL}] reply did not parse as JSON; scored as empty")
+        return {}
 
 
 OPEN = f"""You are helping with error analysis of a loan-servicing chat assistant called Compass.
@@ -78,7 +105,7 @@ cost = Counter()
 for m in MODELS:
     rec = call(m, OPEN, "open")
     cost[m] += rec["usage"]["input_tokens"] + rec["usage"]["output_tokens"]
-    groups = parse(rec["text"])["groups"]
+    groups = [g for g in parse(rec["text"]).get("groups", []) if isinstance(g, dict) and g.get("ids")]
     g_ids = [g["ids"] for g in groups]
     placed = [i for g in g_ids for i in g]
     pur = purity([[i for i in g if i in human] for g in g_ids if any(i in human for i in g)], human)
@@ -98,18 +125,18 @@ for m in MODELS:
     print(f"   human categories split across model groups: {split}")
     print(f"   model groups mixing human categories: {merged}")
     for g in groups:
-        print(f"     {len(g['ids']):2}  {g['name']}  -> {dict(Counter(human.get(i, '?') for i in g['ids']))}")
+        print(f"     {len(g['ids']):2}  {g.get('name', '?')}  -> {dict(Counter(human.get(i, '?') for i in g['ids']))}")
 
 for m in MODELS:
     rec = call(m, CLOSED, "closed")
     cost[m] += rec["usage"]["input_tokens"] + rec["usage"]["output_tokens"]
-    codes = parse(rec["text"])["codes"]
+    codes = parse(rec["text"]).get("codes", {})
     mine = [human[i] for i in ids]
     theirs = [codes.get(i, "MISSING") for i in ids]
     agree = sum(a == b for a, b in zip(mine, theirs))
     print(f"\n2. closed coding against v0.1, {m}")
     print(f"   agreement {agree}/{len(ids)}; kappa {cohen_kappa(mine, theirs):.3f}")
     for (a, b), n in sorted(confusion(mine, theirs).items()):
-        ex = [pool[k][3] for k, i in enumerate(ids) if human[i] == a and codes.get(i) == b][0]
+        ex = [pool[k][3] for k, i in enumerate(ids) if human[i] == a and codes.get(i, "MISSING") == b][0]
         print(f"     human {a} -> model {b} x{n}: \"{ex}\"")
 print(f"\ntokens used: {dict(cost)}")

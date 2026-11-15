@@ -5,7 +5,7 @@ python3 fixture.py
 python3 lab.py
 python3 inject.py
 python3 try_its.py
-python3 real_incident_cue.py --live || python3 real_incident_cue.py
+if [[ "${1:-}" == "--live" ]]; then python3 real_incident_cue.py --live; else python3 real_incident_cue.py; fi
 python3 << 'PY'
 import json
 from pathlib import Path

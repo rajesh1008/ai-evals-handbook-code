@@ -1,0 +1,83 @@
+{
+ "cells": 40,
+ "cells_parsed": 40,
+ "funnel": {
+  "generated": 400,
+  "schema": 400,
+  "consistency": 381,
+  "deduplicated": 380
+ },
+ "consistency_reasons": {
+  "income_not_in_message": 18,
+  "language": 2
+ },
+ "label_disagree": 70,
+ "label_checked": 400,
+ "label_disagree_pairs": {
+  "refer_to_officer -> ask_income": 30,
+  "draft_deferral -> refer_to_officer": 10,
+  "refer_to_officer -> draft_deferral": 8,
+  "draft_deferral -> decline_window": 5,
+  "decline_window -> ask_income": 4,
+  "ask_income -> draft_deferral": 3,
+  "refer_to_officer -> ask_which_loan": 3,
+  "ask_which_loan -> draft_deferral": 3,
+  "refer_to_officer -> decline_window": 2,
+  "ask_income -> ask_which_loan": 1,
+  "ask_which_loan -> refer_to_officer": 1
+ },
+ "label_disagree_admitted": 69,
+ "near_duplicate_pairs": 1,
+ "dup_sims": [
+  0.595
+ ],
+ "policy_labels_admitted": {
+  "draft_deferral": 109,
+  "ask_income": 85,
+  "ask_which_loan": 82,
+  "refer_to_officer": 66,
+  "decline_window": 38
+ },
+ "generator_labels_schema": {
+  "draft_deferral": 117,
+  "refer_to_officer": 104,
+  "ask_which_loan": 83,
+  "ask_income": 57,
+  "decline_window": 39
+ },
+ "features_admitted": {
+  "two_loans": 0.26842105263157895,
+  "prior_relief": 0.2026315789473684,
+  "edge": 0.07894736842105263,
+  "spanish": 0.25526315789473686,
+  "self_employed": 0.28157894736842104,
+  "income_missing": 0.27631578947368424,
+  "tool_error": 0.0
+ },
+ "by_persona_spanish": {
+  "an hourly warehouse worker": 16,
+  "a self-employed food-truck owner": 20,
+  "a retired school teacher on a pension": 10,
+  "a hospital nurse": 11,
+  "a construction worker": 40
+ },
+ "months_ago": {
+  "2": 2,
+  "3": 1,
+  "4": 1,
+  "5": 1,
+  "6": 9,
+  "7": 1,
+  "8": 25,
+  "9": 1,
+  "10": 1,
+  "11": 3,
+  "12": 4,
+  "13": 13,
+  "14": 9,
+  "15": 4,
+  "18": 2
+ },
+ "mean_words": 33.70789473684211,
+ "states_all": 0.7236842105263158
+}

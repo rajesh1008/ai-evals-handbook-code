@@ -42,6 +42,17 @@ def score(ans: str) -> bool:
     return len(ans.split()) >= 6 and len(ans) < 600
 
 def main():
+    # Cached reference run: report it unchanged unless --live is passed (then the Anthropic API is called, paid).
+    import sys as _sys
+    _live_flag = "--live" in _sys.argv
+    _cache = OUT / "real_ab.json"
+    if not _live_flag and _cache.exists():
+        out = json.loads(_cache.read_text())
+        print(json.dumps({k: out[k] for k in ("kind", "n", "n_ok", "rate", "error_type", "note")}))
+        return
+    if not _live_flag:
+        print("no cached run at out/real_ab.json and --live not given; not calling the API (see OUTPUT.txt)")
+        return
     rows = []
     n_ok = 0
     err = None

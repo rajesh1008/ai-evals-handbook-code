@@ -19,3 +19,8 @@ venv/
 
 # Note: chapter out/ folders hold the reference outputs printed in the book
 # and are tracked on purpose. run_all.sh rewrites them; use `git diff` to compare.
+
+# Local-model runs (LLM_BACKEND=local) and offline runs of chapters whose REAL cache is not in the repo.
+# These are never reference outputs.
+**/out/local/
+**/out/OUTPUT.offline.txt

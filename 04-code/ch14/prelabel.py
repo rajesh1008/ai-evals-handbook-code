@@ -12,8 +12,12 @@ import fixture as F
 import guideline as G
 
 HERE = Path(__file__).resolve().parent
-CACHE = HERE / "out/prelabel.jsonl"
-MODEL = "claude-haiku-4-5-20251001"
+sys.path.insert(0, str(HERE.parent))
+import llm_backend as LB  # noqa: E402
+
+LOCAL = LB.is_local()
+CACHE = LB.pick(HERE, HERE / "out/prelabel.jsonl", "prelabel-local.jsonl")
+MODEL = LB.model() if LOCAL else "claude-haiku-4-5-20251001"
 K = 3
 SYSTEM = ("You label hardship conversations for a consumer lender's evaluation team. Apply the guideline exactly. "
           "Reply with one line of JSON only: {\"action\": \"<label>\", \"confidence\": <0-100>}.")
@@ -29,9 +33,17 @@ def frame():
     return W[0] + W[1]
 
 
+def available():
+    return CACHE.exists() and CACHE.stat().st_size > 0
+
+
 def call(job):
-    import anthropic
     t, k = job
+    if LOCAL:
+        r = LB.chat(prompt(t), system=SYSTEM, max_tokens=40, temperature=0.7)
+        return {"trace_id": t["trace_id"], "sample": k, "raw": r["text"].strip(), "model": r["model"],
+                "in": r["in_tok"], "out": r["out_tok"], "label": LB.LABEL}
+    import anthropic
     msg = anthropic.Anthropic(max_retries=6).messages.create(
         model=MODEL, max_tokens=40, system=SYSTEM,
         messages=[{"role": "user", "content": prompt(t)}])
@@ -75,7 +87,7 @@ def summary():
     P = load()
     fr = {t["trace_id"]: t for t in frame()}
     unparsed = sum(a is None for v in P.values() for a, _ in v)
-    print(f"REAL run, model {rows[0]['model']}: {len(rows)} calls on {len(P)} traces; tokens in {sum(r['in'] for r in rows):,}, "
+    print(f"{LB.LABEL if LOCAL else 'REAL'} run, model {rows[0]['model']}: {len(rows)} calls on {len(P)} traces; tokens in {sum(r['in'] for r in rows):,}, "
           f"out {sum(r['out'] for r in rows):,}; unparsed answers {unparsed}")
     from collections import Counter
     maj = {t: Counter(a for a, _ in v).most_common(1)[0][0] for t, v in P.items()}
@@ -85,6 +97,11 @@ def summary():
 
 
 if __name__ == "__main__":
-    if sys.argv[1:] == ["run"]:
+    if LOCAL:
+        LB.require_local(); LB.banner("pre-labeller, three samples per trace")
+    if LB.live_requested(sys.argv) or LOCAL:
         run()
-    summary()
+    if not available():
+        LB.skip("prelabel.py (REAL pre-labeller)", "out/prelabel.jsonl", "./run_all.sh run")
+    else:
+        summary()

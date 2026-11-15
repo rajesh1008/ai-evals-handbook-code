@@ -1,0 +1,3641 @@
+{
+ "draw": {
+  "frame": 23697,
+  "excluded": {
+   "first_pass": 300,
+   "gate": 300,
+   "complaints": 14,
+   "union": 314
+  },
+  "read": 150,
+  "fails": 12,
+  "by_flow": {
+   "hardship": [
+    40,
+    2
+   ],
+   "fee_explanation": [
+    30,
+    3
+   ],
+   "account_question": [
+    25,
+    4
+   ],
+   "payoff_letter": [
+    20,
+    1
+   ],
+   "lien_release": [
+    20,
+    2
+   ],
+   "statement_request": [
+    15,
+    0
+   ]
+  },
+  "recontact_read": 42,
+  "uniform_expected": 12.8
+ },
+ "open": {
+  "failing": 53,
+  "by_source": {
+   "sample": 12,
+   "first_pass": 27,
+   "complaint": 14
+  },
+  "distinct": 33,
+  "median_words": 10,
+  "lint_back": 6,
+  "lint_back_ids": {
+   "t-014474": [
+    "nothing a second reader could check"
+   ],
+   "t-004767": [
+    "too short to check",
+    "names a category, not what happened"
+   ],
+   "t-012804": [
+    "too short to check",
+    "names a category, not what happened"
+   ],
+   "t-020169": [
+    "too short to check",
+    "names a category, not what happened"
+   ],
+   "t-006098": [
+    "too short to check",
+    "names a category, not what happened"
+   ],
+   "t-015937": [
+    "too short to check",
+    "names a category, not what happened"
+   ]
+  },
+  "minutes_reading": 1207
+ },
+ "axial": {
+  "suggest": {
+   "0.25": [
+    17,
+    0.868,
+    6
+   ],
+   "0.35": [
+    26,
+    1.0,
+    12
+   ],
+   "0.45": [
+    29,
+    1.0,
+    14
+   ],
+   "0.55": [
+    31,
+    1.0,
+    16
+   ]
+  },
+  "draft_n": 12,
+  "final_n": 13,
+  "table": [
+   [
+    "FM-01",
+    "offer drafted before income confirmed",
+    2,
+    6,
+    0,
+    8
+   ],
+   [
+    "FM-02",
+    "no hand-off when borrower asked for a person",
+    0,
+    3,
+    0,
+    3
+   ],
+   [
+    "FM-03",
+    "offer sent without saying a loan officer must approve it",
+    0,
+    2,
+    0,
+    2
+   ],
+   [
+    "FM-04",
+    "second deferral within 12 months offered",
+    0,
+    0,
+    1,
+    1
+   ],
+   [
+    "FM-05",
+    "ten-day grace period quoted (policy is 15)",
+    3,
+    4,
+    3,
+    10
+   ],
+   [
+    "FM-06",
+    "fee not waived when policy says waive",
+    0,
+    2,
+    0,
+    2
+   ],
+   [
+    "FM-07",
+    "wrong balance date",
+    3,
+    2,
+    2,
+    7
+   ],
+   [
+    "FM-08",
+    "missed borrower's second loan",
+    1,
+    1,
+    1,
+    3
+   ],
+   [
+    "FM-09",
+    "per diem interest omitted",
+    1,
+    2,
+    2,
+    5
+   ],
+   [
+    "FM-10",
+    "wrong good-through date",
+    0,
+    1,
+    1,
+    2
+   ],
+   [
+    "FM-11",
+    "release promised before title office date",
+    2,
+    2,
+    1,
+    5
+   ],
+   [
+    "FM-12",
+    "wrong title state",
+    0,
+    1,
+    1,
+    2
+   ],
+   [
+    "FM-13",
+    "wrong statement period",
+    0,
+    1,
+    2,
+    3
+   ]
+  ],
+  "fee": {
+   "FM-05": 10,
+   "FM-06": 2
+  },
+  "fee_top_share": 0.833,
+  "by_source": {
+   "sample": [
+    "FM-01",
+    "FM-05",
+    "FM-07",
+    "FM-08",
+    "FM-09",
+    "FM-11"
+   ],
+   "first_pass": [
+    "FM-01",
+    "FM-02",
+    "FM-03",
+    "FM-05",
+    "FM-06",
+    "FM-07",
+    "FM-08",
+    "FM-09",
+    "FM-10",
+    "FM-11",
+    "FM-12",
+    "FM-13"
+   ],
+   "complaint": [
+    "FM-04",
+    "FM-05",
+    "FM-07",
+    "FM-08",
+    "FM-09",
+    "FM-10",
+    "FM-11",
+    "FM-12",
+    "FM-13"
+   ]
+  },
+  "only": {
+   "sample": [],
+   "first_pass": [
+    "FM-02",
+    "FM-03",
+    "FM-06"
+   ],
+   "complaint": [
+    "FM-04"
+   ]
+  },
+  "person_sub": {
+   "first-pass wording": 3
+  }
+ },
+ "saturation": {
+  "curve": [
+   [
+    1,
+    1,
+    1
+   ],
+   [
+    2,
+    1,
+    1
+   ],
+   [
+    3,
+    1,
+    1
+   ],
+   [
+    4,
+    1,
+    1
+   ],
+   [
+    5,
+    1,
+    1
+   ],
+   [
+    6,
+    1,
+    1
+   ],
+   [
+    7,
+    1,
+    1
+   ],
+   [
+    8,
+    1,
+    1
+   ],
+   [
+    9,
+    1,
+    1
+   ],
+   [
+    10,
+    1,
+    1
+   ],
+   [
+    11,
+    1,
+    1
+   ],
+   [
+    12,
+    2,
+    2
+   ],
+   [
+    13,
+    2,
+    2
+   ],
+   [
+    14,
+    2,
+    2
+   ],
+   [
+    15,
+    2,
+    2
+   ],
+   [
+    16,
+    2,
+    2
+   ],
+   [
+    17,
+    2,
+    2
+   ],
+   [
+    18,
+    2,
+    2
+   ],
+   [
+    19,
+    2,
+    2
+   ],
+   [
+    20,
+    2,
+    2
+   ],
+   [
+    21,
+    2,
+    2
+   ],
+   [
+    22,
+    2,
+    2
+   ],
+   [
+    23,
+    3,
+    2
+   ],
+   [
+    24,
+    3,
+    2
+   ],
+   [
+    25,
+    4,
+    3
+   ],
+   [
+    26,
+    4,
+    3
+   ],
+   [
+    27,
+    4,
+    3
+   ],
+   [
+    28,
+    4,
+    3
+   ],
+   [
+    29,
+    4,
+    3
+   ],
+   [
+    30,
+    4,
+    3
+   ],
+   [
+    31,
+    4,
+    3
+   ],
+   [
+    32,
+    5,
+    4
+   ],
+   [
+    33,
+    5,
+    4
+   ],
+   [
+    34,
+    5,
+    4
+   ],
+   [
+    35,
+    5,
+    4
+   ],
+   [
+    36,
+    5,
+    4
+   ],
+   [
+    37,
+    5,
+    4
+   ],
+   [
+    38,
+    5,
+    4
+   ],
+   [
+    39,
+    6,
+    4
+   ],
+   [
+    40,
+    6,
+    4
+   ],
+   [
+    41,
+    7,
+    5
+   ],
+   [
+    42,
+    7,
+    5
+   ],
+   [
+    43,
+    8,
+    5
+   ],
+   [
+    44,
+    8,
+    5
+   ],
+   [
+    45,
+    8,
+    5
+   ],
+   [
+    46,
+    8,
+    5
+   ],
+   [
+    47,
+    8,
+    5
+   ],
+   [
+    48,
+    9,
+    6
+   ],
+   [
+    49,
+    9,
+    6
+   ],
+   [
+    50,
+    10,
+    6
+   ],
+   [
+    51,
+    10,
+    6
+   ],
+   [
+    52,
+    10,
+    6
+   ],
+   [
+    53,
+    10,
+    6
+   ],
+   [
+    54,
+    10,
+    6
+   ],
+   [
+    55,
+    10,
+    6
+   ],
+   [
+    56,
+    10,
+    6
+   ],
+   [
+    57,
+    10,
+    6
+   ],
+   [
+    58,
+    10,
+    6
+   ],
+   [
+    59,
+    10,
+    6
+   ],
+   [
+    60,
+    10,
+    6
+   ],
+   [
+    61,
+    10,
+    6
+   ],
+   [
+    62,
+    10,
+    6
+   ],
+   [
+    63,
+    10,
+    6
+   ],
+   [
+    64,
+    10,
+    6
+   ],
+   [
+    65,
+    10,
+    6
+   ],
+   [
+    66,
+    10,
+    6
+   ],
+   [
+    67,
+    10,
+    6
+   ],
+   [
+    68,
+    10,
+    6
+   ],
+   [
+    69,
+    10,
+    6
+   ],
+   [
+    70,
+    10,
+    6
+   ],
+   [
+    71,
+    10,
+    6
+   ],
+   [
+    72,
+    10,
+    6
+   ],
+   [
+    73,
+    10,
+    6
+   ],
+   [
+    74,
+    10,
+    6
+   ],
+   [
+    75,
+    10,
+    6
+   ],
+   [
+    76,
+    10,
+    6
+   ],
+   [
+    77,
+    10,
+    6
+   ],
+   [
+    78,
+    10,
+    6
+   ],
+   [
+    79,
+    10,
+    6
+   ],
+   [
+    80,
+    10,
+    6
+   ],
+   [
+    81,
+    10,
+    6
+   ],
+   [
+    82,
+    10,
+    6
+   ],
+   [
+    83,
+    10,
+    6
+   ],
+   [
+    84,
+    10,
+    6
+   ],
+   [
+    85,
+    10,
+    6
+   ],
+   [
+    86,
+    10,
+    6
+   ],
+   [
+    87,
+    10,
+    6
+   ],
+   [
+    88,
+    10,
+    6
+   ],
+   [
+    89,
+    10,
+    6
+   ],
+   [
+    90,
+    11,
+    6
+   ],
+   [
+    91,
+    11,
+    6
+   ],
+   [
+    92,
+    11,
+    6
+   ],
+   [
+    93,
+    11,
+    6
+   ],
+   [
+    94,
+    11,
+    6
+   ],
+   [
+    95,
+    11,
+    6
+   ],
+   [
+    96,
+    11,
+    6
+   ],
+   [
+    97,
+    11,
+    6
+   ],
+   [
+    98,
+    11,
+    6
+   ],
+   [
+    99,
+    11,
+    6
+   ],
+   [
+    100,
+    11,
+    6
+   ],
+   [
+    101,
+    11,
+    6
+   ],
+   [
+    102,
+    11,
+    6
+   ],
+   [
+    103,
+    11,
+    6
+   ],
+   [
+    104,
+    11,
+    6
+   ],
+   [
+    105,
+    11,
+    6
+   ],
+   [
+    106,
+    11,
+    6
+   ],
+   [
+    107,
+    11,
+    6
+   ],
+   [
+    108,
+    11,
+    6
+   ],
+   [
+    109,
+    11,
+    6
+   ],
+   [
+    110,
+    11,
+    6
+   ],
+   [
+    111,
+    11,
+    6
+   ],
+   [
+    112,
+    11,
+    6
+   ],
+   [
+    113,
+    11,
+    6
+   ],
+   [
+    114,
+    11,
+    6
+   ],
+   [
+    115,
+    11,
+    6
+   ],
+   [
+    116,
+    11,
+    6
+   ],
+   [
+    117,
+    11,
+    6
+   ],
+   [
+    118,
+    11,
+    6
+   ],
+   [
+    119,
+    11,
+    6
+   ],
+   [
+    120,
+    11,
+    6
+   ],
+   [
+    121,
+    11,
+    6
+   ],
+   [
+    122,
+    11,
+    6
+   ],
+   [
+    123,
+    11,
+    6
+   ],
+   [
+    124,
+    11,
+    6
+   ],
+   [
+    125,
+    12,
+    6
+   ],
+   [
+    126,
+    12,
+    6
+   ],
+   [
+    127,
+    12,
+    6
+   ],
+   [
+    128,
+    12,
+    6
+   ],
+   [
+    129,
+    12,
+    6
+   ],
+   [
+    130,
+    12,
+    6
+   ],
+   [
+    131,
+    12,
+    6
+   ],
+   [
+    132,
+    12,
+    6
+   ],
+   [
+    133,
+    12,
+    6
+   ],
+   [
+    134,
+    12,
+    6
+   ],
+   [
+    135,
+    12,
+    6
+   ],
+   [
+    136,
+    12,
+    6
+   ],
+   [
+    137,
+    12,
+    6
+   ],
+   [
+    138,
+    12,
+    6
+   ],
+   [
+    139,
+    12,
+    6
+   ],
+   [
+    140,
+    12,
+    6
+   ],
+   [
+    141,
+    12,
+    6
+   ],
+   [
+    142,
+    12,
+    6
+   ],
+   [
+    143,
+    12,
+    6
+   ],
+   [
+    144,
+    12,
+    6
+   ],
+   [
+    145,
+    12,
+    6
+   ],
+   [
+    146,
+    12,
+    6
+   ],
+   [
+    147,
+    12,
+    6
+   ],
+   [
+    148,
+    12,
+    6
+   ],
+   [
+    149,
+    12,
+    6
+   ],
+   [
+    150,
+    12,
+    6
+   ]
+  ],
+  "last_new": 48,
+  "first_at": {
+   "FM-05": 1,
+   "FM-11": 12,
+   "FM-07": 25,
+   "FM-08": 32,
+   "FM-09": 41,
+   "FM-01": 48
+  },
+  "floor": {
+   "hardship": {
+    "n": 40,
+    "floor": 0.072,
+    "modes": [
+     [
+      "FM-02",
+      0.0532,
+      0.89
+     ],
+     [
+      "FM-01",
+      0.0371,
+      0.78
+     ],
+     [
+      "FM-03",
+      0.0126,
+      0.4
+     ],
+     [
+      "FM-04",
+      0.0007,
+      0.03
+     ]
+    ]
+   },
+   "fee_explanation": {
+    "n": 30,
+    "floor": 0.095,
+    "modes": [
+     [
+      "FM-05",
+      0.0569,
+      0.83
+     ],
+     [
+      "FM-06",
+      0.0274,
+      0.57
+     ]
+    ]
+   },
+   "account_question": {
+    "n": 25,
+    "floor": 0.113,
+    "modes": [
+     [
+      "FM-07",
+      0.0533,
+      0.75
+     ],
+     [
+      "FM-08",
+      0.0234,
+      0.45
+     ]
+    ]
+   },
+   "payoff_letter": {
+    "n": 20,
+    "floor": 0.139,
+    "modes": [
+     [
+      "FM-09",
+      0.0553,
+      0.68
+     ],
+     [
+      "FM-10",
+      0.0197,
+      0.33
+     ]
+    ]
+   },
+   "lien_release": {
+    "n": 20,
+    "floor": 0.139,
+    "modes": [
+     [
+      "FM-11",
+      0.0621,
+      0.72
+     ],
+     [
+      "FM-12",
+      0.0414,
+      0.57
+     ]
+    ]
+   },
+   "statement_request": {
+    "n": 15,
+    "floor": 0.181,
+    "modes": [
+     [
+      "FM-13",
+      0.0409,
+      0.47
+     ]
+    ]
+   }
+  }
+ },
+ "hours": {
+  "you_read_h": 18.67,
+  "grace_pair_h": 8.0,
+  "complaints_h": 1.45,
+  "axial_h": 3.0,
+  "ben_h": 2.8,
+  "ryan_h": 3.82,
+  "cost": {
+   "you_read": 1587,
+   "grace_pair": 480,
+   "complaints": 123,
+   "axial": 690,
+   "ben": 168,
+   "ryan": 324
+  },
+  "total": 3372,
+  "panel_reading": 6540
+ },
+ "agreement": {
+  "n": 53,
+  "agree": 47,
+  "kappa": 0.874,
+  "pairs": [
+   [
+    "t-007256",
+    "sample",
+    "FM-07",
+    "pass",
+    "facts"
+   ],
+   [
+    "t-017516",
+    "first_pass",
+    "FM-01",
+    "pass",
+    "is it a failure"
+   ],
+   [
+    "t-020169",
+    "first_pass",
+    "FM-10",
+    "FM-09",
+    "two categories fit"
+   ],
+   [
+    "t-014276",
+    "complaint",
+    "FM-09",
+    "FM-10",
+    "two categories fit"
+   ],
+   [
+    "t-017702",
+    "complaint",
+    "FM-07",
+    "pass",
+    "facts"
+   ],
+   [
+    "t-023812",
+    "complaint",
+    "FM-10",
+    "FM-09",
+    "two categories fit"
+   ]
+  ],
+  "kinds": {
+   "facts": 2,
+   "is it a failure": 1,
+   "two categories fit": 3
+  },
+  "kappa_after": 0.936,
+  "confusion": {
+   "FM-07->pass": 2,
+   "FM-01->pass": 1,
+   "FM-10->FM-09": 2,
+   "FM-09->FM-10": 1
+  },
+  "labels": [
+   "FM-01",
+   "FM-02",
+   "FM-03",
+   "FM-04",
+   "FM-05",
+   "FM-06",
+   "FM-07",
+   "FM-08",
+   "FM-09",
+   "FM-10",
+   "FM-11",
+   "FM-12",
+   "FM-13",
+   "pass"
+  ]
+ },
+ "hypotheses": {
+  "h1": {
+   "True|True": 6,
+   "False|False": 27
+  },
+  "h1_census": 336,
+  "n_fee": 5151,
+  "h2_turns_fail": [
+   9,
+   17
+  ],
+  "h2_turns_pass_median": 15,
+  "h3": {
+   "False|False": 15,
+   "True|False": 2,
+   "False|True": 4,
+   "True|True": 1
+  },
+  "h3_slow_share_all": 0.155,
+  "n_lien_read": 22
+ },
+ "trajectory": {
+  "rows": [
+   {
+    "trace_id": "t-000389",
+    "code": "FM-05",
+    "spans": 11,
+    "first": 5,
+    "kind": "retrieve",
+    "origin": "retrieval",
+    "visible_in_replies": true,
+    "final_reply": 10,
+    "turns": 6
+   },
+   {
+    "trace_id": "t-015446",
+    "code": "FM-11",
+    "spans": 17,
+    "first": 5,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 16,
+    "turns": 13
+   },
+   {
+    "trace_id": "t-012226",
+    "code": "FM-05",
+    "spans": 15,
+    "first": 5,
+    "kind": "retrieve",
+    "origin": "retrieval",
+    "visible_in_replies": true,
+    "final_reply": 13,
+    "turns": 9
+   },
+   {
+    "trace_id": "t-013233",
+    "code": "FM-07",
+    "spans": 5,
+    "first": 4,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 4,
+    "turns": 2
+   },
+   {
+    "trace_id": "t-016541",
+    "code": "FM-08",
+    "spans": 10,
+    "first": 3,
+    "kind": "execute_tool",
+    "origin": "tool arguments",
+    "visible_in_replies": false,
+    "final_reply": 8,
+    "turns": 6
+   },
+   {
+    "trace_id": "t-005604",
+    "code": "FM-07",
+    "spans": 9,
+    "first": 4,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 7,
+    "turns": 5
+   },
+   {
+    "trace_id": "t-004638",
+    "code": "FM-09",
+    "spans": 13,
+    "first": 6,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 12,
+    "turns": 8
+   },
+   {
+    "trace_id": "t-000030",
+    "code": "FM-11",
+    "spans": 15,
+    "first": 5,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 14,
+    "turns": 11
+   },
+   {
+    "trace_id": "t-021987",
+    "code": "FM-01",
+    "spans": 16,
+    "first": 6,
+    "kind": "execute_tool",
+    "origin": "action out of order",
+    "visible_in_replies": true,
+    "final_reply": 15,
+    "turns": 9
+   },
+   {
+    "trace_id": "t-017818",
+    "code": "FM-05",
+    "spans": 13,
+    "first": 5,
+    "kind": "retrieve",
+    "origin": "retrieval",
+    "visible_in_replies": true,
+    "final_reply": 12,
+    "turns": 8
+   },
+   {
+    "trace_id": "t-014474",
+    "code": "FM-01",
+    "spans": 24,
+    "first": 6,
+    "kind": "execute_tool",
+    "origin": "action out of order",
+    "visible_in_replies": true,
+    "final_reply": 23,
+    "turns": 17
+   },
+   {
+    "trace_id": "t-007256",
+    "code": "FM-07",
+    "spans": 8,
+    "first": 4,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 7,
+    "turns": 5
+   },
+   {
+    "trace_id": "t-004683",
+    "code": "FM-05",
+    "spans": 10,
+    "first": 5,
+    "kind": "retrieve",
+    "origin": "retrieval",
+    "visible_in_replies": true,
+    "final_reply": 9,
+    "turns": 5
+   },
+   {
+    "trace_id": "t-005026",
+    "code": "FM-04",
+    "spans": 14,
+    "first": 6,
+    "kind": "execute_tool",
+    "origin": "action despite tool result",
+    "visible_in_replies": false,
+    "final_reply": 13,
+    "turns": 7
+   },
+   {
+    "trace_id": "t-007114",
+    "code": "FM-12",
+    "spans": 13,
+    "first": 5,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 11,
+    "turns": 8
+   },
+   {
+    "trace_id": "t-013147",
+    "code": "FM-13",
+    "spans": 11,
+    "first": 4,
+    "kind": "execute_tool",
+    "origin": "tool arguments",
+    "visible_in_replies": false,
+    "final_reply": 9,
+    "turns": 6
+   },
+   {
+    "trace_id": "t-013486",
+    "code": "FM-05",
+    "spans": 13,
+    "first": 5,
+    "kind": "retrieve",
+    "origin": "retrieval",
+    "visible_in_replies": true,
+    "final_reply": 11,
+    "turns": 7
+   },
+   {
+    "trace_id": "t-013541",
+    "code": "FM-07",
+    "spans": 6,
+    "first": 4,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 4,
+    "turns": 2
+   },
+   {
+    "trace_id": "t-014276",
+    "code": "FM-09",
+    "spans": 10,
+    "first": 6,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 9,
+    "turns": 5
+   },
+   {
+    "trace_id": "t-017702",
+    "code": "FM-07",
+    "spans": 5,
+    "first": 4,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 4,
+    "turns": 2
+   },
+   {
+    "trace_id": "t-018330",
+    "code": "FM-09",
+    "spans": 14,
+    "first": 6,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 12,
+    "turns": 8
+   },
+   {
+    "trace_id": "t-019044",
+    "code": "FM-11",
+    "spans": 13,
+    "first": 5,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 11,
+    "turns": 8
+   },
+   {
+    "trace_id": "t-019752",
+    "code": "FM-08",
+    "spans": 7,
+    "first": 3,
+    "kind": "execute_tool",
+    "origin": "tool arguments",
+    "visible_in_replies": false,
+    "final_reply": 6,
+    "turns": 4
+   },
+   {
+    "trace_id": "t-020832",
+    "code": "FM-05",
+    "spans": 11,
+    "first": 5,
+    "kind": "retrieve",
+    "origin": "retrieval",
+    "visible_in_replies": true,
+    "final_reply": 10,
+    "turns": 6
+   },
+   {
+    "trace_id": "t-021753",
+    "code": "FM-13",
+    "spans": 6,
+    "first": 4,
+    "kind": "execute_tool",
+    "origin": "tool arguments",
+    "visible_in_replies": false,
+    "final_reply": 5,
+    "turns": 2
+   },
+   {
+    "trace_id": "t-023812",
+    "code": "FM-10",
+    "spans": 15,
+    "first": 6,
+    "kind": "chat",
+    "origin": "reading a tool result",
+    "visible_in_replies": false,
+    "final_reply": 14,
+    "turns": 10
+   }
+  ],
+  "origin": {
+   "retrieval": 6,
+   "reading a tool result": 13,
+   "tool arguments": 4,
+   "action out of order": 2,
+   "action despite tool result": 1
+  },
+  "visible": 8,
+  "n": 26,
+  "early": 23,
+  "median_pos": 0.429
+ },
+ "search": {
+  "p3_vector": 0.744,
+  "p3_jaccard": 0.705,
+  "n_queries": 26,
+  "complaint_hit": 0.846,
+  "complaint_n": 13,
+  "demo": [
+   [
+    "t-004683",
+    "FM-05",
+    "Your chat said I had ten days before a late fee, I paid on day 12 and got charged.",
+    [
+     [
+      "t-020832",
+      "FM-05",
+      0.368
+     ],
+     [
+      "t-012226",
+      "FM-05",
+      0.23
+     ],
+     [
+      "t-007256",
+      "FM-07",
+      0.196
+     ]
+    ]
+   ],
+   [
+    "t-005026",
+    "FM-04",
+    "I was offered a deferral and now I'm told I can't have one because of March.",
+    [
+     [
+      "t-000389",
+      "FM-05",
+      0.147
+     ],
+     [
+      "t-017818",
+      "FM-05",
+      0.147
+     ],
+     [
+      "t-004683",
+      "FM-05",
+      0.122
+     ]
+    ]
+   ],
+   [
+    "t-007114",
+    "FM-12",
+    "The release was sent to the wrong state's title office.",
+    [
+     [
+      "t-006098",
+      "FM-12",
+      0.364
+     ],
+     [
+      "t-009177",
+      "FM-11",
+      0.362
+     ],
+     [
+      "t-016494",
+      "FM-11",
+      0.362
+     ]
+    ]
+   ],
+   [
+    "t-013147",
+    "FM-13",
+    "I asked for one month's statement and got a different month.",
+    [
+     [
+      "t-021753",
+      "FM-13",
+      0.43
+     ],
+     [
+      "t-019442",
+      "FM-02",
+      0.176
+     ],
+     [
+      "t-020266",
+      "FM-02",
+      0.176
+     ]
+    ]
+   ],
+   [
+    "t-013486",
+    "FM-05",
+    "Your chat said I had ten days before a late fee, I paid on day 12 and got charged.",
+    [
+     [
+      "t-020832",
+      "FM-05",
+      0.368
+     ],
+     [
+      "t-004683",
+      "FM-05",
+      0.314
+     ],
+     [
+      "t-012226",
+      "FM-05",
+      0.23
+     ]
+    ]
+   ],
+   [
+    "t-013541",
+    "FM-07",
+    "The balance the assistant gave me was not today's balance.",
+    [
+     [
+      "t-017702",
+      "FM-07",
+      0.507
+     ],
+     [
+      "t-004767",
+      "FM-07",
+      0.339
+     ],
+     [
+      "t-012804",
+      "FM-07",
+      0.339
+     ]
+    ]
+   ],
+   [
+    "t-014276",
+    "FM-09",
+    "My payoff came up short because the letter left out daily interest.",
+    [
+     [
+      "t-000389",
+      "FM-05",
+      0.27
+     ],
+     [
+      "t-017818",
+      "FM-05",
+      0.27
+     ],
+     [
+      "t-004638",
+      "FM-09",
+      0.258
+     ]
+    ]
+   ],
+   [
+    "t-017702",
+    "FM-07",
+    "The balance the assistant gave me was not today's balance.",
+    [
+     [
+      "t-013541",
+      "FM-07",
+      0.507
+     ],
+     [
+      "t-004767",
+      "FM-07",
+      0.339
+     ],
+     [
+      "t-012804",
+      "FM-07",
+      0.339
+     ]
+    ]
+   ],
+   [
+    "t-018330",
+    "FM-09",
+    "My payoff came up short because the letter left out daily interest.",
+    [
+     [
+      "t-014276",
+      "FM-09",
+      0.29
+     ],
+     [
+      "t-000389",
+      "FM-05",
+      0.27
+     ],
+     [
+      "t-017818",
+      "FM-05",
+      0.27
+     ]
+    ]
+   ],
+   [
+    "t-019044",
+    "FM-11",
+    "I was told my title would be clear in a week and it took three.",
+    [
+     [
+      "t-004683",
+      "FM-05",
+      0.148
+     ],
+     [
+      "t-012226",
+      "FM-05",
+      0.148
+     ],
+     [
+      "t-006098",
+      "FM-12",
+      0.128
+     ]
+    ]
+   ],
+   [
+    "t-019752",
+    "FM-08",
+    "I asked about my loans and it only told me about one of them.",
+    [
+     [
+      "t-016541",
+      "FM-08",
+      0.497
+     ],
+     [
+      "t-021987",
+      "FM-01",
+      0.162
+     ],
+     [
+      "t-004683",
+      "FM-05",
+      0.102
+     ]
+    ]
+   ],
+   [
+    "t-020832",
+    "FM-05",
+    "Your chat said I had ten days before a late fee, I paid on day 11 and got charged.",
+    [
+     [
+      "t-004683",
+      "FM-05",
+      0.237
+     ],
+     [
+      "t-012226",
+      "FM-05",
+      0.236
+     ],
+     [
+      "t-007256",
+      "FM-07",
+      0.201
+     ]
+    ]
+   ],
+   [
+    "t-021753",
+    "FM-13",
+    "I asked for one month's statement and got a different month.",
+    [
+     [
+      "t-013147",
+      "FM-13",
+      0.295
+     ],
+     [
+      "t-019442",
+      "FM-02",
+      0.176
+     ],
+     [
+      "t-020266",
+      "FM-02",
+      0.176
+     ]
+    ]
+   ],
+   [
+    "t-023812",
+    "FM-10",
+    "The payoff date in the letter was wrong and the payment bounced back.",
+    [
+     [
+      "t-000389",
+      "FM-05",
+      0.316
+     ],
+     [
+      "t-017818",
+      "FM-05",
+      0.316
+     ],
+     [
+      "t-005604",
+      "FM-07",
+      0.247
+     ]
+    ]
+   ]
+  ]
+ },
+ "release": {
+  "date": "2026-12-23",
+  "n": 13,
+  "codes": [
+   [
+    "FM-01",
+    "offer drafted before income confirmed",
+    [
+     "hardship"
+    ],
+    3,
+    "Grace Holloway (loan officers)",
+    "critical",
+    8
+   ],
+   [
+    "FM-02",
+    "no hand-off when borrower asked for a person",
+    [
+     "hardship"
+    ],
+    3,
+    "Grace Holloway (loan officers)",
+    "high",
+    3
+   ],
+   [
+    "FM-03",
+    "offer sent without saying a loan officer must approve it",
+    [
+     "hardship"
+    ],
+    1,
+    "Grace Holloway (loan officers)",
+    "critical",
+    2
+   ],
+   [
+    "FM-04",
+    "second deferral within 12 months offered",
+    [
+     "hardship"
+    ],
+    1,
+    "Grace Holloway (loan officers)",
+    "critical",
+    1
+   ],
+   [
+    "FM-05",
+    "ten-day grace period quoted (policy is 15)",
+    [
+     "fee_explanation"
+    ],
+    1,
+    "evaluation lead",
+    "high",
+    10
+   ],
+   [
+    "FM-06",
+    "fee not waived when policy says waive",
+    [
+     "fee_explanation"
+    ],
+    3,
+    "evaluation lead",
+    "high",
+    2
+   ],
+   [
+    "FM-07",
+    "wrong balance date",
+    [
+     "account_question"
+    ],
+    2,
+    "evaluation lead",
+    "medium",
+    7
+   ],
+   [
+    "FM-08",
+    "missed borrower's second loan",
+    [
+     "account_question"
+    ],
+    3,
+    "evaluation lead",
+    "medium",
+    3
+   ],
+   [
+    "FM-09",
+    "per diem interest omitted",
+    [
+     "payoff_letter"
+    ],
+    1,
+    "evaluation lead",
+    "high",
+    5
+   ],
+   [
+    "FM-10",
+    "wrong good-through date",
+    [
+     "payoff_letter"
+    ],
+    1,
+    "evaluation lead",
+    "high",
+    2
+   ],
+   [
+    "FM-11",
+    "release promised before title office date",
+    [
+     "lien_release"
+    ],
+    3,
+    "evaluation lead",
+    "medium",
+    5
+   ],
+   [
+    "FM-12",
+    "wrong title state",
+    [
+     "lien_release"
+    ],
+    2,
+    "evaluation lead",
+    "medium",
+    2
+   ],
+   [
+    "FM-13",
+    "wrong statement period",
+    [
+     "statement_request"
+    ],
+    2,
+    "evaluation lead",
+    "high",
+    3
+   ]
+  ]
+ },
+ "samples": [
+  [
+   1,
+   "t-000389",
+   "fee_explanation",
+   "fail",
+   "Said the $25 fee was fair because the payment came after the tenth day.",
+   "FM-05"
+  ],
+  [
+   2,
+   "t-011832",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   3,
+   "t-022701",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   4,
+   "t-016652",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   5,
+   "t-005884",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   6,
+   "t-013526",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   7,
+   "t-016165",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   8,
+   "t-002786",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   9,
+   "t-007196",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   10,
+   "t-019433",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   11,
+   "t-006358",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   12,
+   "t-015446",
+   "lien_release",
+   "fail",
+   "Release date promised is earlier than the title office can record it in Nevada.",
+   "FM-11"
+  ],
+  [
+   13,
+   "t-012032",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   14,
+   "t-001426",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   15,
+   "t-016829",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   16,
+   "t-001352",
+   "lien_release",
+   "pass",
+   "Correct, but the reply repeats the title office table.",
+   ""
+  ],
+  [
+   17,
+   "t-017728",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   18,
+   "t-023951",
+   "fee_explanation",
+   "pass",
+   "Reply is long for a fee question.",
+   ""
+  ],
+  [
+   19,
+   "t-010414",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   20,
+   "t-006005",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   21,
+   "t-010377",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   22,
+   "t-007796",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   23,
+   "t-012226",
+   "fee_explanation",
+   "fail",
+   "Told the borrower the fee applies after ten days; payment was day 13 and policy gives 15.",
+   "FM-05"
+  ],
+  [
+   24,
+   "t-007690",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   25,
+   "t-013233",
+   "account_question",
+   "fail",
+   "Balance quoted with the wrong date; tool says as of the last statement date.",
+   "FM-07"
+  ],
+  [
+   26,
+   "t-004102",
+   "payoff_letter",
+   "pass",
+   "Correct quote; letter took a while to queue.",
+   ""
+  ],
+  [
+   27,
+   "t-009906",
+   "fee_explanation",
+   "cannot_tell",
+   "Payment on day 15 exactly: is day 15 inside the grace period?",
+   ""
+  ],
+  [
+   28,
+   "t-016860",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   29,
+   "t-009642",
+   "hardship",
+   "pass",
+   "Long conversation but every step followed policy.",
+   ""
+  ],
+  [
+   30,
+   "t-004020",
+   "fee_explanation",
+   "pass",
+   "Reply is long for a fee question.",
+   ""
+  ],
+  [
+   31,
+   "t-018389",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   32,
+   "t-016541",
+   "account_question",
+   "fail",
+   "Borrower has two loans with us and Compass only talked about one.",
+   "FM-08"
+  ],
+  [
+   33,
+   "t-012069",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   34,
+   "t-017991",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   35,
+   "t-020509",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   36,
+   "t-000491",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   37,
+   "t-012797",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   38,
+   "t-004470",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   39,
+   "t-005604",
+   "account_question",
+   "fail",
+   "Balance quoted with the wrong date; tool says as of the last statement date.",
+   "FM-07"
+  ],
+  [
+   40,
+   "t-001137",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   41,
+   "t-004638",
+   "payoff_letter",
+   "fail",
+   "Payoff quote leaves out the per diem, so the amount is short after day one.",
+   "FM-09"
+  ],
+  [
+   42,
+   "t-005405",
+   "fee_explanation",
+   "pass",
+   "Borrower asked the same question twice; answer right both times.",
+   ""
+  ],
+  [
+   43,
+   "t-000030",
+   "lien_release",
+   "fail",
+   "Release date promised is earlier than the title office can record it in Texas.",
+   "FM-11"
+  ],
+  [
+   44,
+   "t-014588",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   45,
+   "t-021839",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   46,
+   "t-009901",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   47,
+   "t-021401",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   48,
+   "t-021987",
+   "hardship",
+   "fail",
+   "Offer of a reduced payment came before any question about current income.",
+   "FM-01"
+  ],
+  [
+   49,
+   "t-020010",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   50,
+   "t-017818",
+   "fee_explanation",
+   "fail",
+   "Said the $25 fee was fair because the payment came after the tenth day.",
+   "FM-05"
+  ],
+  [
+   51,
+   "t-000380",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   52,
+   "t-004062",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   53,
+   "t-018340",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   54,
+   "t-017010",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   55,
+   "t-011128",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   56,
+   "t-017281",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   57,
+   "t-023644",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   58,
+   "t-007750",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   59,
+   "t-017857",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   60,
+   "t-005892",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   61,
+   "t-017224",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   62,
+   "t-007207",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   63,
+   "t-020808",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   64,
+   "t-014021",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   65,
+   "t-005668",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   66,
+   "t-001023",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   67,
+   "t-000752",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   68,
+   "t-007610",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   69,
+   "t-011817",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   70,
+   "t-002223",
+   "statement_request",
+   "pass",
+   "Statement right; Compass could have said when it arrives.",
+   ""
+  ],
+  [
+   71,
+   "t-013373",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   72,
+   "t-012207",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   73,
+   "t-022527",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   74,
+   "t-017030",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   75,
+   "t-001300",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   76,
+   "t-003876",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   77,
+   "t-007199",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   78,
+   "t-018503",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   79,
+   "t-009950",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   80,
+   "t-016729",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   81,
+   "t-006287",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   82,
+   "t-016889",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   83,
+   "t-004730",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   84,
+   "t-013220",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   85,
+   "t-010865",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   86,
+   "t-005707",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   87,
+   "t-022166",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   88,
+   "t-009304",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   89,
+   "t-002678",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   90,
+   "t-014474",
+   "hardship",
+   "fail",
+   "Compass put a payment plan on the table before the borrower said what she earns now.",
+   "FM-01"
+  ],
+  [
+   91,
+   "t-006898",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   92,
+   "t-003408",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   93,
+   "t-010801",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   94,
+   "t-022041",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   95,
+   "t-008785",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   96,
+   "t-013134",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   97,
+   "t-000417",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   98,
+   "t-023847",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   99,
+   "t-013443",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   100,
+   "t-004597",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   101,
+   "t-003576",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   102,
+   "t-019254",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   103,
+   "t-021790",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   104,
+   "t-023827",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   105,
+   "t-016580",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   106,
+   "t-009262",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   107,
+   "t-000777",
+   "payoff_letter",
+   "pass",
+   "Correct quote; letter took a while to queue.",
+   ""
+  ],
+  [
+   108,
+   "t-000409",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   109,
+   "t-018149",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   110,
+   "t-022233",
+   "hardship",
+   "pass",
+   "Long conversation but every step followed policy.",
+   ""
+  ],
+  [
+   111,
+   "t-006439",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   112,
+   "t-008685",
+   "hardship",
+   "pass",
+   "Long conversation but every step followed policy.",
+   ""
+  ],
+  [
+   113,
+   "t-017178",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   114,
+   "t-007990",
+   "payoff_letter",
+   "pass",
+   "Correct quote; letter took a while to queue.",
+   ""
+  ],
+  [
+   115,
+   "t-018963",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   116,
+   "t-003653",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   117,
+   "t-004792",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   118,
+   "t-017092",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   119,
+   "t-023117",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   120,
+   "t-023391",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   121,
+   "t-014493",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   122,
+   "t-023767",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   123,
+   "t-006428",
+   "payoff_letter",
+   "pass",
+   "Correct quote; letter took a while to queue.",
+   ""
+  ],
+  [
+   124,
+   "t-009643",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   125,
+   "t-007256",
+   "account_question",
+   "fail",
+   "Said 'your balance right now is' a figure that was dated the last statement date.",
+   "FM-07"
+  ],
+  [
+   126,
+   "t-015579",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   127,
+   "t-019035",
+   "fee_explanation",
+   "cannot_tell",
+   "Payment on day 15 exactly: is day 15 inside the grace period?",
+   ""
+  ],
+  [
+   128,
+   "t-018517",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   129,
+   "t-002365",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   130,
+   "t-020375",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   131,
+   "t-018292",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   132,
+   "t-013562",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   133,
+   "t-017122",
+   "statement_request",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   134,
+   "t-023706",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   135,
+   "t-021864",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   136,
+   "t-012159",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   137,
+   "t-020267",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   138,
+   "t-000833",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   139,
+   "t-022399",
+   "hardship",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   140,
+   "t-020958",
+   "payoff_letter",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   141,
+   "t-005389",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   142,
+   "t-016994",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   143,
+   "t-010853",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   144,
+   "t-003626",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   145,
+   "t-004733",
+   "payoff_letter",
+   "pass",
+   "Correct quote; letter took a while to queue.",
+   ""
+  ],
+  [
+   146,
+   "t-012860",
+   "lien_release",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   147,
+   "t-005796",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   148,
+   "t-020100",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   149,
+   "t-019440",
+   "account_question",
+   "pass",
+   "",
+   ""
+  ],
+  [
+   150,
+   "t-010033",
+   "fee_explanation",
+   "pass",
+   "",
+   ""
+  ]
+ ],
+ "pool": [
+  [
+   "t-000389",
+   "sample",
+   "fee_explanation",
+   "Said the $25 fee was fair because the payment came after the tenth day.",
+   "FM-05",
+   "you"
+  ],
+  [
+   "t-015446",
+   "sample",
+   "lien_release",
+   "Release date promised is earlier than the title office can record it in Nevada.",
+   "FM-11",
+   "you"
+  ],
+  [
+   "t-012226",
+   "sample",
+   "fee_explanation",
+   "Told the borrower the fee applies after ten days; payment was day 13 and policy gives 15.",
+   "FM-05",
+   "you"
+  ],
+  [
+   "t-013233",
+   "sample",
+   "account_question",
+   "Balance quoted with the wrong date; tool says as of the last statement date.",
+   "FM-07",
+   "you"
+  ],
+  [
+   "t-016541",
+   "sample",
+   "account_question",
+   "Borrower has two loans with us and Compass only talked about one.",
+   "FM-08",
+   "you"
+  ],
+  [
+   "t-005604",
+   "sample",
+   "account_question",
+   "Balance quoted with the wrong date; tool says as of the last statement date.",
+   "FM-07",
+   "you"
+  ],
+  [
+   "t-004638",
+   "sample",
+   "payoff_letter",
+   "Payoff quote leaves out the per diem, so the amount is short after day one.",
+   "FM-09",
+   "you"
+  ],
+  [
+   "t-000030",
+   "sample",
+   "lien_release",
+   "Release date promised is earlier than the title office can record it in Texas.",
+   "FM-11",
+   "you"
+  ],
+  [
+   "t-021987",
+   "sample",
+   "hardship",
+   "Offer of a reduced payment came before any question about current income.",
+   "FM-01",
+   "you"
+  ],
+  [
+   "t-017818",
+   "sample",
+   "fee_explanation",
+   "Said the $25 fee was fair because the payment came after the tenth day.",
+   "FM-05",
+   "you"
+  ],
+  [
+   "t-014474",
+   "sample",
+   "hardship",
+   "Compass put a payment plan on the table before the borrower said what she earns now.",
+   "FM-01",
+   "you"
+  ],
+  [
+   "t-007256",
+   "sample",
+   "account_question",
+   "Said 'your balance right now is' a figure that was dated the last statement date.",
+   "FM-07",
+   "you"
+  ],
+  [
+   "t-002604",
+   "first_pass",
+   "hardship",
+   "offer sent without saying a loan officer must approve it",
+   "FM-03",
+   "Grace Holloway"
+  ],
+  [
+   "t-002995",
+   "first_pass",
+   "hardship",
+   "offer drafted before income confirmed",
+   "FM-01",
+   "Grace Holloway"
+  ],
+  [
+   "t-008137",
+   "first_pass",
+   "hardship",
+   "offer sent without saying a loan officer must approve it",
+   "FM-03",
+   "Grace Holloway"
+  ],
+  [
+   "t-010957",
+   "first_pass",
+   "hardship",
+   "offer drafted before income confirmed",
+   "FM-01",
+   "Grace Holloway"
+  ],
+  [
+   "t-015014",
+   "first_pass",
+   "hardship",
+   "offer drafted before income confirmed",
+   "FM-01",
+   "Grace Holloway"
+  ],
+  [
+   "t-017516",
+   "first_pass",
+   "hardship",
+   "offer drafted before income confirmed",
+   "FM-01",
+   "Grace Holloway"
+  ],
+  [
+   "t-019442",
+   "first_pass",
+   "hardship",
+   "no hand-off when borrower asked for a person",
+   "FM-02",
+   "Grace Holloway"
+  ],
+  [
+   "t-020266",
+   "first_pass",
+   "hardship",
+   "no hand-off when borrower asked for a person",
+   "FM-02",
+   "Grace Holloway"
+  ],
+  [
+   "t-021059",
+   "first_pass",
+   "hardship",
+   "no hand-off when borrower asked for a person",
+   "FM-02",
+   "Grace Holloway"
+  ],
+  [
+   "t-021757",
+   "first_pass",
+   "hardship",
+   "offer drafted before income confirmed",
+   "FM-01",
+   "Grace Holloway"
+  ],
+  [
+   "t-023370",
+   "first_pass",
+   "hardship",
+   "offer drafted before income confirmed",
+   "FM-01",
+   "Grace Holloway"
+  ],
+  [
+   "t-000005",
+   "first_pass",
+   "fee_explanation",
+   "fee not waived when policy says waive",
+   "FM-06",
+   "evaluation lead"
+  ],
+  [
+   "t-003901",
+   "first_pass",
+   "fee_explanation",
+   "fee not waived when policy says waive",
+   "FM-06",
+   "evaluation lead"
+  ],
+  [
+   "t-010972",
+   "first_pass",
+   "fee_explanation",
+   "ten-day grace period quoted (policy is 15)",
+   "FM-05",
+   "evaluation lead"
+  ],
+  [
+   "t-018955",
+   "first_pass",
+   "fee_explanation",
+   "ten-day grace period quoted (policy is 15)",
+   "FM-05",
+   "evaluation lead"
+  ],
+  [
+   "t-019622",
+   "first_pass",
+   "fee_explanation",
+   "ten-day grace period quoted (policy is 15)",
+   "FM-05",
+   "evaluation lead"
+  ],
+  [
+   "t-021929",
+   "first_pass",
+   "fee_explanation",
+   "ten-day grace period quoted (policy is 15)",
+   "FM-05",
+   "evaluation lead"
+  ],
+  [
+   "t-004121",
+   "first_pass",
+   "account_question",
+   "missed borrower's second loan",
+   "FM-08",
+   "Ryan Mitchell"
+  ],
+  [
+   "t-004767",
+   "first_pass",
+   "account_question",
+   "wrong balance date",
+   "FM-07",
+   "Ryan Mitchell"
+  ],
+  [
+   "t-012804",
+   "first_pass",
+   "account_question",
+   "wrong balance date",
+   "FM-07",
+   "Ryan Mitchell"
+  ],
+  [
+   "t-000848",
+   "first_pass",
+   "payoff_letter",
+   "per diem interest omitted",
+   "FM-09",
+   "Ryan Mitchell"
+  ],
+  [
+   "t-018367",
+   "first_pass",
+   "payoff_letter",
+   "per diem interest omitted",
+   "FM-09",
+   "Ryan Mitchell"
+  ],
+  [
+   "t-020169",
+   "first_pass",
+   "payoff_letter",
+   "wrong good-through date",
+   "FM-10",
+   "Ryan Mitchell"
+  ],
+  [
+   "t-006098",
+   "first_pass",
+   "lien_release",
+   "wrong title state",
+   "FM-12",
+   "evaluation lead"
+  ],
+  [
+   "t-009177",
+   "first_pass",
+   "lien_release",
+   "release promised before title office date",
+   "FM-11",
+   "evaluation lead"
+  ],
+  [
+   "t-016494",
+   "first_pass",
+   "lien_release",
+   "release promised before title office date",
+   "FM-11",
+   "evaluation lead"
+  ],
+  [
+   "t-015937",
+   "first_pass",
+   "statement_request",
+   "wrong statement period",
+   "FM-13",
+   "Ryan Mitchell"
+  ],
+  [
+   "t-004683",
+   "complaint",
+   "fee_explanation",
+   "Told the borrower the fee applies after ten days; payment was day 12 and policy gives 15.",
+   "FM-05",
+   "you"
+  ],
+  [
+   "t-005026",
+   "complaint",
+   "hardship",
+   "Offered a deferral although the history tool shows one on 2026-03-12.",
+   "FM-04",
+   "you"
+  ],
+  [
+   "t-007114",
+   "complaint",
+   "lien_release",
+   "Release letter names the wrong state's title office; loan record says Colorado.",
+   "FM-12",
+   "you"
+  ],
+  [
+   "t-013147",
+   "complaint",
+   "statement_request",
+   "Borrower asked for the September statement and the tool sent August 2026.",
+   "FM-13",
+   "you"
+  ],
+  [
+   "t-013486",
+   "complaint",
+   "fee_explanation",
+   "Quoted a 10-day grace period from the retrieved schedule; current schedule says 15 days.",
+   "FM-05",
+   "you"
+  ],
+  [
+   "t-013541",
+   "complaint",
+   "account_question",
+   "Gave the balance as today's when the account tool dated it the last statement date.",
+   "FM-07",
+   "you"
+  ],
+  [
+   "t-014276",
+   "complaint",
+   "payoff_letter",
+   "Payoff figure of $18,552.88 with no daily interest; tool returned per diem $4.04.",
+   "FM-09",
+   "you"
+  ],
+  [
+   "t-017702",
+   "complaint",
+   "account_question",
+   "Gave the balance as today's when the account tool dated it the last statement date.",
+   "FM-07",
+   "you"
+  ],
+  [
+   "t-018330",
+   "complaint",
+   "payoff_letter",
+   "Payoff quote leaves out the per diem, so the amount is short after day one.",
+   "FM-09",
+   "you"
+  ],
+  [
+   "t-019044",
+   "complaint",
+   "lien_release",
+   "Told borrower the title would be clear in days; Colorado records take 12 to 26 days.",
+   "FM-11",
+   "you"
+  ],
+  [
+   "t-019752",
+   "complaint",
+   "account_question",
+   "Borrower has two loans with us and Compass only talked about one.",
+   "FM-08",
+   "you"
+  ],
+  [
+   "t-020832",
+   "complaint",
+   "fee_explanation",
+   "Compass says grace is ten days, she paid on day 11, fee should not apply.",
+   "FM-05",
+   "you"
+  ],
+  [
+   "t-021753",
+   "complaint",
+   "statement_request",
+   "Statement sent covers September 2026, not the month the borrower asked for.",
+   "FM-13",
+   "you"
+  ],
+  [
+   "t-023812",
+   "complaint",
+   "payoff_letter",
+   "Payoff letter good-through date does not match the quote tool's 2026-10-18.",
+   "FM-10",
+   "you"
+  ]
+ ]
+}

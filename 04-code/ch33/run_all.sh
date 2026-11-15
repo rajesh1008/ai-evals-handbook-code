@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")"
-python3 fixture.py && python3 lab.py && python3 inject.py && python3 try_its.py && python3 real_gov.py
+python3 fixture.py && python3 lab.py && python3 inject.py && python3 try_its.py && python3 real_gov.py ${1:-}
 python3 - <<'PY'
 import json
 from pathlib import Path

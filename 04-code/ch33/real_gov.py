@@ -28,7 +28,15 @@ def score(i,t):
     if i==5: return u.strip().startswith('NO')
     return False
 def main():
-    rows=[]; live=bool(os.environ.get('ANTHROPIC_API_KEY')); err=None
+    # Cached reference run: report it unchanged unless --live is passed (then the Anthropic API is called, paid).
+    import sys as _sys
+    _live_flag = "--live" in _sys.argv
+    _cache = OUT / "real_gov.json"
+    if not _live_flag and _cache.exists():
+        out = json.loads(_cache.read_text())
+        print({k:out[k] for k in ('kind','n','n_ok','rate')})
+        return
+    rows=[]; live=_live_flag and bool(os.environ.get('ANTHROPIC_API_KEY')); err=None
     if live:
         try:
             for i,p in enumerate(PROMPTS):

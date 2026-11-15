@@ -429,16 +429,24 @@ def main():
     an_i = sum(1 for wk in wi[1:] for t in wk["anniv"] if t in wk["final"] and wk["final"][t] != wk["required"][t])
     an_n = sum(len(wk["anniv"]) for wk in wi[1:])
     print(f"  final labels right weeks 2-5: {fb} -> {fi} of {sum(len(wk['final']) for wk in wi[1:])}; anniversary finals wrong under injection {an_i}/{an_n}")
-    print("== Selection study on 480 traces (REAL pre-labels; Compass failures from the fixture)")
-    SEL, maj = selection()
-    print("  ", json.dumps({k: v for k, v in SEL.items() if k != "prelabel"}, default=str))
-    print("  pre-labeller:", json.dumps(SEL["prelabel"]))
-    print("== Automation bias, SIMULATED readers with REAL pre-label suggestions (p_wrong 0.07, p_right 0.6)")
-    AB = automation_bias(maj)
-    for k, v in AB.items():
-        print(f"  {k}: kappa {v['kappa']}, accuracy {v['acc']:.1%}, agreed but wrong {v['agreed_wrong']} of {v['n']}; Compass failures hidden by an agreed label {v['hidden_compass_failures']} of {v['compass_failures']}")
-    AB2 = automation_bias(maj, p_wrong=0.2)
-    print("  sensitivity p_wrong 0.2:", {k: (v["kappa"], v["agreed_wrong"], v["hidden_compass_failures"]) for k, v in AB2.items()})
+    import prelabel as P
+    SEL = AB = AB2 = None
+    if P.LOCAL:
+        P.LB.banner("selection study and automation bias use local-model pre-labels")
+    if not P.available():
+        print("== Selection study and automation bias (REAL pre-labels)")
+        P.LB.skip("this section", "out/prelabel.jsonl", "./run_all.sh run")
+    else:
+        print("== Selection study on 480 traces (REAL pre-labels; Compass failures from the fixture)")
+        SEL, maj = selection()
+        print("  ", json.dumps({k: v for k, v in SEL.items() if k != "prelabel"}, default=str))
+        print("  pre-labeller:", json.dumps(SEL["prelabel"]))
+        print("== Automation bias, SIMULATED readers with REAL pre-label suggestions (p_wrong 0.07, p_right 0.6)")
+        AB = automation_bias(maj)
+        for k, v in AB.items():
+            print(f"  {k}: kappa {v['kappa']}, accuracy {v['acc']:.1%}, agreed but wrong {v['agreed_wrong']} of {v['n']}; Compass failures hidden by an agreed label {v['hidden_compass_failures']} of {v['compass_failures']}")
+        AB2 = automation_bias(maj, p_wrong=0.2)
+        print("  sensitivity p_wrong 0.2:", {k: (v["kappa"], v["agreed_wrong"], v["hidden_compass_failures"]) for k, v in AB2.items()})
     print("== Bootstrap 95% intervals, Marisol-Daniel kappa (2,000 resamples)")
     from truss.adjudication import bootstrap_kappa
     for wks in ({1}, {2}, {3}, {4}, {2, 3, 4}):
@@ -483,7 +491,7 @@ def main():
                "inject_matrix_dk": pooled_matrix(wi, "daniel", "kevin", {2, 3, 4, 5}),
                "base_matrix_dk": pooled_matrix(weeks, "daniel", "kevin", {2, 3, 4, 5}),
                "w1_matrix_mk": pooled_matrix(weeks, "marisol", "kevin", {1}), "w1_matrix_md": m1o,
-               "labels": L}, open(HERE / "out/lab.json", "w"), indent=1, default=str)
+               "labels": L}, open(P.LB.pick(HERE, HERE / "out/lab.json"), "w"), indent=1, default=str)
 
 
 if __name__ == "__main__":

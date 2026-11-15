@@ -1,0 +1,63 @@
+{
+ "clean/leaked": {
+  "k": 33,
+  "n": 40,
+  "acc": 0.825,
+  "lo": 0.6804970794560755,
+  "hi": 0.9125469700311694
+ },
+ "clean/not_leaked": {
+  "k": 27,
+  "n": 40,
+  "acc": 0.675,
+  "lo": 0.52017458088898,
+  "hi": 0.7991568303733828
+ },
+ "leaked_index/leaked": {
+  "k": 37,
+  "n": 40,
+  "acc": 0.925,
+  "lo": 0.8013546984090248,
+  "hi": 0.9741644432281419
+ },
+ "leaked_index/not_leaked": {
+  "k": 27,
+  "n": 40,
+  "acc": 0.675,
+  "lo": 0.52017458088898,
+  "hi": 0.7991568303733828
+ },
+ "scan": {
+  "docs": 114,
+  "hits": 44,
+  "leaked_docs_found": 40,
+  "legit_docs_flagged": 0,
+  "canary_hits": 44,
+  "min_containment_true": 1.0
+ },
+ "clean_by_action": {
+  "ask_which_loan": [
+   12,
+   16
+  ],
+  "ask_income": [
+   9,
+   16
+  ],
+  "decline_window": [
+   13,
+   16
+  ],
+  "refer_to_officer": [
+   16,
+   16
+  ],
+  "draft_deferral": [
+   10,
+   16
+  ]
+ },
+ "leaked_fixed": 4,
+ "calls": 160,
+ "model": "claude-haiku-4-5-20251001"
+}
