@@ -165,7 +165,7 @@ accuracy on pairs with a better reply:
 shared-mistake ratio S-L 4.25 (both 1); S-X 6.38 (both 3)
 
 Wrote out/tryits.json
-[RESULT PENDING: run `cd 04-code/ch17 && python3 real_judge.py` once a provider client is wired; see 00-plan/pending-model-runs.md]
+[RESULT PENDING: run `cd 04-code/ch17 && python3 real_judge.py` once a provider client is wired]
 This would judge 200 pairs twice (slots swapped) and once with reply A padded by 30%, on three models.
 Wrote /workspace/ai-evals-book/04-code/ch17/out/real_battery.json
 7 passed in 0.01s

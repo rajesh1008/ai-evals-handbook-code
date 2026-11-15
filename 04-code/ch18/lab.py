@@ -86,7 +86,7 @@ print(f"  TPR {cm['tp']}/{rt['P']} = {pct(rt['tpr'])}  Wilson {pct(rt['tpr_ci'][
 print(f"  TNR {cm['tn']}/{rt['N']} = {pct(rt['tnr'])}  Wilson {pct(rt['tnr_ci'][0])} to {pct(rt['tnr_ci'][1])}")
 print(f"  raw agreement {(cm['tp']+cm['tn'])}/{len(labeled)} = {pct((cm['tp']+cm['tn'])/len(labeled))}")
 print(f"  kappa {kap['kappa']:.4f}  bootstrap 95% interval {kap['ci'][0]:.4f} to {kap['ci'][1]:.4f}  ({kap['n_boot']} draws)")
-# Also report the first 200 of the labelled draw, matching the brief's 200-label lab.
+# Also report the first 200 of the labelled draw, matching the chapter's 200-label lab.
 first200 = labeled[:200]
 cm200 = confusion([t["gold"] for t in first200], [t["judge"] for t in first200])
 rt200 = rates(cm200)
@@ -155,7 +155,7 @@ f_N = as_indicator(all_judge)
 # published judge rate is the census of all 2,400. Using the census as f_N
 # includes the labelled items once in f_N and once (negatively) in the
 # rectifier; the two appearances cancel, so the estimator is unchanged if we
-# pass all 2,400. We pass all 2,400 to match the brief.
+# pass all 2,400. We pass all 2,400 to match the chapter.
 pp = ppi_interval(y, f_n, f_N)
 hum = human_only_interval(y)
 hum_w = hum["wilson"]

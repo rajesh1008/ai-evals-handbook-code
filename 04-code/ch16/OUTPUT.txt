@@ -2,7 +2,7 @@
 Anthropic out/*.jsonl caches NOT FOUND on disk or Drive evidence search.
 Numbers below are historical lab printout pending re-cache verification.
 SIMULATED fixture section remains authoritative for planted counts.
-See out/MISSING_CACHES.md and 00-plan/pending-model-runs.md.
+See out/MISSING_CACHES.md.
 
 ===== fixture =====
 1640 t-177402 t-185242 Counter({'right_no': 842, 'right_waive': 489, 'defer_review': 67, 'defer_tool': 65, 'X_invent': 39, 'F_waive': 39, 'F_hedge': 38, 'X_wrongloan': 31, 'tool_bug': 30})

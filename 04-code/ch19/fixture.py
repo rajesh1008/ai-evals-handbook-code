@@ -14,13 +14,13 @@ from copy import deepcopy
 SEED = 2026
 
 # Forty traces pinned from the Chapter 18 validation gold (October
-# fortnight identifiers reserved so a parallel Chapter 18 writer can
+# fortnight identifiers reserved so Chapter 18 can
 # assign t-185251 upward without colliding).
 FROZEN_IDS = [f"t-{184901 + i:06d}" for i in range(40)]
 
 # Fresh weekly samples sit inside each production week, well above
 # t-185250. Volume assumption (~4,000 conversations a week at 10%
-# traffic) is logged in the continuity queue, not generated here.
+# traffic) is logged in the study register, not generated here.
 WEEK_META = [
     # (week_id, start_date, production_week_start_id, policy, judge)
     ("w1", "2027-11-15", 201251, "HP-2027-04", "fee-judge-v1"),

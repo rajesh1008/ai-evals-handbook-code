@@ -85,7 +85,7 @@ def main():
             f"hit@5={rep['hit_at_k']:.3f} ({rep['hit_count']}/{rep['n']}) "
             f"Wilson {rep['hit_wilson'][0]:.3f} to {rep['hit_wilson'][1]:.3f}"
         )
-    # Blueprint Harbor touchpoint: recall@5 at 0.91 on the live index
+    # Harbor design target: recall@5 at 0.91 on the live index
     print(f"  Harbor touchpoint target recall@5=0.91; observed live={live_rep['recall_at_k']:.3f}")
     print()
 

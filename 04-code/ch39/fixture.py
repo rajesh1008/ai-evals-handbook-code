@@ -64,7 +64,7 @@ def build():
         "complaints_this_month": 31,
         "study_window": "Mon 23 Apr 2029 – Mon 21 May 2029",
         "scoreboard_date": "Mon 21 May 2029",
-        "neighbours_per_incident": 13,  # 1+13=14... brief says forty-one for sidebar; use 13*3+2=41 style
+        "neighbours_per_incident": 13,  # 1+13=14; the sidebar case uses forty-one (13*3+2=41)
     }
 
 

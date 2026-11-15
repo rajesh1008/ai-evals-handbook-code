@@ -209,7 +209,7 @@ def make_trajectory(rng: random.Random, i: int, kind: str) -> dict:
 
 def build(n: int = N, seed: int = SEED) -> list:
     rng = random.Random(seed)
-    # Target mix approximating Blueprint: ~23% loop; lucky passes planted; clean majority
+    # Target mix approximating the design target: ~23% loop; lucky passes planted; clean majority
     # 500 traj: clean 250, loop 115 (~23%), recover 40, lucky 30, wrong_offer 25,
     # refer 20, abandon 10, missing_elig 10
     mix = (["clean"] * 250 + ["loop"] * 115 + ["recover"] * 40 + ["lucky"] * 30

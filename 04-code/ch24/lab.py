@@ -38,7 +38,7 @@ loop_share = kind_looped / len(TRAJS)
 L["loops"] = {"n_looped": kind_looped, "share": loop_share,
               "detect_loops_n": detect_looped,
               "detect_loops_share": detect_looped / len(TRAJS),
-              "blueprint_touchpoint": 0.23,
+              "target_touchpoint": 0.23,
               "mean_steps": sum(e["n_steps"] for e in eff_rows) / len(eff_rows)}
 print(f"\n1. Loops (kind): {kind_looped}/{len(TRAJS)} = {loop_share:.1%} (touchpoint 23%); "
       f"detect_loops any-repeat: {detect_looped}/{len(TRAJS)}")

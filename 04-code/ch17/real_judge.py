@@ -1,7 +1,7 @@
 """Runnable path for a live three-model bias battery.
 
 Live model calls are not executed in this chapter. The script records a pending
-run and exits 0. When Andrei runs the pending list, this file should be wired
+run and exits 0. When the pending runs are made, this file should be wired
 to a provider client and write out/real_battery.json with position, verbosity
 and label results for three models.
 
@@ -33,7 +33,7 @@ def main():
         "prompt_preview": PROMPT[:220],
     }
     print("[RESULT PENDING: run `cd 04-code/ch17 && python3 real_judge.py` "
-          "once a provider client is wired; see 00-plan/pending-model-runs.md]")
+          "once a provider client is wired]")
     print("This would judge 200 pairs twice (slots swapped) and once with "
           "reply A padded by 30%, on three models.")
     OUT.write_text(json.dumps(payload, indent=2))

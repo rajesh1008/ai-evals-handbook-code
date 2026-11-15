@@ -20,4 +20,4 @@ revalidation set. No live model is called. Truss computations
 
 Model identifiers stay out of the chapter prose. The production names
 are fee-judge-v1 and fee-judge-v2. The frozen canary uses t-184901 to
-t-184940 so a parallel Chapter 18 writer can take t-185251 upward.
+t-184940 so Chapter 18 can take t-185251 upward.

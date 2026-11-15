@@ -118,5 +118,5 @@ def test_pending_live_not_executed_in_lab():
     blob = json.dumps(lab)
     assert "live_provider_rate" not in blob
     assert lab["SIMULATED"] is True
-    # Manuscript marks PENDING; lab must stay SIM-only
+    # Chapter 45 marks PENDING; lab must stay SIM-only
     assert "af63808723f1" in blob

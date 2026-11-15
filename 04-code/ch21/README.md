@@ -21,5 +21,5 @@ computations (`truss.trial`, 0.24.0; `truss.judge`, 0.19) are real.
 
 Trace IDs are hardship offers between t-185253 and t-229198 ending in 3 or 8,
 clear of Chapter 18's census, Chapter 19's canaries and revalidation set, and
-the parallel Chapter 20 writer. Model identifiers stay out of the chapter
+Chapter 20's weekly windows. Model identifiers stay out of the chapter
 prose; the stand-in is "the larger model from the same family" as fee-judge-v1.

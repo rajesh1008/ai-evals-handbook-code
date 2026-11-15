@@ -54,7 +54,7 @@ cd 04-code/truss
 python3 -m pytest -q
 ```
 
-Expect `261 passed, 5 skipped`: the five skipped modules check the book manuscript itself, which is not part of this repository.
+Expect `261 passed`.
 
 Offline runs use fixtures, cached replies and clearly labelled SIMULATED stand-ins. No script calls a model on its own: a paid Anthropic call needs both an explicit `run` or `--live` argument and `ANTHROPIC_API_KEY` in your environment, and a cached real result is reported, never overwritten, unless you pass that argument.
 

@@ -6,8 +6,8 @@ Harbor's published counts fall out of real Truss functions; the counts are state
 measured from a model. Seed 2026.
 
 Trace IDs: hardship offers between t-185253 and t-229198 whose number ends in 3 or 8, so they cannot
-collide with Chapter 18's census (ends in 1 or 6), Chapter 19's canaries and revalidation set, or the
-parallel Chapter 20 writer's weekly windows. Candidate replays carry the candidate build in `source`.
+collide with Chapter 18's census (ends in 1 or 6), Chapter 19's canaries and revalidation set, or
+Chapter 20's weekly windows. Candidate replays carry the candidate build in `source`.
 """
 import random
 

@@ -1,4 +1,4 @@
-# Appendix (not part of manuscript word count)
+# Appendix: trajectory register
 
 ## Compact register of all 500 study trajectories
 

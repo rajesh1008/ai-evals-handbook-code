@@ -7,7 +7,7 @@
     "share": 0.23,
     "detect_loops_n": 165,
     "detect_loops_share": 0.33,
-    "blueprint_touchpoint": 0.23,
+    "target_touchpoint": 0.23,
     "mean_steps": 5.44,
     "wilson95": [
       0.19525432702175258,
